@@ -66,18 +66,22 @@ const featuredSops = featuredSopSlugs
     ></div>
     <div class="relative max-w-2xl">
       <div
-        class="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-muted"
+        class="reveal flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-muted"
+        style="--reveal-delay: 40ms"
       >
         <span class="live-dot h-1.5 w-1.5 rounded-full" aria-hidden="true"></span>
         {t(lang, 'hero.badge')}
       </div>
-      <h1 class="title-h1 mt-4 text-4xl font-bold sm:text-5xl">
+      <h1 class="reveal title-h1 mt-4 text-4xl font-bold sm:text-5xl" style="--reveal-delay: 100ms">
         {SITE_NAME[lang]}
       </h1>
-      <p class="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+      <p
+        class="reveal mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg"
+        style="--reveal-delay: 160ms"
+      >
         {SITE_TAGLINE[lang]}
       </p>
-      <div class="mt-8 flex flex-wrap items-center gap-3">
+      <div class="reveal mt-8 flex flex-wrap items-center gap-3" style="--reveal-delay: 220ms">
         <a
           href={localePath(lang, '/sop/')}
           class="inline-flex h-11 items-center rounded-full bg-accent px-6 text-sm font-semibold text-accent-ink transition hover:bg-accent-strong"
@@ -91,7 +95,10 @@ const featuredSops = featuredSopSlugs
           {t(lang, 'hero.ctaTools')}
         </a>
       </div>
-      <dl class="mt-10 flex flex-wrap gap-x-10 gap-y-3 text-sm text-muted">
+      <dl
+        class="reveal mt-10 flex flex-wrap gap-x-10 gap-y-3 text-sm text-muted"
+        style="--reveal-delay: 280ms"
+      >
         <div class="flex items-baseline gap-1.5">
           <dt class="text-2xl font-semibold tabular-nums text-text">{totalTools}</dt>
           <dd>{t(lang, 'hero.statsTools')}</dd>
@@ -109,7 +116,7 @@ const featuredSops = featuredSopSlugs
   </section>
 
   <!-- 搜索 + 筛选 -->
-  <section class="mx-auto max-w-6xl space-y-3 px-4 pb-2 sm:px-6">
+  <section class="reveal mx-auto max-w-6xl space-y-3 px-4 pb-2 sm:px-6">
     <SearchBar lang={lang} />
     <CategoryNav lang={lang} />
     <PriceFilter lang={lang} />
@@ -146,7 +153,7 @@ const featuredSops = featuredSopSlugs
   </section>
 
   <!-- 工作流速览 -->
-  <section class="mx-auto max-w-6xl border-t border-border px-4 py-14 sm:px-6">
+  <section class="reveal mx-auto max-w-6xl border-t border-border px-4 py-14 sm:px-6">
     <div class="mb-6 flex flex-wrap items-end justify-between gap-3">
       <div>
         <h2 class="title-h2 text-xl font-semibold tracking-tight">{t(lang, 'home.sopSectionTitle')}</h2>
@@ -168,7 +175,7 @@ const featuredSops = featuredSopSlugs
   </section>
 
   <!-- 渐变 CTA（Apple liquid glass） -->
-  <section class="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
+  <section class="reveal mx-auto max-w-6xl px-4 pb-20 sm:px-6">
     <div
       class="relative overflow-hidden rounded-3xl px-6 py-12 text-center sm:px-12 sm:py-16"
       style="background: linear-gradient(135deg, #0071e3 0%, #5e5ce6 100%); box-shadow: var(--sh-cta);"

@@ -47,20 +47,20 @@ const groupDescKey = (group: SopGroupId) => `sop.group.${group}.desc` as const;
     />
   </Fragment>
   <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-    <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+    <div class="reveal flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-muted">
       <span class="live-dot h-1.5 w-1.5 rounded-full" aria-hidden="true"></span>
       {t(lang, 'hero.badge')}
     </div>
-    <h1 class="title-h1 mt-3 text-3xl font-bold tracking-tight sm:text-4xl">{t(lang, 'sop.title')}</h1>
-    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted">{t(lang, 'sop.subtitle')}</p>
-    <div class="mt-5 flex items-baseline gap-1.5 text-sm text-muted">
+    <h1 class="reveal title-h1 mt-3 text-3xl font-bold tracking-tight sm:text-4xl" style="--reveal-delay: 60ms">{t(lang, 'sop.title')}</h1>
+    <p class="reveal mt-3 max-w-2xl text-base leading-relaxed text-muted" style="--reveal-delay: 120ms">{t(lang, 'sop.subtitle')}</p>
+    <div class="reveal mt-5 flex items-baseline gap-1.5 text-sm text-muted" style="--reveal-delay: 180ms">
       <span class="text-2xl font-semibold tabular-nums text-text">{sopTotal}</span>
       {t(lang, 'hero.statsSops')}
     </div>
 
     <!-- 核心链路横幅（视频主链路） -->
     <div
-      class="mt-8 rounded-3xl border border-border bg-surface p-6 shadow-card"
+      class="reveal mt-8 rounded-3xl border border-border bg-surface p-6 shadow-card"
       role="img"
       aria-label={t(lang, 'sop.chain')}
     >
@@ -80,7 +80,7 @@ const groupDescKey = (group: SopGroupId) => `sop.group.${group}.desc` as const;
     </div>
 
     <!-- 搜索 -->
-    <div class="mt-8">
+    <div class="reveal mt-8">
       <div class="relative">
         <svg
           class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted"
@@ -117,7 +117,7 @@ const groupDescKey = (group: SopGroupId) => `sop.group.${group}.desc` as const;
     <div class="mt-10 space-y-14">
       {groups.map(({ group, articles }) =>
         articles.length > 0 ? (
-          <section class="sop-group scroll-mt-20" id={group}>
+          <section class="sop-group reveal scroll-mt-20" id={group}>
             <h2 class="title-h2 flex items-baseline gap-2 text-xl font-semibold tracking-tight">
               {t(lang, groupKey(group))}
               <span class="text-sm font-normal tabular-nums text-muted">{articles.length}</span>

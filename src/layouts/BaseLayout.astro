@@ -70,7 +70,9 @@ const ogLocaleAlt = lang === 'zh' ? 'en_US' : 'zh_CN';
     {ogTags.map((tag) => <meta property="article:tag" content={tag} />)}
     <script is:inline>
       // 主题：默认跟随系统，可手动覆盖（防 FOUC，必须在 body 前执行）
+      // 顺带标记 js 已启用（.js .reveal 依赖它，避免无 JS 时内容不可见）
       (function () {
+        document.documentElement.classList.add('js');
         try {
           var saved = localStorage.getItem('theme');
           var dark = saved
@@ -105,6 +107,7 @@ const ogLocaleAlt = lang === 'zh' ? 'en_US' : 'zh_CN';
 
     <script>
       import '../scripts/backToTop.ts';
+      import '../scripts/reveal.ts';
     </script>
   </body>
 </html>
