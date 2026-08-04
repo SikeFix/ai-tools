@@ -1,0 +1,85 @@
+{
+  "slug": "plan-m-learning",
+  "title": "Plan M: AI Learning / Paper Reading Workflow",
+  "summary": "Define the goal → gather materials → AI deep reading → active quizzing → knowledge base → spaced review",
+  "scenario": "Best for exam prep, skill acquisition, close reading of papers and building a knowledge system — turning 'read a lot' into 'actually learned'.",
+  "meta": {
+    "duration": "2-3 hours / topic",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "Kimi / Claude / ChatGPT", "url": "https://kimi.com" },
+    { "name": "Perplexity / academic search", "url": "https://perplexity.ai" },
+    { "name": "Notion / note tools", "url": "https://notion.so" },
+    { "name": "Quizlet / Anki", "url": "https://quizlet.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Define the learning goal",
+      "tool": "ChatGPT / Claude",
+      "time": "10 min",
+      "detail": "Turn 'I want to learn X' into a testable goal: 'after this I can explain / build / answer what'. Have the AI break the big goal into a knowledge checklist with priorities.",
+      "tips": "Reverse-engineer what to learn from 'what you should be able to produce' — more focused than marching through a textbook."
+    },
+    {
+      "id": "s2",
+      "title": "Gather materials",
+      "tool": "Perplexity / academic search",
+      "time": "30 min",
+      "detail": "Find surveys, tutorials, papers and primary sources; use AI search to quickly judge which materials are worth close reading and drop outdated or low-quality ones.",
+      "tips": "Read 2-3 surveys/intros to build the framework first, then go deep on specific papers."
+    },
+    {
+      "id": "s3",
+      "title": "AI deep reading",
+      "tool": "Kimi / Claude",
+      "time": "30-60 min",
+      "detail": "Feed the whole paper/long text to the model: extract the core thesis, method, findings and key concepts, and surface the terms you must tackle one by one.",
+      "tips": "Ask for Socratic-style guidance — have it quiz you instead of handing over the answer."
+    },
+    {
+      "id": "s4",
+      "title": "Active quizzing",
+      "tool": "ChatGPT / Claude + quizzes",
+      "time": "30 min",
+      "detail": "Active recall beats rereading: have the AI quiz you (MCQ / short answer / applied), and go back to the source on mistakes. Use Feynman — explain it to the AI and let it poke holes.",
+      "tips": "Ask for variant questions on your persistent weak spots for maximum mistake-book effect."
+    },
+    {
+      "id": "s5",
+      "title": "Knowledge base",
+      "tool": "Notion / note tools",
+      "time": "30 min",
+      "detail": "Write what you understand in your own words as 'concept card + links'; have the AI reorganize scattered notes into a structured knowledge map.",
+      "tips": "Notes exist for quick recall, not transcription; each card carries one line — 'what I can use this for'."
+    },
+    {
+      "id": "s6",
+      "title": "Spaced review",
+      "tool": "Quizlet / Anki",
+      "time": "Weekly",
+      "detail": "Turn weak points into flashcards and review on a spaced schedule; have the AI run a weekly comprehensive quiz to check overall mastery.",
+      "tips": "Spaced repetition (day 1 / 3 / 7) sticks far better than cramming; twenty minutes a week is enough."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Reading summaries, not sources",
+      "detail": "AI summaries are a map, not the territory; go back to the original for key passages or your understanding stays shallow."
+    },
+    {
+      "title": "Passive reading",
+      "detail": "Highlighting isn't learning; replace 'reading through once' with quizzing and Feynman-style recall."
+    },
+    {
+      "title": "Notes you never revisit",
+      "detail": "Notes that go stale are wasted effort; fold them into the spaced-review loop."
+    },
+    {
+      "title": "Unverified AI answers",
+      "detail": "The model can state wrong concepts or fabricate citations; cross-check key claims against sources."
+    }
+  ]
+}

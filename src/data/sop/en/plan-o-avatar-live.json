@@ -1,0 +1,85 @@
+{
+  "slug": "plan-o-avatar-live",
+  "title": "Plan O: AI Digital-Human Live Streaming",
+  "summary": "Platform & compliance → avatar → script → smart interaction → studio setup → data optimization",
+  "scenario": "Best for teams that want 24/7 streaming, batch avatar selling or brand live rooms without a human always on camera.",
+  "meta": {
+    "duration": "1-2 days / studio",
+    "cost": "Medium",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "Silicon Intelligence / Tencent Zhiying", "url": "https://zenvideo.qq.com" },
+    { "name": "HeyGen / D-ID", "url": "https://heygen.com" },
+    { "name": "ChatGPT / Claude", "url": "https://claude.ai" },
+    { "name": "Streaming console / control panel", "url": "" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Platform and compliance check",
+      "tool": "Platform rules + you",
+      "time": "30 min",
+      "detail": "Confirm the target platform's requirements for digital-human streams (some require a visible AI label) and category licenses; read the rules first to avoid a ban.",
+      "tips": "Compliance is the first gate; missing AI labels, bait copy and prohibited goods are the top ban triggers."
+    },
+    {
+      "id": "s2",
+      "title": "Avatar",
+      "tool": "Silicon Intelligence / Tencent Zhiying / HeyGen",
+      "time": "1-2 hours",
+      "detail": "Pick a preset avatar or clone a real presenter; the avatar should match the brand/goods vibe, with natural motion and lip sync.",
+      "tips": "Lip sync follows punctuation — normalize the script's punctuation before feeding the system."
+    },
+    {
+      "id": "s3",
+      "title": "Script",
+      "tool": "ChatGPT / Claude",
+      "time": "1-2 hours",
+      "detail": "Write live-sell copy (open with a hook, product explain, upsell, Q&A) in loop segments so the avatar can keep talking; prepare standard answers for frequent questions.",
+      "tips": "Design copy in 3-5 minute loops so you can adjust nodes for stock and price live."
+    },
+    {
+      "id": "s4",
+      "title": "Smart interaction",
+      "tool": "Console + AI Q&A",
+      "time": "1 hour",
+      "detail": "Wire comment auto-reply: FAQ copy for common questions, fallback or human handoff for complex ones; set banned-word interception.",
+      "tips": "Interaction keeps people in the room; comment response speed matters more than fancy copy."
+    },
+    {
+      "id": "s5",
+      "title": "Studio setup",
+      "tool": "Streaming companion / console",
+      "time": "1-2 hours",
+      "detail": "Configure encoding, background, overlays, product shelf and coupons; test audio-video sync and latency with a 10-minute trial stream.",
+      "tips": "Trial at low traffic for an hour before scaling ad spend; don't burn budget on day one."
+    },
+    {
+      "id": "s6",
+      "title": "Data optimization",
+      "tool": "Streaming analytics",
+      "time": "Per session",
+      "detail": "Watch entry rate, dwell, engagement and conversion; feed metrics to the AI to review copy and pacing, then iterate the next session.",
+      "tips": "The bottleneck is usually script and interaction, not the avatar; A/B test copy variants."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Platform review and bans",
+      "detail": "Digital-human streams must follow platform AI rules; unlabeled AI, bait copy and prohibited categories all risk bans."
+    },
+    {
+      "title": "Stiff looping copy",
+      "detail": "Viewers see through an obvious loop instantly; keep iterating copy loops and interaction design off the data."
+    },
+    {
+      "title": "Interaction falling behind",
+      "detail": "Unanswered comments bleed the audience; auto-reply plus fallback and human handoff for complex ones."
+    },
+    {
+      "title": "Out-of-sync lips and audio",
+      "detail": "Mismatched lips feel terrible; normalize script punctuation and audio before going live."
+    }
+  ]
+}

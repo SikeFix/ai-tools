@@ -1,0 +1,195 @@
+[
+  {
+    "slug": "perplexity",
+    "caps": [
+      "search",
+      "research",
+      "summarization"
+    ],
+    "useCasesZh": [
+      "带引用来源的搜索",
+      "Deep Research 深度报告",
+      "学术与竞品调研",
+      "快速事实核查"
+    ],
+    "useCasesEn": [
+      "Search with cited sources",
+      "Deep Research reports",
+      "Academic and competitor research",
+      "Quick fact-checking"
+    ]
+  },
+  {
+    "slug": "chatgpt-search",
+    "caps": [
+      "search",
+      "research"
+    ],
+    "useCasesZh": [
+      "对话式联网搜索",
+      "带来源的答案",
+      "与对话记忆结合",
+      "实时信息查询"
+    ],
+    "useCasesEn": [
+      "Conversational web search",
+      "Answers with sources",
+      "Combined with conversation memory",
+      "Real-time information lookup"
+    ]
+  },
+  {
+    "slug": "ai-overviews",
+    "caps": [
+      "search",
+      "summarization"
+    ],
+    "useCasesZh": [
+      "Google 搜索内置摘要",
+      "零成本获取 AI 答案",
+      "快速了解陌生话题",
+      "对比类查询"
+    ],
+    "useCasesEn": [
+      "AI summaries inside Google Search",
+      "Free AI answers",
+      "Quickly grasp unfamiliar topics",
+      "Comparison queries"
+    ]
+  },
+  {
+    "slug": "genspark",
+    "caps": [
+      "research",
+      "search",
+      "summarization"
+    ],
+    "useCasesZh": [
+      "多智能体深度研究",
+      "自动生成结构化结果页",
+      "复杂主题综述",
+      "报告与对比"
+    ],
+    "useCasesEn": [
+      "Multi-agent deep research",
+      "Auto-generated structured result pages",
+      "Comprehensive topic reviews",
+      "Reports and comparisons"
+    ]
+  },
+  {
+    "slug": "you",
+    "caps": [
+      "search",
+      "writing"
+    ],
+    "useCasesZh": [
+      "切换多模型搜索",
+      "个性化搜索偏好",
+      "生成式回答",
+      "隐私相对友好"
+    ],
+    "useCasesEn": [
+      "Switch between multiple models",
+      "Personalized search preferences",
+      "Generative answers",
+      "Privacy-leaning"
+    ]
+  },
+  {
+    "slug": "phind",
+    "caps": [
+      "search",
+      "code-gen"
+    ],
+    "useCasesZh": [
+      "开发者代码搜索",
+      "框架问题排查",
+      "技术文档问答",
+      "错误信息定位"
+    ],
+    "useCasesEn": [
+      "Developer-focused code search",
+      "Framework troubleshooting",
+      "Tech doc Q&A",
+      "Error message diagnosis"
+    ]
+  },
+  {
+    "slug": "kagi",
+    "caps": [
+      "search",
+      "research"
+    ],
+    "useCasesZh": [
+      "付费无广告搜索",
+      "独立索引隐私优先",
+      "搜索工具定制",
+      "AI 摘要"
+    ],
+    "useCasesEn": [
+      "Paid, ad-free search",
+      "Independent index, privacy-first",
+      "Customizable search tools",
+      "AI summaries"
+    ]
+  },
+  {
+    "slug": "brave",
+    "caps": [
+      "search",
+      "summarization"
+    ],
+    "useCasesZh": [
+      "独立索引搜索",
+      "隐私保护",
+      "内置 AI 摘要",
+      "无追踪"
+    ],
+    "useCasesEn": [
+      "Independent-index search",
+      "Privacy protection",
+      "Built-in AI summaries",
+      "No tracking"
+    ]
+  },
+  {
+    "slug": "ragflow",
+    "caps": [
+      "rag",
+      "research",
+      "llm-dev"
+    ],
+    "useCasesZh": [
+      "企业知识库问答",
+      "复杂文档检索",
+      "混合检索 RAG",
+      "私有化知识库"
+    ],
+    "useCasesEn": [
+      "Enterprise knowledge-base Q&A",
+      "Complex document retrieval",
+      "Hybrid-retrieval RAG",
+      "Private knowledge bases"
+    ]
+  },
+  {
+    "slug": "vane",
+    "caps": [
+      "search",
+      "research"
+    ],
+    "useCasesZh": [
+      "自托管 AI 搜索",
+      "本地模型深度搜索",
+      "隐私搜索",
+      "开源版 Perplexity"
+    ],
+    "useCasesEn": [
+      "Self-hosted AI search",
+      "Deep search with local models",
+      "Privacy-focused search",
+      "Open-source Perplexity"
+    ]
+  }
+]

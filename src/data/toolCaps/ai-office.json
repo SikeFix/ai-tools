@@ -1,0 +1,159 @@
+[
+  {
+    "slug": "m365-copilot",
+    "caps": [
+      "slides",
+      "writing",
+      "summarization",
+      "workflow"
+    ],
+    "useCasesZh": [
+      "Word/PPT/Excel 内嵌 AI",
+      "会议纪要自动生成",
+      "邮件起草与总结",
+      "企业级 Agent 流程"
+    ],
+    "useCasesEn": [
+      "AI inside Word, PPT and Excel",
+      "Auto meeting summaries",
+      "Email drafting and summarization",
+      "Enterprise agent workflows"
+    ]
+  },
+  {
+    "slug": "gamma",
+    "caps": [
+      "slides",
+      "writing",
+      "website"
+    ],
+    "useCasesZh": [
+      "一句提示词生成 PPT",
+      "文档与网页快速成型",
+      "演示设计与改版",
+      "汇报材料"
+    ],
+    "useCasesEn": [
+      "Generate slides from one prompt",
+      "Quick docs and webpages",
+      "Presentation design and restyle",
+      "Reporting materials"
+    ]
+  },
+  {
+    "slug": "notion",
+    "caps": [
+      "summarization",
+      "writing",
+      "workflow",
+      "meeting-notes"
+    ],
+    "useCasesZh": [
+      "知识库问答",
+      "笔记智能整理",
+      "数据库自动化",
+      "团队工作流"
+    ],
+    "useCasesEn": [
+      "Knowledge-base Q&A",
+      "Smart note organization",
+      "Database automation",
+      "Team workflows"
+    ]
+  },
+  {
+    "slug": "motion",
+    "caps": [
+      "schedule"
+    ],
+    "useCasesZh": [
+      "AI 自动排日程",
+      "任务时间分配",
+      "会议穿插优化",
+      "专注时间保护"
+    ],
+    "useCasesEn": [
+      "AI auto-scheduling",
+      "Task time allocation",
+      "Meeting optimization",
+      "Focus-time protection"
+    ]
+  },
+  {
+    "slug": "reclaim",
+    "caps": [
+      "schedule"
+    ],
+    "useCasesZh": [
+      "自动保护专注时间",
+      "智能排会避冲突",
+      "习惯时间预留",
+      "日历优化"
+    ],
+    "useCasesEn": [
+      "Auto-protect focus time",
+      "Conflict-free meeting booking",
+      "Habit time blocking",
+      "Calendar optimization"
+    ]
+  },
+  {
+    "slug": "otter",
+    "caps": [
+      "meeting-notes",
+      "summarization"
+    ],
+    "useCasesZh": [
+      "实时会议转录",
+      "发言人识别",
+      "会议要点提取",
+      "团队知识沉淀"
+    ],
+    "useCasesEn": [
+      "Real-time meeting transcription",
+      "Speaker identification",
+      "Meeting highlight extraction",
+      "Team knowledge capture"
+    ]
+  },
+  {
+    "slug": "fireflies",
+    "caps": [
+      "meeting-notes",
+      "summarization",
+      "search"
+    ],
+    "useCasesZh": [
+      "会议录制转录",
+      "自动总结与行动项",
+      "历史会议检索",
+      "CRM 联动"
+    ],
+    "useCasesEn": [
+      "Meeting recording and transcription",
+      "Auto summaries and action items",
+      "Search past meetings",
+      "CRM integration"
+    ]
+  },
+  {
+    "slug": "markitdown",
+    "caps": [
+      "document",
+      "automation",
+      "llm-dev"
+    ],
+    "useCasesZh": [
+      "PDF/PPT/Excel 转 Markdown",
+      "喂给 LLM 前转档",
+      "批量文档转换",
+      "MCP 集成"
+    ],
+    "useCasesEn": [
+      "Convert PDF/PPT/Excel to Markdown",
+      "Normalize files before LLM",
+      "Batch document conversion",
+      "MCP integration"
+    ]
+  }
+]

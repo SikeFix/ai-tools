@@ -1,0 +1,85 @@
+{
+  "slug": "plan-r-video-edit",
+  "title": "Plan R: AI Video Editing / Clipping",
+  "summary": "Asset review → find highlights → smart clipping → captions & packaging → platform versions → data optimization",
+  "scenario": "Best for cutting long videos (live replays, long talks, courses) into short clips, or batch content from existing footage.",
+  "meta": {
+    "duration": "30-60 min / clip",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "CapCut", "url": "https://www.capcut.cn" },
+    { "name": "Descript", "url": "https://descript.com" },
+    { "name": "Whisper / smart captions", "url": "" },
+    { "name": "ChatGPT / Claude", "url": "https://claude.ai" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Review assets and set goals",
+      "tool": "ChatGPT / Claude + you",
+      "time": "10 min",
+      "detail": "Decide which long videos to clip, the target platform, and each clip's theme and length; skim for likely highlight segments.",
+      "tips": "Decide 'what you're cutting for whom' before hunting highlights; a wrong topic wastes a good edit."
+    },
+    {
+      "id": "s2",
+      "title": "Locate highlights",
+      "tool": "Whisper + AI analysis",
+      "time": "15-30 min",
+      "detail": "Transcribe with Whisper and have the AI flag 'bang / insight / quote / conflict' moments with timestamps, zeroing in on the best 30-90 second segments.",
+      "tips": "AI timestamps plus quick human confirmation is an order of magnitude faster than watching frame by frame."
+    },
+    {
+      "id": "s3",
+      "title": "Smart clipping",
+      "tool": "CapCut / Descript",
+      "time": "15-30 min",
+      "detail": "Cut segments on the timestamps, drop filler and dead air; use AI caption alignment and optionally reorder or add transitions.",
+      "tips": "Cut on a complete sentence boundary, never mid-thought."
+    },
+    {
+      "id": "s4",
+      "title": "Captions and packaging",
+      "tool": "CapCut",
+      "time": "10-20 min",
+      "detail": "AI captions (proofread proper nouns) plus title, stickers and intro; adapt to 9:16 vertical and highlight key words to hold attention.",
+      "tips": "Proofread names and jargon manually; put the hook in the first-3-seconds caption."
+    },
+    {
+      "id": "s5",
+      "title": "Platform versions",
+      "tool": "CapCut + AI rewrite",
+      "time": "10 min",
+      "detail": "Produce 9:16 vertical plus 16:9 horizontal from the same clip; adapt titles and cover copy per platform (AI generates variants, you pick).",
+      "tips": "Ship one clip with 2-3 titles across platforms to test which gets the clicks."
+    },
+    {
+      "id": "s6",
+      "title": "Data optimization",
+      "tool": "Platform analytics + AI",
+      "time": "Weekly",
+      "detail": "Watch completion rate and drop-off points; feed the data to the AI to learn which highlight style cuts best, and iterate your clipping standard.",
+      "tips": "Log each clip's topic and cut style to build your own 'clipping playbook'."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Dragging pacing",
+      "detail": "Clips that keep too much setup die; keep one highlight per clip and open with the hook in 3 seconds."
+    },
+    {
+      "title": "Caption typos",
+      "detail": "AI captions mangle names and jargon; proofread before publishing."
+    },
+    {
+      "title": "Quality loss",
+      "detail": "Repeated compression turns to mush; export at high bitrate and crop vertical from source rather than upscaling."
+    },
+    {
+      "title": "Repost compliance",
+      "detail": "Clipping others' content risks copyright; cut only your own footage or with permission."
+    }
+  ]
+}

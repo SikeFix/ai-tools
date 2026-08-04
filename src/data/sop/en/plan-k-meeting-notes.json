@@ -1,0 +1,77 @@
+{
+  "slug": "plan-k-meeting-notes",
+  "title": "Plan K: AI Meeting Notes Workflow",
+  "summary": "Record & transcribe → AI summary → extract action items → archive & distribute → follow up & review",
+  "scenario": "Best for regular meetings, client calls, brainstorming and interviews — turning 'meetings you had' into executable knowledge assets.",
+  "meta": {
+    "duration": "15-30 min / session",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "Otter / Fireflies / Tongyi Tingwu", "url": "https://otter.ai" },
+    { "name": "ChatGPT / Claude", "url": "https://claude.ai" },
+    { "name": "Notion / Feishu Docs", "url": "https://notion.so" },
+    { "name": "Calendar / task tools", "url": "" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Record and transcribe",
+      "tool": "Otter / Fireflies / Tongyi Tingwu",
+      "time": "Automatic",
+      "detail": "Auto-record and transcribe the meeting. For Chinese meetings, domestic tools like Tongyi Tingwu transcribe more accurately. Confirm recording consent — that's the compliance baseline.",
+      "tips": "Skim the transcript first and fix mis-transcribed names/jargon so they don't pollute the summary."
+    },
+    {
+      "id": "s2",
+      "title": "AI summary",
+      "tool": "ChatGPT / Claude",
+      "time": "5 min",
+      "detail": "Feed the transcript to an LLM for a structured summary: meeting goal, key discussions, decisions. Give it an output template (goal / discussion / decisions / todos) for consistent format.",
+      "tips": "Provide a 'notes template' as a few-shot example so output archives consistently."
+    },
+    {
+      "id": "s3",
+      "title": "Extract action items",
+      "tool": "ChatGPT / Claude",
+      "time": "5 min",
+      "detail": "Have the model pull every action item from the transcript: what was decided, who owns it, deadline. Action items are the most valuable part of meeting notes.",
+      "tips": "Ask for 'owner + task + due' triples so you can import them straight into a task tool."
+    },
+    {
+      "id": "s4",
+      "title": "Archive and distribute",
+      "tool": "Notion / Feishu Docs",
+      "time": "5 min",
+      "detail": "Archive the summary plus the raw transcript in the knowledge base with date, attendees and related docs; auto-share to attendees and sync tasks to calendar/board.",
+      "tips": "Keep a link to the raw transcript so people can check details without replaying the whole call."
+    },
+    {
+      "id": "s5",
+      "title": "Follow up and review",
+      "tool": "Task tools + calendar",
+      "time": "Weekly",
+      "detail": "Check last round's action items at the start of the next meeting and do a short review; escalate anything that keeps slipping.",
+      "tips": "Make action items a fixed opener in your meeting template — clear old debts first, then new business."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Compliance and privacy",
+      "detail": "Recording and transcription need attendee consent; be cautious with cloud transcription for confidential meetings."
+    },
+    {
+      "title": "Speaker misattribution",
+      "detail": "Multi-speaker meetings often mislabel who said what; manually confirm 'who said what' for key decisions."
+    },
+    {
+      "title": "Missed action items",
+      "detail": "AI can miss implicit commitments; walk through an 'owner + task + due' list line by line."
+    },
+    {
+      "title": "Over-compression loses context",
+      "detail": "Too-tight summaries drop discussion background; keep the raw transcript link for reference."
+    }
+  ]
+}

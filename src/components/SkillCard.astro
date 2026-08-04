@@ -1,0 +1,70 @@
+---
+import type { Lang, Skill } from '../lib/types';
+import { skillDesc } from '../lib/skills';
+import { localePath, t } from '../lib/i18n';
+
+interface Props {
+  skill: Skill;
+  lang: Lang;
+}
+
+const { skill, lang } = Astro.props;
+const href = localePath(lang, `/skills/${skill.slug}/`);
+
+const sourceClass: Record<Skill['source'], string> = {
+  official: 'bg-accent/10 text-accent',
+  community: 'bg-surface-2 text-muted',
+  builtin: 'bg-surface-2 text-muted',
+};
+
+const query = [skill.name, skill.descZh, skill.descEn, ...(skill.tags ?? [])]
+  .join(' ')
+  .toLowerCase();
+---
+
+<article
+  class="skill-card flex flex-col rounded-2xl border border-border bg-surface p-5 shadow-card transition duration-200 hover:-translate-y-1 hover:shadow-lift"
+  data-query={query}
+>
+  <div class="flex items-start justify-between gap-2">
+    <a href={href} class="title-h3 font-semibold transition hover:text-accent">
+      {skill.name}
+    </a>
+    <span
+      class={[
+        'inline-flex shrink-0 items-center whitespace-nowrap rounded-full px-2 py-0.5 text-xs font-medium',
+        sourceClass[skill.source],
+      ].join(' ')}
+    >
+      {t(lang, `skills.source.${skill.source}`)}
+    </span>
+  </div>
+
+  <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">{skillDesc(skill, lang)}</p>
+
+  <div class="mt-4 flex flex-wrap items-center gap-1.5 border-t border-border pt-3">
+    {(skill.tags ?? []).slice(0, 3).map((tag) => (
+      <span class="rounded-full bg-surface-2 px-2 py-0.5 font-mono text-[11px] text-muted">
+        #{tag}
+      </span>
+    ))}
+  </div>
+
+  <div class="mt-3 flex flex-wrap items-center justify-between gap-2">
+    {skill.install ? (
+      <span class="font-mono text-[11px] text-muted">{skill.install}</span>
+    ) : (
+      <span class="font-mono text-[11px] text-muted">.claude/skills</span>
+    )}
+    {skill.url && (
+      <a
+        href={skill.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-xs font-medium text-accent hover:underline"
+      >
+        {t(lang, 'skills.viewSource')} <span aria-hidden="true">↗</span>
+      </a>
+    )}
+  </div>
+</article>

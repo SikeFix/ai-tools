@@ -1,0 +1,160 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Callout from '../../../components/Callout.astro';
+import Timeline from '../../../components/Timeline.astro';
+import { getSopArticles } from '../../../lib/sop';
+import { findToolByName } from '../../../lib/tools';
+import { t, localePath } from '../../../lib/i18n';
+import type { Lang } from '../../../lib/types';
+
+export function getStaticPaths() {
+  const langs: Array<Lang | undefined> = [undefined, 'en'];
+  return langs.flatMap((lang) =>
+    getSopArticles((lang as Lang) ?? 'zh').map((article) => ({
+      params: { lang, slug: article.slug },
+      props: { article },
+    })),
+  );
+}
+
+const { article } = Astro.props;
+const lang: Lang = (Astro.params.lang as Lang | undefined) ?? 'zh';
+const all = getSopArticles(lang);
+const idx = all.findIndex((item) => item.slug === article.slug);
+const prev = idx > 0 ? all[idx - 1] : undefined;
+const next = idx >= 0 && idx < all.length - 1 ? all[idx + 1] : undefined;
+const canonicalPath = `/sop/${article.slug}/`;
+---
+
+<BaseLayout
+  lang={lang}
+  title={article.title}
+  description={article.summary}
+  canonicalPath={canonicalPath}
+  ogType="article"
+>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: article.title,
+        description: article.summary,
+        step: article.steps.map((step, i) => ({
+          '@type': 'HowToStep',
+          position: i + 1,
+          name: step.title,
+          text: step.detail,
+        })),
+      })}
+    />
+  </Fragment>
+
+  <div class="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+    <!-- 面包屑 -->
+    <nav
+      class="mb-6 flex flex-wrap items-center gap-1.5 text-sm text-muted"
+      aria-label="Breadcrumb"
+    >
+      <a href={localePath(lang, '/')} class="hover:text-text">{t(lang, 'breadcrumb.home')}</a>
+      <span aria-hidden="true">/</span>
+      <a href={localePath(lang, '/sop/')} class="hover:text-text">{t(lang, 'breadcrumb.sop')}</a>
+    </nav>
+
+    <h1 class="title-h1 text-3xl font-bold tracking-tight sm:text-4xl">{article.title}</h1>
+    <p class="mt-3 max-w-xl text-base leading-relaxed text-muted">{article.summary}</p>
+
+    <dl class="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm tabular-nums">
+      <div class="flex gap-1.5">
+        <dt class="text-muted">{t(lang, 'sop.meta.duration')}</dt>
+        <dd class="font-medium">{article.meta.duration}</dd>
+      </div>
+      <div class="flex gap-1.5">
+        <dt class="text-muted">{t(lang, 'sop.meta.cost')}</dt>
+        <dd class="font-medium">{article.meta.cost}</dd>
+      </div>
+      <div class="flex gap-1.5">
+        <dt class="text-muted">{t(lang, 'sop.meta.difficulty')}</dt>
+        <dd class="font-medium">{article.meta.difficulty}</dd>
+      </div>
+    </dl>
+
+    <!-- 适用场景 -->
+    <div class="mt-8">
+      <Callout tone="info" title={t(lang, 'sop.scenario')}>
+        {article.scenario}
+      </Callout>
+    </div>
+
+    <!-- 操作步骤 -->
+    <section class="mt-10">
+      <h2 class="title-h2 mb-4 text-lg font-semibold tracking-tight">{t(lang, 'sop.steps')}</h2>
+      <Timeline steps={article.steps} lang={lang} />
+    </section>
+
+    <!-- 用到的工具（能匹配到站内工具详情的优先站内链接） -->
+    <section class="mt-10">
+      <h2 class="title-h2 mb-4 text-lg font-semibold tracking-tight">{t(lang, 'sop.tools')}</h2>
+      <div class="flex flex-wrap gap-2">
+        {article.toolsNeeded.map((tool) => {
+          const matched = findToolByName(tool.name);
+          const internalHref = matched ? localePath(lang, `/tools/${matched.slug}/`) : null;
+          const href = internalHref ?? tool.url;
+          return href ? (
+            <a
+              href={href}
+              target={internalHref ? undefined : '_blank'}
+              rel={internalHref ? undefined : 'noopener noreferrer'}
+              class="chip hover:border-accent hover:text-accent"
+            >
+              {tool.name}
+              {internalHref ? '' : <span aria-hidden="true">↗</span>}
+            </a>
+          ) : (
+            <span class="chip">{tool.name}</span>
+          );
+        })}
+      </div>
+    </section>
+
+    <!-- 避坑清单 -->
+    <section class="mt-10">
+      <h2 class="title-h2 mb-4 text-lg font-semibold tracking-tight">{t(lang, 'sop.pitfalls')}</h2>
+      <div class="space-y-3">
+        {article.pitfalls.map((pitfall) => (
+          <Callout tone="warning" title={pitfall.title}>
+            {pitfall.detail}
+          </Callout>
+        ))}
+      </div>
+    </section>
+
+    <!-- 上一篇 / 下一篇 -->
+    <nav class="mt-12 flex flex-wrap items-center justify-between gap-3 border-t border-border pt-6">
+      {prev ? (
+        <a
+          href={localePath(lang, `/sop/${prev.slug}/`)}
+          class="max-w-[45%] rounded-lg border border-border px-3 py-2 text-sm transition hover:border-accent hover:text-accent"
+        >
+          <span class="mr-1 text-muted">← {t(lang, 'sop.prev')}</span>
+          <span class="block truncate font-medium">{prev.title}</span>
+        </a>
+      ) : (
+        <span></span>
+      )}
+      {next ? (
+        <a
+          href={localePath(lang, `/sop/${next.slug}/`)}
+          class="max-w-[45%] rounded-lg border border-border px-3 py-2 text-right text-sm transition hover:border-accent hover:text-accent"
+        >
+          <span class="ml-1 text-muted">{t(lang, 'sop.next')} →</span>
+          <span class="block truncate font-medium">{next.title}</span>
+        </a>
+      ) : (
+        <span></span>
+      )}
+    </nav>
+  </div>
+</BaseLayout>

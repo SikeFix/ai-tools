@@ -1,0 +1,85 @@
+{
+  "slug": "plan-l-podcast",
+  "title": "方案 L：AI 播客制作工作流",
+  "summary": "选题定位 → 脚本提纲 → 录制/TTS → AI 剪辑 → 音质配乐 → 发布分发",
+  "scenario": "适合想做播客、知识付费或品牌音频内容的人，从选题到上线一集可听的节目。",
+  "meta": {
+    "duration": "2-4 小时 / 集",
+    "cost": "低",
+    "difficulty": "入门"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT / Claude", "url": "https://claude.ai" },
+    { "name": "ElevenLabs / MiniMax", "url": "https://elevenlabs.io" },
+    { "name": "Descript / 剪映", "url": "https://descript.com" },
+    { "name": "Adobe Podcast / Auphonic", "url": "https://podcast.adobe.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "选题与定位",
+      "tool": "ChatGPT / Claude",
+      "time": "15-30 分钟",
+      "detail": "明确听众、主题方向、单集时长与更新频率；用大模型头脑风暴选题，选 1-2 个对标播客拆解结构与节奏。",
+      "tips": "先定「这集解决听众什么问题」，再定选题；垂直比泛泛更容易积累听众。"
+    },
+    {
+      "id": "s2",
+      "title": "脚本与提纲",
+      "tool": "ChatGPT / Claude",
+      "time": "30-60 分钟",
+      "detail": "访谈节目写问题清单 + 嘉宾背景；单口节目写分段提纲（钩子→展开→行动）。给 AI 你的风格，让它出首版再改。",
+      "tips": "把想聊的 3-5 个核心问题写进提纲，比逐字稿更自然、更有对话感。"
+    },
+    {
+      "id": "s3",
+      "title": "录制或 TTS 配音",
+      "tool": "真人录制 / ElevenLabs / MiniMax",
+      "time": "1-2 小时",
+      "detail": "有嘉宾用远程录音（各自本地录制保证音质）；单人可真人录制或 AI 配音。AI 配音用 ElevenLabs/MiniMax 中文音色，多抽几个音色挑顺耳的。",
+      "tips": "AI 配音长句拆短、多标点，听感更自然；口播前先录一段试听。"
+    },
+    {
+      "id": "s4",
+      "title": "AI 剪辑",
+      "tool": "Descript / 剪映",
+      "time": "30-60 分钟",
+      "detail": "用文字时间线剪辑（Descript）：删口误、停顿、重复直接删文字；Overdub 改错字。剪映做分段与基础剪辑。",
+      "tips": "「文字改音频」是先写后剪，能保住语感；删掉的段落先听一遍确认上下文通顺。"
+    },
+    {
+      "id": "s5",
+      "title": "音质优化与配乐",
+      "tool": "Adobe Podcast / Auphonic",
+      "time": "15-30 分钟",
+      "detail": "一键降噪去混响（Adobe Podcast/Auphonic）；统一响度到播客标准（约 -16 LUFS）；片头片尾 BGM 音量压低。",
+      "tips": "响度一致性比音质本身更能提升「专业感」；BGM 压到人声 30% 以下。"
+    },
+    {
+      "id": "s6",
+      "title": "发布与分发",
+      "tool": "播客托管平台",
+      "time": "30 分钟",
+      "detail": "生成封面、shownotes（用 AI 写摘要 + 时间戳 + 链接）与 RSS；同步到小宇宙/苹果播客/Spotify；做合集页沉淀。",
+      "tips": "shownotes 带时间戳（AI 可生成），听众能直接跳到感兴趣的部分，完听率更高。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "音质差",
+      "detail": "嘈杂环境直接录是大忌；优先安静房间 + 近麦，后期用 AI 降噪兜底。"
+    },
+    {
+      "title": "口误与拖沓没剪",
+      "detail": "文字剪辑几分钟就能剪完；留太多废话会让听众流失。"
+    },
+    {
+      "title": "shownotes 空白",
+      "detail": "空 shownotes 等于浪费 SEO 与转发点；用 AI 生成摘要、时间戳与相关链接。"
+    },
+    {
+      "title": "AI 配音太机械",
+      "detail": "纯 AI 配音长对话听感疲劳；标点、情绪标签、音色选择都能救回不少。"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+---
+import type { Lang, SopArticle } from '../lib/types';
+import { localePath, t } from '../lib/i18n';
+import { getSopLetter } from '../lib/sop';
+
+interface Props {
+  article: SopArticle;
+  lang: Lang;
+}
+
+const { article, lang } = Astro.props;
+const letter = getSopLetter(article.slug);
+const query = [
+  article.title,
+  article.summary,
+  article.scenario,
+  ...article.toolsNeeded.map((tool) => tool.name),
+]
+  .join(' ')
+  .toLowerCase();
+---
+
+<a
+  href={localePath(lang, `/sop/${article.slug}/`)}
+  class="sop-card group flex flex-col rounded-2xl border border-border bg-surface p-5 shadow-card transition duration-200 hover:-translate-y-1 hover:shadow-lift"
+  data-query={query}
+>
+  <span
+    class="inline-flex w-fit items-center rounded-full bg-surface-2 px-2.5 py-0.5 font-mono text-xs font-semibold text-muted"
+    aria-hidden="true"
+  >
+    {letter}
+  </span>
+  <h3 class="title-h3 mt-3 font-semibold transition group-hover:text-accent">
+    {article.title}
+  </h3>
+  <p class="mt-2 line-clamp-3 text-sm leading-relaxed text-muted">{article.summary}</p>
+  <dl class="mt-4 flex flex-wrap gap-x-4 gap-y-1 border-t border-border pt-3 text-xs tabular-nums text-muted">
+    <div class="flex gap-1">
+      <dt>{t(lang, 'sop.meta.duration')}：</dt>
+      <dd class="text-text">{article.meta.duration}</dd>
+    </div>
+    <div class="flex gap-1">
+      <dt>{t(lang, 'sop.meta.cost')}：</dt>
+      <dd class="text-text">{article.meta.cost}</dd>
+    </div>
+    <div class="flex gap-1">
+      <dt>{t(lang, 'sop.meta.difficulty')}：</dt>
+      <dd class="text-text">{article.meta.difficulty}</dd>
+    </div>
+  </dl>
+</a>

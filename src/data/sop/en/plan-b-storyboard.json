@@ -1,0 +1,98 @@
+{
+  "slug": "plan-b-storyboard",
+  "title": "Plan B: Text-to-Video Storyboards (Pro)",
+  "summary": "3-layer planning → prompt engineering → consistency assets → animatic preview → shot generation → sound design → spec-driven assembly + QC gates",
+  "scenario": "Best for AI short dramas, manga animation, promos and TVC-style shorts. Storyboard-driven, consistency-managed, with hard QC gates — the most engineering-grade text-to-video route in the community.",
+  "meta": {
+    "duration": "2-4 hours / video",
+    "cost": "Medium-High",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT / Claude", "url": "https://claude.ai" },
+    { "name": "Jimeng / Seedance / Kling", "url": "https://jimeng.jianying.com" },
+    { "name": "Midjourney / ComfyUI", "url": "https://midjourney.com" },
+    { "name": "ElevenLabs / MiniMax + Suno", "url": "https://elevenlabs.io" },
+    { "name": "FFmpeg / CapCut / DaVinci", "url": "https://ffmpeg.org" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Script and 3-layer shot planning",
+      "tool": "ChatGPT / Claude",
+      "time": "30-60 min",
+      "detail": "Plan recursively in three layers — Event (narrative skeleton) → Scene (dramatic units, time/place) → Shot (storyboard table). Each shot row has: shot number, shot size (wide/full/medium/close/insert), camera movement (push/pull/pan/tilt/track), camera position, lighting, visual content, dialogue/sound, and duration. Generate 2-3 camera options per scene and pick the best.",
+      "tips": "Fewer shots means more control — keep short films to 20-40 shots. The storyboard is the single source of truth for every later step."
+    },
+    {
+      "id": "s2",
+      "title": "Prompt engineering template (character DNA + scene block)",
+      "tool": "Jimeng / Seedance / Kling",
+      "time": "20-30 min",
+      "detail": "Lock a CHARACTER DNA block at the top (Identity / Face / Hair / Outfit / body / vibe / no-drift items); change only the 'scene block' (place / time / action) per shot. Order video prompts by priority: composition → subject → camera move → overall mood, which sharply reduces element conflicts. Keep a fixed negative: no different eye color / no extra characters / no watermark. Log a manifest (prompt / seed / model version / reference image) for reproducibility.",
+      "tips": "Concrete constraints like 'low-angle upward shot, fluid motion, no distortion' beat stacks of adjectives."
+    },
+    {
+      "id": "s3",
+      "title": "Character consistency assets (3 tiers by budget)",
+      "tool": "Midjourney / Jimeng + ComfyUI",
+      "time": "40-90 min",
+      "detail": "Tier 1 (no training, 70-80%): generate front/side/back character sheets as references (Midjourney --cref / Jimeng reference), plain simple background. Tier 2 (no training, ~95%): ComfyUI chain InstantID + IP-Adapter FaceID → ControlNet OpenPose → FaceDetailer; CFG 4-5, IP-Adapter weight 0.6-0.8, fixed seed. Tier 3 (trained, best): train a LoRA on 20-30 multi-angle shots (1024², 1500-3000 steps, lr 1e-4~5e-5). For cross-shot video, lock identity with first/last frames + interpolation.",
+      "tips": "90% of 'face melt' comes from busy references or extreme head-on shots. Make the character sheet clean first."
+    },
+    {
+      "id": "s4",
+      "title": "Animatic preview (iterate almost free)",
+      "tool": "CapCut / FFmpeg",
+      "time": "30-40 min",
+      "detail": "Assemble the whole film from storyboard stills + voiceover to check pacing, shot transitions and timing BEFORE spending money on video generation. This step is nearly free and the most cost-effective iteration point — fixing pacing here can halve your API bill.",
+      "tips": "Animatic-first is the professional consensus: preview in stills, then generate. Never the reverse."
+    },
+    {
+      "id": "s5",
+      "title": "Generate each shot",
+      "tool": "Kling / Jimeng / Vidu / Runway / Seedance",
+      "time": "60-120 min",
+      "detail": "5-8 seconds per shot, using the first-frame image + the tool's subject library ('@' the character) + voice reference. Picks: Kling (Chinese storytelling, physical realism), Jimeng (all-in-one, anime), Vidu (multi-subject consistency), Runway (director-level camera), Seedance (cinematic long takes). On failure (face melt / bad physics), fix the first frame or prompt and retry — cheaper than fixing in post.",
+      "tips": "Generate 2-3 candidates per shot and pick; keep seeds fixed for reproducibility."
+    },
+    {
+      "id": "s6",
+      "title": "Voice, music and ambience",
+      "tool": "ElevenLabs / MiniMax + Suno",
+      "time": "20-40 min",
+      "detail": "Tag emotions per character when dubbing (e.g. [angrily]); lip sync relies on punctuation. Generate BGM with Suno, keep ambience as its own bed layer. For singing scenes, separate vocals with Demucs before driving lip sync to avoid 'mouth flailing'. Lip-sync audio prep: 16-24kHz mono WAV, trim leading silence, add ~0.2s tail, normalize to -3dB peak.",
+      "tips": "Music at ~30% of voice volume; mixing ambience and music as separate layers instantly raises quality."
+    },
+    {
+      "id": "s7",
+      "title": "Spec-driven assembly + QC gates",
+      "tool": "FFmpeg / CapCut / DaVinci",
+      "time": "60-120 min",
+      "detail": "Drive assembly from a timeline spec (film_spec: cuts / music spans / ambience / color / fades) instead of hand-stitching. Triple QC gates: ① Whisper-back each narration line, similarity ≥0.85 or re-synthesize; ② CLIP image-text consistency check to reject drifted keyframes early; ③ final self-review (ffprobe validation, frame sampling, audio level, captions). Resume on interruption; fix a single line with a minimal-repair tool instead of re-rendering.",
+      "tips": "Turn QC into deterministic machine-checkable rules, not eyeballing. Keep storyboard, voice samples and manifest for regression."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Characters morphing ('face melt')",
+      "detail": "Use the 3-tier consistency strategy (reference → InstantID/IP-Adapter → LoRA) plus first/last-frame locking; keep reference backgrounds clean."
+    },
+    {
+      "title": "Conflicting prompt elements",
+      "detail": "Write prompts by priority (composition → subject → camera → mood) and fix negative drift items (eye color / hairstyle / extra characters / watermark)."
+    },
+    {
+      "title": "Spending money before finding problems",
+      "detail": "Always do the Animatic preview (stills + audio) first — iterate pacing there; fixing after generation costs many times more."
+    },
+    {
+      "title": "Misread lines / audio-video drift",
+      "detail": "Whisper-back every line (similarity ≥0.85); prep lip-sync audio per spec (mono, trimmed silence, -3dB)."
+    },
+    {
+      "title": "'Brake' feel on transitions",
+      "detail": "Non-continuous first/last frames create a jarring stop; use seamless straight cuts or speed-ramp + mask fixes, and keep camera motion continuous across adjacent shots."
+    }
+  ]
+}

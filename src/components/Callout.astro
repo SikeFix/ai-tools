@@ -1,0 +1,43 @@
+---
+interface Props {
+  tone?: 'info' | 'warning' | 'success';
+  title?: string;
+  class?: string;
+}
+
+const { tone = 'info', title, class: className } = Astro.props;
+
+const toneClass = {
+  info: 'border border-border bg-surface',
+  warning: 'border border-[rgba(255,107,0,0.35)] bg-[rgba(255,107,0,0.07)]',
+  success: 'border border-[rgba(48,209,88,0.35)] bg-[rgba(48,209,88,0.07)]',
+};
+
+const titleClass = {
+  info: 'text-text',
+  warning: 'text-[#ff6b00]',
+  success: 'text-[#248a3d]',
+};
+
+const icon = {
+  info: '💡',
+  warning: '⚠️',
+  success: '✅',
+};
+
+const darkTitleClass = {
+  info: '',
+  warning: 'dark:text-[#ff7f2a]',
+  success: 'dark:text-[#30d158]',
+};
+---
+
+<div class={['rounded-2xl p-4 text-sm leading-relaxed', toneClass[tone], className].join(' ')}>
+  <p class={['flex items-center gap-2 font-semibold', titleClass[tone], darkTitleClass[tone]].join(' ')}>
+    <span aria-hidden="true">{icon[tone]}</span>
+    {title}
+  </p>
+  <div class="mt-1 text-muted">
+    <slot />
+  </div>
+</div>

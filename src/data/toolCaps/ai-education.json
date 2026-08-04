@@ -1,0 +1,176 @@
+[
+  {
+    "slug": "khanmigo",
+    "caps": [
+      "tutor",
+      "homework",
+      "math"
+    ],
+    "useCasesZh": [
+      "苏格拉底式引导学习",
+      "数学题分步讲解",
+      "作文辅导",
+      "家长监控学习"
+    ],
+    "useCasesEn": [
+      "Socratic-guided learning",
+      "Step-by-step math help",
+      "Essay tutoring",
+      "Parental learning oversight"
+    ]
+  },
+  {
+    "slug": "duolingo-max",
+    "caps": [
+      "tutor",
+      "translate"
+    ],
+    "useCasesZh": [
+      "AI 角色扮演练口语",
+      "视频通话练外语",
+      "个性化错题讲解",
+      "多语言学习"
+    ],
+    "useCasesEn": [
+      "AI roleplay for speaking",
+      "Video-call language practice",
+      "Personalized mistake explanations",
+      "Multi-language learning"
+    ]
+  },
+  {
+    "slug": "gauth",
+    "caps": [
+      "homework",
+      "math",
+      "tutor"
+    ],
+    "useCasesZh": [
+      "拍照解数学题",
+      "理科作业答疑",
+      "多学科题目",
+      "海外爆款"
+    ],
+    "useCasesEn": [
+      "Photo-solving math problems",
+      "STEM homework help",
+      "Multi-subject questions",
+      "Global hit"
+    ]
+  },
+  {
+    "slug": "photomath",
+    "caps": [
+      "math",
+      "homework"
+    ],
+    "useCasesZh": [
+      "拍照分步演算",
+      "手写题识别",
+      "公式解释",
+      "考前复习"
+    ],
+    "useCasesEn": [
+      "Photo step-by-step solutions",
+      "Handwritten problem recognition",
+      "Formula explanations",
+      "Exam prep"
+    ]
+  },
+  {
+    "slug": "socratic",
+    "caps": [
+      "homework",
+      "tutor"
+    ],
+    "useCasesZh": [
+      "免费拍照答疑",
+      "学科知识讲解",
+      "可视化解释",
+      "学生自学"
+    ],
+    "useCasesEn": [
+      "Free photo Q&A",
+      "Subject explanations",
+      "Visual explanations",
+      "Self-study"
+    ]
+  },
+  {
+    "slug": "magicschool",
+    "caps": [
+      "tutor",
+      "writing"
+    ],
+    "useCasesZh": [
+      "备课与教案生成",
+      "出题与作业批改",
+      "80+ 教学工具",
+      "课堂管理"
+    ],
+    "useCasesEn": [
+      "Lesson plan generation",
+      "Quiz creation and grading",
+      "80+ teaching tools",
+      "Classroom management"
+    ]
+  },
+  {
+    "slug": "wolfram-alpha",
+    "caps": [
+      "math",
+      "research"
+    ],
+    "useCasesZh": [
+      "微积分与方程求解",
+      "理化生公式计算",
+      "数据查询",
+      "知识验证"
+    ],
+    "useCasesEn": [
+      "Calculus and equation solving",
+      "STEM formula computation",
+      "Data lookup",
+      "Knowledge verification"
+    ]
+  },
+  {
+    "slug": "quizlet",
+    "caps": [
+      "homework",
+      "tutor"
+    ],
+    "useCasesZh": [
+      "AI 生成单词卡",
+      "背单词与测验",
+      "学习计划",
+      "学科复习"
+    ],
+    "useCasesEn": [
+      "AI-generated flashcards",
+      "Vocabulary drills and quizzes",
+      "Study plans",
+      "Subject revision"
+    ]
+  },
+  {
+    "slug": "deep-tutor",
+    "caps": [
+      "tutor",
+      "homework",
+      "agent"
+    ],
+    "useCasesZh": [
+      "自适应辅导平台",
+      "多智能体教学",
+      "掌握度门控学习",
+      "RAG 知识问答"
+    ],
+    "useCasesEn": [
+      "Adaptive tutoring platform",
+      "Multi-agent teaching",
+      "Mastery-gated learning",
+      "RAG knowledge Q&A"
+    ]
+  }
+]

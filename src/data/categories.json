@@ -1,0 +1,98 @@
+[
+  {
+    "id": "ai-chat",
+    "order": 1,
+    "nameZh": "AI 对话 / 助手",
+    "nameEn": "AI Chat & Assistants",
+    "descZh": "通用对话助手与多模态大模型，日常问答、写作、代码的入口。",
+    "descEn": "General-purpose assistants and multimodal LLMs for chat, writing, and coding."
+  },
+  {
+    "id": "ai-video",
+    "order": 2,
+    "nameZh": "AI 视频生成",
+    "nameEn": "AI Video Generation",
+    "descZh": "文生视频、图生视频与视频编辑工具，从素材到分镜剧情。",
+    "descEn": "Text/image-to-video generators and video editing tools."
+  },
+  {
+    "id": "ai-image",
+    "order": 3,
+    "nameZh": "AI 图片生成",
+    "nameEn": "AI Image Generation",
+    "descZh": "文生图、图生图与设计稿生成，写实、艺术与排版各有专长。",
+    "descEn": "Text/image-to-image generators, from realistic to stylized and typographic."
+  },
+  {
+    "id": "ai-audio",
+    "order": 4,
+    "nameZh": "AI 音频 / 音乐 / 配音",
+    "nameEn": "AI Audio, Music & Voice",
+    "descZh": "TTS 配音、声音克隆、配乐与歌曲生成，视频声轨一站式解决。",
+    "descEn": "Text-to-speech, voice cloning, music and song generation for your video soundtracks."
+  },
+  {
+    "id": "ai-coding",
+    "order": 5,
+    "nameZh": "AI 编程",
+    "nameEn": "AI Coding",
+    "descZh": "AI 原生编辑器、补全与终端编程智能体，改写开发工作流。",
+    "descEn": "AI-native editors, autocomplete and terminal coding agents that reshape development."
+  },
+  {
+    "id": "ai-writing",
+    "order": 6,
+    "nameZh": "AI 写作",
+    "nameEn": "AI Writing",
+    "descZh": "长文、营销文案、语法润色与创意写作助手。",
+    "descEn": "Long-form, marketing, grammar and creative writing assistants."
+  },
+  {
+    "id": "ai-search",
+    "order": 7,
+    "nameZh": "AI 搜索引擎",
+    "nameEn": "AI Search Engines",
+    "descZh": "引用式搜索、深度研究与对话式信息获取。",
+    "descEn": "Cited search, deep research and conversational information retrieval."
+  },
+  {
+    "id": "ai-office",
+    "order": 8,
+    "nameZh": "AI 办公 / 效率",
+    "nameEn": "AI Productivity",
+    "descZh": "PPT、文档、会议转录与日程管理，日常办公效率翻倍。",
+    "descEn": "Slides, documents, meeting transcription and scheduling to supercharge daily work."
+  },
+  {
+    "id": "ai-avatar",
+    "order": 9,
+    "nameZh": "AI 数字人 / Avatar",
+    "nameEn": "AI Avatars",
+    "descZh": "数字人口播、虚拟主播与多语言出镜视频。",
+    "descEn": "Digital humans, virtual presenters and multilingual avatar videos."
+  },
+  {
+    "id": "ai-design",
+    "order": 10,
+    "nameZh": "AI 设计",
+    "nameEn": "AI Design",
+    "descZh": "UI/UX、Logo、矢量与网页设计，AI 辅助从 0 到发布。",
+    "descEn": "UI/UX, logos, vector art and web design, AI-assisted from zero to launch."
+  },
+  {
+    "id": "ai-education",
+    "order": 11,
+    "nameZh": "AI 学习 / 教育",
+    "nameEn": "AI Education",
+    "descZh": "AI 导师、拍照解题与学习工具，个性化学习体验。",
+    "descEn": "AI tutors, photo-solving and learning tools for personalized education."
+  },
+  {
+    "id": "ai-agent",
+    "order": 12,
+    "nameZh": "AI Agent / 自动化",
+    "nameEn": "AI Agents & Automation",
+    "descZh": "自主智能体与可视化工作流自动化，连接应用完成多步任务。",
+    "descEn": "Autonomous agents and visual workflow automation that connect apps and finish multi-step tasks."
+  }
+]

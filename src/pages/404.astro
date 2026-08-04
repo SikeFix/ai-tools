@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { localePath, t } from '../lib/i18n';
+import type { Lang } from '../lib/types';
+
+const lang: Lang = Astro.url.pathname.startsWith('/en') ? 'en' : 'zh';
+---
+
+<BaseLayout lang={lang} title="404" canonicalPath="/" ogType="website">
+  <div class="mx-auto max-w-lg px-4 py-28 text-center sm:px-6">
+    <p class="text-7xl font-bold tracking-tight text-accent">404</p>
+    <h1 class="mt-4 text-2xl font-bold">{t(lang, '404.title')}</h1>
+    <p class="mt-2 text-muted">{t(lang, '404.desc')}</p>
+    <a
+      href={localePath(lang, '/')}
+      class="mt-8 inline-block rounded-xl bg-accent px-5 py-2.5 text-sm font-medium text-accent-ink transition hover:bg-accent-strong"
+    >
+      {t(lang, 'common.backHome')}
+    </a>
+  </div>
+</BaseLayout>

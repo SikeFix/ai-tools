@@ -1,0 +1,100 @@
+export const zh = {
+  // 导航
+  'nav.home': '首页',
+  'nav.sop': '工作流',
+  'nav.skills': '常用 Skills',
+
+  // Hero
+  'hero.badge': '持续更新',
+  'hero.title': 'AI 工具导航',
+  'hero.tagline': '精选 12 大类主流 AI 工具，附 AI 视频制作标准工作流。',
+  'hero.ctaTools': '浏览工具',
+  'hero.ctaSop': '查看工作流',
+  'hero.statsTools': '款工具',
+  'hero.statsCategories': '个分类',
+  'hero.statsSops': '套工作流',
+
+  // 首页工作流速览
+  'home.sopSectionTitle': 'AI 工作流速览',
+  'home.sopSectionDesc': '从 AI 视频到写作、出图与编程，覆盖常见任务的可复用工作流。',
+  'home.viewAllSops': '查看全部工作流',
+  'home.ctaTitle': '把 AI 用进你的工作流',
+  'home.ctaDesc': '从 {n} 款工具到 {m} 套工作流，找到属于你的 AI 组合拳。',
+  'home.ctaButton': '开始浏览',
+
+  // 搜索 / 筛选
+  'search.placeholder': '搜索工具（支持中英文）…',
+  'search.placeholderSop': '搜索工作流（标题 / 摘要 / 工具）…',
+  'search.placeholderSkill': '搜索技能（名称 / 描述 / 标签）…',
+  'filter.all': '全部',
+  'filter.category': '分类',
+  'filter.price': '价格',
+  'filter.clear': '清空筛选',
+  'price.Free': '免费',
+  'price.Freemium': '免费增值',
+  'price.Paid': '付费',
+  'result.count': '共 {n} 款工具',
+  'result.empty': '没有匹配的工具',
+  'result.emptyHint': '换个关键词，或清空筛选条件再试试。',
+
+  // 工具卡片 / 详情
+  'tool.visit': '访问官网',
+  'tool.related': '同类工具',
+  'tool.tags': '标签',
+  'tool.capabilities': '擅长能力',
+  'tool.useCases': '能做什么',
+  'tool.workflows': '推荐工作流',
+  'tool.notFound': '未找到该工具',
+  'breadcrumb.home': '首页',
+  'breadcrumb.tools': '工具',
+  'breadcrumb.sop': '工作流',
+  'breadcrumb.skills': 'Skills',
+
+  // Skills
+  'skills.title': '常用 AI Skills',
+  'skills.subtitle': '精选 Claude Code / AI Agent 技能，即装即用，覆盖设计、开发、内容与效率。',
+  'skills.source.official': '官方',
+  'skills.source.community': '社区',
+  'skills.source.builtin': '内置',
+  'skills.installHint': '在 Claude Code 中通过插件市场或 .claude/skills 安装。',
+  'skills.viewSource': '查看来源',
+  'skills.useCases': '能做什么',
+  'skills.install': '安装方式',
+  'skills.related': '相关技能',
+  'skills.source': '来源',
+
+  // SOP
+  'sop.title': 'AI 工作流',
+  'sop.subtitle': '从 AI 视频到写作、出图与编程，覆盖常见 AI 任务的可复用标准工作流。',
+  'sop.chain': '文 → 图 → 视 → 音 → 剪',
+  'sop.chainNote': '所有 AI 视频方案都收敛到这条主链路：定题 → 脚本 → 分镜 → 画面生成 → 配音配乐 → 剪辑合成 → 发布运营。',
+  'sop.scenario': '适用场景',
+  'sop.steps': '操作步骤',
+  'sop.pitfalls': '避坑清单',
+  'sop.tools': '用到的工具',
+  'sop.meta.duration': '耗时',
+  'sop.meta.cost': '成本',
+  'sop.meta.difficulty': '难度',
+  'sop.prev': '上一篇',
+  'sop.next': '下一篇',
+  'sop.empty': '暂无工作流',
+  'sop.group.video': '视频制作',
+  'sop.group.content': '内容创作',
+  'sop.group.productivity': '效率提升',
+  'sop.group.video.desc': 'AI 视频生成、剪辑与数字人出镜。',
+  'sop.group.content.desc': '写作、出图、翻译与播客等内容产出。',
+  'sop.group.productivity.desc': '编程、PPT、数据分析与会议效率。',
+
+  // 页脚 / 通用
+  'footer.note': '工具清单来自公开调研整理，仅供参考。',
+  'footer.official': '官方网站',
+  'footer.copyright': '© 2026 · 持续更新',
+  'theme.toggle': '切换深色/浅色',
+  'lang.toggle': 'Switch to English',
+  'common.backHome': '返回首页',
+  'common.backToTop': '回到顶部',
+  '404.title': '页面不存在',
+  '404.desc': '你访问的页面可能已移动或不存在。',
+} as const;
+
+export type UiKey = keyof typeof zh;

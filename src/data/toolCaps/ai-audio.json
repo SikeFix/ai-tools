@@ -1,0 +1,171 @@
+[
+  {
+    "slug": "elevenlabs",
+    "caps": [
+      "tts",
+      "voice-clone",
+      "lip-sync"
+    ],
+    "useCasesZh": [
+      "克隆自己的声音配音",
+      "多语言口播配音",
+      "有声书与播客",
+      "视频音效与翻译配音"
+    ],
+    "useCasesEn": [
+      "Clone your own voice for dubbing",
+      "Multilingual voiceovers",
+      "Audiobooks and podcasts",
+      "Video sound effects and translated dubbing"
+    ]
+  },
+  {
+    "slug": "suno",
+    "caps": [
+      "music",
+      "tts"
+    ],
+    "useCasesZh": [
+      "生成带人声的完整歌曲",
+      "短视频 BGM",
+      "任意风格定制",
+      "商用授权歌曲"
+    ],
+    "useCasesEn": [
+      "Generate complete songs with vocals",
+      "BGM for short videos",
+      "Custom styles",
+      "Commercially-licensed tracks"
+    ]
+  },
+  {
+    "slug": "udio",
+    "caps": [
+      "music"
+    ],
+    "useCasesZh": [
+      "成品感强的音乐生成",
+      "分轨 Remix 改编",
+      "背景配乐",
+      "风格实验"
+    ],
+    "useCasesEn": [
+      "Finished-sounding music generation",
+      "Per-track remixing",
+      "Background scores",
+      "Style experiments"
+    ]
+  },
+  {
+    "slug": "stable-audio",
+    "caps": [
+      "music"
+    ],
+    "useCasesZh": [
+      "音效与氛围音生成",
+      "短视频配乐",
+      "游戏音效",
+      "环境音"
+    ],
+    "useCasesEn": [
+      "Sound effects and ambience",
+      "Short-video music",
+      "Game sound effects",
+      "Environmental audio"
+    ]
+  },
+  {
+    "slug": "murf",
+    "caps": [
+      "tts",
+      "voice-clone"
+    ],
+    "useCasesZh": [
+      "专业配音讲解",
+      "多语言产品演示",
+      "培训课程配音",
+      "广告旁白"
+    ],
+    "useCasesEn": [
+      "Professional narration",
+      "Multilingual product demos",
+      "Training course voiceovers",
+      "Ad voiceovers"
+    ]
+  },
+  {
+    "slug": "aiva",
+    "caps": [
+      "music"
+    ],
+    "useCasesZh": [
+      "古典与管弦乐编曲",
+      "影视配乐草稿",
+      "游戏配乐",
+      "作曲学习"
+    ],
+    "useCasesEn": [
+      "Classical and orchestral composition",
+      "Film score drafts",
+      "Game music",
+      "Learning composition"
+    ]
+  },
+  {
+    "slug": "descript",
+    "caps": [
+      "video-edit",
+      "tts",
+      "summarization"
+    ],
+    "useCasesZh": [
+      "文字剪辑播客",
+      "Overdub 修正口误",
+      "字幕生成",
+      "播客成品导出"
+    ],
+    "useCasesEn": [
+      "Edit podcasts by editing text",
+      "Overdub to fix mistakes",
+      "Caption generation",
+      "Export finished podcasts"
+    ]
+  },
+  {
+    "slug": "adobe-podcast",
+    "caps": [
+      "tts"
+    ],
+    "useCasesZh": [
+      "人声降噪与增强",
+      "播客音质修复",
+      "远程录音美化",
+      "直播回放优化"
+    ],
+    "useCasesEn": [
+      "Voice denoising and enhancement",
+      "Podcast audio repair",
+      "Remote recording polish",
+      "Replay optimization"
+    ]
+  },
+  {
+    "slug": "fish-speech",
+    "caps": [
+      "tts",
+      "voice-clone"
+    ],
+    "useCasesZh": [
+      "零样本克隆声音",
+      "多语言配音",
+      "本地离线合成",
+      "中文语音克隆"
+    ],
+    "useCasesEn": [
+      "Zero-shot voice cloning",
+      "Multilingual dubbing",
+      "Local offline synthesis",
+      "Chinese voice cloning"
+    ]
+  }
+]

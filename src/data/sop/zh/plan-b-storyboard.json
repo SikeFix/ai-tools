@@ -1,0 +1,98 @@
+{
+  "slug": "plan-b-storyboard",
+  "title": "方案 B：文生视频 / 分镜剧情（专业版）",
+  "summary": "三层规划 → Prompt 工程 → 角色一致性资产 → Animatic 预演 → 分镜生成 → 音效混音 → Spec 组装 + QC 门禁",
+  "scenario": "适合 AI 短剧、漫剧、宣传片、TVC 式短片。以「分镜表驱动 + 一致性管理 + 质检门禁」为核心，是社区工程化程度最高的文生视频路线。",
+  "meta": {
+    "duration": "2-4 小时 / 条",
+    "cost": "中-高",
+    "difficulty": "进阶"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT / Claude", "url": "https://claude.ai" },
+    { "name": "即梦 / Seedance / 可灵", "url": "https://jimeng.jianying.com" },
+    { "name": "Midjourney / ComfyUI", "url": "https://midjourney.com" },
+    { "name": "ElevenLabs / MiniMax + Suno", "url": "https://elevenlabs.io" },
+    { "name": "FFmpeg / 剪映 / DaVinci", "url": "https://ffmpeg.org" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "剧本与三层镜头规划",
+      "tool": "ChatGPT / Claude",
+      "time": "30-60 分钟",
+      "detail": "用大模型按「事件层 → 场景层 → 镜头层」三层递归规划：先定叙事骨架（事件层），再拆戏剧单元与时空情境（场景层），最后落成分镜表（镜头层）。每行包含：分镜号、景别（远/全/中/近/特）、运镜（推/拉/摇/移/跟）、机位、光影、画面内容、台词/音效、预估时长。同一场景可让 AI 出 2-3 个机位方案再选优。",
+      "tips": "镜头越少越可控，短片建议控制在 20-40 镜；分镜表是后续所有环节的唯一依据。"
+    },
+    {
+      "id": "s2",
+      "title": "Prompt 工程模板（角色 DNA + 场景块）",
+      "tool": "即梦 / Seedance / 可灵",
+      "time": "20-30 分钟",
+      "detail": "顶部固定 CHARACTER DNA 块（Identity / Face / Hair / Outfit / 年龄体态 / 气质 / 禁止漂移项），每个镜头只改「场景块」（地点 / 时间 / 动作）。视频生成 Prompt 按优先级书写：构图 → 主角 → 镜头运动 → 整体氛围，可显著降低元素矛盾。Negative prompt 固定漂移项：no different eye color / no extra characters / no watermark。记录 manifest（prompt / seed / 模型版本 / 参考图）保证可复现。",
+      "tips": "写清「镜头从下往上仰拍，动作流畅不崩坏」这类约束，比堆砌形容词有效得多。"
+    },
+    {
+      "id": "s3",
+      "title": "角色一致性资产（三层策略按预算选）",
+      "tool": "Midjourney / 即梦 + ComfyUI",
+      "time": "40-90 分钟",
+      "detail": "第一层（零训练，70-80% 保真）：生成正/侧/背多视角角色卡作参考图（Midjourney --cref / 即梦参考图），背景必须纯色简单。第二层（无训练，95%）：ComfyUI 链 InstantID + IP-Adapter FaceID → ControlNet OpenPose → FaceDetailer，CFG 4-5、IP-Adapter 权重 0.6-0.8、固定 seed。第三层（训练，最高）：20-30 张多角度角色图训 LoRA（1024²、1500-3000 步、lr 1e-4~5e-5）。跨镜头视频用「首尾帧锁定 + 插值」。",
+      "tips": "崩脸 90% 是因为参考图背景太杂或镜头太正；先把定妆照拍「干净」再谈一致性。"
+    },
+    {
+      "id": "s4",
+      "title": "Animatic 动画预演（先免费迭代）",
+      "tool": "剪映 / FFmpeg",
+      "time": "30-40 分钟",
+      "detail": "用「分镜静图 + 配音」先组装全片预演，确认节奏、镜头衔接与时长后再烧钱生成视频。这一步几乎免费，是最划算的迭代环节——预演里暴露的问题改了再生成，能省一半 API 费用。",
+      "tips": "Animatic-first 是专业团队的共识：先动图预演，再逐镜生成，不要反过来。"
+    },
+    {
+      "id": "s5",
+      "title": "逐镜生成",
+      "tool": "可灵 / 即梦 / Vidu / Runway / Seedance",
+      "time": "60-120 分钟",
+      "detail": "每镜 5-8 秒，用首帧图 + 工具主体库 @ 引用角色 + 声音参考。选型参考：可灵（中文剧情 / 物理真实）、即梦（一站式 / 二次元）、Vidu（多实体一致性）、Runway（导演运镜）、Seedance（电影级长镜头）。生成失败（崩脸 / 物理错误）优先改首帧与 prompt，重试成本远低于后期修补。",
+      "tips": "同一条 prompt 多抽几张再挑，比反复调参更快；种子固定便于复现。"
+    },
+    {
+      "id": "s6",
+      "title": "配音、配乐与环境音",
+      "tool": "ElevenLabs / MiniMax + Suno",
+      "time": "20-40 分钟",
+      "detail": "配音给角色标情绪标签（如 [愤怒地]），嘴型同步靠标点断句。BGM 用 Suno 生成，环境音作为独立一层（ambience bed）最后混入。唱歌场景先用 Demucs 分离人声再驱动对口型，避免「嘴乱动」。对口型音频预处理规范：16-24kHz 单声道 WAV、去头静音、尾加约 0.2s、归一化到 -3dB 峰值。",
+      "tips": "配乐音量压到人声 ~30%；环境音一层 + 音乐一层分开调，质感立刻提升。"
+    },
+    {
+      "id": "s7",
+      "title": "Spec 驱动组装 + QC 门禁",
+      "tool": "FFmpeg / 剪映 / DaVinci",
+      "time": "60-120 分钟",
+      "detail": "用时间线清单（film_spec：切点 / 音乐跨度 / 环境音 / 调色 / 淡入淡出）驱动 FFmpeg 组装，而非手工拼接。三重质检门禁：① 每句配音 Whisper 回验相似度 ≥0.85，不过关重合成；② CLIP 文图一致性检查，提前拒绝跑偏帧；③ 成片自审（ffprobe 校验、帧采样、音频电平、字幕检查）。断点续跑，改单句音轨用最小修复原则不重渲染。",
+      "tips": "把 QC 做成可机检的确定性规则，而不是靠人眼；中间产物（storyboard / voice samples / manifest）保留做回归。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "角色崩脸",
+      "detail": "用三层一致性策略（参考图 → InstantID/IP-Adapter → LoRA）+ 首尾帧锁定；参考图背景要干净。"
+    },
+    {
+      "title": "提示词元素冲突",
+      "detail": "按「构图 → 主角 → 运镜 → 氛围」优先级写 Prompt，negative 固定漂移项（眼色 / 发型 / 多余人 / 水印）。"
+    },
+    {
+      "title": "先烧钱后发现问题",
+      "detail": "一定先做 Animatic 预演（静图 + 音频），节奏问题在预演阶段迭代，生成阶段再改会成倍费钱。"
+    },
+    {
+      "title": "配音错字 / 音画不同步",
+      "detail": "每句配音用 Whisper 回验相似度 ≥0.85；音频按规范预处理（单声道 / 去头静音 / -3dB）。"
+    },
+    {
+      "title": "转场「刹车感」",
+      "detail": "首尾帧不连续会产生急停感；用无缝直切或调速 + 蒙版修补，相邻镜头镜头运动尽量连续。"
+    }
+  ]
+}

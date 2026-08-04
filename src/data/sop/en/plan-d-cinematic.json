@@ -1,0 +1,98 @@
+{
+  "slug": "plan-d-cinematic",
+  "title": "Plan D: Cinematic AI Short Films (Agent Pipeline)",
+  "summary": "Brief & deconstruct → multi-agent pipeline → character anchors → audio-first → animatic preview → shot generation → spec assembly + minimal repair + QC",
+  "scenario": "Best for 5-15 minute narrative shorts, one-person AI film studios, and batch content production. Combines multi-agent orchestration, animatic-first iteration and triple QC gates — the most engineering-grade advanced route (inspired by OpenMontage, movie-gen and ViMax).",
+  "meta": {
+    "duration": "2.5-6 hours / video",
+    "cost": "High (~$50-200 / video)",
+    "difficulty": "Expert"
+  },
+  "toolsNeeded": [
+    { "name": "CrewAI / LangGraph / Agent SDK", "url": "https://crewai.com" },
+    { "name": "Midjourney / Jimeng", "url": "https://midjourney.com" },
+    { "name": "Seedance / Kling / Higgsfield CLI", "url": "https://jimeng.jianying.com" },
+    { "name": "ElevenLabs + Suno / Sonilo", "url": "https://elevenlabs.io" },
+    { "name": "FFmpeg + assemble script", "url": "https://ffmpeg.org" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Brief and reference deconstruction",
+      "tool": "ChatGPT / Claude",
+      "time": "20 min",
+      "detail": "Fix the platform, duration, style and budget cap up front. Study reference shorts (high engagement, similar length) and decompose their structure, shot count, transitions and sound design into a reference blueprint.",
+      "tips": "Set budget and acceptance criteria before starting, or the agent pipeline will burn money uncontrolled."
+    },
+    {
+      "id": "s2",
+      "title": "Multi-agent orchestration",
+      "tool": "CrewAI / LangGraph / Claude Agent SDK",
+      "time": "30 min",
+      "detail": "Orchestrate Writer → Director → Producer → QC agents: the Writer produces the script and 3-layer plan (event / scene / shot); the Director outputs the storyboard and multi-camera options; the Producer screens reference images and validates cross-shot consistency; QC generates parallel candidates and scores them with a VLM. Steal the architecture from open-source ViMax, storyforge or ArcReel.",
+      "tips": "Route creative decision points to you for approval — never let it 'wing it'. Bake in a budget cap and per-operation approval thresholds."
+    },
+    {
+      "id": "s3",
+      "title": "Character anchors",
+      "tool": "Midjourney / Jimeng",
+      "time": "30 min",
+      "detail": "Create canonical character look shots (Anchors) as cross-shot consistency references, then derive a first-frame image per scene from them. The first frame is the 'anchor' for each generation, setting physics and lighting.",
+      "tips": "Anchor sheets need front / side / back views on a plain background; every later shot references the same set."
+    },
+    {
+      "id": "s4",
+      "title": "Audio-first across the whole film",
+      "tool": "ElevenLabs / MiniMax + Suno",
+      "time": "30 min",
+      "detail": "Pick character voices, then produce the full voiceover, BGM and ambience for the entire film. Audio-first lets every frame lock to the soundtrack and enables the preview — professional long-form always puts sound before picture.",
+      "tips": "Tag emotions in the voiceover; keep voice, music and ambience as separate mix layers with independent control."
+    },
+    {
+      "id": "s5",
+      "title": "Animatic preview",
+      "tool": "FFmpeg / CapCut",
+      "time": "40 min",
+      "detail": "Assemble the whole film from storyboard stills + the full soundtrack to validate pacing, shot flow and total duration. Nearly free, this is where every pacing problem is resolved before the expensive generation phase.",
+      "tips": "Generate only after the preview passes — this single gate saves over half your API budget."
+    },
+    {
+      "id": "s6",
+      "title": "Shot generation",
+      "tool": "Seedance 2.0 / Kling / Higgsfield CLI",
+      "time": "60-180 min",
+      "detail": "Input = first frame + Anchors + voice reference. Prompt priority: composition → subject → camera move → overall mood. Cap concurrency; on failure fix the first frame and retry. For longer films use keyframe mode or first/last-frame chaining to avoid the 'stitched shorts' feel.",
+      "tips": "Generate multiple candidates per shot; log a manifest (prompt / seed / model version) for reproducibility and rollback."
+    },
+    {
+      "id": "s7",
+      "title": "Spec assembly + minimal repair + QC",
+      "tool": "FFmpeg + custom assemble script",
+      "time": "60 min",
+      "detail": "Drive assembly from a timeline spec (film_spec: cuts / music spans / ambience / color / fades). Handle director notes with the cheapest fix: re-dub one line with a dub tool, re-render only one shot, catch mis-cast voices with an F0 pitch check. Triple QC gates: ASR back-check ≥0.85, CLIP consistency, ffprobe final review.",
+      "tips": "Keep intermediates (storyboard / voice samples / manifest) for regression; render with resume support so an interruption never loses progress."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Budget blowout",
+      "detail": "Iterate free on the Animatic first; run cost estimates, spend caps and per-operation approvals before executing. Never let agents retry without limit."
+    },
+    {
+      "title": "Agents running wild",
+      "detail": "Route key creative decisions to human approval and give agents a full SKILL/process doc — otherwise they skip the standard pipeline and invent worse flows."
+    },
+    {
+      "title": "Long-form feels stitched together",
+      "detail": "Use keyframe mode / first-last-frame chaining instead of hard-stitching shorts; seamless straight cuts with continuous camera motion across shots."
+    },
+    {
+      "title": "Audio-video drift",
+      "detail": "Audio-first + lip-sync audio prep spec (mono, trimmed silence, -3dB) + minimal repair (re-dub one line instead of re-rendering)."
+    },
+    {
+      "title": "Consistency collapse",
+      "detail": "Anchors + first/last-frame locking + VLM cross-shot checks. Don't rely on 'praying the same model remembers the character'."
+    }
+  ]
+}

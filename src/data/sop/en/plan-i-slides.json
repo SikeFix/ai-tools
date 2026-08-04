@@ -1,0 +1,77 @@
+{
+  "slug": "plan-i-slides",
+  "title": "Plan I: AI Presentations (Slides)",
+  "summary": "Topic & audience → outline & storyline → per-slide generation → visual consistency → speaker notes → rehearsal",
+  "scenario": "Best for reports, pitches, courseware and solution decks — from a topic to a deliverable you can actually present.",
+  "meta": {
+    "duration": "30-60 min / deck",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "Gamma / Tome", "url": "https://gamma.app" },
+    { "name": "ChatGPT / Claude", "url": "https://claude.ai" },
+    { "name": "Canva / template libraries", "url": "https://canva.com" },
+    { "name": "Chart tools (dataviz)", "url": "" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Topic and audience positioning",
+      "tool": "ChatGPT / Claude",
+      "time": "5 min",
+      "detail": "Clarify who the audience is, what the core message is, and what decision you want them to make afterward. If you can say it in one sentence, the deck can focus.",
+      "tips": "Write one line — 'this deck should make the audience decide X' — and build everything around it."
+    },
+    {
+      "id": "s2",
+      "title": "Outline and storyline",
+      "tool": "ChatGPT / Claude",
+      "time": "10 min",
+      "detail": "Build the storyline with a problem-solution or pyramid structure: one small title per slide, plus core argument and data points. Lock the outline before generating slides.",
+      "tips": "One idea per slide; three ideas crammed on one slide is the classic deck killer."
+    },
+    {
+      "id": "s3",
+      "title": "Generate per slide",
+      "tool": "Gamma / Tome",
+      "time": "15-30 min",
+      "detail": "Feed the outline to an AI slide generator as 'title + bullets + chart slot', or have the model write page copy and apply a template. Leave data/chart slots blank to fill later.",
+      "tips": "Manually verify key-number pages — AI fabricates 'growth of 300%' type figures."
+    },
+    {
+      "id": "s4",
+      "title": "Visual consistency",
+      "tool": "Canva / templates",
+      "time": "10 min",
+      "detail": "Unify fonts (max 2), palette (primary + accent), layout and chart style; keep whitespace generous and backgrounds quiet.",
+      "tips": "Charts follow one palette (dataviz spec); never use more than two accent colors."
+    },
+    {
+      "id": "s5",
+      "title": "Speaker notes and rehearsal",
+      "tool": "Notes script + timer",
+      "time": "15 min",
+      "detail": "Write per-slide speaker notes (what to say, transitions, timing), estimate total duration from slide count and rehearse once or twice, trimming what overruns.",
+      "tips": "Record and listen back; delivery rhythm affects the audience more than the slide content."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Information overload per slide",
+      "detail": "One idea per slide; a wall of body text turns the deck into a document people read instead of a talk."
+    },
+    {
+      "title": "Flashy visuals drowning content",
+      "detail": "Busy backgrounds, rainbow colors and animation abuse distract; restraint is where premium comes from."
+    },
+    {
+      "title": "Wrong data and charts",
+      "detail": "Verify every AI-generated figure against the source; truncated chart axes mislead the audience."
+    },
+    {
+      "title": "No speaker notes",
+      "detail": "Titles only, no script, and you freeze on stage; notes plus rehearsal are the foundation of good delivery."
+    }
+  ]
+}

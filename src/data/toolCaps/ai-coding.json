@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "cursor",
+    "caps": ["code-gen", "coding-agent", "code-complete"],
+    "useCasesZh": ["AI 原生编辑器写代码", "Composer 智能体改需求", "代码库重构", "跨文件补全"],
+    "useCasesEn": ["AI-native editor for writing code", "Composer agent for feature changes", "Codebase refactoring", "Cross-file completion"]
+  },
+  {
+    "slug": "copilot",
+    "caps": ["code-complete", "code-gen", "coding-agent"],
+    "useCasesZh": ["IDE 内实时补全", "GitHub 内嵌代码建议", "测试与文档生成", "代码审查辅助"],
+    "useCasesEn": ["Real-time IDE completion", "Inline GitHub suggestions", "Test and doc generation", "Code review assistance"]
+  },
+  {
+    "slug": "claude-code",
+    "caps": ["coding-agent", "code-gen", "workflow"],
+    "useCasesZh": ["终端里自主改代码跑命令", "自动提交 PR", "批量重构与迁移", "构建整个小项目"],
+    "useCasesEn": ["Autonomously edit code and run commands in the terminal", "Open PRs automatically", "Batch refactors and migrations", "Build entire small projects"]
+  },
+  {
+    "slug": "windsurf",
+    "caps": ["code-gen", "coding-agent", "code-complete"],
+    "useCasesZh": ["深度理解大代码库", "Cascade 多文件协作", "AI 补全与对话编程", "需求到实现"],
+    "useCasesEn": ["Deep understanding of large codebases", "Cascade multi-file collaboration", "AI completion and chat-driven coding", "From requirements to implementation"]
+  },
+  {
+    "slug": "codex",
+    "caps": ["coding-agent", "code-gen"],
+    "useCasesZh": ["本地仓库任务自动化", "CLI 智能体写代码", "脚本与工具开发", "开源项目贡献"],
+    "useCasesEn": ["Automate local repo tasks", "CLI agent for coding", "Script and tool development", "Open-source contributions"]
+  },
+  {
+    "slug": "replit",
+    "caps": ["code-gen", "website", "coding-agent"],
+    "useCasesZh": ["云端一键起项目", "AI 生成全栈应用", "多人协作开发", "快速部署网站"],
+    "useCasesEn": ["Spin up projects in the cloud", "AI-generated full-stack apps", "Collaborative development", "Rapid website deployment"]
+  },
+  {
+    "slug": "cline",
+    "caps": ["coding-agent", "code-gen"],
+    "useCasesZh": ["IDE 内开源编程智能体", "自主修改与运行", "多文件任务", "本地优先"],
+    "useCasesEn": ["Open-source IDE coding agent", "Autonomous edits and runs", "Multi-file tasks", "Local-first"]
+  },
+  {
+    "slug": "codeium",
+    "caps": ["code-complete", "code-gen"],
+    "useCasesZh": ["免费的代码补全", "多 IDE 支持", "聊天式代码问答", "个人与团队使用"],
+    "useCasesEn": ["Free code completion", "Multi-IDE support", "Chat-based coding Q&A", "For individuals and teams"]
+  }
+]

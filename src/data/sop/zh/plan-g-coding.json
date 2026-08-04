@@ -1,0 +1,85 @@
+{
+  "slug": "plan-g-coding",
+  "title": "方案 G：AI 编程工作流（需求到交付）",
+  "summary": "需求澄清 → 技术方案 → 脚手架 → 增量编码 → 测试调试 → 审查提交",
+  "scenario": "适合新功能、小工具、静态网站、自动化脚本等开发任务，从模糊需求到可交付代码。",
+  "meta": {
+    "duration": "1-4 小时 / 功能",
+    "cost": "中",
+    "difficulty": "进阶"
+  },
+  "toolsNeeded": [
+    { "name": "Cursor / Claude Code", "url": "https://cursor.com" },
+    { "name": "GitHub Copilot / Windsurf", "url": "https://github.com/features/copilot" },
+    { "name": "Claude / ChatGPT", "url": "https://claude.ai" },
+    { "name": "Git", "url": "https://git-scm.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "需求澄清",
+      "tool": "ChatGPT / Claude + 你",
+      "time": "10-20 分钟",
+      "detail": "把模糊需求写成明确的验收标准：目标、输入输出、边界条件、不做的事。用大模型反问补齐遗漏，这一步决定返工多少。",
+      "tips": "写清「当 X 发生时应该 Y」的验收用例，AI 和你在同一页上。"
+    },
+    {
+      "id": "s2",
+      "title": "技术方案",
+      "tool": "Claude / ChatGPT",
+      "time": "10-20 分钟",
+      "detail": "先定选型与架构（语言/框架/数据结构/接口），让模型给出方案对比与理由。方案定了再写码，避免写一半推倒重来。",
+      "tips": "让模型列出「最简单能跑通的最小方案」，先 MVP 再扩展，比一上来就全量设计稳。"
+    },
+    {
+      "id": "s3",
+      "title": "脚手架与骨架",
+      "tool": "Cursor / Claude Code",
+      "time": "10-30 分钟",
+      "detail": "初始化项目、目录结构、依赖与基础配置，先让代码能跑起来。用 Agent 脚手架或模板减少手工劳动。",
+      "tips": "先 git init 并频繁小步提交，任何改动都能回滚。"
+    },
+    {
+      "id": "s4",
+      "title": "增量编码",
+      "tool": "Cursor / Claude Code / Copilot",
+      "time": "1-2 小时",
+      "detail": "一小步一小步实现：一个功能/一个模块完成后立即验证。用编程 Agent（Claude Code/Cursor Composer）自主改代码跑命令，出问题能定位到具体一步。",
+      "tips": "每完成一个可验证的单元就提交一次；一次让 AI 生成整个大功能是最容易埋大 bug 的做法。"
+    },
+    {
+      "id": "s5",
+      "title": "测试与调试",
+      "tool": "测试框架 + AI 辅助",
+      "time": "30-60 分钟",
+      "detail": "为关键逻辑写单测，手动验证边界与异常路径；出错时把错误日志喂给模型分析。让 AI 补测试、跑测试、修回归。",
+      "tips": "把「如何复现」写清楚再问模型，修复命中率更高；边界值（空、超长、非法输入）单独测。"
+    },
+    {
+      "id": "s6",
+      "title": "审查与提交",
+      "tool": "Code Review / 审查 Agent",
+      "time": "20-30 分钟",
+      "detail": "自查 diff + 让 AI 做一遍安全/正确性/性能审查，修掉发现的问题，写清 PR 描述（改了什么、为什么、怎么测）。",
+      "tips": "PR 描述里附上测试结果与复现步骤，评审通过率更高，回滚也容易。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "需求没澄清就开写",
+      "detail": "模糊需求写出来的代码必然返工；先花 10 分钟写验收标准，是最划算的投资。"
+    },
+    {
+      "title": "一次生成整个大功能",
+      "detail": "让 AI 一次性输出大功能代码，bug 藏得深难排查；增量编码 + 每步验证才是可靠节奏。"
+    },
+    {
+      "title": "不跑测试就交付",
+      "detail": "AI 生成的代码看似合理但边界会出错；至少为关键路径写测试并跑一遍。"
+    },
+    {
+      "title": "依赖陈旧库 / API 猜错",
+      "detail": "模型可能用过时 API；用 context7 等工具确认库版本与签名，或用最新文档再生成。"
+    }
+  ]
+}

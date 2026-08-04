@@ -1,0 +1,85 @@
+{
+  "slug": "plan-s-ecommerce",
+  "title": "Plan S: AI E-commerce Operations",
+  "summary": "Product selection → copy & images → detail page → pricing & promos → automated support → data review",
+  "scenario": "Best for marketplace sellers and store teams — using AI to speed up selection, listing, copy and support.",
+  "meta": {
+    "duration": "1-3 hours / product",
+    "cost": "Low-Medium",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT / Claude", "url": "https://claude.ai" },
+    { "name": "Midjourney / Jimeng", "url": "https://midjourney.com" },
+    { "name": "Dify / Coze (support)", "url": "https://dify.ai" },
+    { "name": "Store dashboard / analytics", "url": "" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Product selection analysis",
+      "tool": "ChatGPT / Claude + data",
+      "time": "30-60 min",
+      "detail": "Feed store data (sales, competition, review pain points) to the AI: find categories with demand gaps and manageable competition, and mine 'opportunities in negative reviews'.",
+      "tips": "Having the AI dig improvement points out of competitor bad reviews beats gut-feel selection."
+    },
+    {
+      "id": "s2",
+      "title": "Copy and images",
+      "tool": "ChatGPT / Claude + Midjourney / Jimeng",
+      "time": "30-60 min",
+      "detail": "Generate titles (with search terms), selling points and SKU descriptions; AI images for hero and scene shots (use Ideogram/Flux for accurate text, then polish product shots).",
+      "tips": "Put the user's search term at the front of the title; write selling points as 'pain → solution → proof'."
+    },
+    {
+      "id": "s3",
+      "title": "Detail page",
+      "tool": "ChatGPT / Claude + layout tools",
+      "time": "1 hour",
+      "detail": "Structure: hero selling point → scene shots → specs → comparison → after-sales; AI writes copy and page structure, you verify the specs.",
+      "tips": "Specs and promises must be true; run a human pass for advertising-law red lines (absolute claims, exaggerated benefits)."
+    },
+    {
+      "id": "s4",
+      "title": "Pricing and promos",
+      "tool": "AI pricing analysis",
+      "time": "30 min",
+      "detail": "Have the AI suggest pricing from competitor bands and cost, and design promo combos (discounts, gifts, bundle-to-hit); generate event copy for big sales.",
+      "tips": "Price for the profit-vs-conversion balance, not gross margin alone; keep promos simple."
+    },
+    {
+      "id": "s5",
+      "title": "Automated support",
+      "tool": "Dify / Coze + support platform",
+      "time": "1-2 hours",
+      "detail": "Build an AI agent to auto-answer high-frequency queries (logistics / returns / sizing), escalating sensitive ones; reuse the Plan P knowledge-base method.",
+      "tips": "Response speed drives conversion and reviews; automate the top-frequency questions first."
+    },
+    {
+      "id": "s6",
+      "title": "Data review",
+      "tool": "Store analytics + AI",
+      "time": "Weekly",
+      "detail": "Review conversion, refund rate, reviews and traffic sources; have the AI find problems and opportunities, then iterate selection and copy.",
+      "tips": "Feed negative reviews and refund reasons to the AI for root causes — more useful than watching revenue alone."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Unclear metric definitions",
+      "detail": "Align definitions first (GMV vs gross profit vs net, period); the AI computing against the wrong metric misleads decisions."
+    },
+    {
+      "title": "Chaotic pricing",
+      "detail": "Promo vs daily price conflicts cause disputes; manage the price system in a table and re-check."
+    },
+    {
+      "title": "Advertising-law red lines",
+      "detail": "Absolute claims, exaggerated benefits and unfair comparisons get fined; human compliance review before publishing."
+    },
+    {
+      "title": "Image copyright",
+      "detail": "Mixed AI/stock assets trip licensing; confirm commercial rights and use your own product shots."
+    }
+  ]
+}

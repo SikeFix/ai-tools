@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+/* ── 手动切换暗色：.dark 类驱动（Apple 深色 = 纯黑地面 + #1d1d1f 表面） ── */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ── Apple Liquid Glass tokens ── */
+:root {
+  /* 中性色（界面骨架） */
+  --bg: #f5f5f7; /* 页面地面 — 冷灰白，绝不暖/米色 */
+  --surface: #ffffff;
+  --surface-2: #f5f5f7; /* 卡片内浅灰填充 / 行 hover */
+  --border: rgba(0, 0, 0, 0.07); /* 发丝分割线 */
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --muted-2: #86868b;
+  --faint: #d2d2d7;
+
+  /* 强调色（仅此一个蓝色；正文保持黑白灰） */
+  --accent: #0071e3;
+  --accent-strong: #0066cc;
+  --accent-ink: #ffffff;
+
+  /* 语义色：价格档（克制，保持灰阶，正文用权重区分） */
+  --price-free: #1d1d1f;
+  --price-freemium: #6e6e73;
+  --price-paid: #86868b;
+
+  /* 两段式阴影（永远两层：贴身接触 + 柔和弥散） */
+  --sh-card: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.05);
+  --sh-panel: 0 1px 3px rgba(0, 0, 0, 0.05), 0 14px 40px rgba(0, 0, 0, 0.05);
+  --sh-lift: 0 12px 32px rgba(0, 0, 0, 0.1);
+  --sh-cta: 0 20px 54px rgba(0, 113, 227, 0.24);
+
+  /* 字号字距 token（标题负字距，数字等宽） */
+  --tracking-h1: -0.03em;
+  --tracking-h2: -0.02em;
+  --tracking-h3: -0.01em;
+}
+
+.dark {
+  --bg: #000000;
+  --surface: #1d1d1f;
+  --surface-2: #2c2c2e;
+  --border: rgba(255, 255, 255, 0.12);
+  --text: #f5f5f7;
+  --muted: #a1a1a6;
+  --muted-2: #86868b;
+  --faint: #48484a;
+
+  --accent: #0a84ff;
+  --accent-strong: #2997ff;
+  --accent-ink: #ffffff;
+
+  --price-free: #f5f5f7;
+  --price-freemium: #a1a1a6;
+  --price-paid: #86868b;
+
+  --sh-card: 0 1px 2px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.4);
+  --sh-panel: 0 1px 3px rgba(0, 0, 0, 0.5), 0 14px 40px rgba(0, 0, 0, 0.4);
+  --sh-lift: 0 12px 32px rgba(0, 0, 0, 0.55);
+  --sh-cta: 0 20px 54px rgba(10, 132, 255, 0.35);
+}
+
+/* 桥接成 Tailwind 工具类 */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-ink: var(--accent-ink);
+  --color-price-free: var(--price-free);
+  --color-price-freemium: var(--price-freemium);
+  --color-price-paid: var(--price-paid);
+
+  --shadow-card: var(--sh-card);
+  --shadow-panel: var(--sh-panel);
+  --shadow-lift: var(--sh-lift);
+  --shadow-cta: var(--sh-cta);
+
+  /* 圆角对齐 Apple 语义档位：chip 6 / thumb 12 / sheet 16 / card 18 / panel 22 */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 18px;
+  --radius-3xl: 22px;
+  --radius-full: 999px;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+/* 键盘可访问性：聚焦可见 */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ── 液态玻璃导航：仅导航/浮层用玻璃，内容区一律实心白 ── */
+.glass-nav {
+  background: rgba(245, 245, 247, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid transparent; /* 滚动到内容才显示发丝线 */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.dark .glass-nav {
+  background: rgba(0, 0, 0, 0.72);
+}
+.glass-nav.scrolled {
+  border-bottom-color: var(--border);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* ── 筛选 pill（分类/价格）：灰底标签，激活 = 反色实心 pill ── */
+.chip {
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.3rem 0.9rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--muted);
+  transition: color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.dark .chip {
+  background: rgba(255, 255, 255, 0.1);
+}
+.chip:hover {
+  color: var(--text);
+}
+.chip-active {
+  background: var(--text);
+  color: var(--bg);
+  font-weight: 600;
+}
+.chip-active:hover {
+  color: var(--bg);
+}
+
+/* ── Live 脉冲点（hero eyebrow） ── */
+@keyframes pulse-dot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(48, 209, 88, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(48, 209, 88, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(48, 209, 88, 0);
+  }
+}
+.live-dot {
+  background: #30d158;
+  animation: pulse-dot 2.2s infinite;
+}
+
+/* 标题负字距（Apple 细节） */
+.title-h1 {
+  letter-spacing: var(--tracking-h1);
+}
+.title-h2 {
+  letter-spacing: var(--tracking-h2);
+}
+.title-h3 {
+  letter-spacing: var(--tracking-h3);
+}

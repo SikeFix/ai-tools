@@ -1,0 +1,69 @@
+{
+  "slug": "plan-c-avatar",
+  "title": "Plan C: AI Avatar Presenters",
+  "summary": "Pick a tool → prepare the avatar → write the script → one-click generation → post-process & publish",
+  "scenario": "Best for batch talking-head videos without showing your own face, corporate training, and multilingual export. Core loop: avatar + script + one-click generation.",
+  "meta": {
+    "duration": "~20 min / video",
+    "cost": "~$2 / video",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "Tencent Zhiying", "url": "https://zenvideo.qq.com" },
+    { "name": "HeyGen", "url": "https://heygen.com" },
+    { "name": "D-ID", "url": "https://d-id.com" },
+    { "name": "CapCut", "url": "https://www.capcut.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Pick a tool",
+      "tool": "Tencent Zhiying / HeyGen / D-ID",
+      "time": "2 min",
+      "detail": "Tencent Zhiying (most China-friendly, strong Chinese, generous free credits); HeyGen (best quality, 95%+ lip sync, ~$1-2/min); D-ID (cheap and sufficient, ~$0.3-0.7/min). Advanced: record 2-5 minutes of yourself and train an 'Instant Avatar' in HeyGen to clone your own presenter."
+    },
+    {
+      "id": "s2",
+      "title": "Prepare the avatar",
+      "tool": "Preset avatar / headshot photo",
+      "time": "2 min",
+      "detail": "Start with a platform preset, or generate a custom presenter from a headshot (even lighting, clean background, ≥720p resolution)."
+    },
+    {
+      "id": "s3",
+      "title": "Write the talking-head script",
+      "tool": "ChatGPT / Claude",
+      "time": "5 min",
+      "detail": "100-300 words, short sentences with plenty of commas. Avatar lip sync is driven entirely by punctuation — the more standard your punctuation, the better the result."
+    },
+    {
+      "id": "s4",
+      "title": "Generate and render",
+      "tool": "HeyGen / Tencent Zhiying",
+      "time": "5-10 min",
+      "detail": "Paste the script, pick a voice, submit the render (a 1-minute video takes about 1-2 minutes). Then check lip sync, expression and voice fit.",
+      "tips": "Play each segment and check the lips; re-render only the sentences that fail rather than restarting the whole video."
+    },
+    {
+      "id": "s5",
+      "title": "Post-process and publish",
+      "tool": "CapCut",
+      "time": "5 min",
+      "detail": "Add captions, BGM and transitions in CapCut, then publish. For multilingual export, use HeyGen's multilingual lip sync to produce every language version from one script."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Too few punctuation marks → lips out of sync",
+      "detail": "Lip sync depends on punctuation. Always split long sentences, add commas, and use periods to make the avatar stop and pause."
+    },
+    {
+      "title": "Free avatars look like 'mannequins'",
+      "detail": "Free-tier presenters have stiff motion. For real quality, pay for a tier or upload a cloned video of yourself."
+    },
+    {
+      "title": "Licensing and watermarks",
+      "detail": "Some free tiers watermark output or restrict commercial use. Confirm the license before bulk commercial publishing."
+    }
+  ]
+}

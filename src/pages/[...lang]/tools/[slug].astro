@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Badge from '../../../components/Badge.astro';
+import ToolGrid from '../../../components/ToolGrid.astro';
+import {
+  capLabel,
+  categoryName,
+  getAllTools,
+  getCategoryById,
+  getToolIcon,
+  getToolsByCategory,
+  toolDesc,
+  toolUseCases,
+} from '../../../lib/tools';
+import { t, localePath } from '../../../lib/i18n';
+import { getSopsUsingTool } from '../../../lib/sop';
+import type { Lang } from '../../../lib/types';
+
+export function getStaticPaths() {
+  return getAllTools().flatMap((tool) => [
+    { params: { lang: undefined, slug: tool.slug }, props: { tool } }, // zh → /tools/slug/
+    { params: { lang: 'en', slug: tool.slug }, props: { tool } }, // en → /en/tools/slug/
+  ]);
+}
+
+const { tool } = Astro.props;
+const lang: Lang = (Astro.params.lang as Lang | undefined) ?? 'zh';
+const cat = getCategoryById(tool.category);
+const desc = toolDesc(tool, lang);
+const related = getToolsByCategory(tool.category)
+  .filter((item) => item.slug !== tool.slug)
+  .slice(0, 6);
+const canonicalPath = `/tools/${tool.slug}/`;
+const icon = getToolIcon(tool.slug);
+const workflows = getSopsUsingTool(tool.slug);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: tool.name,
+  url: tool.url,
+  description: desc,
+  applicationCategory: cat?.nameEn ?? 'AI Tool',
+  offers: {
+    '@type': 'Offer',
+    price: tool.price === 'Paid' ? undefined : '0',
+    priceCurrency: tool.price === 'Paid' ? undefined : 'USD',
+  },
+};
+---
+
+<BaseLayout
+  lang={lang}
+  title={tool.name}
+  description={desc}
+  canonicalPath={canonicalPath}
+  ogType="article"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
+  </Fragment>
+
+  <div class="mx-auto max-w-4xl px-4 py-10 sm:px-6">
+    <!-- 面包屑 -->
+    <nav class="mb-6 flex flex-wrap items-center gap-1.5 text-sm text-muted" aria-label="Breadcrumb">
+      <a href={localePath(lang, '/')} class="hover:text-text">{t(lang, 'breadcrumb.home')}</a>
+      <span aria-hidden="true">/</span>
+      <a href={localePath(lang, '/')} class="hover:text-text">{t(lang, 'breadcrumb.tools')}</a>
+      <span aria-hidden="true">/</span>
+      {cat && (
+        <a href={`${localePath(lang, '/')}#cat-${cat.id}`} class="hover:text-text">
+          {categoryName(cat, lang)}
+        </a>
+      )}
+    </nav>
+
+    <div class="flex flex-col gap-6 sm:flex-row sm:items-start">
+      <div
+        class="h-16 w-16 shrink-0 overflow-hidden rounded-2xl bg-surface-2"
+        aria-hidden="true"
+      >
+        {icon ? (
+          <img src={icon} alt="" width="64" height="64" class="h-16 w-16 object-contain p-2" />
+        ) : (
+          <span class="grid h-16 w-16 place-items-center text-2xl font-bold text-accent">
+            {tool.name.charAt(0).toUpperCase()}
+          </span>
+        )}
+      </div>
+
+      <div class="min-w-0 flex-1">
+        <h1 class="title-h1 text-2xl font-bold tracking-tight sm:text-3xl">{tool.name}</h1>
+        <p class="mt-2 max-w-xl leading-relaxed text-muted">{desc}</p>
+        <div class="mt-3 flex flex-wrap items-center gap-2">
+          <Badge tier={tool.price} />
+          {cat && <Badge label={categoryName(cat, lang)} />}
+          {(tool.tags ?? []).map((tag) => (
+            <span class="text-xs text-muted">#{tag}</span>
+          ))}
+        </div>
+      </div>
+
+      <a
+        href={tool.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex h-11 shrink-0 items-center rounded-full bg-accent px-5 text-sm font-semibold text-accent-ink transition hover:bg-accent-strong"
+      >
+        {t(lang, 'tool.visit')} <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    {(tool.caps ?? []).length > 0 && (
+      <section class="mt-10">
+        <h2 class="title-h2 mb-4 text-lg font-semibold tracking-tight">{t(lang, 'tool.capabilities')}</h2>
+        <div class="flex flex-wrap gap-1.5">
+          {(tool.caps ?? []).map((cap) => (
+            <span class="rounded-full bg-accent/10 px-3 py-1 text-sm font-medium text-accent">
+              {capLabel(cap, lang)}
+            </span>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {toolUseCases(tool, lang).length > 0 && (
+      <section class="mt-10">
+        <h2 class="title-h2 mb-4 text-lg font-semibold tracking-tight">{t(lang, 'tool.useCases')}</h2>
+        <ul class="space-y-2.5">
+          {toolUseCases(tool, lang).map((useCase) => (
+            <li class="flex items-start gap-3 text-sm leading-relaxed text-muted">
+              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+              {useCase}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {workflows.length > 0 && (
+      <section class="mt-10">
+        <h2 class="title-h2 mb-4 text-lg font-semibold tracking-tight">{t(lang, 'tool.workflows')}</h2>
+        <div class="flex flex-wrap gap-2">
+          {workflows.map((workflow) => (
+            <a
+              href={localePath(lang, `/sop/${workflow.slug}/`)}
+              class="chip hover:border-accent hover:text-accent"
+            >
+              {workflow.title}
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {related.length > 0 && (
+      <section class="mt-12">
+        <h2 class="mb-4 text-lg font-semibold tracking-tight">{t(lang, 'tool.related')}</h2>
+        <ToolGrid tools={related} lang={lang} />
+      </section>
+    )}
+  </div>
+</BaseLayout>

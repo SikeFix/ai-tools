@@ -1,0 +1,772 @@
+[
+  {
+    "slug": "apple-design",
+    "useCasesZh": [
+      "把普通界面改造成苹果质感",
+      "做产品导航/卡片页的视觉定调",
+      "统一全站色彩、圆角与阴影规范"
+    ],
+    "useCasesEn": [
+      "Turn plain UI into an Apple-grade look",
+      "Set the visual direction for nav and card pages",
+      "Unify colors, radius and shadow tokens site-wide"
+    ]
+  },
+  {
+    "slug": "frontend-design",
+    "useCasesZh": [
+      "写前端前先定美学方向",
+      "避开 AI 默认套路（Inter/紫色渐变）",
+      "建立统一的色彩系统与组件语言"
+    ],
+    "useCasesEn": [
+      "Decide an aesthetic before writing frontend code",
+      "Avoid AI clichés (Inter, purple gradients)",
+      "Establish a unified color system and component language"
+    ]
+  },
+  {
+    "slug": "ui-ux-pro-max",
+    "useCasesZh": [
+      "快速产出高质量 UI 稿",
+      "自动匹配产品类型的字体与样式",
+      "落地 99 条 UX 准则"
+    ],
+    "useCasesEn": [
+      "Produce high-quality UI quickly",
+      "Auto-match fonts and styles to product type",
+      "Apply 99 UX guidelines"
+    ]
+  },
+  {
+    "slug": "theme-factory",
+    "useCasesZh": [
+      "把品牌色一键变成 CSS 变量",
+      "切换浅色/深色主题",
+      "复用设计系统 token"
+    ],
+    "useCasesEn": [
+      "Turn brand colors into CSS variables in one shot",
+      "Switch light/dark themes",
+      "Reuse design-system tokens"
+    ]
+  },
+  {
+    "slug": "canvas-design",
+    "useCasesZh": [
+      "做横幅/Banner 视觉设计",
+      "布局类图形排版",
+      "导出 PNG/PDF"
+    ],
+    "useCasesEn": [
+      "Design banners and visual layouts",
+      "Compose graphic layouts",
+      "Export to PNG/PDF"
+    ]
+  },
+  {
+    "slug": "power-design",
+    "useCasesZh": [
+      "自动应用可读性与 WCAG 规则",
+      "检查页面排版是否达标",
+      "改善移动端可用性"
+    ],
+    "useCasesEn": [
+      "Auto-apply readability and WCAG rules",
+      "Check page layouts against standards",
+      "Improve mobile usability"
+    ]
+  },
+  {
+    "slug": "brand-guidelines",
+    "useCasesZh": [
+      "固化品牌色、字体、语气规范",
+      "统一多页面品牌表现",
+      "沉淀可复用的品牌 token"
+    ],
+    "useCasesEn": [
+      "Codify brand colors, type and tone",
+      "Keep brand consistent across pages",
+      "Reusable brand tokens"
+    ]
+  },
+  {
+    "slug": "design-system-architect",
+    "useCasesZh": [
+      "从一个品牌色生成整套配色",
+      "输出浅/深色语义 token",
+      "生成 Tailwind v4 主题配置"
+    ],
+    "useCasesEn": [
+      "Derive a full palette from one brand hue",
+      "Output light/dark semantic tokens",
+      "Generate Tailwind v4 theme config"
+    ]
+  },
+  {
+    "slug": "web-artifacts-builder",
+    "useCasesZh": [
+      "快速搭一个多文件前端项目",
+      "用 React+Tailwind+shadcn 做界面",
+      "打包成单个 HTML 交付"
+    ],
+    "useCasesEn": [
+      "Scaffold a multi-file frontend project fast",
+      "Build UIs with React+Tailwind+shadcn",
+      "Bundle into a single HTML deliverable"
+    ]
+  },
+  {
+    "slug": "webapp-testing",
+    "useCasesZh": [
+      "对网页做自动化点选测试",
+      "截图校验渲染结果",
+      "回归检查核心流程"
+    ],
+    "useCasesEn": [
+      "Automated click-through testing of web pages",
+      "Screenshot-verify rendered results",
+      "Regression-check core flows"
+    ]
+  },
+  {
+    "slug": "claude-api",
+    "useCasesZh": [
+      "查 Claude 模型 ID 与定价",
+      "写流式/工具调用代码",
+      "估算 token 与缓存成本"
+    ],
+    "useCasesEn": [
+      "Look up Claude model IDs and pricing",
+      "Write streaming / tool-use code",
+      "Estimate token and cache costs"
+    ]
+  },
+  {
+    "slug": "code-review",
+    "useCasesZh": [
+      "审查当前改动或 PR",
+      "给出可执行的正确性/安全发现",
+      "提升代码质量与可维护性"
+    ],
+    "useCasesEn": [
+      "Review the working diff or a PR",
+      "Surface actionable correctness/security findings",
+      "Improve code quality and maintainability"
+    ]
+  },
+  {
+    "slug": "security-review",
+    "useCasesZh": [
+      "扫描注入与敏感信息泄露",
+      "检查依赖漏洞",
+      "审查不安全默认配置"
+    ],
+    "useCasesEn": [
+      "Scan for injection and leaked secrets",
+      "Check dependency vulnerabilities",
+      "Audit unsafe default configs"
+    ]
+  },
+  {
+    "slug": "review",
+    "useCasesZh": [
+      "审查 GitHub PR",
+      "按严重度分级输出发现",
+      "代码规范与一致性检查"
+    ],
+    "useCasesEn": [
+      "Review GitHub PRs",
+      "Rank findings by severity",
+      "Check code style and consistency"
+    ]
+  },
+  {
+    "slug": "init",
+    "useCasesZh": [
+      "为项目生成 CLAUDE.md",
+      "让新 AI 会话快速理解项目",
+      "沉淀项目约定与命令"
+    ],
+    "useCasesEn": [
+      "Generate a CLAUDE.md for the project",
+      "Let new AI sessions grasp the project fast",
+      "Document conventions and commands"
+    ]
+  },
+  {
+    "slug": "run",
+    "useCasesZh": [
+      "启动项目并真实运行",
+      "验证改动在真实环境生效",
+      "CLI/服务器/浏览器驱动"
+    ],
+    "useCasesEn": [
+      "Launch and drive the project",
+      "Verify changes in the real runtime",
+      "CLI / server / browser driving"
+    ]
+  },
+  {
+    "slug": "playwright-mcp",
+    "useCasesZh": [
+      "浏览器自动点选与截图",
+      "读渲染后的 DOM 断言",
+      "测 Core Web Vitals"
+    ],
+    "useCasesEn": [
+      "Automate browser clicks and screenshots",
+      "Assert against rendered DOM",
+      "Measure Core Web Vitals"
+    ]
+  },
+  {
+    "slug": "figma-mcp",
+    "useCasesZh": [
+      "从 Figma 读设计变量",
+      "颜色/间距/字体直接转代码",
+      "设计与代码保持一致"
+    ],
+    "useCasesEn": [
+      "Read design variables from Figma",
+      "Turn colors/spacing/fonts into code",
+      "Keep design and code in sync"
+    ]
+  },
+  {
+    "slug": "chrome-devtools-mcp",
+    "useCasesZh": [
+      "读浏览器控制台报错",
+      "排查网络与性能问题",
+      "自动化调试流程"
+    ],
+    "useCasesEn": [
+      "Read browser console errors",
+      "Diagnose network and performance issues",
+      "Automate the debugging loop"
+    ]
+  },
+  {
+    "slug": "v0-mcp",
+    "useCasesZh": [
+      "描述需求生成多屏 UI",
+      "快速出产品原型",
+      "生成可运行的前端代码"
+    ],
+    "useCasesEn": [
+      "Describe a need, get multi-screen UI",
+      "Rapid product prototyping",
+      "Generate runnable frontend code"
+    ]
+  },
+  {
+    "slug": "github-mcp",
+    "useCasesZh": [
+      "创建 issue 与开 PR",
+      "审代码、查 CI 状态",
+      "管理仓库与分支"
+    ],
+    "useCasesEn": [
+      "Create issues and open PRs",
+      "Review code and check CI status",
+      "Manage repos and branches"
+    ]
+  },
+  {
+    "slug": "screenshot-mcp",
+    "useCasesZh": [
+      "截取网页/桌面截图",
+      "读取截图内容做视觉验证",
+      "为文档生成配图"
+    ],
+    "useCasesEn": [
+      "Capture web/desktop screenshots",
+      "Read captures for visual verification",
+      "Generate docs imagery"
+    ]
+  },
+  {
+    "slug": "skill-factory",
+    "useCasesZh": [
+      "把重复流程封装成 skill",
+      "按规范生成 SKILL.md",
+      "沉淀个人/团队工作法"
+    ],
+    "useCasesEn": [
+      "Package repeatable flows into skills",
+      "Generate SKILL.md to spec",
+      "Codify personal/team playbooks"
+    ]
+  },
+  {
+    "slug": "sqlite-mcp",
+    "useCasesZh": [
+      "让 AI 直接查询数据库",
+      "做数据探索与报表",
+      "建表与导入导出"
+    ],
+    "useCasesEn": [
+      "Let the AI query the database directly",
+      "Data exploration and reports",
+      "Create tables, import and export"
+    ]
+  },
+  {
+    "slug": "document-skills",
+    "useCasesZh": [
+      "解析 PDF/Word/Excel/PPT",
+      "提取文字、表格与结构",
+      "批量处理办公文档"
+    ],
+    "useCasesEn": [
+      "Parse PDF/Word/Excel/PPT",
+      "Extract text, tables and structure",
+      "Process office docs in batch"
+    ]
+  },
+  {
+    "slug": "image-understanding",
+    "useCasesZh": [
+      "OCR 图片文字",
+      "识别物体与场景",
+      "读取图表与截图信息"
+    ],
+    "useCasesEn": [
+      "OCR text from images",
+      "Recognize objects and scenes",
+      "Read charts and screenshots"
+    ]
+  },
+  {
+    "slug": "web-research",
+    "useCasesZh": [
+      "多来源深度检索",
+      "交叉验证信息",
+      "产出带引用的研究报告"
+    ],
+    "useCasesEn": [
+      "Multi-source deep search",
+      "Cross-verify information",
+      "Produce cited research reports"
+    ]
+  },
+  {
+    "slug": "context7",
+    "useCasesZh": [
+      "实时拉取库的最新文档",
+      "减少 API 幻觉",
+      "确认依赖版本与签名"
+    ],
+    "useCasesEn": [
+      "Pull live docs for any library",
+      "Reduce API hallucination",
+      "Confirm dependency versions and signatures"
+    ]
+  },
+  {
+    "slug": "web-scraping",
+    "useCasesZh": [
+      "抓取网页结构化数据",
+      "处理登录与反爬",
+      "数据清洗与入库"
+    ],
+    "useCasesEn": [
+      "Scrape structured web data",
+      "Handle auth and anti-bot",
+      "Clean and load data"
+    ]
+  },
+  {
+    "slug": "dataviz",
+    "useCasesZh": [
+      "任何图表前的规范检查",
+      "统一配色与明暗主题",
+      "保证图表可访问性"
+    ],
+    "useCasesEn": [
+      "Required reading before any chart",
+      "Unified palette and light/dark themes",
+      "Accessible visualizations"
+    ]
+  },
+  {
+    "slug": "video-production-skill",
+    "useCasesZh": [
+      "自动产出口播教学视频",
+      "脚本→生图→TTS→合成全流程",
+      "无人值守批量出片"
+    ],
+    "useCasesEn": [
+      "Auto-produce talking-head videos",
+      "Full pipeline: script→image→TTS→composite",
+      "Unattended batch video production"
+    ]
+  },
+  {
+    "slug": "image-gen",
+    "useCasesZh": [
+      "生成配图、图标与海报",
+      "统一走 FHL 生图接口",
+      "多种风格与尺寸"
+    ],
+    "useCasesEn": [
+      "Generate illustrations, icons and posters",
+      "One unified FHL image API",
+      "Multiple styles and sizes"
+    ]
+  },
+  {
+    "slug": "ui-slice",
+    "useCasesZh": [
+      "从 UI 设计稿提取图标按钮",
+      "批量切图",
+      "输出高清透明底素材"
+    ],
+    "useCasesEn": [
+      "Extract icons/buttons from a UI design",
+      "Batch slicing",
+      "Output clean transparent assets"
+    ]
+  },
+  {
+    "slug": "voice-clone",
+    "useCasesZh": [
+      "用样本克隆声音",
+      "数字人口播配音",
+      "多语言克隆配音"
+    ],
+    "useCasesEn": [
+      "Clone a voice from samples",
+      "Dub avatar videos",
+      "Multilingual cloned dubbing"
+    ]
+  },
+  {
+    "slug": "subtitle-skill",
+    "useCasesZh": [
+      "音频转词级时间戳字幕",
+      "生成 SRT 字幕文件",
+      "对齐烧录进视频"
+    ],
+    "useCasesEn": [
+      "Word-level timestamped captions",
+      "Generate SRT files",
+      "Align and burn into video"
+    ]
+  },
+  {
+    "slug": "thumbnail-maker",
+    "useCasesZh": [
+      "批量做视频封面",
+      "加标题字与统一模板",
+      "多平台尺寸适配"
+    ],
+    "useCasesEn": [
+      "Batch video cover generation",
+      "Headline text on consistent templates",
+      "Multi-platform sizing"
+    ]
+  },
+  {
+    "slug": "speech-to-text",
+    "useCasesZh": [
+      "会议/访谈语音转文字",
+      "口述速记",
+      "带说话人与时间戳转写"
+    ],
+    "useCasesEn": [
+      "Transcribe meetings and interviews",
+      "Dictation notes",
+      "Speaker- and timestamp-annotated transcripts"
+    ]
+  },
+  {
+    "slug": "update-config",
+    "useCasesZh": [
+      "配置 hooks 与权限",
+      "设置环境变量",
+      "自动化 settings.json"
+    ],
+    "useCasesEn": [
+      "Configure hooks and permissions",
+      "Set environment variables",
+      "Automate settings.json"
+    ]
+  },
+  {
+    "slug": "loop",
+    "useCasesZh": [
+      "定时循环执行任务",
+      "轮询部署/CI 状态",
+      "周期检查与提醒"
+    ],
+    "useCasesEn": [
+      "Run tasks on a recurring interval",
+      "Poll deploy/CI status",
+      "Periodic checks and reminders"
+    ]
+  },
+  {
+    "slug": "keybindings-help",
+    "useCasesZh": [
+      "自定义键盘快捷键",
+      "绑定常用命令",
+      "修改 keybindings.json"
+    ],
+    "useCasesEn": [
+      "Customize keyboard shortcuts",
+      "Bind frequently-used commands",
+      "Edit keybindings.json"
+    ]
+  },
+  {
+    "slug": "simplify",
+    "useCasesZh": [
+      "清理冗余代码",
+      "复用与简化重构",
+      "提升代码可读性"
+    ],
+    "useCasesEn": [
+      "Clean up redundant code",
+      "Reuse and simplify",
+      "Improve readability"
+    ]
+  },
+  {
+    "slug": "fewer-permission-prompts",
+    "useCasesZh": [
+      "把常用只读命令加入白名单",
+      "减少权限弹窗",
+      "长任务更流畅"
+    ],
+    "useCasesEn": [
+      "Allowlist common read-only commands",
+      "Reduce permission prompts",
+      "Smoother long tasks"
+    ]
+  },
+  {
+    "slug": "localization",
+    "useCasesZh": [
+      "批量翻译项目文案",
+      "保留占位符与格式",
+      "输出多语言语言包"
+    ],
+    "useCasesEn": [
+      "Batch-translate project copy",
+      "Preserve placeholders and format",
+      "Output locale packs"
+    ]
+  },
+  {
+    "slug": "brainstorm",
+    "useCasesZh": [
+      "多角度发散创意",
+      "聚类收敛选项",
+      "按标准打分排序"
+    ],
+    "useCasesEn": [
+      "Diverge ideas from many angles",
+      "Cluster and converge options",
+      "Score and rank against criteria"
+    ]
+  },
+  {
+    "slug": "decision-maker",
+    "useCasesZh": [
+      "把选择变成决策矩阵",
+      "按权重打分比较",
+      "给出推荐与理由"
+    ],
+    "useCasesEn": [
+      "Turn choices into a decision matrix",
+      "Weighted scoring comparison",
+      "Recommendation with reasoning"
+    ]
+  },
+  {
+    "slug": "email-draft",
+    "useCasesZh": [
+      "按语气起草邮件",
+      "改写让邮件更得体",
+      "处理多收件人跟进度"
+    ],
+    "useCasesEn": [
+      "Draft emails in the right tone",
+      "Rewrite to be more appropriate",
+      "Handle multi-recipient threads"
+    ]
+  },
+  {
+    "slug": "summarize-skill",
+    "useCasesZh": [
+      "长文/视频/音频提炼要点",
+      "生成结构化摘要",
+      "提取行动项"
+    ],
+    "useCasesEn": [
+      "Extract key points from long content",
+      "Structured summaries",
+      "Pull out action items"
+    ]
+  },
+  {
+    "slug": "notion-mcp",
+    "useCasesZh": [
+      "读写 Notion 页面与数据库",
+      "自动记笔记与整理",
+      "知识库检索"
+    ],
+    "useCasesEn": [
+      "Read/write Notion pages and databases",
+      "Auto note-taking and organization",
+      "Knowledge-base retrieval"
+    ]
+  },
+  {
+    "slug": "calendar-mcp",
+    "useCasesZh": [
+      "查询与创建日历事件",
+      "让 AI 帮你排日程",
+      "查空闲时间与提醒"
+    ],
+    "useCasesEn": [
+      "Query and create calendar events",
+      "Let AI schedule for you",
+      "Find free time and reminders"
+    ]
+  },
+  {
+    "slug": "mindmap-skill",
+    "useCasesZh": [
+      "把要点整理成思维导图",
+      "导出 Markdown/Mermaid",
+      "结构化梳理思路"
+    ],
+    "useCasesEn": [
+      "Organize points into a mind map",
+      "Export Markdown/Mermaid",
+      "Structure your thinking"
+    ]
+  },
+  {
+    "slug": "superpowers",
+    "useCasesZh": [
+      "按 plan-first 方法论开发",
+      "TDD 先写测试再实现",
+      "用子代理并行开发",
+      "结构化 Agent 开发流程"
+    ],
+    "useCasesEn": [
+      "Develop with plan-first methodology",
+      "TDD: tests before implementation",
+      "Parallel subagent development",
+      "Structured agentic development"
+    ]
+  },
+  {
+    "slug": "ecc",
+    "useCasesZh": [
+      "一站式配置 Claude Code",
+      "选技能/记忆/安全工具",
+      "搭建个人 Agent 环境",
+      "学习 Agent 最佳实践"
+    ],
+    "useCasesEn": [
+      "Configure Claude Code in one place",
+      "Pick skills, memory and security tools",
+      "Set up a personal agent environment",
+      "Learn agent best practices"
+    ]
+  },
+  {
+    "slug": "mattpocock-skills",
+    "useCasesZh": [
+      "真实工程的测试写法",
+      "重构与调试实战",
+      "生成高质量工程代码",
+      "前端项目落地"
+    ],
+    "useCasesEn": [
+      "Real-world testing patterns",
+      "Refactoring and debugging in practice",
+      "High-quality engineering code",
+      "Frontend project delivery"
+    ]
+  },
+  {
+    "slug": "karpathy-skills",
+    "useCasesZh": [
+      "让 Claude 遵循工程规范",
+      "改善代码行为与习惯",
+      "单文件注入行为规则",
+      "借鉴名人工作流"
+    ],
+    "useCasesEn": [
+      "Enforce engineering norms on Claude",
+      "Improve coding behavior and habits",
+      "Inject rules from a single file",
+      "Adopt a famous workflow"
+    ]
+  },
+  {
+    "slug": "gstack",
+    "useCasesZh": [
+      "参考 YC 总裁的配置",
+      "快速搭好 Claude Code 环境",
+      "套用成熟工具组合",
+      "配置风格学习"
+    ],
+    "useCasesEn": [
+      "Reference the YC president's config",
+      "Set up Claude Code fast",
+      "Adopt proven tool combinations",
+      "Learn config style"
+    ]
+  },
+  {
+    "slug": "claude-mem",
+    "useCasesZh": [
+      "跨会话记住项目偏好",
+      "压缩历史会话可检索",
+      "长期上下文累积",
+      "记忆型工作流"
+    ],
+    "useCasesEn": [
+      "Remember project preferences across sessions",
+      "Compress history into searchable memory",
+      "Long-term context accumulation",
+      "Memory-driven workflows"
+    ]
+  },
+  {
+    "slug": "awesome-mcp-servers",
+    "useCasesZh": [
+      "按需查找 MCP 服务器",
+      "了解各类工具能力",
+      "接入新能力前做调研",
+      "整理 MCP 生态"
+    ],
+    "useCasesEn": [
+      "Find MCP servers by need",
+      "Understand tool capabilities",
+      "Research before integrating",
+      "Organize the MCP ecosystem"
+    ]
+  },
+  {
+    "slug": "deep-research",
+    "useCasesZh": [
+      "生成深度研究报告",
+      "多来源检索交叉验证",
+      "带引文的调研成稿",
+      "竞品与学术调研"
+    ],
+    "useCasesEn": [
+      "Generate deep research reports",
+      "Multi-source retrieval with cross-verification",
+      "Cited research deliverables",
+      "Competitor and academic research"
+    ]
+  }
+]

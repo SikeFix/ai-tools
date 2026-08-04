@@ -1,0 +1,20 @@
+---
+import type { Lang, PriceTier } from '../lib/types';
+import { t } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const tiers: PriceTier[] = ['Free', 'Freemium', 'Paid'];
+---
+
+<div id="price-filter" class="flex flex-wrap items-center gap-1.5">
+  <span class="mr-1 text-xs font-medium text-muted">{t(lang, 'filter.price')}</span>
+  {tiers.map((tier) => (
+    <button type="button" data-price={tier} class="chip">
+      {t(lang, `price.${tier}`)}
+    </button>
+  ))}
+</div>

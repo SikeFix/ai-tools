@@ -1,0 +1,179 @@
+[
+  {
+    "slug": "heygen",
+    "caps": [
+      "avatar",
+      "lip-sync",
+      "tts",
+      "translate"
+    ],
+    "useCasesZh": [
+      "数字人口播视频",
+      "多语言口型同步出海",
+      "营销与培训视频",
+      "克隆真人形象"
+    ],
+    "useCasesEn": [
+      "Avatar talking-head videos",
+      "Multilingual lip-synced export",
+      "Marketing and training videos",
+      "Clone a real presenter"
+    ]
+  },
+  {
+    "slug": "synthesia",
+    "caps": [
+      "avatar",
+      "tts",
+      "translate"
+    ],
+    "useCasesZh": [
+      "企业培训视频",
+      "多语言员工沟通",
+      "产品演示",
+      "规模化内容制作"
+    ],
+    "useCasesEn": [
+      "Corporate training videos",
+      "Multilingual employee comms",
+      "Product demos",
+      "Scalable content production"
+    ]
+  },
+  {
+    "slug": "d-id",
+    "caps": [
+      "avatar",
+      "lip-sync",
+      "tts"
+    ],
+    "useCasesZh": [
+      "照片生成会说话数字人",
+      "低成本口播",
+      "客服与助理视频",
+      "快速试片"
+    ],
+    "useCasesEn": [
+      "Turn photos into talking avatars",
+      "Low-cost talking-head videos",
+      "Support and assistant videos",
+      "Quick test videos"
+    ]
+  },
+  {
+    "slug": "colossyan",
+    "caps": [
+      "avatar",
+      "tts"
+    ],
+    "useCasesZh": [
+      "学习与发展场景视频",
+      "内部培训",
+      "合规宣导",
+      "多语言版本"
+    ],
+    "useCasesEn": [
+      "Learning & development videos",
+      "Internal training",
+      "Compliance communications",
+      "Multilingual versions"
+    ]
+  },
+  {
+    "slug": "deepbrain",
+    "caps": [
+      "avatar",
+      "tts"
+    ],
+    "useCasesZh": [
+      "4K 超写实数字人",
+      "广电级制作",
+      "虚拟主播",
+      "新闻与节目"
+    ],
+    "useCasesEn": [
+      "4K ultra-realistic avatars",
+      "Broadcast-grade production",
+      "Virtual presenters",
+      "News and shows"
+    ]
+  },
+  {
+    "slug": "veed",
+    "caps": [
+      "avatar",
+      "video-edit",
+      "tts"
+    ],
+    "useCasesZh": [
+      "社媒口播视频",
+      "自动字幕",
+      "短视频剪辑",
+      "电商素材"
+    ],
+    "useCasesEn": [
+      "Social talking-head videos",
+      "Auto captions",
+      "Short-video editing",
+      "E-commerce assets"
+    ]
+  },
+  {
+    "slug": "creatify",
+    "caps": [
+      "avatar",
+      "workflow",
+      "tts"
+    ],
+    "useCasesZh": [
+      "批量广告口播变体",
+      "投放素材 A/B 测试",
+      "电商广告",
+      "多版本文案"
+    ],
+    "useCasesEn": [
+      "Batch ad talking-head variants",
+      "Ad A/B testing assets",
+      "E-commerce ads",
+      "Multi-version scripts"
+    ]
+  },
+  {
+    "slug": "jogg",
+    "caps": [
+      "avatar",
+      "text-to-video"
+    ],
+    "useCasesZh": [
+      "450+ 数字人快速出片",
+      "文生视频口播",
+      "社媒内容批量",
+      "多语言"
+    ],
+    "useCasesEn": [
+      "Fast videos from 450+ avatars",
+      "Text-to-video talking heads",
+      "Batch social content",
+      "Multilingual"
+    ]
+  },
+  {
+    "slug": "echomimic-v3",
+    "caps": [
+      "avatar",
+      "lip-sync"
+    ],
+    "useCasesZh": [
+      "照片/视频驱动数字人",
+      "12G 显存本地运行",
+      "口型与表情同步",
+      "低成本数字人"
+    ],
+    "useCasesEn": [
+      "Photo/video-driven avatars",
+      "Runs on 12GB VRAM locally",
+      "Lip-sync and expressions",
+      "Low-cost digital humans"
+    ]
+  }
+]

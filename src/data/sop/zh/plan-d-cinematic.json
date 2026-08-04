@@ -1,0 +1,98 @@
+{
+  "slug": "plan-d-cinematic",
+  "title": "方案 D：电影级 AI 短片（Agent 流水线）",
+  "summary": "立项拆解 → 多 Agent 分工 → 角色锚点 → 全片音频先行 → Animatic 预演 → 分镜生成 → Spec 组装 + 最小修复 + QC",
+  "scenario": "适合 5-15 分钟叙事短片、一人 AI 电影工作室、批量内容生产线。融合多 Agent 编排 + animatic-first + 三重质检，是目前社区最「工程化」的进阶路线（参考 OpenMontage、movie-gen、ViMax 等开源项目）。",
+  "meta": {
+    "duration": "2.5-6 小时 / 条",
+    "cost": "高（约 $50-200 / 条）",
+    "difficulty": "专家"
+  },
+  "toolsNeeded": [
+    { "name": "CrewAI / LangGraph / Agent SDK", "url": "https://crewai.com" },
+    { "name": "Midjourney / 即梦", "url": "https://midjourney.com" },
+    { "name": "Seedance / 可灵 / Higgsfield CLI", "url": "https://jimeng.jianying.com" },
+    { "name": "ElevenLabs + Suno / Sonilo", "url": "https://elevenlabs.io" },
+    { "name": "FFmpeg + assemble 脚本", "url": "https://ffmpeg.org" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "立项与参考拆解",
+      "tool": "ChatGPT / Claude",
+      "time": "20 分钟",
+      "detail": "明确平台、时长、风格与预算上限。找对标短片（点赞高 / 时长匹配），拆解其结构、镜头数、转场方式与音效设计，形成你的「参考蓝图」。",
+      "tips": "先定预算与交付标准再开工，避免 Agent 流水线失控烧钱。"
+    },
+    {
+      "id": "s2",
+      "title": "多 Agent 分工编排",
+      "tool": "CrewAI / LangGraph / Claude Agent SDK",
+      "time": "30 分钟",
+      "detail": "编排「编剧 → 导演 → 制片人 → 质检」Agent：编剧出剧本与三层规划（事件 / 场景 / 镜头）；导演出分镜表与多机位方案；制片人筛选参考图并做跨镜头一致性校验；质检并行生成候选并用 VLM 打分迭代。可参考开源 ViMax（导演/编剧/制片人分工）、storyforge、ArcReel 的架构。",
+      "tips": "关键创意决策点让 Agent 请求你批准，别让它全自主「拍脑袋」；预算上限与逐操作审批阈值要写进编排。"
+    },
+    {
+      "id": "s3",
+      "title": "角色定妆锚点 Anchors",
+      "tool": "Midjourney / 即梦",
+      "time": "30 分钟",
+      "detail": "先做全片角色定妆照（Anchors）作为跨镜头一致性参考，再为每场据此生成一张首帧图。首帧是后续生成的「锚」，决定物理与光影基调。",
+      "tips": "锚点图要正、侧、背多视角；背景简单；后续所有镜头都引用同一组锚点。"
+    },
+    {
+      "id": "s4",
+      "title": "全片音频先行",
+      "tool": "ElevenLabs / MiniMax + Suno",
+      "time": "30 分钟",
+      "detail": "选定角色声线，先出全片配音、BGM 与环境音。音频先行让后续画面严格对齐声轨，也便于直接做预演——专业长片都「声音先于画面」。",
+      "tips": "给配音标情绪标签；音乐、环境音、人声三层分开，混音时各自独立控制。"
+    },
+    {
+      "id": "s5",
+      "title": "Animatic 动画预演",
+      "tool": "FFmpeg / 剪映",
+      "time": "40 分钟",
+      "detail": "用「分镜静图 + 全片音频」组装预演，确认节奏、镜头衔接与总时长。这一步几乎免费，所有节奏问题都在此迭代完毕，再进入烧钱的生成阶段。",
+      "tips": "预演通过后再批量生成，能省一半以上 API 费用；这是成本治理的第一道闸。"
+    },
+    {
+      "id": "s6",
+      "title": "分镜生成",
+      "tool": "Seedance 2.0 / 可灵 / Higgsfield CLI",
+      "time": "60-180 分钟",
+      "detail": "输入 = 首帧图 + Anchors + 声音参考。Prompt 优先级：构图 → 主角 → 镜头运动 → 整体氛围。控制并发上限，生成失败优先改首帧重试；长片用关键帧模式或首尾帧续接，避免「短片段硬拼」的碎片感。",
+      "tips": "每镜多抽候选再选优；manifest 记录 prompt / seed / 模型版本，方便复现与回溯。"
+    },
+    {
+      "id": "s7",
+      "title": "Spec 驱动组装 + 最小修复 + QC",
+      "tool": "FFmpeg + 自定义 assemble 脚本",
+      "time": "60 分钟",
+      "detail": "用时间线清单（film_spec：切点 / 音乐跨度 / 环境音 / 调色 / 淡入淡出）驱动 FFmpeg 组装。Director notes 逐条用最便宜的修复方式：只换某句音轨用 dub 工具、只重渲某镜、音调错配用 F0 筛查。QC 三重门禁：ASR 回验 ≥0.85、CLIP 一致性、ffprobe 成片自审。",
+      "tips": "中间产物（storyboard / voice samples / manifest）刻意保留做回归；渲染支持断点续跑，防中断丢进度。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "预算失控",
+      "detail": "先 Animatic 免费迭代；执行前做成本预估、支出上限、逐操作审批阈值，别让 Agent 无限重试。"
+    },
+    {
+      "title": "Agent 自主乱来",
+      "detail": "关键创意决策点必须人工审批；给 Agent 明确的 SKILL / 流程文档，否则它会跳过标准流程自创较差做法。"
+    },
+    {
+      "title": "长片碎片感",
+      "detail": "用关键帧模式 / 首尾帧续接替代逐镜硬拼；转场用无缝直切，镜头运动跨镜连续。"
+    },
+    {
+      "title": "音画不同步",
+      "detail": "音频先行 + 音频预处理规范（单声道 / 去头静音 / -3dB）+ 最小修复（只换某句音轨）。"
+    },
+    {
+      "title": "一致性崩坏",
+      "detail": "Anchors 锚点 + 首尾帧锁定 + VLM 跨镜头校验；别依赖「祈祷同一个模型记住角色」。"
+    }
+  ]
+}

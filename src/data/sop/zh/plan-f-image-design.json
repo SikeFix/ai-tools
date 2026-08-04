@@ -1,0 +1,77 @@
+{
+  "slug": "plan-f-image-design",
+  "title": "方案 F：AI 出图设计工作流（海报 / 品牌）",
+  "summary": "需求梳理 → 风格参考 → 文生图初稿 → 图生图精修 → 文字版式 → 放大导出",
+  "scenario": "适合海报、封面、电商主图、品牌视觉与社媒素材等图像产出，20-40 分钟出一张可用图。",
+  "meta": {
+    "duration": "20-40 分钟 / 张",
+    "cost": "低-中",
+    "difficulty": "入门"
+  },
+  "toolsNeeded": [
+    { "name": "Midjourney / 即梦 / Flux", "url": "https://midjourney.com" },
+    { "name": "Ideogram / Canva", "url": "https://ideogram.ai" },
+    { "name": "Topaz / Real-ESRGAN", "url": "https://topazlabs.com" },
+    { "name": "ChatGPT / Claude", "url": "https://claude.ai" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "需求梳理与风格参考",
+      "tool": "ChatGPT / Claude + 参考图",
+      "time": "5 分钟",
+      "detail": "明确用途、画幅、文案位置、主色调与风格关键词，收集 2-3 张对标图作为视觉参考。Prompt 越具体，出图成功率越高。",
+      "tips": "参考图 + 明确的风格词（如「胶片感」「扁平插画」）比形容词堆砌有效得多。"
+    },
+    {
+      "id": "s2",
+      "title": "文生图初稿",
+      "tool": "Midjourney / 即梦 / Flux",
+      "time": "5-10 分钟",
+      "detail": "按「主体 → 场景 → 风格 → 构图 → 细节约束」顺序写 Prompt，一次多抽 4-8 张候选再挑。Midjourney 艺术感强、即梦中文场景好、Flux 文字准。",
+      "tips": "主体不一致时固定描述（如「红发少女」）或上传参考图；同一 Prompt 多抽几轮总有好图。"
+    },
+    {
+      "id": "s3",
+      "title": "图生图精修",
+      "tool": "图生图 / 局部重绘",
+      "time": "5-10 分钟",
+      "detail": "用图生图改构图、换背景、修细节；局部重绘修补崩坏的手、脸与边缘。比重新生成快得多，是出图质量的关键一步。",
+      "tips": "崩手/崩字优先局部重绘指定区域，别整张重来。"
+    },
+    {
+      "id": "s4",
+      "title": "文字与版式",
+      "tool": "Ideogram / Canva",
+      "time": "5 分钟",
+      "detail": "标题、slogan、价格等文字用 Ideogram（字形准）或导入 Canva 排版。AI 生成的图里直接写字容易乱码，版式交给专业工具更稳。",
+      "tips": "文字务必人工校对；留出安全边距避免被平台裁切。"
+    },
+    {
+      "id": "s5",
+      "title": "放大与导出",
+      "tool": "Topaz / Real-ESRGAN",
+      "time": "5 分钟",
+      "detail": "AI 出图通常 1024-2048px，商用打印或高清场景用超分模型放大并导出对应规格（RGB/CMYK、300dpi、PNG/PSD）。",
+      "tips": "超分会强化噪点，先降噪再放大；电商主图注意平台尺寸规范。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "文字乱码",
+      "detail": "AI 图内嵌文字经常出错；用 Ideogram/Flux 这类字形强的模型，或后期用 Canva 排版覆盖。"
+    },
+    {
+      "title": "崩手、崩结构",
+      "detail": "手指、牙齿、透视最容易崩；用局部重绘指定区域修复，或用图生图参考结构。"
+    },
+    {
+      "title": "商用授权",
+      "detail": "Midjourney 等付费版商用授权清晰，免费模型/训练数据来源要先确认；素材库风格图慎用。"
+    },
+    {
+      "title": "直接照搬他人风格图",
+      "detail": "参考风格可以，直接模仿他人作品可能有版权风险；尽量提炼「风格词」而非喂原图。"
+    }
+  ]
+}

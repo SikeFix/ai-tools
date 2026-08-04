@@ -1,0 +1,85 @@
+{
+  "slug": "plan-j-data-analysis",
+  "title": "Plan J: AI Data Analysis / Research Report",
+  "summary": "Define the question → clean data → exploratory analysis → deep modeling → visualize & narrate → conclusions",
+  "scenario": "Best for business dashboards, user analysis, competitor research and paper data — from a question to a decision-ready conclusion.",
+  "meta": {
+    "duration": "2-6 hours / report",
+    "cost": "Low-Medium",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT / Claude / Code Interpreter", "url": "https://claude.ai" },
+    { "name": "Python (pandas / scikit-learn)", "url": "" },
+    { "name": "Visualization (dataviz / matplotlib)", "url": "" },
+    { "name": "SQL / data warehouse", "url": "" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Define the question and metrics",
+      "tool": "ChatGPT / Claude",
+      "time": "15 min",
+      "detail": "Turn a vague ask into a quantifiable question and metrics (definition, time range, comparison group). Ambiguity in scope is the #1 analysis killer — align on what you're measuring first.",
+      "tips": "Write 'the question + which metrics + where data comes from' and let the AI check what's missing."
+    },
+    {
+      "id": "s2",
+      "title": "Clean the data",
+      "tool": "Python / Code Interpreter",
+      "time": "30-60 min",
+      "detail": "Handle missing values, outliers, duplicates, types and formats. Have the AI write cleaning scripts and output before/after stats.",
+      "tips": "Inspect distributions (describe / value_counts) before deciding how to treat missing values — don't blindly drop rows."
+    },
+    {
+      "id": "s3",
+      "title": "Exploratory analysis",
+      "tool": "pandas + visualization",
+      "time": "30-60 min",
+      "detail": "Look at distributions, correlations, group comparisons and trends; let the AI generate charts to surface patterns. This step yields the 'leads worth digging into'.",
+      "tips": "Correlation ≠ causation; describe the phenomenon first, then design a validation."
+    },
+    {
+      "id": "s4",
+      "title": "Deep modeling",
+      "tool": "scikit-learn / statistical methods",
+      "time": "1-2 hours",
+      "detail": "Pick the method for the question (regression / clustering / significance test / prediction), split train/test, check metrics and watch for overfitting. Have the AI write the model code and explain the result.",
+      "tips": "Don't throw a complex model at a small sample; run a simple baseline first and add complexity gradually."
+    },
+    {
+      "id": "s5",
+      "title": "Visualize and narrate",
+      "tool": "dataviz / matplotlib",
+      "time": "30 min",
+      "detail": "Use KPI cards plus clear charts to tell what happened, why, and what it means. Keep axes and palette consistent to avoid misleading visuals.",
+      "tips": "Start axes at zero, label units and sample sizes; every chart needs a one-line takeaway, not silence."
+    },
+    {
+      "id": "s6",
+      "title": "Conclusions and recommendations",
+      "tool": "ChatGPT / Claude",
+      "time": "30 min",
+      "detail": "Package findings as 'conclusion + evidence + recommendation + limitations', stating assumptions and data limits explicitly.",
+      "tips": "Stating limitations and confidence beats overselling — it reads more credible, not less."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Poor data quality",
+      "detail": "Dirty data yields beautiful but wrong conclusions; cleaning and QA are the most important step."
+    },
+    {
+      "title": "Confusing correlation with causation",
+      "detail": "Correlation is not causation; distinguish 'observed association' from 'verified cause' in the report."
+    },
+    {
+      "title": "Overfitting / tiny samples",
+      "detail": "Complex models on small data give irreproducible results; use simple baselines plus cross-validation."
+    },
+    {
+      "title": "Misleading charts",
+      "detail": "Truncated axes, unlabeled units, missing sample sizes all mislead; visualize to spec."
+    }
+  ]
+}

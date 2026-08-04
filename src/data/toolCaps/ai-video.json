@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "sora",
+    "caps": ["text-to-video", "cinematic", "image-to-video"],
+    "useCasesZh": ["生成电影级长镜头与运镜", "广告片与品牌短片", "概念片与视觉预演", "分镜剧本片段化实现"],
+    "useCasesEn": ["Generate cinematic long takes and camera moves", "Ads and brand short films", "Concept videos and pre-visualization", "Turn storyboard beats into footage"]
+  },
+  {
+    "slug": "veo",
+    "caps": ["text-to-video", "lip-sync", "image-to-video"],
+    "useCasesZh": ["原生 4K 视频生成", "带同步人声与音效的内容", "电影级 B-roll", "多语言口播素材"],
+    "useCasesEn": ["Native 4K video generation", "Content with synchronized speech and sound effects", "Cinematic B-roll", "Multilingual talking-head footage"]
+  },
+  {
+    "slug": "kling",
+    "caps": ["text-to-video", "image-to-video", "character-consistency"],
+    "useCasesZh": ["中文 AI 短剧与漫剧", "动作连贯的高难度镜头", "角色一致性的剧情视频", "抖音/短视频爆款"],
+    "useCasesEn": ["Chinese AI short dramas and manga animation", "High-difficulty shots with fluid motion", "Story videos with consistent characters", "Viral short-form videos"]
+  },
+  {
+    "slug": "runway",
+    "caps": ["text-to-video", "image-to-video", "video-edit"],
+    "useCasesZh": ["导演级运镜与多机位", "VFX 视觉特效合成", "专业剪辑工作流", "广告与品牌内容"],
+    "useCasesEn": ["Director-level camera control", "VFX compositing", "Professional editing workflows", "Ads and branded content"]
+  },
+  {
+    "slug": "luma",
+    "caps": ["text-to-video", "image-to-video"],
+    "useCasesZh": ["快速出片与批量试探", "梦境系艺术风格", "社交短视频", "创意原型演示"],
+    "useCasesEn": ["Fast turnaround and rapid iteration", "Dreamlike artistic styles", "Social short videos", "Creative prototype demos"]
+  },
+  {
+    "slug": "pika",
+    "caps": ["text-to-video", "video-edit", "image-to-video"],
+    "useCasesZh": ["一键风格化改造素材", "AI 特效玩法", "二次创作短视频", "动画风格内容"],
+    "useCasesEn": ["One-click stylization of footage", "Fun AI effects", "Remix short videos", "Animated-style content"]
+  },
+  {
+    "slug": "hailuo",
+    "caps": ["text-to-video", "image-to-video"],
+    "useCasesZh": ["稳定可控的文生视频", "创意短片与广告素材", "分镜片段生成", "电商与营销视频"],
+    "useCasesEn": ["Stable and controllable text-to-video", "Creative shorts and ad assets", "Storyboard shot generation", "E-commerce and marketing videos"]
+  },
+  {
+    "slug": "pixverse",
+    "caps": ["text-to-video", "image-to-video", "video-edit"],
+    "useCasesZh": ["多模态视频创作", "AI 特效与风格迁移", "UGC 短视频", "跨平台内容分发"],
+    "useCasesEn": ["Multimodal video creation", "AI effects and style transfer", "UGC short videos", "Cross-platform content"]
+  }
+]

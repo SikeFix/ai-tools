@@ -1,0 +1,18 @@
+---
+import type { PriceTier } from '../lib/types';
+
+interface Props {
+  /** 价格档位（Apple 风格：灰阶呈现，不做彩色） */
+  tier?: PriceTier;
+  /** 自定义文本（如分类名），覆盖 tier 文本 */
+  label?: string;
+}
+
+const { tier, label } = Astro.props;
+---
+
+<span
+  class="inline-flex items-center whitespace-nowrap rounded-full bg-surface-2 px-2 py-0.5 text-xs font-medium text-muted"
+>
+  {label ?? tier}
+</span>

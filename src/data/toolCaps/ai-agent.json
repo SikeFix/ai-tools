@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "manus",
+    "caps": ["agent", "research", "workflow"],
+    "useCasesZh": ["自主完成多步任务", "研究报告生成", "数据整理与分析", "端到端执行"],
+    "useCasesEn": ["Autonomous multi-step tasks", "Research report generation", "Data organization and analysis", "End-to-end execution"]
+  },
+  {
+    "slug": "n8n",
+    "caps": ["workflow", "agent", "automation"],
+    "useCasesZh": ["开源工作流自动化", "AI Agent 节点编排", "自托管数据安全", "定时任务"],
+    "useCasesEn": ["Open-source workflow automation", "AI agent node orchestration", "Self-hosted data security", "Scheduled jobs"]
+  },
+  {
+    "slug": "zapier",
+    "caps": ["workflow", "automation"],
+    "useCasesZh": ["连接 7000+ 应用", "自然语言建自动化", "营销与销售流程", "无代码集成"],
+    "useCasesEn": ["Connect 7000+ apps", "Natural-language automation", "Marketing and sales flows", "No-code integration"]
+  },
+  {
+    "slug": "make",
+    "caps": ["workflow", "automation", "data-viz"],
+    "useCasesZh": ["可视化流程搭建", "数据管道", "多应用编排", "中等复杂度自动化"],
+    "useCasesEn": ["Visual flow building", "Data pipelines", "Multi-app orchestration", "Mid-complexity automation"]
+  },
+  {
+    "slug": "langchain",
+    "caps": ["llm-dev", "agent", "workflow"],
+    "useCasesZh": ["构建 LLM 应用", "Agent 状态编排", "RAG 检索增强", "生产级框架"],
+    "useCasesEn": ["Build LLM applications", "Agent state orchestration", "RAG retrieval augmentation", "Production-grade framework"]
+  },
+  {
+    "slug": "crewai",
+    "caps": ["llm-dev", "agent"],
+    "useCasesZh": ["多智能体协作开发", "角色分工编排", "Python 集成", "任务自动化"],
+    "useCasesEn": ["Multi-agent collaboration", "Role-based orchestration", "Python integration", "Task automation"]
+  },
+  {
+    "slug": "lindy",
+    "caps": ["agent", "workflow"],
+    "useCasesZh": ["模板化商业智能体", "销售客服日程自动化", "快速上线", "CRM 集成"],
+    "useCasesEn": ["Template-based business agents", "Sales, support and scheduling automation", "Fast onboarding", "CRM integration"]
+  },
+  {
+    "slug": "dify",
+    "caps": ["llm-dev", "agent", "workflow"],
+    "useCasesZh": ["开源 LLM App 平台", "可视化 Agent 编排", "RAG 知识库", "私有化部署"],
+    "useCasesEn": ["Open-source LLM app platform", "Visual agent orchestration", "RAG knowledge bases", "Private deployment"]
+  },
+  {
+    "slug": "openclaw",
+    "caps": ["agent", "workflow", "automation"],
+    "useCasesZh": ["接入微信/Telegram 当私人助理", "自动收发消息与执行任务", "定时提醒与信息汇总", "个人自动化工作流"],
+    "useCasesEn": ["Act as a personal assistant on WeChat/Telegram", "Auto-handle messages and tasks", "Scheduled reminders and digests", "Personal automation workflows"]
+  },
+  {
+    "slug": "hermes-agent",
+    "caps": ["agent", "memory", "research"],
+    "useCasesZh": ["长期记住偏好持续进化", "自主完成多步任务", "跨会话知识累积", "个人知识代理"],
+    "useCasesEn": ["Remember preferences and keep evolving", "Autonomous multi-step tasks", "Cross-session knowledge accumulation", "Personal knowledge agent"]
+  },
+  {
+    "slug": "browser-use",
+    "caps": ["agent", "automation", "research"],
+    "useCasesZh": ["让 AI 操作真实浏览器", "自动填表单/下单/爬取", "网页数据采集", "端到端流程自动化"],
+    "useCasesEn": ["Let AI drive a real browser", "Auto-fill forms, order, scrape", "Web data collection", "End-to-end flow automation"]
+  },
+  {
+    "slug": "mem0",
+    "caps": ["llm-dev", "agent", "memory"],
+    "useCasesZh": ["给 Agent 加长期记忆", "向量 + 知识图谱存储", "多会话状态保持", "构建记忆型应用"],
+    "useCasesEn": ["Add long-term memory to agents", "Vector + knowledge-graph storage", "Multi-session state", "Build memory-native apps"]
+  },
+  {
+    "slug": "deer-flow",
+    "caps": ["agent", "research", "workflow"],
+    "useCasesZh": ["深度研究报告生成", "问题拆解并行检索", "Agent 编排示范", "调研自动化"],
+    "useCasesEn": ["Deep research reports", "Decompose questions and search in parallel", "Agent orchestration examples", "Research automation"]
+  }
+]

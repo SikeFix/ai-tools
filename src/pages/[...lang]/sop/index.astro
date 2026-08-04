@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SopCard from '../../../components/SopCard.astro';
+import Callout from '../../../components/Callout.astro';
+import { getSopsByGroup, type SopGroupId } from '../../../lib/sop';
+import { t } from '../../../lib/i18n';
+import type { Lang } from '../../../lib/types';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: undefined } }, // zh → /sop/
+    { params: { lang: 'en' } }, // en → /en/sop/
+  ];
+}
+
+const lang: Lang = (Astro.params.lang as Lang | undefined) ?? 'zh';
+const groups = getSopsByGroup(lang);
+const chainSteps = t(lang, 'sop.chain').split(' → ');
+
+const groupKey = (group: SopGroupId) => `sop.group.${group}` as const;
+const groupDescKey = (group: SopGroupId) => `sop.group.${group}.desc` as const;
+---
+
+<BaseLayout lang={lang} title={t(lang, 'sop.title')} canonicalPath="/sop/" ogType="website">
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <h1 class="title-h1 text-3xl font-bold tracking-tight sm:text-4xl">{t(lang, 'sop.title')}</h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted">{t(lang, 'sop.subtitle')}</p>
+
+    <!-- 核心链路横幅（视频主链路） -->
+    <div
+      class="mt-8 rounded-3xl border border-border bg-surface p-6 shadow-card"
+      role="img"
+      aria-label={t(lang, 'sop.chain')}
+    >
+      <ol class="flex flex-wrap items-center justify-center gap-x-2 gap-y-3 text-sm font-semibold">
+        {chainSteps.map((step, i) => (
+          <>
+            <li class="rounded-full bg-accent/10 px-3.5 py-1.5 text-accent">{step}</li>
+            {i < chainSteps.length - 1 && (
+              <li aria-hidden="true" class="text-faint">→</li>
+            )}
+          </>
+        ))}
+      </ol>
+    </div>
+
+    <Callout tone="info" title={t(lang, 'sop.chain')} class="mt-4">
+      {t(lang, 'sop.chainNote')}
+    </Callout>
+
+    <!-- 搜索 -->
+    <div class="mt-8">
+      <input
+        type="search"
+        enterkeyhint="search"
+        autocomplete="off"
+        placeholder={t(lang, 'search.placeholderSop')}
+        data-search=".sop-card"
+        data-search-section=".sop-group"
+        data-count="search-count"
+        class="w-full rounded-xl border border-border bg-surface py-2.5 pl-4 pr-4 text-sm outline-none transition placeholder:text-muted focus:border-accent"
+      />
+      <p class="mt-2 text-sm text-muted" hidden>
+        <span id="search-count" class="tabular-nums"></span>
+      </p>
+    </div>
+
+    <!-- 按类型分组 -->
+    <div class="mt-10 space-y-14">
+      {groups.map(({ group, articles }) =>
+        articles.length > 0 ? (
+          <section class="sop-group scroll-mt-20" id={group}>
+            <h2 class="title-h2 text-xl font-semibold tracking-tight">{t(lang, groupKey(group))}</h2>
+            <p class="mb-5 mt-1 text-sm text-muted">{t(lang, groupDescKey(group))}</p>
+            <div class="grid gap-4 sm:grid-cols-3">
+              {articles.map((article) => (
+                <SopCard article={article} lang={lang} />
+              ))}
+            </div>
+          </section>
+        ) : null,
+      )}
+    </div>
+  </div>
+
+  <script>
+    import '../../../scripts/searchCards.ts';
+  </script>
+</BaseLayout>

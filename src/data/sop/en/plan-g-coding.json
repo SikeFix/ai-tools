@@ -1,0 +1,85 @@
+{
+  "slug": "plan-g-coding",
+  "title": "Plan G: AI Coding Workflow (Requirements to Delivery)",
+  "summary": "Clarify requirements → technical plan → scaffold → incremental coding → test & debug → review & commit",
+  "scenario": "Best for new features, small tools, static sites and automation scripts — from a vague requirement to shippable code.",
+  "meta": {
+    "duration": "1-4 hours / feature",
+    "cost": "Medium",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "Cursor / Claude Code", "url": "https://cursor.com" },
+    { "name": "GitHub Copilot / Windsurf", "url": "https://github.com/features/copilot" },
+    { "name": "Claude / ChatGPT", "url": "https://claude.ai" },
+    { "name": "Git", "url": "https://git-scm.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Clarify requirements",
+      "tool": "ChatGPT / Claude + you",
+      "time": "10-20 min",
+      "detail": "Turn a vague requirement into clear acceptance criteria: goal, inputs/outputs, edge cases, and what NOT to build. Let the model ask the gaps you missed — this decides how much you rework.",
+      "tips": "Write 'when X happens, then Y' acceptance cases so the AI and you are on the same page."
+    },
+    {
+      "id": "s2",
+      "title": "Technical plan",
+      "tool": "Claude / ChatGPT",
+      "time": "10-20 min",
+      "detail": "Decide stack and architecture (language, framework, data structures, interfaces) first, with the model comparing options and trade-offs. Settle the plan before writing code.",
+      "tips": "Ask for the simplest runnable MVP first, then expand — steadier than designing everything up front."
+    },
+    {
+      "id": "s3",
+      "title": "Scaffold and skeleton",
+      "tool": "Cursor / Claude Code",
+      "time": "10-30 min",
+      "detail": "Initialize the project, directory structure, dependencies and base config until the code runs. Use templates or agent scaffolding to cut manual labor.",
+      "tips": "git init early and commit in small steps so anything can roll back."
+    },
+    {
+      "id": "s4",
+      "title": "Incremental coding",
+      "tool": "Cursor / Claude Code / Copilot",
+      "time": "1-2 hours",
+      "detail": "Implement in small steps — finish one feature/module and verify it before moving on. Let coding agents (Claude Code / Cursor Composer) edit and run autonomously, so problems trace to a specific step.",
+      "tips": "Commit every verifiable unit; generating one giant feature at once is how big hidden bugs happen."
+    },
+    {
+      "id": "s5",
+      "title": "Test and debug",
+      "tool": "Test framework + AI",
+      "time": "30-60 min",
+      "detail": "Write unit tests for critical logic, manually verify edge and error paths, and feed error logs to the model for diagnosis. Let AI write tests, run them and fix regressions.",
+      "tips": "Describe exactly how to reproduce before asking the model — hit rate jumps; test empty, huge and invalid inputs separately."
+    },
+    {
+      "id": "s6",
+      "title": "Review and commit",
+      "tool": "Code Review / review agent",
+      "time": "20-30 min",
+      "detail": "Self-review the diff, run an AI security/correctness/performance pass, fix findings, and write a clear PR description (what changed, why, how tested).",
+      "tips": "Include test results and reproduction steps in the PR; reviews pass faster and rollbacks are easy."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Coding before clarifying requirements",
+      "detail": "Vague requirements mean guaranteed rework; ten minutes writing acceptance criteria is the cheapest investment."
+    },
+    {
+      "title": "Generating one giant feature at once",
+      "detail": "Big one-shot output buries bugs where they're hard to find; incremental coding with per-step verification is the reliable rhythm."
+    },
+    {
+      "title": "Shipping without running tests",
+      "detail": "AI code looks plausible but breaks at the edges; at minimum test the critical paths."
+    },
+    {
+      "title": "Stale libraries / guessed APIs",
+      "detail": "Models may suggest outdated APIs; confirm library versions and signatures (e.g. with context7) or regenerate against current docs."
+    }
+  ]
+}

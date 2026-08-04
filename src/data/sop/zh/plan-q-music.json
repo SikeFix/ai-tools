@@ -1,0 +1,85 @@
+{
+  "slug": "plan-q-music",
+  "title": "方案 Q：AI 音乐与声音制作",
+  "summary": "需求定位 → 风格参考 → AI 生成 → 选曲改编 → 混音音效 → 版权确认",
+  "scenario": "适合短视频配乐、游戏音效、播客 BGM、广告音乐等声音产出，从需求到可商用素材。",
+  "meta": {
+    "duration": "30-60 分钟 / 首",
+    "cost": "低-中",
+    "difficulty": "入门"
+  },
+  "toolsNeeded": [
+    { "name": "Suno / Udio", "url": "https://suno.com" },
+    { "name": "Stable Audio / ElevenLabs", "url": "https://stability.ai" },
+    { "name": "AIVA", "url": "https://aiva.ai" },
+    { "name": "混音 / 版权平台", "url": "" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "需求定位",
+      "tool": "ChatGPT / Claude",
+      "time": "10 分钟",
+      "detail": "明确用途（BGM/歌曲/音效/播客片头）、时长、情绪与风格（曲风、速度、器乐/人声、有无歌词）。",
+      "tips": "把「情绪 + 场景 + 风格」写成一句话需求，比给模型一堆抽象形容词有效。"
+    },
+    {
+      "id": "s2",
+      "title": "风格参考",
+      "tool": "ChatGPT / Claude",
+      "time": "10 分钟",
+      "detail": "描述对标歌曲/风格关键词，让 AI 生成可执行的 prompt 描述（乐器、BPM、和声、质感），并给参考曲目让 AI 提炼特征。",
+      "tips": "「参考曲风 + 具体器乐 + 情绪走向」三段式 prompt 出曲更贴需求。"
+    },
+    {
+      "id": "s3",
+      "title": "AI 生成",
+      "tool": "Suno / Udio",
+      "time": "10-20 分钟",
+      "detail": "Suno 生成带人声完整歌曲（任意风格）、Udio 成品感更强可 Remix；多生成几版再挑。歌词用 AI 写并人工过一遍。",
+      "tips": "同一 prompt 多抽 5-10 版，挑出最顺耳的再精修，比反复微调参数高效。"
+    },
+    {
+      "id": "s4",
+      "title": "选曲与改编",
+      "tool": "Udio Remix / AIVA",
+      "time": "10-20 分钟",
+      "detail": "选中版本做 Remix/延长/变速改编，AIVA 用于古典与纯器乐编曲；把「半成品」改成贴合时长的版本。",
+      "tips": "生成最长可用版本，剪辑时留富余；改编时保留主旋律别跑偏。"
+    },
+    {
+      "id": "s5",
+      "title": "混音与音效",
+      "tool": "Stable Audio / 混音工具",
+      "time": "15-30 分钟",
+      "detail": "叠加音效（Stable Audio 生成 SFX）、调音量与响度、必要时人声分离（Demucs）做 Remix 或伴奏提取。",
+      "tips": "响度统一到目标平台标准；BGM 场景永远压低音量做人声地板。"
+    },
+    {
+      "id": "s6",
+      "title": "版权确认",
+      "tool": "平台授权说明 + 你",
+      "time": "10 分钟",
+      "detail": "确认生成物的商用授权（Suno 付费版可商用、免费版限制）、署名要求与平台分成条款。",
+      "tips": "商用前逐条读授权；「免费版生成的歌能不能商用」是最高频翻车点。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "商用授权不清",
+      "detail": "免费版生成的歌商用有风险；商用务必用付费档并确认授权条款。"
+    },
+    {
+      "title": "人声机械感",
+      "detail": "AI 人声长句僵硬；拆短句、加情绪标签，或多抽几版挑自然。"
+    },
+    {
+      "title": "风格不符需求",
+      "detail": "prompt 太抽象出曲偏；用「参考曲风 + 器乐 + BPM + 情绪」结构化描述。"
+    },
+    {
+      "title": "伴奏/人声分离质量",
+      "detail": "粗暴分离有毛刺；用 Demucs 类专用模型，必要时保留原曲。"
+    }
+  ]
+}

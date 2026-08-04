@@ -1,0 +1,85 @@
+{
+  "slug": "plan-h-translation",
+  "title": "Plan H: AI Translation / Multilingual Export",
+  "summary": "Preprocess source → build glossary → AI first pass → human review → localization adaption → QA & ship",
+  "scenario": "Best for going abroad: product copy, website/app multilingual, marketing content and documentation — machine translation for the base, human review for quality.",
+  "meta": {
+    "duration": "1-3 hours / language",
+    "cost": "Low-Medium",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "DeepSeek / ChatGPT / Claude", "url": "https://deepseek.com" },
+    { "name": "Translation API (DeepL / cloud)", "url": "https://deepl.com" },
+    { "name": "Localization platform (Crowdin / Lokalise)", "url": "https://crowdin.com" },
+    { "name": "Native reviewer / professional translator", "url": "" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Preprocess the source",
+      "tool": "Formatting tools + you",
+      "time": "10 min",
+      "detail": "Clean layout noise (extra line breaks, markup, placeholders) and flag what must be preserved. Clean input means clean output.",
+      "tips": "Tag placeholders like %s, {name} and {{variable}} separately so translators never touch them."
+    },
+    {
+      "id": "s2",
+      "title": "Build a glossary",
+      "tool": "ChatGPT / Claude",
+      "time": "15-30 min",
+      "detail": "Collect brand names, product names, jargon and slogans into a source↔target glossary, ruling which stay untranslated and which get fixed translations. Consistency starts here.",
+      "tips": "Brand names usually stay as-is; feature words (e.g. 'save') get one canonical translation site-wide."
+    },
+    {
+      "id": "s3",
+      "title": "AI first pass",
+      "tool": "DeepSeek / ChatGPT / translation API",
+      "time": "30-60 min",
+      "detail": "Feed 'glossary + style requirements + source' together, translating segment by segment. For bulk, use an API or script, giving each line context to avoid mis-splitting.",
+      "tips": "Give the model 1-2 polished reference sentences (few-shot) for much steadier style."
+    },
+    {
+      "id": "s4",
+      "title": "Human review",
+      "tool": "Native speaker / professional translator",
+      "time": "1-2 hours",
+      "detail": "Review cultural context, tone and marketing hooks line by line; reflow long sentences to target-language habits. Brand-voice consistency is won at this gate.",
+      "tips": "Give reviewers a scope ('tone / length / culture only') so style doesn't drift while editing."
+    },
+    {
+      "id": "s5",
+      "title": "Localization adaption",
+      "tool": "Localization platform / dev handoff",
+      "time": "30 min",
+      "detail": "Localize dates, currency, units and time zones; adapt truncation and wrapping caused by different text lengths, and restore placeholders to the right slots.",
+      "tips": "EN→ZH often grows ~30%, ZH→EN can shrink ~30%; leave flex in your layout."
+    },
+    {
+      "id": "s6",
+      "title": "QA and ship",
+      "tool": "Back-translation spot checks + UI screenshots",
+      "time": "30 min",
+      "detail": "Back-translate samples to compare semantics; screenshot key pages for truncation, overlap and untranslated leftovers before launch.",
+      "tips": "Run an automated 'untranslated residue scan' before release — more reliable than eyeballing screens."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Inconsistent terminology",
+      "detail": "The same feature translated differently across pages is a going-abroad killer; build a glossary and enforce it globally."
+    },
+    {
+      "title": "Awkward cultural context",
+      "detail": "Literal translation trips over memes, puns and taboos; native review is the safety net."
+    },
+    {
+      "title": "Lost format / truncation",
+      "detail": "Placeholders shift and text overflows after translation; use a localization platform plus screenshot QA."
+    },
+    {
+      "title": "Machine-translation smell",
+      "detail": "Pure MT reads stiff; the AI-pass + human-polish combo beats either alone."
+    }
+  ]
+}

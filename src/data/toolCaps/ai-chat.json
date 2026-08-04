@@ -1,0 +1,189 @@
+[
+  {
+    "slug": "chatgpt",
+    "caps": [
+      "writing",
+      "code-gen",
+      "image-gen",
+      "summarization"
+    ],
+    "useCasesZh": [
+      "写邮件、文案、周报等各类文本",
+      "辅助编程与 debug",
+      "生成配图与海报",
+      "总结长文档、提取要点"
+    ],
+    "useCasesEn": [
+      "Draft emails, copy and weekly reports",
+      "Assist with coding and debugging",
+      "Generate illustrations and posters",
+      "Summarize long documents and extract key points"
+    ]
+  },
+  {
+    "slug": "claude",
+    "caps": [
+      "writing",
+      "code-gen",
+      "summarization",
+      "coding-agent"
+    ],
+    "useCasesZh": [
+      "分析上百页长文档与合同",
+      "大工程代码阅读与重构",
+      "用 Claude Code 自动改代码提 PR",
+      "深度写作与多轮创作"
+    ],
+    "useCasesEn": [
+      "Analyze hundred-page documents and contracts",
+      "Read and refactor large codebases",
+      "Use Claude Code to edit code and open PRs",
+      "Deep writing and multi-turn creative work"
+    ]
+  },
+  {
+    "slug": "gemini",
+    "caps": [
+      "writing",
+      "code-gen",
+      "research",
+      "summarization"
+    ],
+    "useCasesZh": [
+      "与 Gmail / Docs / Sheets 联动处理办公",
+      "1M 上下文读长代码库",
+      "多模态看图问答",
+      "生成内容并深度搜索"
+    ],
+    "useCasesEn": [
+      "Work across Gmail, Docs and Sheets",
+      "Read long codebases with 1M context",
+      "Answer questions from images",
+      "Generate content plus deep web search"
+    ]
+  },
+  {
+    "slug": "deepseek",
+    "caps": [
+      "writing",
+      "code-gen",
+      "reasoning",
+      "summarization"
+    ],
+    "useCasesZh": [
+      "免费深度推理问答",
+      "编程与算法题",
+      "长文本写作",
+      "数学与逻辑推理"
+    ],
+    "useCasesEn": [
+      "Free deep-reasoning Q&A",
+      "Coding and algorithm problems",
+      "Long-form writing",
+      "Math and logical reasoning"
+    ]
+  },
+  {
+    "slug": "kimi",
+    "caps": [
+      "summarization",
+      "research",
+      "writing",
+      "search"
+    ],
+    "useCasesZh": [
+      "一口气读完整本 PDF 并总结",
+      "联网检索并整理资料",
+      "写研究报告与综述",
+      "多轮长对话"
+    ],
+    "useCasesEn": [
+      "Read an entire PDF and summarize it",
+      "Search the web and organize findings",
+      "Write research reports and surveys",
+      "Long multi-turn conversations"
+    ]
+  },
+  {
+    "slug": "doubao",
+    "caps": [
+      "writing",
+      "image-gen",
+      "tts",
+      "summarization"
+    ],
+    "useCasesZh": [
+      "日常问答与写作",
+      "App 内生成图片",
+      "语音交互与朗读",
+      "快速总结"
+    ],
+    "useCasesEn": [
+      "Everyday Q&A and writing",
+      "Generate images in-app",
+      "Voice interaction and reading aloud",
+      "Quick summarization"
+    ]
+  },
+  {
+    "slug": "qwen",
+    "caps": [
+      "writing",
+      "code-gen",
+      "summarization",
+      "llm-dev"
+    ],
+    "useCasesZh": [
+      "中文办公写作",
+      "开源模型微调与部署",
+      "多模态内容理解",
+      "代码生成"
+    ],
+    "useCasesEn": [
+      "Chinese business writing",
+      "Fine-tune and deploy open models",
+      "Multimodal content understanding",
+      "Code generation"
+    ]
+  },
+  {
+    "slug": "grok",
+    "caps": [
+      "writing",
+      "research",
+      "search",
+      "code-gen"
+    ],
+    "useCasesZh": [
+      "追踪 X 平台实时热点",
+      "观点类写作与评论",
+      "联网问答",
+      "代码与数据分析"
+    ],
+    "useCasesEn": [
+      "Track real-time X platform trends",
+      "Opinion writing and commentary",
+      "Web-connected Q&A",
+      "Code and data analysis"
+    ]
+  },
+  {
+    "slug": "open-webui",
+    "caps": [
+      "search",
+      "workflow"
+    ],
+    "useCasesZh": [
+      "自托管聊天界面",
+      "接 Ollama 本地模型",
+      "多用户共享",
+      "隐私优先对话"
+    ],
+    "useCasesEn": [
+      "Self-hosted chat UI",
+      "Connect local Ollama models",
+      "Multi-user shared access",
+      "Privacy-first conversations"
+    ]
+  }
+]

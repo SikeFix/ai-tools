@@ -1,0 +1,85 @@
+{
+  "slug": "plan-p-customer-service",
+  "title": "Plan P: Building an AI Customer-Service Agent",
+  "summary": "Business mapping → knowledge base → intent & FAQ → dialogue flow → channel integration → human fallback & iteration",
+  "scenario": "Best for e-commerce, SaaS, websites and support teams — offloading repeat queries to an AI agent available 24/7.",
+  "meta": {
+    "duration": "1-3 days / setup",
+    "cost": "Low-Medium",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "Dify / Coze", "url": "https://dify.ai" },
+    { "name": "ChatGPT / Claude", "url": "https://claude.ai" },
+    { "name": "Support platform (WeCom / DingTalk / website)", "url": "" },
+    { "name": "Knowledge-base tool", "url": "" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Map the business",
+      "tool": "ChatGPT / Claude + you",
+      "time": "1 hour",
+      "detail": "List the frequent query types (pre-sale / after-sale / logistics / returns / product usage), estimate their share, and decide what is fully automated, what escalates, and what the AI must never promise.",
+      "tips": "Solve the 80% of top-frequency questions first and leave the long tail to humans — don't chase 100% coverage on day one."
+    },
+    {
+      "id": "s2",
+      "title": "Build the knowledge base",
+      "tool": "Dify / Coze + you",
+      "time": "3-6 hours",
+      "detail": "Structure FAQs, product specs and policy terms into a searchable knowledge base wired through RAG. Knowledge quality decides answer accuracy.",
+      "tips": "Write each entry as 'question → standard answer → source link'; refresh from real tickets regularly."
+    },
+    {
+      "id": "s3",
+      "title": "Intents and FAQ config",
+      "tool": "Dify / Coze",
+      "time": "1-2 hours",
+      "detail": "Configure intent detection (price / logistics / returns / complaints), bind each to standard answers, and set fallback copy plus human-handoff triggers.",
+      "tips": "Keep to 5-8 main intents; over-splitting causes misclassification."
+    },
+    {
+      "id": "s4",
+      "title": "Design the dialogue flow",
+      "tool": "Dify / Coze",
+      "time": "1-2 hours",
+      "detail": "Build multi-turn flows: ask for the order number, confirm the issue, offer a solution, check satisfaction. Route sensitive topics (refunds, complaints, legal) straight to humans.",
+      "tips": "When the AI is unsure, it must offer a human handoff — never answer blind."
+    },
+    {
+      "id": "s5",
+      "title": "Integrate channels",
+      "tool": "Support platform",
+      "time": "1 hour",
+      "detail": "Connect WeCom / DingTalk / website / app support entry points; configure human-in-the-loop (AI answers first, human takeover visible).",
+      "tips": "Gray-launch one channel before rolling out; keep all conversation logs for optimization."
+    },
+    {
+      "id": "s6",
+      "title": "Fallback and iterate",
+      "tool": "Support platform + you",
+      "time": "Ongoing",
+      "detail": "Daily-sample conversation logs: wrong answers go into the knowledge base, over-escalations get tighter copy; run periodic 'answer accuracy' evaluations.",
+      "tips": "Set a confidence threshold: below it auto-escalate to a human, above it auto-answer."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Thin knowledge base",
+      "detail": "Missing knowledge makes the AI fabricate answers; fill the top-frequency questions before launch."
+    },
+    {
+      "title": "Irrelevant answers",
+      "detail": "Misclassified intents produce irrelevant replies; tighten intents and strengthen fallback copy."
+    },
+    {
+      "title": "Wrong answers on sensitive topics",
+      "detail": "Refunds, complaints and legal must force human handoff — never let the AI improvise."
+    },
+    {
+      "title": "No human fallback",
+      "detail": "Full automation without an out angers customers; keep human-in-the-loop and handoff channels."
+    }
+  ]
+}

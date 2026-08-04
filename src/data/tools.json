@@ -1,0 +1,1073 @@
+[
+  {
+    "slug": "chatgpt",
+    "name": "ChatGPT",
+    "url": "https://chatgpt.com",
+    "category": "ai-chat",
+    "price": "Freemium",
+    "tags": ["assistant", "multimodal", "search"],
+    "descZh": "OpenAI 旗舰通用助手，多模态，生态最全、全球月活第一。",
+    "descEn": "OpenAI's flagship general assistant, multimodal, with the largest ecosystem and #1 global monthly active users."
+  },
+  {
+    "slug": "claude",
+    "name": "Claude",
+    "url": "https://claude.ai",
+    "category": "ai-chat",
+    "price": "Freemium",
+    "tags": ["assistant", "long-context", "coding", "writing"],
+    "descZh": "Anthropic 旗舰助手，长文档推理与编程见长，上下文窗口大。",
+    "descEn": "Anthropic's flagship assistant, strong at long-context reasoning and coding, with a large context window."
+  },
+  {
+    "slug": "gemini",
+    "name": "Google Gemini",
+    "url": "https://gemini.google.com",
+    "category": "ai-chat",
+    "price": "Free",
+    "tags": ["assistant", "multimodal", "1m-context"],
+    "descZh": "谷歌多模态助手，与 Workspace 深度整合，支持 1M 上下文。",
+    "descEn": "Google's multimodal assistant, deeply integrated with Workspace, with 1M-token context."
+  },
+  {
+    "slug": "deepseek",
+    "name": "DeepSeek",
+    "url": "https://deepseek.com",
+    "category": "ai-chat",
+    "price": "Free",
+    "tags": ["assistant", "open-source", "reasoning"],
+    "descZh": "国产开源模型，推理能力强、免费且速度快，全球榜单前列。",
+    "descEn": "An open-source Chinese model with strong reasoning, free and fast, ranking high globally."
+  },
+  {
+    "slug": "kimi",
+    "name": "Kimi",
+    "url": "https://kimi.com",
+    "category": "ai-chat",
+    "price": "Free",
+    "tags": ["assistant", "long-document"],
+    "descZh": "月之暗面长文本助手，擅长长文档阅读与联网搜索。",
+    "descEn": "Moonshot AI's long-context assistant, excellent at reading long documents and web search."
+  },
+  {
+    "slug": "doubao",
+    "name": "豆包 Doubao",
+    "url": "https://doubao.com",
+    "category": "ai-chat",
+    "price": "Free",
+    "tags": ["assistant", "app", "multimodal"],
+    "descZh": "字节跳动国民级 AI 助手，App 月活全球前五。",
+    "descEn": "ByteDance's consumer AI assistant, among the top-5 apps by monthly active users worldwide."
+  },
+  {
+    "slug": "qwen",
+    "name": "通义千问 Qwen",
+    "url": "https://qwen.ai",
+    "category": "ai-chat",
+    "price": "Free",
+    "tags": ["assistant", "open-source", "multimodal"],
+    "descZh": "阿里通义千问，多模态能力与开源模型生态完善。",
+    "descEn": "Alibaba's Qwen, with strong multimodal capabilities and a rich open-source model ecosystem."
+  },
+  {
+    "slug": "grok",
+    "name": "Grok",
+    "url": "https://grok.com",
+    "category": "ai-chat",
+    "price": "Freemium",
+    "tags": ["assistant", "real-time", "x-platform"],
+    "descZh": "xAI 助手，实时接入 X 平台数据，风格不设限。",
+    "descEn": "xAI's assistant with real-time X platform data and an unfiltered style."
+  },
+
+  {
+    "slug": "sora",
+    "name": "Sora",
+    "url": "https://sora.com",
+    "category": "ai-video",
+    "price": "Paid",
+    "tags": ["text-to-video", "cinematic"],
+    "descZh": "OpenAI 文生视频标杆，物理仿真与长镜头一致性最强。",
+    "descEn": "OpenAI's text-to-video model with the strongest physics simulation and long-take consistency."
+  },
+  {
+    "slug": "veo",
+    "name": "Google Veo 3",
+    "url": "https://deepmind.google/models/veo/",
+    "category": "ai-video",
+    "price": "Paid",
+    "tags": ["text-to-video", "4k", "audio-sync"],
+    "descZh": "谷歌视频模型，原生 4K + 音画同步，可一步生成人声与音效。",
+    "descEn": "Google's video model with native 4K and synchronized audio, generating speech and sound effects in one step."
+  },
+  {
+    "slug": "kling",
+    "name": "可灵 Kling",
+    "url": "https://klingai.com",
+    "category": "ai-video",
+    "price": "Freemium",
+    "tags": ["text-to-video", "chinese", "storytelling"],
+    "descZh": "快手出品，中文剧情与物理真实度天花板，适合 AI 短剧。",
+    "descEn": "Kuaishou's video model, top-tier for Chinese storytelling and physical realism, ideal for AI short dramas."
+  },
+  {
+    "slug": "runway",
+    "name": "Runway",
+    "url": "https://runwayml.com",
+    "category": "ai-video",
+    "price": "Paid",
+    "tags": ["text-to-video", "editing", "director-mode"],
+    "descZh": "专业级视频生成与编辑工作流，支持导演级运镜控制。",
+    "descEn": "Professional-grade video generation and editing workflow with director-level camera control."
+  },
+  {
+    "slug": "luma",
+    "name": "Luma Dream Machine",
+    "url": "https://lumalabs.ai",
+    "category": "ai-video",
+    "price": "Freemium",
+    "tags": ["text-to-video", "fast"],
+    "descZh": "基于 Ray 2 的快速文生视频，适合快速出片。",
+    "descEn": "Fast text-to-video powered by Ray 2, great for quick turnaround."
+  },
+  {
+    "slug": "pika",
+    "name": "Pika",
+    "url": "https://pika.art",
+    "category": "ai-video",
+    "price": "Freemium",
+    "tags": ["text-to-video", "effects"],
+    "descZh": "轻量视频生成/编辑工具，一键风格化与特效玩法丰富。",
+    "descEn": "Lightweight video generation and editing with one-click stylization and fun effects."
+  },
+  {
+    "slug": "hailuo",
+    "name": "海螺 Hailuo",
+    "url": "https://hailuoai.video",
+    "category": "ai-video",
+    "price": "Freemium",
+    "tags": ["text-to-video", "multimodal"],
+    "descZh": "MiniMax 旗下视频生成，稳定出片，新晋热门。",
+    "descEn": "MiniMax's video generator with consistent output, rising in popularity."
+  },
+  {
+    "slug": "pixverse",
+    "name": "PixVerse",
+    "url": "https://pixverse.ai",
+    "category": "ai-video",
+    "price": "Freemium",
+    "tags": ["text-to-video", "effects", "multimodal"],
+    "descZh": "国产多模态视频工具，AI 特效玩法丰富。",
+    "descEn": "A Chinese multimodal video tool with rich AI effect playfulness."
+  },
+
+  {
+    "slug": "midjourney",
+    "name": "Midjourney",
+    "url": "https://midjourney.com",
+    "category": "ai-image",
+    "price": "Paid",
+    "tags": ["text-to-image", "artistic", "character-consistency"],
+    "descZh": "艺术感与写实度最强的图像生成，支持角色一致性。",
+    "descEn": "The strongest image generator for artistry and realism, with character consistency."
+  },
+  {
+    "slug": "dalle",
+    "name": "DALL·E 3",
+    "url": "https://openai.com/dall-e-3",
+    "category": "ai-image",
+    "price": "Freemium",
+    "tags": ["text-to-image", "chatgpt"],
+    "descZh": "集成于 ChatGPT 的图像生成，文本渲染与指令遵循好。",
+    "descEn": "Image generation built into ChatGPT, with good text rendering and instruction following."
+  },
+  {
+    "slug": "flux",
+    "name": "Flux",
+    "url": "https://bfl.ai",
+    "category": "ai-image",
+    "price": "Freemium",
+    "tags": ["text-to-image", "open-source", "text-rendering"],
+    "descZh": "Black Forest Labs 开源权重模型，文字渲染极佳，可本地运行。",
+    "descEn": "Black Forest Labs' open-weight model with excellent text rendering, runnable locally."
+  },
+  {
+    "slug": "ideogram",
+    "name": "Ideogram",
+    "url": "https://ideogram.ai",
+    "category": "ai-image",
+    "price": "Freemium",
+    "tags": ["text-to-image", "typography", "logo"],
+    "descZh": "擅长 Logo、排版与带字设计稿，字形准确度突出。",
+    "descEn": "Great at logos, typography and text-heavy designs with standout character accuracy."
+  },
+  {
+    "slug": "leonardo",
+    "name": "Leonardo AI",
+    "url": "https://leonardo.ai",
+    "category": "ai-image",
+    "price": "Freemium",
+    "tags": ["text-to-image", "game-assets", "character"],
+    "descZh": "免费额度充足，游戏资产与角色一致性友好。",
+    "descEn": "Generous free credits, friendly to game assets and character consistency."
+  },
+  {
+    "slug": "firefly",
+    "name": "Adobe Firefly",
+    "url": "https://firefly.adobe.com",
+    "category": "ai-image",
+    "price": "Paid",
+    "tags": ["text-to-image", "commercial-safe", "creative-cloud"],
+    "descZh": "商业可用授权最安全，深度集成 Photoshop/Illustrator。",
+    "descEn": "The safest choice for commercial licensing, deeply integrated with Photoshop and Illustrator."
+  },
+  {
+    "slug": "stable-diffusion",
+    "name": "Stable Diffusion",
+    "url": "https://stability.ai",
+    "category": "ai-image",
+    "price": "Free",
+    "tags": ["text-to-image", "open-source", "local"],
+    "descZh": "开源本地部署生态（配 ComfyUI），可玩性与可控性最高。",
+    "descEn": "Open-source local deployment ecosystem (with ComfyUI), the most controllable and tinkerable."
+  },
+  {
+    "slug": "imagen",
+    "name": "Google Imagen 4",
+    "url": "https://deepmind.google/models/imagen/",
+    "category": "ai-image",
+    "price": "Paid",
+    "tags": ["text-to-image", "photorealistic"],
+    "descZh": "Gemini 内置写实图像生成，主打真实感。",
+    "descEn": "Photorealistic image generation built into Gemini, focused on realism."
+  },
+
+  {
+    "slug": "elevenlabs",
+    "name": "ElevenLabs",
+    "url": "https://elevenlabs.io",
+    "category": "ai-audio",
+    "price": "Freemium",
+    "tags": ["tts", "voice-cloning", "dubbing"],
+    "descZh": "语音克隆与情感化 TTS 标杆，配音、音效、翻译全覆盖。",
+    "descEn": "The benchmark for voice cloning and expressive TTS, covering dubbing, sound effects and translation."
+  },
+  {
+    "slug": "suno",
+    "name": "Suno",
+    "url": "https://suno.com",
+    "category": "ai-audio",
+    "price": "Freemium",
+    "tags": ["music", "song-generation"],
+    "descZh": "一键生成带人声完整歌曲，支持任意风格与商用版权。",
+    "descEn": "One-click full songs with vocals in any style, with commercial licensing."
+  },
+  {
+    "slug": "udio",
+    "name": "Udio",
+    "url": "https://udio.com",
+    "category": "ai-audio",
+    "price": "Freemium",
+    "tags": ["music", "song-generation", "remix"],
+    "descZh": "高品质「成品感」音乐生成，支持分轨 Remix。",
+    "descEn": "High-quality, finished-sounding music generation with per-track remixing."
+  },
+  {
+    "slug": "stable-audio",
+    "name": "Stable Audio",
+    "url": "https://stability.ai/stable-audio",
+    "category": "ai-audio",
+    "price": "Freemium",
+    "tags": ["music", "sound-effects"],
+    "descZh": "Stability 出品的音乐、音效与配乐生成。",
+    "descEn": "Stability's music, sound effect and soundtrack generator."
+  },
+  {
+    "slug": "murf",
+    "name": "Murf AI",
+    "url": "https://murf.ai",
+    "category": "ai-audio",
+    "price": "Freemium",
+    "tags": ["tts", "voiceover", "multilingual"],
+    "descZh": "120+ 真人音色、20+ 语言的专业配音工具。",
+    "descEn": "Professional voiceover tool with 120+ realistic voices in 20+ languages."
+  },
+  {
+    "slug": "aiva",
+    "name": "AIVA",
+    "url": "https://aiva.ai",
+    "category": "ai-audio",
+    "price": "Freemium",
+    "tags": ["music", "composition", "orchestral"],
+    "descZh": "专注古典与管弦乐编曲的 AI 作曲家。",
+    "descEn": "An AI composer focused on classical and orchestral arrangement."
+  },
+  {
+    "slug": "descript",
+    "name": "Descript",
+    "url": "https://descript.com",
+    "category": "ai-audio",
+    "price": "Freemium",
+    "tags": ["podcast", "transcription", "editing"],
+    "descZh": "播客一站式剪辑，文字改音频、Overdub 拟声。",
+    "descEn": "All-in-one podcast editor with edit-by-text and Overdub voice synthesis."
+  },
+  {
+    "slug": "adobe-podcast",
+    "name": "Adobe Podcast",
+    "url": "https://podcast.adobe.com",
+    "category": "ai-audio",
+    "price": "Free",
+    "tags": ["voice-enhancement", "denoise"],
+    "descZh": "免费人声降噪/增强，播客音质一键提升。",
+    "descEn": "Free voice enhancement and denoising for one-click podcast audio quality."
+  },
+
+  {
+    "slug": "cursor",
+    "name": "Cursor",
+    "url": "https://cursor.com",
+    "category": "ai-coding",
+    "price": "Freemium",
+    "tags": ["ide", "autocomplete", "agent"],
+    "descZh": "AI 原生编辑器，Composer 智能体编程，增速最快的开发工具之一。",
+    "descEn": "An AI-native editor with agentic programming via Composer, one of the fastest-growing dev tools."
+  },
+  {
+    "slug": "copilot",
+    "name": "GitHub Copilot",
+    "url": "https://github.com/features/copilot",
+    "category": "ai-coding",
+    "price": "Freemium",
+    "tags": ["autocomplete", "ide", "github"],
+    "descZh": "装机量最大的 AI 编程助手，深度集成 IDE 与 GitHub。",
+    "descEn": "The most-installed AI coding assistant, deeply integrated with IDEs and GitHub."
+  },
+  {
+    "slug": "claude-code",
+    "name": "Claude Code",
+    "url": "https://claude.com/claude-code",
+    "category": "ai-coding",
+    "price": "Freemium",
+    "tags": ["agent", "terminal", "cli"],
+    "descZh": "Anthropic 终端/IDE 编程智能体，可自主改代码、跑命令、提 PR。",
+    "descEn": "Anthropic's terminal/IDE coding agent that edits code, runs commands and opens PRs autonomously."
+  },
+  {
+    "slug": "windsurf",
+    "name": "Windsurf",
+    "url": "https://windsurf.com",
+    "category": "ai-coding",
+    "price": "Freemium",
+    "tags": ["ide", "context", "agent"],
+    "descZh": "以深度代码理解与 Cascade 上下文见长的 AI IDE。",
+    "descEn": "An AI IDE known for deep code understanding and Cascade context."
+  },
+  {
+    "slug": "codex",
+    "name": "Codex CLI",
+    "url": "https://openai.com/codex",
+    "category": "ai-coding",
+    "price": "Free",
+    "tags": ["agent", "terminal", "open-source"],
+    "descZh": "OpenAI 开源终端编程智能体，可处理本地仓库任务。",
+    "descEn": "OpenAI's open-source terminal coding agent for local repository tasks."
+  },
+  {
+    "slug": "replit",
+    "name": "Replit",
+    "url": "https://replit.com",
+    "category": "ai-coding",
+    "price": "Freemium",
+    "tags": ["cloud-ide", "full-stack", "ai-assist"],
+    "descZh": "云端协作开发环境，AI 辅助全栈生成，2000 万+ 用户。",
+    "descEn": "Cloud collaborative IDE with AI-assisted full-stack generation, 20M+ users."
+  },
+  {
+    "slug": "cline",
+    "name": "Cline",
+    "url": "https://cline.bot",
+    "category": "ai-coding",
+    "price": "Free",
+    "tags": ["agent", "open-source", "ide"],
+    "descZh": "IDE 内开源编程智能体，口碑最佳之一。",
+    "descEn": "An open-source coding agent inside your IDE, one of the best-reviewed."
+  },
+  {
+    "slug": "codeium",
+    "name": "Codeium",
+    "url": "https://codeium.com",
+    "category": "ai-coding",
+    "price": "Free",
+    "tags": ["autocomplete", "free"],
+    "descZh": "免费的 Copilot 替代补全工具。",
+    "descEn": "A free alternative to Copilot for code completion."
+  },
+
+  {
+    "slug": "jasper",
+    "name": "Jasper",
+    "url": "https://jasper.ai",
+    "category": "ai-writing",
+    "price": "Paid",
+    "tags": ["marketing", "long-form", "seo"],
+    "descZh": "长文营销内容标杆，品牌语气训练 + SEO 集成。",
+    "descEn": "The benchmark for long-form marketing content, with brand voice training and SEO integration."
+  },
+  {
+    "slug": "copy-ai",
+    "name": "Copy.ai",
+    "url": "https://copy.ai",
+    "category": "ai-writing",
+    "price": "Freemium",
+    "tags": ["short-copy", "marketing-automation"],
+    "descZh": "短文案与营销自动化工作流，模板丰富。",
+    "descEn": "Short copy and marketing automation workflows with rich templates."
+  },
+  {
+    "slug": "grammarly",
+    "name": "Grammarly",
+    "url": "https://grammarly.com",
+    "category": "ai-writing",
+    "price": "Freemium",
+    "tags": ["grammar", "proofreading", "all-platforms"],
+    "descZh": "语法纠错与润色领域第一名，全平台插件。",
+    "descEn": "The #1 grammar checking and polishing tool, available on every platform."
+  },
+  {
+    "slug": "writesonic",
+    "name": "Writesonic",
+    "url": "https://writesonic.com",
+    "category": "ai-writing",
+    "price": "Freemium",
+    "tags": ["seo", "long-form"],
+    "descZh": "高性价比 SEO 长文生成器。",
+    "descEn": "A cost-effective SEO long-form content generator."
+  },
+  {
+    "slug": "rytr",
+    "name": "Rytr",
+    "url": "https://rytr.me",
+    "category": "ai-writing",
+    "price": "Freemium",
+    "tags": ["affordable", "multilingual"],
+    "descZh": "平价多语种文案生成助手。",
+    "descEn": "An affordable multilingual copywriting assistant."
+  },
+  {
+    "slug": "sudowrite",
+    "name": "Sudowrite",
+    "url": "https://sudowrite.com",
+    "category": "ai-writing",
+    "price": "Paid",
+    "tags": ["fiction", "creative-writing"],
+    "descZh": "面向小说与创意写作的 AI 助手。",
+    "descEn": "An AI assistant built for fiction and creative writing."
+  },
+  {
+    "slug": "quillbot",
+    "name": "QuillBot",
+    "url": "https://quillbot.com",
+    "category": "ai-writing",
+    "price": "Freemium",
+    "tags": ["paraphrase", "rewriting"],
+    "descZh": "改写润色与同义替换神器，多届榜单全勤。",
+    "descEn": "A paraphrasing and synonym replacement powerhouse, a consistent chart regular."
+  },
+
+  {
+    "slug": "perplexity",
+    "name": "Perplexity",
+    "url": "https://perplexity.ai",
+    "category": "ai-search",
+    "price": "Freemium",
+    "tags": ["search", "citations", "deep-research"],
+    "descZh": "引用式 AI 搜索标杆，Deep Research 生成深度报告。",
+    "descEn": "The benchmark for cited AI search, with Deep Research reports."
+  },
+  {
+    "slug": "chatgpt-search",
+    "name": "ChatGPT Search",
+    "url": "https://chatgpt.com",
+    "category": "ai-search",
+    "price": "Freemium",
+    "tags": ["search", "conversational", "sources"],
+    "descZh": "对话式搜索 + 推理一体，答案带来源。",
+    "descEn": "Conversational search combined with reasoning, answers with sources."
+  },
+  {
+    "slug": "ai-overviews",
+    "name": "Google AI Overviews",
+    "url": "https://gemini.google.com",
+    "category": "ai-search",
+    "price": "Free",
+    "tags": ["search", "google", "summary"],
+    "descZh": "内嵌于 Google 搜索的 AI 摘要，零摩擦覆盖数十亿用户。",
+    "descEn": "AI summaries built into Google Search, reaching billions with zero friction."
+  },
+  {
+    "slug": "genspark",
+    "name": "Genspark",
+    "url": "https://genspark.ai",
+    "category": "ai-search",
+    "price": "Freemium",
+    "tags": ["deep-research", "agents"],
+    "descZh": "多智能体深度研究，自动生成结构化结果页。",
+    "descEn": "Multi-agent deep research that auto-generates structured result pages."
+  },
+  {
+    "slug": "you",
+    "name": "You.com",
+    "url": "https://you.com",
+    "category": "ai-search",
+    "price": "Freemium",
+    "tags": ["search", "multi-model"],
+    "descZh": "可切换多模型（GPT/Claude/Gemini）的 AI 搜索。",
+    "descEn": "AI search with switchable models (GPT/Claude/Gemini)."
+  },
+  {
+    "slug": "phind",
+    "name": "Phind",
+    "url": "https://phind.com",
+    "category": "ai-search",
+    "price": "Free",
+    "tags": ["search", "developer"],
+    "descZh": "面向开发者的代码型 AI 搜索。",
+    "descEn": "A code-focused AI search engine for developers."
+  },
+  {
+    "slug": "kagi",
+    "name": "Kagi",
+    "url": "https://kagi.com",
+    "category": "ai-search",
+    "price": "Paid",
+    "tags": ["search", "privacy"],
+    "descZh": "付费隐私优先的独立索引 AI 搜索。",
+    "descEn": "A paid, privacy-first AI search engine with an independent index."
+  },
+  {
+    "slug": "brave",
+    "name": "Brave Search",
+    "url": "https://search.brave.com",
+    "category": "ai-search",
+    "price": "Free",
+    "tags": ["search", "privacy", "independent-index"],
+    "descZh": "独立索引、隐私优先，内置 AI 摘要。",
+    "descEn": "Independent-index, privacy-first search with built-in AI summaries."
+  },
+
+  {
+    "slug": "m365-copilot",
+    "name": "Microsoft 365 Copilot",
+    "url": "https://microsoft.com/copilot",
+    "category": "ai-office",
+    "price": "Paid",
+    "tags": ["office", "agent", "enterprise"],
+    "descZh": "微软全系办公套件内嵌 AI 与 Agent 模式。",
+    "descEn": "AI and agent modes embedded across the entire Microsoft 365 suite."
+  },
+  {
+    "slug": "gamma",
+    "name": "Gamma",
+    "url": "https://gamma.app",
+    "category": "ai-office",
+    "price": "Freemium",
+    "tags": ["presentation", "slides", "documents"],
+    "descZh": "一句提示词生成精美 PPT、文档与网页。",
+    "descEn": "Generate polished slides, documents and webpages from a single prompt."
+  },
+  {
+    "slug": "notion",
+    "name": "Notion",
+    "url": "https://notion.so",
+    "category": "ai-office",
+    "price": "Freemium",
+    "tags": ["notes", "knowledge-base", "agents"],
+    "descZh": "笔记 + 知识库 + 内嵌 AI 与 Agents，自主执行多步办公任务。",
+    "descEn": "Notes, knowledge base and embedded AI with agents that execute multi-step work."
+  },
+  {
+    "slug": "motion",
+    "name": "Motion",
+    "url": "https://usemotion.com",
+    "category": "ai-office",
+    "price": "Paid",
+    "tags": ["calendar", "task-automation"],
+    "descZh": "AI 自动规划日程与任务排期。",
+    "descEn": "AI that automatically plans your calendar and schedules tasks."
+  },
+  {
+    "slug": "reclaim",
+    "name": "Reclaim.ai",
+    "url": "https://reclaim.ai",
+    "category": "ai-office",
+    "price": "Freemium",
+    "tags": ["calendar", "focus-time"],
+    "descZh": "自动保护专注时间、智能排会。",
+    "descEn": "Auto-protects focus time and intelligently schedules meetings."
+  },
+  {
+    "slug": "otter",
+    "name": "Otter.ai",
+    "url": "https://otter.ai",
+    "category": "ai-office",
+    "price": "Freemium",
+    "tags": ["meeting", "transcription"],
+    "descZh": "实时会议转录 + 发言人识别。",
+    "descEn": "Real-time meeting transcription with speaker identification."
+  },
+  {
+    "slug": "fireflies",
+    "name": "Fireflies.ai",
+    "url": "https://fireflies.ai",
+    "category": "ai-office",
+    "price": "Freemium",
+    "tags": ["meeting", "transcription", "search"],
+    "descZh": "会议录制、转录、总结与检索。",
+    "descEn": "Meeting recording, transcription, summarization and search."
+  },
+
+  {
+    "slug": "heygen",
+    "name": "HeyGen",
+    "url": "https://heygen.com",
+    "category": "ai-avatar",
+    "price": "Paid",
+    "tags": ["avatar", "talking-head", "multilingual"],
+    "descZh": "数字人口播视频标杆，嘴型同步与多语言最强。",
+    "descEn": "The benchmark for avatar talking-head videos, best-in-class lip sync and multilingual."
+  },
+  {
+    "slug": "synthesia",
+    "name": "Synthesia",
+    "url": "https://synthesia.io",
+    "category": "ai-avatar",
+    "price": "Paid",
+    "tags": ["avatar", "training", "enterprise"],
+    "descZh": "企业培训视频数字人平台，财富 100 中 60% 在用。",
+    "descEn": "Enterprise training video avatar platform, used by 60% of the Fortune 100."
+  },
+  {
+    "slug": "d-id",
+    "name": "D-ID",
+    "url": "https://d-id.com",
+    "category": "ai-avatar",
+    "price": "Freemium",
+    "tags": ["avatar", "photo-to-video"],
+    "descZh": "照片一键生成会说话的数字人，渲染快、免费额度大。",
+    "descEn": "Turn a photo into a talking avatar instantly, fast rendering with generous free credits."
+  },
+  {
+    "slug": "colossyan",
+    "name": "Colossyan",
+    "url": "https://colossyan.com",
+    "category": "ai-avatar",
+    "price": "Paid",
+    "tags": ["avatar", "learning-development"],
+    "descZh": "面向企业学习与发展场景的数字人视频。",
+    "descEn": "Avatar videos for corporate learning and development."
+  },
+  {
+    "slug": "deepbrain",
+    "name": "DeepBrain AI",
+    "url": "https://deepbrain.io",
+    "category": "ai-avatar",
+    "price": "Paid",
+    "tags": ["avatar", "4k", "broadcast"],
+    "descZh": "4K 超写实数字人，广电级制作。",
+    "descEn": "4K ultra-realistic digital humans at broadcast quality."
+  },
+  {
+    "slug": "veed",
+    "name": "VEED",
+    "url": "https://veed.io",
+    "category": "ai-avatar",
+    "price": "Freemium",
+    "tags": ["avatar", "social-video", "subtitles"],
+    "descZh": "社交媒体口播与字幕视频编辑器。",
+    "descEn": "Social media talking-head and subtitle video editor."
+  },
+  {
+    "slug": "creatify",
+    "name": "Creatify",
+    "url": "https://creatify.ai",
+    "category": "ai-avatar",
+    "price": "Freemium",
+    "tags": ["advertising", "batch-generation"],
+    "descZh": "批量生成广告口播视频变体，适合广告投放。",
+    "descEn": "Batch-generates ad talking-head video variants for advertising."
+  },
+  {
+    "slug": "jogg",
+    "name": "JoggAI",
+    "url": "https://jogg.ai",
+    "category": "ai-avatar",
+    "price": "Freemium",
+    "tags": ["avatar", "text-to-video"],
+    "descZh": "450+ 超写实数字人，快速文生视频。",
+    "descEn": "450+ ultra-realistic avatars for fast text-to-video."
+  },
+
+  {
+    "slug": "figma-ai",
+    "name": "Figma AI",
+    "url": "https://figma.com",
+    "category": "ai-design",
+    "price": "Freemium",
+    "tags": ["ui-ux", "design-system", "prototype"],
+    "descZh": "设计系统内 AI：文本生成 UI 稿、自动布局。",
+    "descEn": "AI inside the design system: text-to-UI and auto-layout."
+  },
+  {
+    "slug": "canva",
+    "name": "Canva Magic Studio",
+    "url": "https://canva.com",
+    "category": "ai-design",
+    "price": "Freemium",
+    "tags": ["design", "all-in-one", "magic-studio"],
+    "descZh": "全民设计平台 + 25+ 款 AI 工具，设计写作视频一体。",
+    "descEn": "The everyone-can-design platform with 25+ AI tools, combining design, writing and video."
+  },
+  {
+    "slug": "recraft",
+    "name": "Recraft",
+    "url": "https://recraft.ai",
+    "category": "ai-design",
+    "price": "Freemium",
+    "tags": ["vector", "svg", "logo"],
+    "descZh": "原生 SVG 矢量生成，Logo 与图标设计利器。",
+    "descEn": "Native SVG vector generation, a powerhouse for logos and icons."
+  },
+  {
+    "slug": "looka",
+    "name": "Looka",
+    "url": "https://looka.com",
+    "category": "ai-design",
+    "price": "Freemium",
+    "tags": ["logo", "brand-kit"],
+    "descZh": "问卷式 Logo 与全套品牌视觉生成。",
+    "descEn": "Questionnaire-driven logo and full brand identity generation."
+  },
+  {
+    "slug": "uizard",
+    "name": "Uizard",
+    "url": "https://uizard.io",
+    "category": "ai-design",
+    "price": "Freemium",
+    "tags": ["wireframe", "prototype", "no-design"],
+    "descZh": "草图/文字转线框原型，适合非设计师。",
+    "descEn": "Sketch or text to wireframe prototypes, built for non-designers."
+  },
+  {
+    "slug": "framer",
+    "name": "Framer",
+    "url": "https://framer.com",
+    "category": "ai-design",
+    "price": "Freemium",
+    "tags": ["website", "no-code"],
+    "descZh": "提示词直接生成可发布网站。",
+    "descEn": "Generate a publishable website directly from a prompt."
+  },
+  {
+    "slug": "relume",
+    "name": "Relume",
+    "url": "https://relume.com",
+    "category": "ai-design",
+    "price": "Freemium",
+    "tags": ["website", "components", "wireframe"],
+    "descZh": "AI 网站搭建，秒级生成站点地图与组件。",
+    "descEn": "AI website building with instant sitemaps and component generation."
+  },
+
+  {
+    "slug": "khanmigo",
+    "name": "Khanmigo",
+    "url": "https://khanmigo.ai",
+    "category": "ai-education",
+    "price": "Paid",
+    "tags": ["tutor", "socratic"],
+    "descZh": "Khan 学院苏格拉底式 AI 导师，有随机对照实验背书。",
+    "descEn": "Khan Academy's Socratic AI tutor, validated by randomized controlled trials."
+  },
+  {
+    "slug": "duolingo-max",
+    "name": "Duolingo Max",
+    "url": "https://duolingo.com",
+    "category": "ai-education",
+    "price": "Freemium",
+    "tags": ["language", "roleplay"],
+    "descZh": "语言学习 + AI 角色扮演对话（Roleplay/Video Call）。",
+    "descEn": "Language learning with AI roleplay and video call conversations."
+  },
+  {
+    "slug": "gauth",
+    "name": "Gauth",
+    "url": "https://gauth.com",
+    "category": "ai-education",
+    "price": "Freemium",
+    "tags": ["math", "photo-solver"],
+    "descZh": "字节出品的 AI 拍照解题工具，海外爆款。",
+    "descEn": "ByteDance's AI photo problem-solver, an overseas hit."
+  },
+  {
+    "slug": "photomath",
+    "name": "Photomath",
+    "url": "https://photomath.com",
+    "category": "ai-education",
+    "price": "Freemium",
+    "tags": ["math", "step-by-step"],
+    "descZh": "拍照解题、分步演算，数学学习常用。",
+    "descEn": "Photo-solving with step-by-step explanations, a math study staple."
+  },
+  {
+    "slug": "socratic",
+    "name": "Socratic",
+    "url": "https://socratic.org",
+    "category": "ai-education",
+    "price": "Free",
+    "tags": ["homework", "explainer"],
+    "descZh": "谷歌免费拍照答疑助手。",
+    "descEn": "Google's free photo-based homework helper."
+  },
+  {
+    "slug": "magicschool",
+    "name": "MagicSchool",
+    "url": "https://magicschool.ai",
+    "category": "ai-education",
+    "price": "Freemium",
+    "tags": ["teacher", "lesson-planning"],
+    "descZh": "老师备课助手，80+ 教学工具，600 万+ 教师使用。",
+    "descEn": "Teacher lesson-prep assistant with 80+ tools, used by 6M+ teachers."
+  },
+  {
+    "slug": "wolfram-alpha",
+    "name": "Wolfram Alpha",
+    "url": "https://wolframalpha.com",
+    "category": "ai-education",
+    "price": "Freemium",
+    "tags": ["computation", "stem", "knowledge"],
+    "descZh": "计算引擎，理工科公式与知识查询。",
+    "descEn": "A computational engine for STEM formulas and knowledge queries."
+  },
+  {
+    "slug": "quizlet",
+    "name": "Quizlet",
+    "url": "https://quizlet.com",
+    "category": "ai-education",
+    "price": "Freemium",
+    "tags": ["flashcards", "practice"],
+    "descZh": "AI 生成单词卡与练习测验。",
+    "descEn": "AI-generated flashcards and practice quizzes."
+  },
+
+  {
+    "slug": "manus",
+    "name": "Manus",
+    "url": "https://manus.im",
+    "category": "ai-agent",
+    "price": "Freemium",
+    "tags": ["agent", "autonomous"],
+    "descZh": "通用自主智能体，接受目标后自主规划执行全流程。",
+    "descEn": "A general autonomous agent that plans and executes end-to-end from a goal."
+  },
+  {
+    "slug": "n8n",
+    "name": "n8n",
+    "url": "https://n8n.io",
+    "category": "ai-agent",
+    "price": "Free",
+    "tags": ["workflow", "automation", "self-hosted"],
+    "descZh": "开源工作流自动化 + 原生 AI Agent 节点，可自托管。",
+    "descEn": "Open-source workflow automation with native AI agent nodes, self-hostable."
+  },
+  {
+    "slug": "zapier",
+    "name": "Zapier Agents",
+    "url": "https://zapier.com",
+    "category": "ai-agent",
+    "price": "Freemium",
+    "tags": ["workflow", "automation", "7000-apps"],
+    "descZh": "连接 7000+ 应用的自然语言自动化智能体。",
+    "descEn": "Natural-language automation agents connecting 7000+ apps."
+  },
+  {
+    "slug": "make",
+    "name": "Make",
+    "url": "https://make.com",
+    "category": "ai-agent",
+    "price": "Freemium",
+    "tags": ["workflow", "automation", "visual"],
+    "descZh": "可视化工作流自动化，性价比介于 Zapier 与 n8n 之间。",
+    "descEn": "Visual workflow automation, positioned between Zapier and n8n in price-performance."
+  },
+  {
+    "slug": "langchain",
+    "name": "LangChain",
+    "url": "https://langchain.com",
+    "category": "ai-agent",
+    "price": "Free",
+    "tags": ["framework", "open-source", "llm-apps"],
+    "descZh": "最主流的开源 LLM 应用与有状态 Agent 框架。",
+    "descEn": "The most mainstream open-source framework for LLM apps and stateful agents."
+  },
+  {
+    "slug": "crewai",
+    "name": "CrewAI",
+    "url": "https://crewai.com",
+    "category": "ai-agent",
+    "price": "Free",
+    "tags": ["multi-agent", "python", "framework"],
+    "descZh": "Python 多智能体协作框架，角色分工式编排。",
+    "descEn": "A Python multi-agent collaboration framework with role-based orchestration."
+  },
+  {
+    "slug": "lindy",
+    "name": "Lindy",
+    "url": "https://lindy.ai",
+    "category": "ai-agent",
+    "price": "Freemium",
+    "tags": ["agent", "templates", "business"],
+    "descZh": "模板化最快上手的商业智能体（销售/客服/日程）。",
+    "descEn": "Template-driven business agents for sales, support and scheduling."
+  },
+  {
+    "slug": "dify",
+    "name": "Dify",
+    "url": "https://dify.ai",
+    "category": "ai-agent",
+    "price": "Free",
+    "tags": ["llm-platform", "open-source", "rag"],
+    "descZh": "开源 LLM App 与 Agent 开发平台，国内社区活跃。",
+    "descEn": "Open-source LLM app and agent development platform with an active Chinese community."
+  },
+  {
+    "slug": "openclaw",
+    "name": "OpenClaw",
+    "url": "https://github.com/openclaw/openclaw",
+    "category": "ai-agent",
+    "price": "Free",
+    "tags": ["agent", "assistant", "personal"],
+    "descZh": "开源个人 AI 助理，接入 WhatsApp/Telegram/微信等消息平台执行真实任务，GitHub 历史 star 最高。",
+    "descEn": "Open-source personal AI assistant that connects WhatsApp/Telegram/WeChat to execute real tasks — the most-starred repo in GitHub history."
+  },
+  {
+    "slug": "hermes-agent",
+    "name": "Hermes Agent",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "category": "ai-agent",
+    "price": "Free",
+    "tags": ["agent", "memory", "self-evolving"],
+    "descZh": "自带持久记忆的自进化个人 AI 代理，ROSS 指数 2026 Q2 增长第一。",
+    "descEn": "A self-evolving personal AI agent with persistent memory — #1 growth on the 2026 Q2 ROSS index."
+  },
+  {
+    "slug": "browser-use",
+    "name": "Browser-use",
+    "url": "https://github.com/browser-use/browser-use",
+    "category": "ai-agent",
+    "price": "Free",
+    "tags": ["browser", "automation", "agent"],
+    "descZh": "让 AI 代理控制真实浏览器干活，电商、表单、爬虫类自动化的基础设施。",
+    "descEn": "Lets AI agents control a real browser — the infrastructure for e-commerce, form and scraping automation."
+  },
+  {
+    "slug": "mem0",
+    "name": "Mem0",
+    "url": "https://github.com/mem0ai/mem0",
+    "category": "ai-agent",
+    "price": "Freemium",
+    "tags": ["memory", "agent", "vector"],
+    "descZh": "跨会话 Agent 记忆层（向量 + 知识图谱），2026 记忆赛道生态最大，YC 背书。",
+    "descEn": "Cross-session agent memory layer (vectors + knowledge graph), the largest memory ecosystem in 2026, YC-backed."
+  },
+  {
+    "slug": "deer-flow",
+    "name": "DeerFlow",
+    "url": "https://github.com/bytedance/deer-flow",
+    "category": "ai-agent",
+    "price": "Free",
+    "tags": ["deep-research", "agent", "orchestration"],
+    "descZh": "字节深度研究 Agent，2.0 演化为通用「超级 Agent harness」，曾登 GitHub Trending #1。",
+    "descEn": "ByteDance's deep-research agent, evolved into a general-purpose super agent harness, once #1 on GitHub Trending."
+  },
+  {
+    "slug": "open-webui",
+    "name": "Open WebUI",
+    "url": "https://github.com/open-webui/open-webui",
+    "category": "ai-chat",
+    "price": "Free",
+    "tags": ["self-hosted", "ui", "ollama"],
+    "descZh": "自托管 AI 对话界面，支持 Ollama/OpenAI 兼容后端，隐私友好。",
+    "descEn": "Self-hosted AI chat interface supporting Ollama/OpenAI-compatible backends, privacy-friendly."
+  },
+  {
+    "slug": "markitdown",
+    "name": "MarkItDown",
+    "url": "https://github.com/microsoft/markitdown",
+    "category": "ai-office",
+    "price": "Free",
+    "tags": ["convert", "markdown", "mcp"],
+    "descZh": "微软官方：把 PDF/PPT/Excel/图片等任意文件转成 Markdown，喂给 LLM 前先转档的必需品。",
+    "descEn": "Microsoft's official tool to convert PDF/PPT/Excel/images into Markdown — essential before feeding files to an LLM."
+  },
+  {
+    "slug": "ragflow",
+    "name": "RAGFlow",
+    "url": "https://github.com/infiniflow/ragflow",
+    "category": "ai-search",
+    "price": "Free",
+    "tags": ["rag", "knowledge-base", "deepdoc"],
+    "descZh": "面向复杂文档的开源 RAG 引擎，DeepDoc 解析 + 混合检索，硬文档首选。",
+    "descEn": "Open-source RAG engine for complex documents with DeepDoc parsing and hybrid retrieval — best for hard documents."
+  },
+  {
+    "slug": "vane",
+    "name": "Vane",
+    "url": "https://github.com/itzcrazykns/Vane",
+    "category": "ai-search",
+    "price": "Free",
+    "tags": ["search", "self-hosted", "perplexity"],
+    "descZh": "自托管开源版 Perplexity（原 Perplexica），本地 LLM 可跑，Docker 一键部署。",
+    "descEn": "Self-hosted open-source Perplexity (formerly Perplexica), runnable with local LLMs, one-command Docker deploy."
+  },
+  {
+    "slug": "fish-speech",
+    "name": "Fish Speech",
+    "url": "https://github.com/fishaudio/fish-speech",
+    "category": "ai-audio",
+    "price": "Free",
+    "tags": ["tts", "voice-clone", "open-source"],
+    "descZh": "80+ 语言零样本语音克隆，中文最强之一，ElevenLabs 的开源替代。",
+    "descEn": "Zero-shot voice cloning in 80+ languages, among the best for Chinese — an open-source ElevenLabs alternative."
+  },
+  {
+    "slug": "echomimic-v3",
+    "name": "EchoMimic V3",
+    "url": "https://github.com/antgroup/echomimic_v3",
+    "category": "ai-avatar",
+    "price": "Free",
+    "tags": ["avatar", "talking-head", "low-vram"],
+    "descZh": "12G 显存即可跑的统一音视频人形动画模型，数字人赛道 2026 新秀。",
+    "descEn": "Unified audio-driven human animation model that runs on 12GB VRAM — the rising star of 2026 avatar generation."
+  },
+  {
+    "slug": "deep-tutor",
+    "name": "DeepTutor",
+    "url": "https://github.com/HKUDS/DeepTutor",
+    "category": "ai-education",
+    "price": "Free",
+    "tags": ["tutor", "adaptive", "open-source"],
+    "descZh": "开源自适应 AI 辅导平台，多智能体 + RAG + 掌握度门控，教育赛道开源第一。",
+    "descEn": "Open-source adaptive AI tutoring platform with multi-agent, RAG and mastery gating — #1 in open-source education."
+  },
+  {
+    "slug": "open-design",
+    "name": "Open Design",
+    "url": "https://github.com/nexu-io/open-design",
+    "category": "ai-design",
+    "price": "Free",
+    "tags": ["design", "figma", "agent"],
+    "descZh": "开源 Claude Design/Figma 替代，自动检测机器上的编程 Agent 当设计引擎，现象级项目。",
+    "descEn": "Open-source Claude Design/Figma alternative that auto-detects coding agents as design engines — a breakout project."
+  }
+]

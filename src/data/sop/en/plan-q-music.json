@@ -1,0 +1,85 @@
+{
+  "slug": "plan-q-music",
+  "title": "Plan Q: AI Music & Sound Production",
+  "summary": "Requirement → style reference → AI generation → select & remix → mix & SFX → licensing check",
+  "scenario": "Best for short-video BGM, game SFX, podcast intros and ad music — from requirement to usable, licensed audio.",
+  "meta": {
+    "duration": "30-60 min / track",
+    "cost": "Low-Medium",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "Suno / Udio", "url": "https://suno.com" },
+    { "name": "Stable Audio / ElevenLabs", "url": "https://stability.ai" },
+    { "name": "AIVA", "url": "https://aiva.ai" },
+    { "name": "Mixing / licensing platform", "url": "" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Define the requirement",
+      "tool": "ChatGPT / Claude",
+      "time": "10 min",
+      "detail": "Pin the use (BGM / song / SFX / podcast intro), duration, mood and style (genre, tempo, instrumental vs vocal, with or without lyrics).",
+      "tips": "Write 'mood + scene + style' as a one-line requirement instead of abstract adjectives."
+    },
+    {
+      "id": "s2",
+      "title": "Style reference",
+      "tool": "ChatGPT / Claude",
+      "time": "10 min",
+      "detail": "Describe reference tracks or style keywords and have the AI build an executable prompt (instruments, BPM, harmony, texture); give reference songs to extract features from.",
+      "tips": "A three-part prompt — reference style + concrete instruments + emotional arc — lands much closer to the brief."
+    },
+    {
+      "id": "s3",
+      "title": "AI generation",
+      "tool": "Suno / Udio",
+      "time": "10-20 min",
+      "detail": "Suno for complete songs with vocals in any style, Udio for a more 'finished' feel with remixing; generate several versions and pick. Write lyrics with AI, then human-review.",
+      "tips": "Generate 5-10 takes of the same prompt and refine the best — faster than micro-tuning parameters."
+    },
+    {
+      "id": "s4",
+      "title": "Select and remix",
+      "tool": "Udio Remix / AIVA",
+      "time": "10-20 min",
+      "detail": "Remix / extend / tempo-shift the chosen take; AIVA for classical and pure-instrumental scoring; adapt the 'half-finished' track to your exact length.",
+      "tips": "Generate the longest usable version and cut down; keep the main melody intact when remixing."
+    },
+    {
+      "id": "s5",
+      "title": "Mix and SFX",
+      "tool": "Stable Audio / mixing tools",
+      "time": "15-30 min",
+      "detail": "Layer sound effects (Stable Audio), balance levels and loudness, and stem-separate vocals (Demucs) when you need an instrumental or a remix.",
+      "tips": "Normalize to the target platform's loudness; in background-music contexts always keep it under the voice floor."
+    },
+    {
+      "id": "s6",
+      "title": "Licensing check",
+      "tool": "Platform terms + you",
+      "time": "10 min",
+      "detail": "Confirm commercial rights for the generated track (Suno paid tier allows commercial use, free tier is limited), attribution rules and platform revenue share.",
+      "tips": "Read the terms line by line before commercial use — 'can I use a free-tier track commercially' is the most common landmine."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Unclear commercial rights",
+      "detail": "Free-tier tracks carry commercial risk; for commercial use, pay the tier and confirm the license."
+    },
+    {
+      "title": "Robotic AI vocals",
+      "detail": "Long AI-vocal phrases sound stiff; split sentences, add emotion tags, or audition more takes."
+    },
+    {
+      "title": "Style misses the brief",
+      "detail": "Abstract prompts drift; use the structured 'reference style + instruments + BPM + mood' form."
+    },
+    {
+      "title": "Poor stem separation",
+      "detail": "Crude separation sounds scratchy; use a dedicated model like Demucs, or keep the original."
+    }
+  ]
+}

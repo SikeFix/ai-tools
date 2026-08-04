@@ -1,0 +1,85 @@
+{
+  "slug": "plan-n-social-media",
+  "title": "Plan N: AI Social Media Operations",
+  "summary": "Platform positioning → content calendar → batch content generation → per-platform adaptation → scheduling → data-driven iteration",
+  "scenario": "Best for personal IPs, brand accounts and ops teams — turning 'what do we post today' into a batchable, repeatable process.",
+  "meta": {
+    "duration": "30-60 min / day",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT / Claude", "url": "https://claude.ai" },
+    { "name": "Canva", "url": "https://canva.com" },
+    { "name": "Doubao / ChatGPT", "url": "https://doubao.com" },
+    { "name": "Scheduling tools", "url": "" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Platform and account positioning",
+      "tool": "ChatGPT / Claude",
+      "time": "15 min",
+      "detail": "Decide the main platform (Douyin / Xiaohongshu / Bilibili / WeChat), target audience and differentiation; have the AI distill 3-5 content pillars (what you do, what you don't).",
+      "tips": "Go deep on one platform before expanding; the narrower your pillars, the clearer the persona and the steadier the growth."
+    },
+    {
+      "id": "s2",
+      "title": "Content calendar",
+      "tool": "ChatGPT / Claude",
+      "time": "15 min",
+      "detail": "Plan a week of topics: have the AI batch out topic ideas per pillar with angle, format (image/video) and best-publish time for each.",
+      "tips": "Topic formula: pillar + timely hook + a specific audience pain; schedule a week ahead instead of deciding that day."
+    },
+    {
+      "id": "s3",
+      "title": "Batch content generation",
+      "tool": "ChatGPT / Claude + Canva",
+      "time": "30-60 min",
+      "detail": "Generate copy drafts in batch (headline, body, hashtags); visuals via Canva templates. Feed the model your account style and past hits (few-shot) for consistency.",
+      "tips": "Turn 'headline → body → tags' into a template and have the AI fill it line by line, then hand-polish."
+    },
+    {
+      "id": "s4",
+      "title": "Per-platform adaptation",
+      "tool": "ChatGPT / Claude",
+      "time": "15 min",
+      "detail": "Adapt titles and openings per platform (Xiaohongshu = hooks + tags, WeChat = headline, Douyin = first 3 seconds); trim length and format accordingly.",
+      "tips": "Have the AI output all platform versions at once; you only adjust tone."
+    },
+    {
+      "id": "s5",
+      "title": "Scheduling",
+      "tool": "Scheduling tools",
+      "time": "15 min",
+      "detail": "Queue 3-7 days ahead at each platform's active hours; insert trending hooks in as breaks, keeping the calendar never empty.",
+      "tips": "A fixed cadence (daily / every other day) builds recommendation weight better than random posting."
+    },
+    {
+      "id": "s6",
+      "title": "Data review and iterate",
+      "tool": "Platform analytics + AI",
+      "time": "30 min / week",
+      "detail": "Feed weekly metrics to the AI: which topics, titles and times worked, and adjust the next calendar. Replicate winning structure, not content.",
+      "tips": "Watch completion and save rates, not just likes; have the AI extract your 'viral factors'."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Running out of content",
+      "detail": "No calendar, same-day topics, and you stop posting; content pillars plus an advance schedule is the cure."
+    },
+    {
+      "title": "Samey, copied content",
+      "detail": "Pure AI batch posting looks homogeneous; structure-copy + content-rewrite + asset-swap is how you stand out."
+    },
+    {
+      "title": "Ignoring the data",
+      "detail": "Posting on feel is shooting blind; review metrics weekly and iterate topics."
+    },
+    {
+      "title": "Breaking platform rules",
+      "detail": "AI-generated bait copy can trip platform rules; human-check compliance before publishing."
+    }
+  ]
+}

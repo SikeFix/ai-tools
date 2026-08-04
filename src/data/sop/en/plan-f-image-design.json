@@ -1,0 +1,77 @@
+{
+  "slug": "plan-f-image-design",
+  "title": "Plan F: AI Image Design Workflow (Posters / Brand)",
+  "summary": "Requirements & style refs → text-to-image drafts → image-to-image refinement → text & layout → upscale & export",
+  "scenario": "Best for posters, covers, e-commerce hero images, brand visuals and social assets — a usable image in 20-40 minutes.",
+  "meta": {
+    "duration": "20-40 min / image",
+    "cost": "Low-Medium",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "Midjourney / Jimeng / Flux", "url": "https://midjourney.com" },
+    { "name": "Ideogram / Canva", "url": "https://ideogram.ai" },
+    { "name": "Topaz / Real-ESRGAN", "url": "https://topazlabs.com" },
+    { "name": "ChatGPT / Claude", "url": "https://claude.ai" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Requirements and style references",
+      "tool": "ChatGPT / Claude + reference images",
+      "time": "5 min",
+      "detail": "Pin down purpose, aspect ratio, where the text goes, main palette and style keywords; collect 2-3 reference images. The more specific the prompt, the higher the success rate.",
+      "tips": "Reference images plus concrete style words (e.g. 'film grain', 'flat illustration') beat adjective soup."
+    },
+    {
+      "id": "s2",
+      "title": "Text-to-image drafts",
+      "tool": "Midjourney / Jimeng / Flux",
+      "time": "5-10 min",
+      "detail": "Write prompts in this order — subject → scene → style → composition → detail constraints — and generate 4-8 candidates per round. Midjourney for artistry, Jimeng for Chinese scenes, Flux for accurate text.",
+      "tips": "For consistent subjects, fix the description or upload a reference; multiple rolls of the same prompt usually yield a keeper."
+    },
+    {
+      "id": "s3",
+      "title": "Image-to-image refinement",
+      "tool": "Img2Img / inpainting",
+      "time": "5-10 min",
+      "detail": "Use image-to-image to recompose, swap backgrounds and fix details; inpainting repairs broken hands, faces and edges. Far faster than regenerating — the key to quality.",
+      "tips": "Repair broken hands/text in a targeted region instead of restarting the whole image."
+    },
+    {
+      "id": "s4",
+      "title": "Text and layout",
+      "tool": "Ideogram / Canva",
+      "time": "5 min",
+      "detail": "Set headlines, slogans and prices with Ideogram (accurate glyphs) or lay out in Canva. AI-embedded text often garbles; let a proper tool handle typography.",
+      "tips": "Proofread every word; leave safe margins so platforms don't crop it."
+    },
+    {
+      "id": "s5",
+      "title": "Upscale and export",
+      "tool": "Topaz / Real-ESRGAN",
+      "time": "5 min",
+      "detail": "AI images are usually 1024-2048px; for print or high-res use, upscale with a super-resolution model and export the required spec (RGB/CMYK, 300dpi, PNG/PSD).",
+      "tips": "Denoise before upscaling to avoid amplified noise; check platform size specs for e-commerce."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Garbled embedded text",
+      "detail": "AI text inside images is unreliable; use Ideogram/Flux for glyph-heavy work or overlay text in Canva."
+    },
+    {
+      "title": "Broken hands and anatomy",
+      "detail": "Fingers, teeth and perspective break most often; fix with targeted inpainting or reference-based img2img."
+    },
+    {
+      "title": "Commercial licensing",
+      "detail": "Paid Midjourney tiers have clear commercial terms; confirm training-data provenance for free models, and be careful with stock-style copies."
+    },
+    {
+      "title": "Directly mimicking someone's art",
+      "detail": "Reference a style, don't feed someone's original image; extract style words instead of copying works wholesale."
+    }
+  ]
+}

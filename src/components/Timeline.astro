@@ -1,0 +1,19 @@
+---
+import type { Lang, SopStep } from '../lib/types';
+import StepCard from './StepCard.astro';
+
+interface Props {
+  steps: SopStep[];
+  lang: Lang;
+}
+
+const { steps, lang } = Astro.props;
+---
+
+<div class="overflow-hidden rounded-3xl border border-border bg-surface shadow-panel">
+  {steps.map((step, index) => (
+    <div class={index > 0 ? 'border-t border-border' : ''}>
+      <StepCard step={step} index={index} lang={lang} />
+    </div>
+  ))}
+</div>

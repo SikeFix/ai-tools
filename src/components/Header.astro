@@ -1,0 +1,91 @@
+---
+import { counterpartPath, localePath, t } from '../lib/i18n';
+import { SITE_NAME } from '../consts';
+import type { Lang } from '../lib/types';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const pathname = Astro.url.pathname;
+
+const navItems = [
+  { label: t(lang, 'nav.home'), href: localePath(lang, '/'), exact: true },
+  { label: t(lang, 'nav.sop'), href: localePath(lang, '/sop/'), exact: false },
+  { label: t(lang, 'nav.skills'), href: localePath(lang, '/skills/'), exact: false },
+];
+
+const isActive = (href: string, exact: boolean) =>
+  exact ? pathname === href : pathname.startsWith(href);
+---
+
+<header class="glass-nav sticky top-0 z-40">
+  <div
+    class="mx-auto flex h-14 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6"
+  >
+    <a
+      href={localePath(lang, '/')}
+      class="flex items-center gap-2 font-semibold tracking-tight"
+      aria-label={SITE_NAME[lang]}
+    >
+      <img
+        src="/logo.png"
+        alt=""
+        width="28"
+        height="28"
+        class="h-7 w-7 rounded-lg object-cover"
+        loading="eager"
+      />
+      <span class="hidden sm:inline">{SITE_NAME[lang]}</span>
+    </a>
+
+    <nav class="flex items-center gap-0.5 text-sm" aria-label="Main">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class={[
+            'rounded-full px-3 py-1.5 transition-colors',
+            isActive(item.href, item.exact)
+              ? 'font-semibold text-text'
+              : 'text-muted hover:text-text',
+          ].join(' ')}
+        >
+          {item.label}
+        </a>
+      ))}
+
+      <a
+        href={counterpartPath(lang, pathname)}
+        class="ml-1 rounded-full border border-border bg-surface/70 px-3 py-1.5 text-muted transition-colors hover:text-text"
+      >
+        {t(lang, 'lang.toggle')}
+      </a>
+
+      <button
+        id="theme-toggle"
+        type="button"
+        aria-label={t(lang, 'theme.toggle')}
+        class="ml-1 grid h-8 w-8 place-items-center rounded-full border border-border bg-surface/70 text-muted transition-colors hover:text-text"
+      >
+        <svg id="icon-sun" class="hidden dark:block" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"></path>
+        </svg>
+        <svg id="icon-moon" class="block dark:hidden" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<script>
+  import '../scripts/theme.ts';
+
+  // 玻璃导航：内容滚动到下方才显示发丝线/阴影
+  const nav = document.querySelector('.glass-nav');
+  const onScroll = () => nav?.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll();
+  addEventListener('scroll', onScroll, { passive: true });
+</script>

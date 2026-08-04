@@ -1,0 +1,99 @@
+---
+import { t, localePath } from '../lib/i18n';
+import { SITE_NAME } from '../consts';
+import { getCategories, categoryName } from '../lib/tools';
+import { sopGroupIds, type SopGroupId } from '../lib/sop';
+import type { UiKey } from '../i18n/ui.zh';
+import type { Lang } from '../lib/types';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const cats = getCategories().slice(0, 8);
+const groups = sopGroupIds;
+const groupLabels: Record<SopGroupId, UiKey> = {
+  video: 'sop.group.video',
+  content: 'sop.group.content',
+  productivity: 'sop.group.productivity',
+};
+const groupLabel = (id: SopGroupId) => t(lang, groupLabels[id]);
+---
+
+<footer class="border-t border-border">
+  <div
+    class="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-4"
+  >
+    <div>
+      <p class="flex items-center gap-2 font-semibold tracking-tight">
+        <img
+          src="/logo.png"
+          alt=""
+          width="28"
+          height="28"
+          class="h-7 w-7 rounded-lg object-cover"
+          loading="lazy"
+        />
+        {SITE_NAME[lang]}
+      </p>
+      <p class="mt-3 max-w-xs text-sm leading-relaxed text-muted">{t(lang, 'footer.note')}</p>
+      <p class="mt-4 text-sm">
+        <a
+          href="https://www.keorigin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-medium text-accent transition hover:text-accent-strong"
+        >
+          {t(lang, 'footer.official')} <span class="text-muted">keorigin.com</span> ↗
+        </a>
+      </p>
+    </div>
+
+    <nav aria-label="Tools">
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-muted">{t(lang, 'breadcrumb.tools')}</p>
+      <ul class="space-y-2 text-sm">
+        {cats.map((cat) => (
+          <li>
+            <a href={`${localePath(lang, '/')}#cat-${cat.id}`} class="text-muted transition hover:text-accent">
+              {categoryName(cat, lang)}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <nav aria-label="Workflows">
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-muted">{t(lang, 'breadcrumb.sop')}</p>
+      <ul class="space-y-2 text-sm">
+        {groups.map((group) => (
+          <li>
+            <a href={`${localePath(lang, '/sop/')}#${group}`} class="text-muted transition hover:text-accent">
+              {groupLabel(group)}
+            </a>
+          </li>
+        ))}
+        <li>
+          <a href={localePath(lang, '/sop/')} class="font-medium text-accent transition hover:text-accent-strong">
+            {t(lang, 'home.viewAllSops')} →
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav aria-label="Skills">
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-muted">{t(lang, 'breadcrumb.skills')}</p>
+      <ul class="space-y-2 text-sm">
+        <li>
+          <a href={localePath(lang, '/skills/')} class="text-muted transition hover:text-accent">{t(lang, 'skills.title')}</a>
+        </li>
+        <li>
+          <a href={localePath(lang, '/')} class="text-muted transition hover:text-accent">{t(lang, 'nav.home')}</a>
+        </li>
+        <li>
+          <a href={localePath(lang, '/')} class="text-muted transition hover:text-accent">{t(lang, 'footer.copyright')}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>

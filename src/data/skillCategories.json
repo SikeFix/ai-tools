@@ -1,0 +1,37 @@
+[
+  {
+    "id": "design",
+    "nameZh": "设计",
+    "nameEn": "Design",
+    "descZh": "让 AI 产出更像专业设计师手笔的界面与视觉。",
+    "descEn": "Make AI output feel like it came from a professional designer."
+  },
+  {
+    "id": "dev",
+    "nameZh": "开发",
+    "nameEn": "Development",
+    "descZh": "构建、测试与审查代码的高效技能。",
+    "descEn": "Skills for building, testing and reviewing code."
+  },
+  {
+    "id": "content",
+    "nameZh": "内容创作",
+    "nameEn": "Content Creation",
+    "descZh": "图片、切图与视频生产的创作流水线。",
+    "descEn": "Creative pipelines for images, slicing and video production."
+  },
+  {
+    "id": "efficiency",
+    "nameZh": "效率工具",
+    "nameEn": "Productivity",
+    "descZh": "自动化 Claude Code 环境与日常操作。",
+    "descEn": "Automate your Claude Code environment and daily operations."
+  },
+  {
+    "id": "data",
+    "nameZh": "数据与可视化",
+    "nameEn": "Data & Visualization",
+    "descZh": "数据分析、图表与外部数据接入。",
+    "descEn": "Data analysis, charts and external data integration."
+  }
+]

@@ -1,0 +1,89 @@
+---
+import type { Lang, Tool } from '../lib/types';
+import { capLabel, getCategoryById, getToolIcon, toolDesc } from '../lib/tools';
+import { categoryName } from '../lib/tools';
+import { localePath } from '../lib/i18n';
+import Badge from './Badge.astro';
+
+interface Props {
+  tool: Tool;
+  lang: Lang;
+}
+
+const { tool, lang } = Astro.props;
+const cat = getCategoryById(tool.category);
+const desc = toolDesc(tool, lang);
+const href = localePath(lang, `/tools/${tool.slug}/`);
+const icon = getToolIcon(tool.slug);
+
+// 搜索索引：工具名 + slug + 双语描述 + 标签 + 分类双语名，全小写
+const query = [
+  tool.name,
+  tool.slug,
+  tool.descZh,
+  tool.descEn,
+  ...(tool.tags ?? []),
+  cat?.nameZh ?? '',
+  cat?.nameEn ?? '',
+]
+  .join(' ')
+  .toLowerCase();
+---
+
+<article
+  class="tool-card group relative flex flex-col rounded-2xl border border-border bg-surface p-4 shadow-card transition duration-200 hover:-translate-y-1 hover:shadow-lift"
+  data-category={tool.category}
+  data-price={tool.price}
+  data-query={query}
+>
+  <div class="flex items-start gap-3 pr-5">
+    <a
+      href={href}
+      class="block h-10 w-10 shrink-0 overflow-hidden rounded-xl bg-surface-2"
+      aria-hidden="true"
+      tabindex="-1"
+    >
+      {icon ? (
+        <img src={icon} alt="" width="40" height="40" loading="lazy" class="h-10 w-10 object-contain p-1" />
+      ) : (
+        <span class="grid h-10 w-10 place-items-center text-sm font-bold text-text">
+          {tool.name.charAt(0).toUpperCase()}
+        </span>
+      )}
+    </a>
+    <div class="min-w-0">
+      <a href={href} class="title-h3 block truncate font-semibold hover:text-accent">
+        {tool.name}
+      </a>
+      <p class="mt-1 line-clamp-2 text-sm leading-relaxed text-muted">{desc}</p>
+      {(tool.caps ?? []).slice(0, 3).length > 0 && (
+        <div class="mt-2 flex flex-wrap gap-1">
+          {(tool.caps ?? [])
+            .slice(0, 3)
+            .map((cap) => (
+              <span class="rounded-full bg-surface-2 px-2 py-0.5 text-[11px] font-medium text-muted">
+                {capLabel(cap, lang)}
+              </span>
+            ))}
+        </div>
+      )}
+    </div>
+  </div>
+
+  <div class="mt-auto flex items-center gap-1.5 pt-3">
+    <Badge tier={tool.price} />
+    {cat && <Badge label={categoryName(cat, lang)} />}
+  </div>
+
+  <a
+    href={tool.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={`${tool.name} ↗`}
+    class="absolute right-3 top-3 text-muted opacity-0 transition group-hover:opacity-100 hover:text-accent"
+  >
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M7 17 17 7M7 7h10v10"></path>
+    </svg>
+  </a>
+</article>

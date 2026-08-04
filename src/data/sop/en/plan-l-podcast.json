@@ -1,0 +1,85 @@
+{
+  "slug": "plan-l-podcast",
+  "title": "Plan L: AI Podcast Production Workflow",
+  "summary": "Topic & positioning → script & outline → record/TTS → AI edit → audio polish & music → publish & distribute",
+  "scenario": "Best for anyone starting a podcast, knowledge product or branded audio — from topic to a listenable episode.",
+  "meta": {
+    "duration": "2-4 hours / episode",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT / Claude", "url": "https://claude.ai" },
+    { "name": "ElevenLabs / MiniMax", "url": "https://elevenlabs.io" },
+    { "name": "Descript / CapCut", "url": "https://descript.com" },
+    { "name": "Adobe Podcast / Auphonic", "url": "https://podcast.adobe.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Topic and positioning",
+      "tool": "ChatGPT / Claude",
+      "time": "15-30 min",
+      "detail": "Define the audience, theme, episode length and cadence; brainstorm topics with an LLM and study 1-2 reference podcasts for structure and pacing.",
+      "tips": "Decide 'what problem this episode solves for the listener' first; niche beats generic for building an audience."
+    },
+    {
+      "id": "s2",
+      "title": "Script and outline",
+      "tool": "ChatGPT / Claude",
+      "time": "30-60 min",
+      "detail": "For interviews write question lists plus guest background; for solo shows write a segmented outline (hook → expansion → action). Give the model your style and revise its first pass.",
+      "tips": "Putting your 3-5 core questions in the outline makes the conversation more natural than a verbatim script."
+    },
+    {
+      "id": "s3",
+      "title": "Record or TTS",
+      "tool": "Live recording / ElevenLabs / MiniMax",
+      "time": "1-2 hours",
+      "detail": "With guests, record locally on each side for audio quality; solo, record live or use AI voice. For AI voice use ElevenLabs/MiniMax Chinese voices and audition a few before choosing.",
+      "tips": "For AI dubbing keep sentences short with punctuation; test-record one segment first."
+    },
+    {
+      "id": "s4",
+      "title": "AI editing",
+      "tool": "Descript / CapCut",
+      "time": "30-60 min",
+      "detail": "Edit on a text timeline (Descript): delete filler, pauses and repeats by deleting words; fix slip-ups with Overdub. CapCut for segmenting and basic edits.",
+      "tips": "'Edit the text, not the waveform' keeps the feel of speech; listen to deleted spans to confirm the context still flows."
+    },
+    {
+      "id": "s5",
+      "title": "Audio polish and music",
+      "tool": "Adobe Podcast / Auphonic",
+      "time": "15-30 min",
+      "detail": "One-click denoise and de-reverb (Adobe Podcast/Auphonic); normalize loudness to podcast standard (~-16 LUFS); add intro/outro BGM kept low.",
+      "tips": "Consistent loudness reads more 'professional' than raw sound quality; keep BGM under 30% of voice."
+    },
+    {
+      "id": "s6",
+      "title": "Publish and distribute",
+      "tool": "Podcast hosting platform",
+      "time": "30 min",
+      "detail": "Create cover art, shownotes (AI-generated summary + timestamps + links) and RSS; publish to XiaoYuzhou, Apple Podcasts and Spotify; build a collection page.",
+      "tips": "Timestamps in shownotes let listeners jump straight to what they want — higher completion rate."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Poor audio quality",
+      "detail": "Recording in a noisy room is the cardinal sin; quiet room + close mic, with AI denoise as a safety net."
+    },
+    {
+      "title": "Unedited filler",
+      "detail": "Text-based editing cuts filler in minutes; too much dead air loses listeners."
+    },
+    {
+      "title": "Empty shownotes",
+      "detail": "Blank shownotes waste SEO and sharing; use AI for summary, timestamps and links."
+    },
+    {
+      "title": "Robotic AI voice",
+      "detail": "Long stretches of pure TTS tire the ear; punctuation, emotion tags and voice choice all help."
+    }
+  ]
+}

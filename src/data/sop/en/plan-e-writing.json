@@ -1,0 +1,85 @@
+{
+  "slug": "plan-e-writing",
+  "title": "Plan E: AI Writing Workflow (Long-form / Marketing)",
+  "summary": "Topic & positioning → outline → section-by-section draft → human polish & fact-check → visuals & layout → multi-platform publish",
+  "scenario": "Best for WeChat long-form, SEO articles, marketing copy and industry reports — a quality piece in 30-60 minutes.",
+  "meta": {
+    "duration": "30-60 min / piece",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT / Claude", "url": "https://claude.ai" },
+    { "name": "Jasper / Writesonic", "url": "https://jasper.ai" },
+    { "name": "Midjourney / Canva", "url": "https://midjourney.com" },
+    { "name": "Grammarly / QuillBot", "url": "https://grammarly.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Topic and positioning",
+      "tool": "ChatGPT / Claude",
+      "time": "5-10 min",
+      "detail": "Define the reader, goal and platform, brainstorm topics with an LLM, and deconstruct 1-2 reference pieces for angle and structure. Positioning decides half the reach.",
+      "tips": "Topic formula: target reader + specific pain + counterintuitive hook beats generic 'tips sharing'."
+    },
+    {
+      "id": "s2",
+      "title": "Outline and structure",
+      "tool": "ChatGPT / Claude",
+      "time": "5 min",
+      "detail": "Have the model build a pyramid (conclusion first) or four-part (hook → problem → solution → CTA) outline, each section annotated with key points, data and visual ideas. Approve the outline before writing.",
+      "tips": "Lock the outline first to halve rework; leave data/case slots to fill in one by one."
+    },
+    {
+      "id": "s3",
+      "title": "Draft section by section",
+      "tool": "Jasper / Writesonic / Claude",
+      "time": "10-20 min",
+      "detail": "Generate one section per prompt (controlling tone, length and bullet usage). Avoid generating the whole piece at once — section-by-section drafts are structurally steadier and less robotic.",
+      "tips": "Give the model a sample paragraph (few-shot) to dramatically improve style consistency."
+    },
+    {
+      "id": "s4",
+      "title": "Human polish and fact-check",
+      "tool": "Grammarly / QuillBot + you",
+      "time": "10-15 min",
+      "detail": "Verify every number, quote and 'according to a study' claim (AI fabricates sources); rewrite conversationally, cut redundancy, add transitions. This is the line between machine output and human work — never skip it.",
+      "tips": "Check numbers and proper nouns one by one; anything like '20% of users' must trace to a source."
+    },
+    {
+      "id": "s5",
+      "title": "Visuals and layout",
+      "tool": "Midjourney / Canva",
+      "time": "10 min",
+      "detail": "Cover image plus one visual per section; graded headings, short paragraphs and whitespace. Layout decides read-through rate and is easier to neglect than the prose.",
+      "tips": "16:9 cover; keep all visuals in one style and palette to avoid a patchwork feel."
+    },
+    {
+      "id": "s6",
+      "title": "Publish and iterate",
+      "tool": "WeChat / Zhihu / Xiaohongshu",
+      "time": "5 min",
+      "detail": "Adapt titles and openings per platform, then track reads, read-through and saves to refine topics and style for the next piece.",
+      "tips": "Post the same content with 2-3 titles and see which gets the clicks."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Ship the AI draft as-is",
+      "detail": "It reads robotic and generic; readers can tell. You must polish and add your own examples and judgment."
+    },
+    {
+      "title": "Unverified data and quotes",
+      "detail": "AI fabricates 'according to a study' and '20% of users'. Verify every claim — credibility is on the line."
+    },
+    {
+      "title": "Generating the whole piece at once",
+      "detail": "3000 words in one pass is unstable; section-by-section generation keeps structure controllable."
+    },
+    {
+      "title": "Clickbait and overpromising",
+      "detail": "Overhyped titles lower trust and read-through; the body must match the headline's promise."
+    }
+  ]
+}

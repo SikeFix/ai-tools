@@ -1,0 +1,157 @@
+[
+  {
+    "slug": "figma-ai",
+    "caps": [
+      "ui-design",
+      "website"
+    ],
+    "useCasesZh": [
+      "文本生成 UI 稿",
+      "自动布局与规范",
+      "设计系统一致性",
+      "原型快速迭代"
+    ],
+    "useCasesEn": [
+      "Text-to-UI generation",
+      "Auto layout and standards",
+      "Design system consistency",
+      "Rapid prototype iteration"
+    ]
+  },
+  {
+    "slug": "canva",
+    "caps": [
+      "ui-design",
+      "image-gen",
+      "writing",
+      "website"
+    ],
+    "useCasesZh": [
+      "全民设计海报",
+      "一键生成品牌素材",
+      "图文视频一体创作",
+      "社媒模板"
+    ],
+    "useCasesEn": [
+      "Design for everyone",
+      "One-click brand assets",
+      "Unified image-text-video creation",
+      "Social templates"
+    ]
+  },
+  {
+    "slug": "recraft",
+    "caps": [
+      "logo",
+      "image-gen"
+    ],
+    "useCasesZh": [
+      "原生 SVG 矢量 Logo",
+      "图标库生成",
+      "可编辑设计稿",
+      "品牌视觉"
+    ],
+    "useCasesEn": [
+      "Native SVG vector logos",
+      "Icon library generation",
+      "Editable design files",
+      "Brand identity"
+    ]
+  },
+  {
+    "slug": "looka",
+    "caps": [
+      "logo",
+      "image-gen"
+    ],
+    "useCasesZh": [
+      "问卷式 Logo 设计",
+      "全套品牌视觉",
+      "名片与社交素材",
+      "品牌规范"
+    ],
+    "useCasesEn": [
+      "Questionnaire-driven logo design",
+      "Full brand identity",
+      "Business cards and social assets",
+      "Brand guidelines"
+    ]
+  },
+  {
+    "slug": "uizard",
+    "caps": [
+      "ui-design",
+      "website"
+    ],
+    "useCasesZh": [
+      "草图转线框原型",
+      "文字描述生成 UI",
+      "非设计师做原型",
+      "产品验证"
+    ],
+    "useCasesEn": [
+      "Sketch to wireframe",
+      "Describe UI in text",
+      "Prototyping for non-designers",
+      "Product validation"
+    ]
+  },
+  {
+    "slug": "framer",
+    "caps": [
+      "website",
+      "ui-design"
+    ],
+    "useCasesZh": [
+      "提示词生成网站",
+      "无代码发布",
+      "动效与交互",
+      "营销落地页"
+    ],
+    "useCasesEn": [
+      "Prompt-to-website",
+      "No-code publishing",
+      "Animations and interactions",
+      "Marketing landing pages"
+    ]
+  },
+  {
+    "slug": "relume",
+    "caps": [
+      "website",
+      "ui-design"
+    ],
+    "useCasesZh": [
+      "AI 网站地图生成",
+      "组件库快速搭建",
+      "落地页结构",
+      "前端代码导出"
+    ],
+    "useCasesEn": [
+      "AI sitemap generation",
+      "Rapid component-based builds",
+      "Landing page structure",
+      "Frontend code export"
+    ]
+  },
+  {
+    "slug": "open-design",
+    "caps": [
+      "ui-design",
+      "website",
+      "agent"
+    ],
+    "useCasesZh": [
+      "文本生成设计稿",
+      "Figma 开源替代",
+      "自动检测编程 Agent 设计",
+      "品牌设计系统"
+    ],
+    "useCasesEn": [
+      "Text-to-design",
+      "Open-source Figma alternative",
+      "Auto-detect coding agents as designers",
+      "Brand design systems"
+    ]
+  }
+]

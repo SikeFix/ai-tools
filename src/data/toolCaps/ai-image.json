@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "midjourney",
+    "caps": ["image-gen", "logo", "character-consistency"],
+    "useCasesZh": ["艺术海报与封面", "角色一致性画稿", "概念设计与插画", "摄影级写实图片"],
+    "useCasesEn": ["Artistic posters and covers", "Character-consistent illustrations", "Concept art and illustration", "Photorealistic images"]
+  },
+  {
+    "slug": "dalle",
+    "caps": ["image-gen", "photo-edit"],
+    "useCasesZh": ["对话中直接生成配图", "插画与卡通形象", "海报文案图", "简单图像编辑"],
+    "useCasesEn": ["Generate images right inside a chat", "Illustrations and mascots", "Posters with text", "Simple image editing"]
+  },
+  {
+    "slug": "flux",
+    "caps": ["image-gen", "logo", "photo-edit"],
+    "useCasesZh": ["文字排版精准的图片", "本地部署批量生成", "电商与产品图", "海报与印刷稿"],
+    "useCasesEn": ["Images with precise text rendering", "Local deployment for batch generation", "E-commerce and product images", "Posters and print layouts"]
+  },
+  {
+    "slug": "ideogram",
+    "caps": ["image-gen", "logo"],
+    "useCasesZh": ["Logo 与品牌标志设计", "带字海报与广告", "排版设计稿", "字体准确度要求高的图"],
+    "useCasesEn": ["Logo and brand mark design", "Text-heavy posters and ads", "Typographic design work", "Images demanding accurate text"]
+  },
+  {
+    "slug": "leonardo",
+    "caps": ["image-gen", "photo-edit", "character-consistency"],
+    "useCasesZh": ["游戏角色与资产", "免费额度批量生图", "角色一致性素材", "概念场景"],
+    "useCasesEn": ["Game characters and assets", "Batch generation with free credits", "Character-consistent assets", "Concept scenes"]
+  },
+  {
+    "slug": "firefly",
+    "caps": ["image-gen", "photo-edit"],
+    "useCasesZh": ["商业安全的生成图", "Photoshop 生成式填充", "品牌海报", "电商素材"],
+    "useCasesEn": ["Commercially-safe generated images", "Photoshop generative fill", "Brand posters", "E-commerce assets"]
+  },
+  {
+    "slug": "stable-diffusion",
+    "caps": ["image-gen", "photo-edit", "ui-design"],
+    "useCasesZh": ["ComfyUI 可控工作流", "LoRA 定制训练", "本地私有化生成", "写实与动漫风格"],
+    "useCasesEn": ["Controllable ComfyUI workflows", "Custom LoRA training", "Private local generation", "Realistic and anime styles"]
+  },
+  {
+    "slug": "imagen",
+    "caps": ["image-gen", "photo-edit"],
+    "useCasesZh": ["写实照片级生成", "真实感广告图", "产品实拍替代", "人像与场景"],
+    "useCasesEn": ["Photorealistic generation", "Realistic ad imagery", "Product photography stand-ins", "Portraits and scenes"]
+  }
+]

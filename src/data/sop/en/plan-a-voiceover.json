@@ -1,0 +1,74 @@
+{
+  "slug": "plan-a-voiceover",
+  "title": "Plan A: Voiceover / Explainers",
+  "summary": "Write script → TTS voice → visuals → edit in CapCut → publish",
+  "scenario": "Best for knowledge explainers, product demos and tutorial videos. The fastest, simplest route — one video in 15-40 minutes, driven by text plus stock or AI visuals.",
+  "meta": {
+    "duration": "15-40 min / video",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT / Claude", "url": "https://claude.ai" },
+    { "name": "ElevenLabs", "url": "https://elevenlabs.io" },
+    { "name": "CapCut", "url": "https://www.capcut.com" },
+    { "name": "Jimeng / Midjourney", "url": "https://midjourney.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Write the voiceover script",
+      "tool": "ChatGPT / Claude / DeepSeek",
+      "time": "5-10 min",
+      "detail": "Generate a 200-300 word voiceover with an LLM, one idea per sentence. Use a four-part structure: hook (golden 3 seconds) → problem → solution → call to action. Rewrite it conversationally by hand afterward.",
+      "tips": "The first 3-5 seconds need a hook. Keep sentences short with plenty of commas so TTS breaks naturally."
+    },
+    {
+      "id": "s2",
+      "title": "Record the voice with TTS",
+      "tool": "ElevenLabs / CapCut AI voice",
+      "time": "5-10 min",
+      "detail": "For premium quality use ElevenLabs (supports Chinese, can clone your voice; parameters stability≈0.75 / similarity≈0.75). For quick and free, use CapCut's built-in AI voice.",
+      "tips": "In talking-head videos, audio matters more than visuals — spend an extra couple of minutes choosing the voice and pace."
+    },
+    {
+      "id": "s3",
+      "title": "Prepare the visuals",
+      "tool": "CapCut text-to-video / Jimeng / stock",
+      "time": "5-15 min",
+      "detail": "Pick one of three routes: stock montage (CapCut's text-to-video auto-matches footage, captions and BGM); AI images (Jimeng/Midjourney for cover or storyboard stills, then image-to-video for motion); or real footage / stock B-roll."
+    },
+    {
+      "id": "s4",
+      "title": "Edit and composite",
+      "tool": "CapCut",
+      "time": "10-20 min",
+      "detail": "Cut visuals to the voice track's rhythm — never the other way around. Auto-captions then manually proofread proper nouns. Keep music at ~30% of voice volume, transitions at 200-300ms, and export 16:9 or 9:16 for the platform."
+    },
+    {
+      "id": "s5",
+      "title": "Publish and iterate",
+      "tool": "Douyin / Xiaohongshu / Bilibili",
+      "time": "5 min",
+      "detail": "Adapt per platform: Douyin 15-60s vertical, Xiaohongshu 9-15s, Bilibili 2-5min horizontal. Tick the AI-content label, then track watch-through rate and comment keywords to iterate."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Run-on sentences",
+      "detail": "TTS reads a long sentence in one breath and sounds terrible. Split into 10-15 character chunks with commas."
+    },
+    {
+      "title": "Visuals over script",
+      "detail": "The first 3-5 seconds decide your watch-through rate. The script matters far more than the footage — don't over-invest in visuals."
+    },
+    {
+      "title": "Music drowning the voice",
+      "detail": "Keep BGM at roughly 30% of voice volume, or viewers can't hear the narration."
+    },
+    {
+      "title": "Commercial licensing",
+      "detail": "Free tiers watermark output or cap at 720p. Before commercial use, confirm voice and music licenses — especially AI songs."
+    }
+  ]
+}

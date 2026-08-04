@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SearchBar from '../../components/SearchBar.astro';
+import CategoryNav from '../../components/CategoryNav.astro';
+import PriceFilter from '../../components/PriceFilter.astro';
+import CategorySection from '../../components/CategorySection.astro';
+import { getAllTools, getCategorySections } from '../../lib/tools';
+import { getSopArticles } from '../../lib/sop';
+import { t, localePath } from '../../lib/i18n';
+import { SITE_NAME, SITE_TAGLINE } from '../../consts';
+import SopCard from '../../components/SopCard.astro';
+import type { Lang } from '../../lib/types';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: undefined } }, // zh → 根路径 /
+    { params: { lang: 'en' } }, // en → /en/
+  ];
+}
+
+const lang: Lang = (Astro.params.lang as Lang | undefined) ?? 'zh';
+const sections = getCategorySections();
+const totalTools = getAllTools().length;
+const sopArticles = getSopArticles(lang);
+const sopCount = sopArticles.length;
+
+// 首页精选工作流（视频旗舰 + 非视频代表）
+const featuredSopSlugs = ['plan-b-storyboard', 'plan-d-cinematic', 'plan-e-writing', 'plan-g-coding'];
+const featuredSops = featuredSopSlugs
+  .map((slug) => sopArticles.find((article) => article.slug === slug))
+  .filter((article): article is NonNullable<typeof article> => Boolean(article));
+---
+
+<BaseLayout lang={lang} canonicalPath="/" ogType="website">
+  <!-- Hero -->
+  <section class="mx-auto max-w-6xl px-4 pt-16 pb-12 sm:px-6">
+    <div class="max-w-2xl">
+      <div
+        class="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-muted"
+      >
+        <span class="live-dot h-1.5 w-1.5 rounded-full" aria-hidden="true"></span>
+        {t(lang, 'hero.badge')}
+      </div>
+      <h1 class="title-h1 mt-4 text-4xl font-bold sm:text-5xl">
+        {SITE_NAME[lang]}
+      </h1>
+      <p class="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+        {SITE_TAGLINE[lang]}
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a
+          href={localePath(lang, '/sop/')}
+          class="inline-flex h-11 items-center rounded-full bg-accent px-6 text-sm font-semibold text-accent-ink transition hover:bg-accent-strong"
+        >
+          {t(lang, 'hero.ctaSop')}
+        </a>
+        <a
+          href="#cat-ai-chat"
+          class="inline-flex h-11 items-center rounded-full border border-border bg-surface px-5 text-sm font-semibold text-text transition hover:bg-surface-2"
+        >
+          {t(lang, 'hero.ctaTools')}
+        </a>
+      </div>
+      <dl class="mt-10 flex flex-wrap gap-x-10 gap-y-3 text-sm text-muted">
+        <div class="flex items-baseline gap-1.5">
+          <dd class="text-2xl font-semibold tabular-nums text-text">{totalTools}</dd>
+          <dt>{t(lang, 'hero.statsTools')}</dt>
+        </div>
+        <div class="flex items-baseline gap-1.5">
+          <dd class="text-2xl font-semibold tabular-nums text-text">{sections.length}</dd>
+          <dt>{t(lang, 'hero.statsCategories')}</dt>
+        </div>
+        <div class="flex items-baseline gap-1.5">
+          <dd class="text-2xl font-semibold tabular-nums text-text">{sopCount}</dd>
+          <dt>{t(lang, 'hero.statsSops')}</dt>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 搜索 + 筛选 -->
+  <section class="mx-auto max-w-6xl space-y-3 px-4 pb-2 sm:px-6">
+    <SearchBar lang={lang} />
+    <CategoryNav lang={lang} />
+    <PriceFilter lang={lang} />
+  </section>
+
+  <!-- 结果栏（筛选激活时显示） -->
+  <section
+    id="result-bar"
+    class="mx-auto max-w-6xl px-4 pb-2 sm:px-6"
+    hidden
+  >
+    <div class="flex flex-wrap items-center gap-3">
+      <p id="result-count" data-template={t(lang, 'result.count')} class="text-sm font-medium"></p>
+      <button
+        id="filter-clear"
+        type="button"
+        class="chip"
+        hidden
+      >
+        {t(lang, 'filter.clear')}
+      </button>
+    </div>
+    <div id="result-empty" hidden class="mt-3 rounded-2xl border border-border bg-surface p-8 text-center shadow-card">
+      <p class="font-semibold">{t(lang, 'result.empty')}</p>
+      <p class="mt-1 text-sm text-muted">{t(lang, 'result.emptyHint')}</p>
+    </div>
+  </section>
+
+  <!-- 分类区块 -->
+  <section class="mx-auto max-w-6xl space-y-14 px-4 pb-10 pt-6 sm:px-6">
+    {sections.map(({ category, tools }) => (
+      <CategorySection category={category} tools={tools} lang={lang} />
+    ))}
+  </section>
+
+  <!-- 工作流速览 -->
+  <section class="mx-auto max-w-6xl border-t border-border px-4 py-14 sm:px-6">
+    <div class="mb-6 flex flex-wrap items-end justify-between gap-3">
+      <div>
+        <h2 class="title-h2 text-xl font-semibold tracking-tight">{t(lang, 'home.sopSectionTitle')}</h2>
+        <p class="mt-1 text-sm text-muted">{t(lang, 'home.sopSectionDesc')}</p>
+      </div>
+      <a
+        href={localePath(lang, '/sop/')}
+        class="inline-flex items-center gap-1 rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent transition hover:bg-accent/20"
+      >
+        {t(lang, 'home.viewAllSops')} · {sopCount}
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      {featuredSops.map((article) => (
+        <SopCard article={article} lang={lang} />
+      ))}
+    </div>
+  </section>
+
+  <!-- 渐变 CTA（Apple liquid glass） -->
+  <section class="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
+    <div
+      class="relative overflow-hidden rounded-3xl px-6 py-12 text-center sm:px-12 sm:py-16"
+      style="background: linear-gradient(135deg, #0071e3 0%, #5e5ce6 100%); box-shadow: var(--sh-cta);"
+    >
+      <div
+        aria-hidden="true"
+        class="pointer-events-none absolute -right-10 -top-16 h-64 w-64 rounded-full"
+        style="background: rgba(255,255,255,0.18); filter: blur(46px);"
+      ></div>
+      <div
+        aria-hidden="true"
+        class="pointer-events-none absolute -bottom-20 left-[12%] h-52 w-52 rounded-full"
+        style="background: rgba(120,80,255,0.5); filter: blur(50px);"
+      ></div>
+      <div class="relative">
+        <h2 class="title-h2 text-2xl font-bold text-white sm:text-3xl">
+          {t(lang, 'home.ctaTitle')}
+        </h2>
+        <p
+          class="mx-auto mt-3 max-w-xl text-sm leading-relaxed sm:text-base"
+          style="color: rgba(255,255,255,0.85);"
+        >
+          {t(lang, 'home.ctaDesc')
+            .replace('{n}', String(totalTools))
+            .replace('{m}', String(sopCount))}
+        </p>
+        <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href={localePath(lang, '/sop/')}
+            class="inline-flex h-11 items-center rounded-full px-6 text-sm font-semibold text-white transition hover:brightness-110"
+            style="background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.22); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);"
+          >
+            {t(lang, 'home.ctaButton')}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import '../../scripts/search.ts';
+  </script>
+</BaseLayout>

@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "jasper",
+    "caps": ["writing", "summarization"],
+    "useCasesZh": ["长文营销内容", "品牌语气一致性写作", "SEO 文章", "广告与落地页"],
+    "useCasesEn": ["Long-form marketing content", "Consistent brand-voice writing", "SEO articles", "Ads and landing pages"]
+  },
+  {
+    "slug": "copy-ai",
+    "caps": ["writing", "workflow"],
+    "useCasesZh": ["短文案批量生成", "营销自动化工作流", "社交发帖", "广告文案"],
+    "useCasesEn": ["Batch short copy generation", "Marketing automation workflows", "Social posts", "Ad copy"]
+  },
+  {
+    "slug": "grammarly",
+    "caps": ["proofread", "writing", "translate"],
+    "useCasesZh": ["英文语法纠错", "语气与风格润色", "全平台输入", "改写建议"],
+    "useCasesEn": ["English grammar checking", "Tone and style polishing", "Works across platforms", "Rewriting suggestions"]
+  },
+  {
+    "slug": "writesonic",
+    "caps": ["writing", "summarization"],
+    "useCasesZh": ["SEO 长文生成", "博客与内容营销", "产品描述", "低成本批量写作"],
+    "useCasesEn": ["SEO long-form generation", "Blogs and content marketing", "Product descriptions", "Low-cost batch writing"]
+  },
+  {
+    "slug": "rytr",
+    "caps": ["writing", "translate"],
+    "useCasesZh": ["平价多语种文案", "电商描述", "邮件与短信", "创意标题"],
+    "useCasesEn": ["Affordable multilingual copy", "E-commerce descriptions", "Emails and SMS", "Creative headlines"]
+  },
+  {
+    "slug": "sudowrite",
+    "caps": ["writing"],
+    "useCasesZh": ["小说续写与扩写", "创意头脑风暴", "角色对话润色", "完本修改"],
+    "useCasesEn": ["Novel continuation and expansion", "Creative brainstorming", "Dialogue polishing", "Revision for completion"]
+  },
+  {
+    "slug": "quillbot",
+    "caps": ["proofread", "writing"],
+    "useCasesZh": ["同义改写与润色", "避免重复表达", "英文写作提升", "摘要与检查"],
+    "useCasesEn": ["Paraphrasing and polishing", "Avoid repetition", "Improve English writing", "Summarizing and checking"]
+  }
+]

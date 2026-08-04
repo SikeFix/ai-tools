@@ -1,0 +1,29 @@
+---
+import type { Lang } from '../lib/types';
+import { getCategories, categoryName } from '../lib/tools';
+import { t } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const cats = getCategories();
+---
+
+<nav id="category-nav" aria-label={t(lang, 'filter.category')}>
+  <ul class="flex flex-wrap gap-1.5">
+    <li>
+      <button type="button" data-category="" class="chip chip-active">
+        {t(lang, 'filter.all')}
+      </button>
+    </li>
+    {cats.map((cat) => (
+      <li>
+        <button type="button" data-category={cat.id} class="chip">
+          {categoryName(cat, lang)}
+        </button>
+      </li>
+    ))}
+  </ul>
+</nav>
