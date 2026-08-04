@@ -1,0 +1,78 @@
+{
+  "slug": "plan-ad-children-book",
+  "title": "方案 AD：AI 儿童绘本",
+  "summary": "故事线 → 分页脚本 → 插画 → 排版 → 出版/电子版",
+  "scenario": "适合家长或创作者做原创儿童绘本，从一句话灵感做到可打印或上架的成书。",
+  "meta": {
+    "duration": "3-6 小时 / 本",
+    "cost": "中",
+    "difficulty": "进阶"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chat.openai.com" },
+    { "name": "Midjourney", "url": "https://www.midjourney.com" },
+    { "name": "DALL·E 3", "url": "https://openai.com/dall-e-3" },
+    { "name": "Flux", "url": "https://blackforestlabs.ai" },
+    { "name": "Canva Magic Studio", "url": "https://www.canva.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "故事线",
+      "tool": "ChatGPT",
+      "time": "20-30 分钟",
+      "detail": "先用一句话想法让模型扩出完整故事线：主角、冲突、转折、结局，并用三段式校验节奏。给模型一个 3-6 岁孩子的兴趣清单，让故事贴近日常生活经验。",
+      "tips": "让模型输出 3 版不同主角的故事线，挑最打动你的再深化。"
+    },
+    {
+      "id": "s2",
+      "title": "分页脚本",
+      "tool": "ChatGPT",
+      "time": "30-40 分钟",
+      "detail": "把故事线拆成 16-24 页，每页配一句话旁白加画面描述（角色、场景、情绪、景别）。保持每页信息量一致，给插图留出呼吸空间。",
+      "tips": "在画面描述里固定主角外貌（发色、衣着），后面所有插图才会统一。"
+    },
+    {
+      "id": "s3",
+      "title": "插画生成",
+      "tool": "Midjourney / DALL·E 3 / Flux",
+      "time": "1-2 小时",
+      "detail": "按页生成插图，先在 Midjourney 里用角色参考图统一主角，再逐页生成。把第一张满意图的描述存成模板，每页只改场景和动作，画风就不会漂移。",
+      "tips": "用 --cref 或图生图回传上一张成品，角色一致性最稳。"
+    },
+    {
+      "id": "s4",
+      "title": "排版",
+      "tool": "Canva Magic Studio",
+      "time": "1 小时",
+      "detail": "把插图和文字按页拖进画布，统一字体与字号，加页码和封面封底。用 Magic Studio 的文案与背景功能补细节，导出 PDF 用于打印或电子版。",
+      "tips": "先做一张样页确认字号与出血，再批量套版，避免整本返工。"
+    },
+    {
+      "id": "s5",
+      "title": "出版/电子版",
+      "tool": "Canva + 出版平台",
+      "time": "30 分钟",
+      "detail": "电子版导出 300dpi 的 PDF，检查文字不贴边、跨页出血正确。可直接上传 Kindle 或打印平台，也可以生成预览链接请朋友内测。",
+      "tips": "打印前先打 1-2 页测试色差和裁切，别整本冲。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "角色不一致",
+      "detail": "每页随机生成主角会变成「变形人」；先用固定角色参考，再逐页变体。"
+    },
+    {
+      "title": "文字压图 / 跨页",
+      "detail": "儿童绘本字大，排版时留足边距，文字别跨过中缝。"
+    },
+    {
+      "title": "一次性生成全部插图",
+      "detail": "先出 2-3 张定风格，确认后再批量，否则画风漂移难收拾。"
+    },
+    {
+      "title": "忽略版权声明",
+      "detail": "若要在正规平台出版，先确认所用模型与素材的商用条款。"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "slug": "plan-aw-team-sop",
+  "title": "Plan AW: Team Onboarding & SOP Library",
+  "summary": "Role inventory → process mapping → SOP writing → knowledge base → maintenance",
+  "scenario": "For teams turning scattered work experience into processes new hires can follow, plus onboarding material, to stop repeating the same answers.",
+  "meta": {
+    "duration": "3-5 days",
+    "cost": "Low",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "Notion", "url": "https://notion.so" },
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Claude", "url": "https://claude.ai" },
+    { "name": "GitHub", "url": "https://github.com" },
+    { "name": "Confluence", "url": "https://www.atlassian.com/software/confluence" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Role inventory",
+      "tool": "Notion + you",
+      "time": "0.5-1 day",
+      "detail": "Collect each role's daily tasks, frequent questions, handover items and hard-won lessons into a role map. Ask a veteran on the team to walk through their typical day — that's the cheapest first-hand material.",
+      "tips": "Start from 'questions a new hire asks in their first 30 days' and prioritize the places where the same answers get repeated most."
+    },
+    {
+      "id": "s2",
+      "title": "Process mapping",
+      "tool": "ChatGPT / Claude",
+      "time": "1 day",
+      "detail": "Turn repetitive work from the role map into flows: trigger → steps → output → owner. Have the model check for missing links, unclear ownership, and when to escalate.",
+      "tips": "Ask the model to flag exceptions and gray zones in every process — most SOP failures happen in the exceptions."
+    },
+    {
+      "id": "s3",
+      "title": "SOP writing",
+      "tool": "Claude / ChatGPT",
+      "time": "1-2 days",
+      "detail": "Convert flows into followable SOPs: each step states what to do, which tool, what 'done' looks like, common mistakes, and where screenshots go. Have the model compress wordy prose into step checklists and review it from a new-hire perspective.",
+      "tips": "Have a real new hire walk through the SOP once; fix wherever they stall — more effective than self-review."
+    },
+    {
+      "id": "s4",
+      "title": "Knowledge base",
+      "tool": "Notion / Confluence",
+      "time": "0.5-1 day",
+      "detail": "File SOPs into the knowledge base by department and process, with a table of contents, tags and search, and permission tiers to keep confidential material inside. Put the onboarding handbook (accounts, environment, day-one checklist) front and center.",
+      "tips": "Stamp every SOP with 'last updated + owner'; a knowledge base nobody maintains is as good as none."
+    },
+    {
+      "id": "s5",
+      "title": "Maintenance",
+      "tool": "GitHub / scheduled review",
+      "time": "0.5 day per quarter",
+      "detail": "Review SOPs quarterly or whenever a process changes: track edits with GitHub or KB versioning, update stale steps and screenshots, and have AI diff old vs new flows to flag linked documents that need syncing.",
+      "tips": "Keep an SOP revision log — which entry, why, and who changed it — and point new hires at the docs before asking people."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "SOPs too abstract to follow",
+      "detail": "'Follow up responsibly' gives a new hire nothing to do; every step needs an action, a tool and a done-criteria so they can execute without hand-holding."
+    },
+    {
+      "title": "Building a library that's never maintained",
+      "detail": "A stale SOP misleads more than its absence; schedule quarterly reviews and a revision log so maintenance becomes routine."
+    },
+    {
+      "title": "Loose access control",
+      "detail": "Knowledge bases often hold client info and internal decisions; share by permission tier and revoke accounts promptly on departure."
+    },
+    {
+      "title": "Waiting for perfection",
+      "detail": "Ship an 80-point usable version, let new hires break it in, then iterate; waiting for a 100-point release usually means it never ships."
+    }
+  ]
+}

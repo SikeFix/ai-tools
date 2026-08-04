@@ -1,0 +1,75 @@
+{
+  "slug": "plan-w-doc-narration",
+  "title": "方案 W：AI 科普纪录片旁白",
+  "summary": "资料调研 → 旁白脚本 → 配音 → 画面生成 → 配乐字幕",
+  "scenario": "历史、科技、自然主题的知识类长视频，用 AI 把制作门槛降到个人可做。",
+  "meta": {
+    "duration": "3-6 小时 / 集",
+    "cost": "中",
+    "difficulty": "进阶"
+  },
+  "toolsNeeded": [
+    { "name": "Perplexity", "url": "https://www.perplexity.ai" },
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "ElevenLabs", "url": "https://elevenlabs.io" },
+    { "name": "海螺 Hailuo", "url": "https://hailuoai.com" },
+    { "name": "Sora", "url": "https://sora.com" },
+    { "name": "Suno", "url": "https://suno.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "资料调研",
+      "tool": "Perplexity + ChatGPT",
+      "time": "30-60 分钟",
+      "detail": "用 Perplexity 检索资料并交叉核对来源，让 ChatGPT 汇总出起承转合的叙事主线，标出每个可考证的事实点与时间线；这一步决定片子能不能过观众的事实关。",
+      "tips": "关键事实保留来源链接，成片时能回查，避免硬伤被点名。"
+    },
+    {
+      "id": "s2",
+      "title": "旁白脚本",
+      "tool": "ChatGPT",
+      "time": "1 小时",
+      "detail": "按章节写口语化旁白稿：短句、有画面感，控制在每分钟 240-280 字，并标注「此处配什么画面」的提示词，方便后面生成画面。",
+      "tips": "先写大纲再逐节扩写，一次让 AI 出整片结构会散。"
+    },
+    {
+      "id": "s3",
+      "title": "配音",
+      "tool": "ElevenLabs",
+      "time": "30-45 分钟",
+      "detail": "把旁白稿转成沉稳有叙事感的配音；长片分段生成再拼接，单段念错只需重录一段。",
+      "tips": "把「停顿、重音」标记写进文本，纪录片质感立刻提升。"
+    },
+    {
+      "id": "s4",
+      "title": "画面生成",
+      "tool": "海螺 Hailuo + Sora",
+      "time": "2-3 小时",
+      "detail": "按画面提示词批量生成历史复原、显微、航拍等氛围画面，静态图用海螺做动态化；关键史实处保留真实史料影像与地图。",
+      "tips": "写统一的「色调 + 年代」前缀，全片视觉风格才统一。"
+    },
+    {
+      "id": "s5",
+      "title": "配乐字幕",
+      "tool": "Suno + 剪辑软件",
+      "time": "30-45 分钟",
+      "detail": "用 Suno 生成环境氛围配乐与铺底音效，叠加旁白字幕、片头片尾与章节标题。",
+      "tips": "配乐音量压到 -18 到 -20dB 左右，别盖过旁白人声。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "事实错误",
+      "detail": "AI 编造细节在知识区是大忌，关键史实必须人工核验。"
+    },
+    {
+      "title": "旁白太书面",
+      "detail": "科普要口语化，书面语会让观众觉得照本宣科。"
+    },
+    {
+      "title": "画面与旁白脱节",
+      "detail": "先写好旁白再配画面，让画面跟着文字走。"
+    }
+  ]
+}

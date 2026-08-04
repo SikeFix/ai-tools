@@ -1,0 +1,73 @@
+{
+  "slug": "plan-y-live-clip",
+  "title": "Plan Y: AI Live-Clip Remix",
+  "summary": "Catch highlights → clip script → captions → remix → viral distribution",
+  "scenario": "For slicing highlights out of livestreams or long videos and redistributing them to amplify reach.",
+  "meta": {
+    "duration": "1-2 hours / clip",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "剪映 CapCut", "url": "https://www.capcut.cn" },
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Descript", "url": "https://www.descript.com" },
+    { "name": "Fish Speech", "url": "https://fish.audio" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Catch highlights",
+      "tool": "CapCut + ChatGPT",
+      "time": "30 min",
+      "detail": "Use CapCut's smart tagging or speech-to-text to locate high-energy moments (memorable lines, plot twists, standout scenes), or feed the live transcript to the model and let it pick segments that stand alone. Prefer segments that hit an emotional point within 3 seconds.",
+      "tips": "Pick clips that still work without context — ones that are funny, moving or spicy on their own spread furthest."
+    },
+    {
+      "id": "s2",
+      "title": "Clip script",
+      "tool": "ChatGPT",
+      "time": "15 min",
+      "detail": "Rewrite the chosen segment into a script with a hook: add a one-line intro that frames the highlight, keep the middle authentic, and close with a follow or engage nudge.",
+      "tips": "Ask for 3 hook variations and keep the one with the strongest conflict."
+    },
+    {
+      "id": "s3",
+      "title": "Captions",
+      "tool": "CapCut / Descript",
+      "time": "20-30 min",
+      "detail": "Auto-generate subtitles, correct typos by hand, and colorize or bump the size of keywords so the clip reads even on mute.",
+      "tips": "Highlighted, slightly enlarged keywords measurably lift retention and completion."
+    },
+    {
+      "id": "s4",
+      "title": "Remix",
+      "tool": "Descript + Fish Speech",
+      "time": "30 min",
+      "detail": "Reassemble, re-time and insert B-roll in Descript; when you need transition lines, clone the host's voice with Fish Speech to produce new content without the host.",
+      "tips": "Match the cloned voice's emotion to the original, or viewers will notice instantly."
+    },
+    {
+      "id": "s5",
+      "title": "Viral distribution",
+      "tool": "Platforms",
+      "time": "20 min",
+      "detail": "Adapt per platform: vertical plus hot-trend titles for Douyin, wider and slightly longer for Bilibili, hashtags for Xiaohongshu; stagger posts across matrix accounts and log the numbers for each clip.",
+      "tips": "Log every clip's data and turn winning patterns into a reusable template."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Copyright risk",
+      "detail": "Livestream rights belong to the host — get permission and credit the source before remixing."
+    },
+    {
+      "title": "Taking things out of context",
+      "detail": "Over-editing distorts the original meaning; keep the context intact."
+    },
+    {
+      "title": "High volume, low quality",
+      "detail": "Too many weak clips dilute your brand; quality over quantity."
+    }
+  ]
+}

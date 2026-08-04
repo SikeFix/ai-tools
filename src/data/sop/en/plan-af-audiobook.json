@@ -1,0 +1,78 @@
+{
+  "slug": "plan-af-audiobook",
+  "title": "Plan AF: AI Audiobook & Podcast",
+  "summary": "Text prep → voice selection → segmented recording → music & SFX → publish",
+  "scenario": "For individuals and teams turning books, articles or topics into audiobooks, podcasts or spoken-word audio.",
+  "meta": {
+    "duration": "2-5 hours / 30-min episode",
+    "cost": "Medium",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "ElevenLabs", "url": "https://elevenlabs.io" },
+    { "name": "Fish Speech", "url": "https://speech.fish.audio" },
+    { "name": "Suno", "url": "https://suno.com" },
+    { "name": "Descript", "url": "https://www.descript.com" },
+    { "name": "Adobe Podcast", "url": "https://podcast.adobe.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Text prep",
+      "tool": "ChatGPT / Claude",
+      "time": "20-30 min",
+      "detail": "Convert the source into a spoken-style script: split into chapters, add paragraph markers, cut written-form language. Annotate emotion and pacing cues per paragraph for the TTS.",
+      "tips": "Keep each segment under ~30 seconds of speech so a bad take only needs one segment re-recorded."
+    },
+    {
+      "id": "s2",
+      "title": "Voice selection",
+      "tool": "ElevenLabs / Fish Speech",
+      "time": "20-30 min",
+      "detail": "Preview 3-5 candidate voices and pick one that matches the content's tone. For Chinese, start with Fish Speech's stock voices; for long-form, prefer ElevenLabs.",
+      "tips": "Compare candidates reading the same opening line — don't choose from voice-list descriptions alone."
+    },
+    {
+      "id": "s3",
+      "title": "Segmented recording",
+      "tool": "ElevenLabs / Fish Speech",
+      "time": "1-2 hours",
+      "detail": "Generate speech paragraph by paragraph and listen to each, fixing stress, phrasing and proper-noun pronunciation. Lock names and places in a pronunciation dictionary so the whole book stays consistent.",
+      "tips": "Fix unusual words in the dictionary before generating, or every segment will pronounce them differently."
+    },
+    {
+      "id": "s4",
+      "title": "Music & SFX",
+      "tool": "Suno + Descript",
+      "time": "30-60 min",
+      "detail": "Use Suno for background music or intro/outro, keep it under about -20dB as a bed. Assemble segments in Descript with fades and pauses, and strip flubs and noise.",
+      "tips": "Duck the music side-chained to the voice so music steps aside when the narration speaks."
+    },
+    {
+      "id": "s5",
+      "title": "Publish",
+      "tool": "Podcast platform + Descript",
+      "time": "30 min",
+      "detail": "Export a standard audio format, design a cover and title, upload to podcast platforms or distribution. Add chapter timestamps and a transcript so listeners can skip and search.",
+      "tips": "Ship one episode through the RSS and review flow first, then schedule the batch."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Recording the whole book in one pass",
+      "detail": "Long-form TTS errors compound; segmenting lets you fix cheaply instead of expecting a one-shot master."
+    },
+    {
+      "title": "Voice that doesn't match the tone",
+      "detail": "The content decides the voice — audition first instead of chasing a trendy-sounding voice."
+    },
+    {
+      "title": "Music drowning the voice",
+      "detail": "Keep BGM low with voice priority; if you can't hear the narration, redo it."
+    },
+    {
+      "title": "Licensing and AI-voice disclosure",
+      "detail": "Platforms have rules for AI-generated speech; check them before publishing."
+    }
+  ]
+}

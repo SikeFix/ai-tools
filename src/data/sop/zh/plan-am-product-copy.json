@@ -1,0 +1,78 @@
+{
+  "slug": "plan-am-product-copy",
+  "title": "方案 AM：AI 电商详情页文案",
+  "summary": "产品卖点 → 详情页结构 → 文案生成 → 配图 → 转化优化",
+  "scenario": "适合电商运营与商家，为商品写出高转化的详情页文案与卖点图。",
+  "meta": {
+    "duration": "2-4 小时 / 商品",
+    "cost": "中",
+    "difficulty": "入门"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chat.openai.com" },
+    { "name": "Copy.ai", "url": "https://www.copy.ai" },
+    { "name": "Canva Magic Studio", "url": "https://www.canva.com" },
+    { "name": "Midjourney", "url": "https://www.midjourney.com" },
+    { "name": "Google Gemini", "url": "https://gemini.google.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "产品卖点",
+      "tool": "ChatGPT / Google Gemini",
+      "time": "20-30 分钟",
+      "detail": "收集产品规格、材质、认证与使用场景，提炼 3-5 个核心卖点与差异化。让模型对比竞品文案，找出你独有的点。",
+      "tips": "卖点按「痛点到解决方案到证据」写，详情页每一屏都围绕一个卖点。"
+    },
+    {
+      "id": "s2",
+      "title": "详情页结构",
+      "tool": "ChatGPT",
+      "time": "30 分钟",
+      "detail": "按「首屏钩子 → 痛点场景 → 卖点展开 → 参数细节 → 品牌背书 → 售后」搭结构。把结构转成每屏的文案需求清单。",
+      "tips": "首屏 3 秒内说清「解决什么问题」，停留率全看这一屏。"
+    },
+    {
+      "id": "s3",
+      "title": "文案生成",
+      "tool": "Copy.ai / ChatGPT",
+      "time": "40-60 分钟",
+      "detail": "按结构逐屏生成文案：标题、副标题、卖点说明、参数表与 FAQ。注意平台违禁词与绝对化用语，保健食品类格外谨慎。",
+      "tips": "每屏标题用「收益型」写法，如「3 秒速热，告别冷水洗脸」。"
+    },
+    {
+      "id": "s4",
+      "title": "配图",
+      "tool": "Midjourney / Canva Magic Studio",
+      "time": "40-60 分钟",
+      "detail": "详情页主图用商品实拍或 3D 渲染，卖点图用 Midjourney 生成场景图、Canva 排版加文字。保证图片与文案信息一致。",
+      "tips": "卖点图字少图多，一屏一个卖点，手机端阅读不费劲。"
+    },
+    {
+      "id": "s5",
+      "title": "转化优化",
+      "tool": "ChatGPT + 平台数据",
+      "time": "30 分钟 / 轮",
+      "detail": "上线后看停留时长、加购率与退款原因，让模型分析文案问题并出 A/B 方案。每次只改一屏，用数据验证再推广。",
+      "tips": "先优化首屏与卖点图，这两处对转化影响最大。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "详情页写成说明书",
+      "detail": "罗列参数没人看完；按「用户收益」重组顺序与表达。"
+    },
+    {
+      "title": "夸大功效",
+      "detail": "绝对化与功效词违规会下架扣分；每个卖点要有真实依据。"
+    },
+    {
+      "title": "图文不一致",
+      "detail": "文案说 A、图是 B，买家觉得被骗；图片文案互相对齐。"
+    },
+    {
+      "title": "只写不测",
+      "detail": "转化率靠数据说话；上线后持续 AB，别凭感觉定稿。"
+    }
+  ]
+}

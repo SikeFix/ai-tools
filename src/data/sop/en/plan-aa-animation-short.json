@@ -1,0 +1,79 @@
+{
+  "slug": "plan-aa-animation-short",
+  "title": "Plan AA: AI Animated Short Film",
+  "summary": "Story script → character design → storyboard → image/video generation → assembly & music",
+  "scenario": "For a 1-3 minute stylized animated short, handling characters, visuals and music with AI end to end.",
+  "meta": {
+    "duration": "1-2 days",
+    "cost": "Medium",
+    "difficulty": "Intermediate"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Midjourney", "url": "https://www.midjourney.com" },
+    { "name": "Flux", "url": "https://blackforestlabs.ai" },
+    { "name": "可灵 Kling", "url": "https://klingai.com" },
+    { "name": "Runway", "url": "https://runwayml.com" },
+    { "name": "Suno", "url": "https://suno.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Story script",
+      "tool": "ChatGPT",
+      "time": "30-45 min",
+      "detail": "Write a short story with a single through-line, a three-act shape and a clear emotional arc; in 1-3 minutes there's room for one turn, and no more than three main characters.",
+      "tips": "Start with one sentence — 'what the hero wants, what blocks them, how it resolves' — then expand; don't jump straight to long prose."
+    },
+    {
+      "id": "s2",
+      "title": "Character design",
+      "tool": "Midjourney + Flux",
+      "time": "30-45 min",
+      "detail": "Generate multi-angle reference sheets for the main characters, lock hair, outfit, palette and style into a single description, and reuse it as the fixed reference for every later image-to-video pass.",
+      "tips": "Reusing one character image as the fixed reference gives you the most stable cross-shot consistency."
+    },
+    {
+      "id": "s3",
+      "title": "Storyboard",
+      "tool": "ChatGPT",
+      "time": "30 min",
+      "detail": "Turn the script into a storyboard table: shot number, visual, dialogue, duration and camera move, marking keyframes and emotional beats. Budget roughly one shot per 3-5 seconds — around 15-20 shots per minute.",
+      "tips": "If you can't draw, write detailed visual descriptions and let the AI turn them into image prompts."
+    },
+    {
+      "id": "s4",
+      "title": "Image / video generation",
+      "tool": "Flux + 可灵 Kling + Runway",
+      "time": "3-5 hours",
+      "detail": "Generate keyframes in Flux first, then animate them with image-to-video in Kling or Runway; produce a few takes for important actions and transitions and pick the best. You can also render characters and backgrounds separately and composite.",
+      "tips": "Generating characters and backgrounds separately keeps the style unified and lets you swap backgrounds without redrawing characters."
+    },
+    {
+      "id": "s5",
+      "title": "Assembly & music",
+      "tool": "Editor + Suno",
+      "time": "1-2 hours",
+      "detail": "Cut shots to the storyboard, time transitions and score to the emotional beats, generate an ending theme or ambient track in Suno, then grade, caption and add sound effects.",
+      "tips": "Lock the music before editing — the edit flows far better when emotional beats follow the track."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Character inconsistency",
+      "detail": "Looks or outfits changing between shots is the #1 AI animation pain point — lock the reference."
+    },
+    {
+      "title": "Too many, too short shots",
+      "detail": "30+ shots in 1-3 minutes is unwatchable; learn to leave breathing room."
+    },
+    {
+      "title": "Chasing 3D realism",
+      "detail": "AI 3D characters collapse easily; stylized 2D is far more stable."
+    },
+    {
+      "title": "No sound design",
+      "detail": "Visuals without sound feel dry; add ambient audio and foley."
+    }
+  ]
+}

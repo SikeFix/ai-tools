@@ -1,0 +1,78 @@
+{
+  "slug": "plan-ai-novel",
+  "title": "Plan AI: AI Novel Writing",
+  "summary": "Worldbuilding → outline → chapter generation → character consistency → polish",
+  "scenario": "For authors writing long web novels or books who want AI efficiency without losing their own style and rights.",
+  "meta": {
+    "duration": "3-6 hours / 10k words",
+    "cost": "Medium",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "Claude", "url": "https://claude.ai" },
+    { "name": "ChatGPT", "url": "https://chat.openai.com" },
+    { "name": "Sudowrite", "url": "https://www.sudowrite.com" },
+    { "name": "Kimi", "url": "https://kimi.moonshot.cn" },
+    { "name": "DeepSeek", "url": "https://chat.deepseek.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Worldbuilding",
+      "tool": "Claude / ChatGPT",
+      "time": "30-40 min",
+      "detail": "Build the world, power system, map, character sheets and central conflicts into a 'story bible' document. Have the model interrogate the premise for plot holes and tighten internal logic.",
+      "tips": "Keep the bible in a separate file and attach it to every chapter generation so the book never drifts."
+    },
+    {
+      "id": "s2",
+      "title": "Outline",
+      "tool": "ChatGPT / Claude",
+      "time": "40-60 min",
+      "detail": "Lay out the full book in three acts, then break into volumes and chapters, each with 'event + POV + hook'. Flag climax chapters and where foreshadowing pays off.",
+      "tips": "Write every chapter's hook first — when you're stuck, follow the outline."
+    },
+    {
+      "id": "s3",
+      "title": "Chapter generation",
+      "tool": "Sudowrite / Claude / DeepSeek",
+      "time": "1-2 hours / chapter",
+      "detail": "Generate each draft with 'outline + setting summary + previous-chapter summary' as context, then rewrite by hand. Let AI draft the connective tissue; you write key dialogue and emotional peaks.",
+      "tips": "Give the model 3-5 sample passages to establish the voice — far more effective than describing style in words."
+    },
+    {
+      "id": "s4",
+      "title": "Character consistency",
+      "tool": "Claude / Kimi",
+      "time": "30 min / week",
+      "detail": "Maintain character files (personality, catchphrases, relationships, current goals) and update before each chapter. Run a 'consistency review' pass to flag dialogue and actions that break character.",
+      "tips": "Store the files as structured JSON — it feeds the model most efficiently in bulk."
+    },
+    {
+      "id": "s5",
+      "title": "Polish & proof",
+      "tool": "Sudowrite / ChatGPT / Kimi",
+      "time": "40-60 min / volume",
+      "detail": "After reading through, run three review passes: logic gaps, voice consistency, typos and grammar. Use Sudowrite's rewrite features on weak passages while keeping your touch.",
+      "tips": "Read the polished text yourself once more — AI tends to flatten your distinctive voice."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "The book drifting from the bible",
+      "detail": "Generating without the setting invites contradictions; attach the setting summary every chapter."
+    },
+    {
+      "title": "Collective amnesia",
+      "detail": "Characters forget last chapter's motives; keep character files and refresh them."
+    },
+    {
+      "title": "Homogenized prose",
+      "detail": "Heavy AI writing reads alike; write the key scenes yourself, use AI for drafts."
+    },
+    {
+      "title": "Unclear copyright",
+      "detail": "Some platforms restrict purely AI-generated content; check platform rules and commercial licensing."
+    }
+  ]
+}

@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import SopCard from '../../../components/SopCard.astro';
-import { getSopsByGroup, type SopGroupId } from '../../../lib/sop';
-import { t } from '../../../lib/i18n';
+import { getSopArticles, getSopsByGroup, type SopGroupId } from '../../../lib/sop';
+import { t, localePath } from '../../../lib/i18n';
+import { SITE_URL } from '../../../consts';
 import type { Lang } from '../../../lib/types';
 
 export function getStaticPaths() {
@@ -21,7 +22,30 @@ const groupKey = (group: SopGroupId) => `sop.group.${group}` as const;
 const groupDescKey = (group: SopGroupId) => `sop.group.${group}.desc` as const;
 ---
 
-<BaseLayout lang={lang} title={t(lang, 'sop.title')} canonicalPath="/sop/" ogType="website">
+<BaseLayout
+  lang={lang}
+  title={t(lang, 'sop.title')}
+  description={t(lang, 'sop.subtitle')}
+  canonicalPath="/sop/"
+  ogType="website"
+>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: t(lang, 'sop.title'),
+        itemListElement: getSopArticles(lang).map((article, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: article.title,
+          url: SITE_URL + localePath(lang, `/sop/${article.slug}/`),
+        })),
+      })}
+    />
+  </Fragment>
   <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
     <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-muted">
       <span class="live-dot h-1.5 w-1.5 rounded-full" aria-hidden="true"></span>

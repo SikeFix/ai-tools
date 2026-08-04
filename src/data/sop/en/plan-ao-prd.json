@@ -1,0 +1,78 @@
+{
+  "slug": "plan-ao-prd",
+  "title": "Plan AO: AI PRD Writing",
+  "summary": "Interviews → feature list → user stories → acceptance criteria → review iterations",
+  "scenario": "For product managers who want to turn scattered ideas into an executable PRD quickly — grounded in interview notes, not generated from thin air.",
+  "meta": {
+    "duration": "3-6 hours",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "Claude", "url": "https://claude.ai" },
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Notion", "url": "https://notion.so" },
+    { "name": "Gamma", "url": "https://gamma.app" },
+    { "name": "Replit", "url": "https://replit.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Collect interviews & inputs",
+      "tool": "Notion + you",
+      "time": "30-60 min",
+      "detail": "Write user interview notes, feedback, competitor observations and stakeholder asks into Notion, tagging each as 'verified' or 'assumption'. With raw material in place, AI output won't drift.",
+      "tips": "For every requirement, capture who runs into what problem in which scenario — that's the raw material for user stories."
+    },
+    {
+      "id": "s2",
+      "title": "Feature list",
+      "tool": "Claude / ChatGPT",
+      "time": "30-60 min",
+      "detail": "Have the model organize the material into a feature list: grouped by module, prioritized (P0/P1/P2), with dependencies and conflicting requirements removed. Align on 'what we build' before touching details.",
+      "tips": "Ask the model to score each feature on user value × build cost; keep only high-value, low-cost items in P0."
+    },
+    {
+      "id": "s3",
+      "title": "User stories",
+      "tool": "Claude / ChatGPT",
+      "time": "1-2 hours",
+      "detail": "For each P0/P1 feature, write a user story: 'As a <role>, I want <action>, so that <outcome>.' Have the model fill in edge cases and error flows to build story cards.",
+      "tips": "Give every story one happy path and two exception paths — that's ready-made input for dev and QA."
+    },
+    {
+      "id": "s4",
+      "title": "Acceptance criteria",
+      "tool": "Claude / ChatGPT",
+      "time": "1 hour",
+      "detail": "Turn user stories into testable conditions using 'when X happens, the system should Y', covering normal, edge and error cases, plus an explicit 'not a bug' list.",
+      "tips": "Write criteria well enough that QA can copy them directly; half an hour here saves days in development."
+    },
+    {
+      "id": "s5",
+      "title": "Review & iterate",
+      "tool": "Gamma + Notion",
+      "time": "1-2 hours",
+      "detail": "Lay the PRD out as a visual document in Gamma for team review, feed feedback back into Notion, and have AI update requirements and priorities into a v2 for another pass.",
+      "tips": "In review, debate only whether it serves target users — leave implementation arguments for the technical design stage."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Letting AI invent the whole PRD",
+      "detail": "A PRD with no interviews or data is a castle in the air; feed material first, then let AI organize — reverse the order and you're just talking to yourself."
+    },
+    {
+      "title": "A feature list with no priorities",
+      "detail": "All-P0 is no P0; rank by user value and cost. Cutting features protects delivery quality better than adding them."
+    },
+    {
+      "title": "Vague acceptance criteria",
+      "detail": "'Great UX' or 'fast' can't be tested; write concrete, testable conditions so QA has a verdict to apply."
+    },
+    {
+      "title": "Writing without reviewing",
+      "detail": "A PRD that skips review breeds requirement drift during implementation; run at least one formal review before development."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "slug": "plan-ac-vlog-ip",
+  "title": "Plan AC: Brand Vlog & IP Persona",
+  "summary": "Persona → content pillars → presenter / avatar → serialization → operations",
+  "scenario": "For companies or creators building a consistent persona through a vlog series, turning output into content assets and follower trust.",
+  "meta": {
+    "duration": "2-4 hours / episode",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "HeyGen", "url": "https://www.heygen.com" },
+    { "name": "D-ID", "url": "https://www.d-id.com" },
+    { "name": "Synthesia", "url": "https://www.synthesia.io" },
+    { "name": "剪映 CapCut", "url": "https://www.capcut.cn" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Persona",
+      "tool": "ChatGPT",
+      "time": "30 min",
+      "detail": "Define the IP's core persona — identity tags, speaking style, point of view and visual look — plus a one-line description and three rules you will never break. Every piece of content follows this.",
+      "tips": "Give the persona a contrasting hook, like 'a deadpan engineer telling deadpan jokes', so people remember it."
+    },
+    {
+      "id": "s2",
+      "title": "Content pillars",
+      "tool": "ChatGPT",
+      "time": "30 min",
+      "detail": "Turn the persona into 3-4 fixed pillars (behind the scenes, Q&A, failure moments, etc.), each with a set format, length and posting rhythm.",
+      "tips": "Name pillars with a 'series feel' so viewers anticipate the next episode."
+    },
+    {
+      "id": "s3",
+      "title": "Presenter / avatar",
+      "tool": "HeyGen + D-ID + Synthesia",
+      "time": "45 min",
+      "detail": "Show a real face for authenticity; if you'd rather not, clone an avatar for talking-head segments, or generate the script first and read it on camera. Avatars suit information-dense content; emotion and opinion want a real person.",
+      "tips": "Avatars are least jarring in high-information pieces — keep the emotional and opinion content human."
+    },
+    {
+      "id": "s4",
+      "title": "Serialization",
+      "tool": "ChatGPT + CapCut",
+      "time": "1-2 hours",
+      "detail": "Build series recognition with a fixed intro, outro, BGM and caption style, produce multiple episodes per series in batch, and end each episode with a teaser for the next.",
+      "tips": "A fixed intro plus a signature catchphrase creates instant series recognition and a reason to come back."
+    },
+    {
+      "id": "s5",
+      "title": "Operations",
+      "tool": "Platform analytics + ChatGPT",
+      "time": "30-45 min",
+      "detail": "Aggregate follower demographics and engagement, let the model analyze which pillars and topics grow followers, and feed that back into direction and cadence. Also bank a catchphrase library and a winning-topics library.",
+      "tips": "Keep the catchphrase and topic libraries in a doc the model reuses each episode — it gets easier the longer you run."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Drifting persona",
+      "detail": "One version this week, another next week confuses fans; once you set the rules, keep them."
+    },
+    {
+      "title": "Avatar overuse",
+      "detail": "All-avatar content reads as fake and untrustworthy; show a real person now and then."
+    },
+    {
+      "title": "Content without assets",
+      "detail": "A vlog should bank catchphrases, footage and topics so production gets easier."
+    },
+    {
+      "title": "Unstable cadence",
+      "detail": "Series vlogs live on a fixed rhythm; gaps bleed followers."
+    }
+  ]
+}

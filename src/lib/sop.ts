@@ -13,7 +13,7 @@ function keyToParts(key: string): { lang: Lang; slug: string } | null {
   return { lang: match[1] as Lang, slug: match[2] };
 }
 
-/** 某语言下全部 SOP，按 slug（plan-a/plan-b/plan-c）排序 */
+/** 某语言下全部 SOP，按 plan-a → plan-z → plan-aa 自然序排序 */
 export function getSopArticles(lang: Lang): SopArticle[] {
   const articles = Object.entries(modules)
     .map(([key, value]) => {
@@ -22,20 +22,33 @@ export function getSopArticles(lang: Lang): SopArticle[] {
     })
     .filter((article): article is SopArticle => article !== null);
 
-  return articles.sort((a, b) => a.slug.localeCompare(b.slug));
+  return articles.sort((a, b) => sopSlugIndex(a.slug) - sopSlugIndex(b.slug));
 }
 
 export function getSopBySlug(lang: Lang, slug: string): SopArticle | undefined {
   return getSopArticles(lang).find((article) => article.slug === slug);
 }
 
-const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const LETTER_NUM: Record<string, number> = {};
+'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach((ch, i) => {
+  LETTER_NUM[ch] = i + 1;
+});
 
-/** 方案编号字母（按 plan-a → plan-z 顺序） */
+/** 解析 plan- 后的字母段为序号：A→1, Z→26, AA→27, AW→49（bijective base-26） */
+export function sopSlugIndex(slug: string): number {
+  const m = slug.match(/^plan-([a-z]+)-/i);
+  const letters = m ? m[1].toUpperCase() : '';
+  let num = 0;
+  for (const ch of letters) {
+    num = num * 26 + (LETTER_NUM[ch] ?? 0);
+  }
+  return num;
+}
+
+/** 方案编号字母：plan-g-coding → G，plan-aa-animation-short → AA */
 export function getSopLetter(slug: string): string {
-  const all = getSopArticles('zh');
-  const idx = all.findIndex((article) => article.slug === slug);
-  return idx >= 0 && idx < LETTERS.length ? LETTERS[idx] : String(idx + 1);
+  const m = slug.match(/^plan-([a-z]+)-/i);
+  return m ? m[1].toUpperCase() : slug.toUpperCase();
 }
 
 // ── SOP 分组（视频制作 / 内容创作 / 效率提升） ──
@@ -49,12 +62,32 @@ const SOP_GROUPS: Record<string, SopGroupId> = {
   'plan-d-cinematic': 'video',
   'plan-o-avatar-live': 'video',
   'plan-r-video-edit': 'video',
+  'plan-t-product-demo': 'video',
+  'plan-u-short-video-matrix': 'video',
+  'plan-v-ecommerce-video': 'video',
+  'plan-w-doc-narration': 'video',
+  'plan-x-music-mv': 'video',
+  'plan-y-live-clip': 'video',
+  'plan-z-tutorial-video': 'video',
+  'plan-aa-animation-short': 'video',
+  'plan-ab-ad-film': 'video',
+  'plan-ac-vlog-ip': 'video',
   'plan-e-writing': 'content',
   'plan-f-image-design': 'content',
   'plan-h-translation': 'content',
   'plan-l-podcast': 'content',
   'plan-n-social-media': 'content',
   'plan-q-music': 'content',
+  'plan-ad-children-book': 'content',
+  'plan-ae-comic': 'content',
+  'plan-af-audiobook': 'content',
+  'plan-ag-resume': 'content',
+  'plan-ah-marketing-copy': 'content',
+  'plan-ai-novel': 'content',
+  'plan-aj-newsletter': 'content',
+  'plan-ak-wechat-weibo': 'content',
+  'plan-al-social-calendar': 'content',
+  'plan-am-product-copy': 'content',
   'plan-g-coding': 'productivity',
   'plan-i-slides': 'productivity',
   'plan-j-data-analysis': 'productivity',
@@ -62,6 +95,16 @@ const SOP_GROUPS: Record<string, SopGroupId> = {
   'plan-m-learning': 'productivity',
   'plan-p-customer-service': 'productivity',
   'plan-s-ecommerce': 'productivity',
+  'plan-an-contract-review': 'productivity',
+  'plan-ao-prd': 'productivity',
+  'plan-ap-competitor-analysis': 'productivity',
+  'plan-aq-course-design': 'productivity',
+  'plan-ar-paper-writing': 'productivity',
+  'plan-as-travel-planning': 'productivity',
+  'plan-at-personal-finance': 'productivity',
+  'plan-au-health-fitness': 'productivity',
+  'plan-av-interview-prep': 'productivity',
+  'plan-aw-team-sop': 'productivity',
 };
 
 export function getSopGroup(slug: string): SopGroupId {

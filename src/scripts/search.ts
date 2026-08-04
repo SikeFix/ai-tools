@@ -90,6 +90,15 @@ clearButton?.addEventListener('click', () => {
   applyFilter();
 });
 
+// 支持 ?q= 搜索深链（配合 WebSite SearchAction，可分享搜索结果）
+const urlParams = new URLSearchParams(window.location.search);
+const initialQuery = urlParams.get('q');
+if (initialQuery && input) {
+  input.value = initialQuery;
+  q = initialQuery.trim();
+  applyFilter();
+}
+
 // 键盘 '/' 快捷聚焦搜索框
 window.addEventListener('keydown', (event) => {
   if (event.key === '/' && document.activeElement !== input) {

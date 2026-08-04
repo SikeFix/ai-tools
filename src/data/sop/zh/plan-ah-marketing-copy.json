@@ -1,0 +1,78 @@
+{
+  "slug": "plan-ah-marketing-copy",
+  "title": "方案 AH：AI 营销文案矩阵",
+  "summary": "卖点 → 核心文案 → 多渠道变体 → 合规检查 → AB 测试",
+  "scenario": "适合一个产品要铺开多平台营销文案的品牌与运营，一次梳理持续复用。",
+  "meta": {
+    "duration": "2-4 小时 / 产品",
+    "cost": "中",
+    "difficulty": "进阶"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chat.openai.com" },
+    { "name": "Copy.ai", "url": "https://www.copy.ai" },
+    { "name": "Jasper", "url": "https://www.jasper.ai" },
+    { "name": "Writesonic", "url": "https://writesonic.com" },
+    { "name": "Grammarly", "url": "https://www.grammarly.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "卖点梳理",
+      "tool": "ChatGPT",
+      "time": "20-30 分钟",
+      "detail": "用「痛点-方案-证据」模板提炼产品的 3-5 个核心卖点，每个卖点配一句证据。让模型站在目标用户角度连问 5 个「所以呢？」，逼出真价值。",
+      "tips": "卖点写成「用户得到什么」而非「产品有什么」。"
+    },
+    {
+      "id": "s2",
+      "title": "核心文案",
+      "tool": "ChatGPT / Copy.ai",
+      "time": "30-40 分钟",
+      "detail": "为每个卖点写核心文案：标题 + 副标题 + 正文 + CTA，保持语气一致。这版是母版，所有渠道变体都从它派生。",
+      "tips": "先写 3 版标题（理性/感性/紧迫），让同侪或 AI 打分挑一版。"
+    },
+    {
+      "id": "s3",
+      "title": "多渠道变体",
+      "tool": "Copy.ai / Jasper / Writesonic",
+      "time": "1 小时",
+      "detail": "从母版变体出：社媒短文案、邮件标题、广告语、详情页段落，注意各平台字符限制。用工具内置模板选对应渠道，替换平台热词。",
+      "tips": "给每个平台留一行专属钩子（如小红书加话题标签）。"
+    },
+    {
+      "id": "s4",
+      "title": "合规检查",
+      "tool": "Grammarly + 你",
+      "time": "20 分钟",
+      "detail": "检查绝对化用语（最、第一、治愈）、资质证明与平台违禁词；医疗、金融类内容格外严格。让模型列出潜在合规风险点，人工复核。",
+      "tips": "把常用违禁词表喂给模型，让它逐条标记。"
+    },
+    {
+      "id": "s5",
+      "title": "AB 测试",
+      "tool": "投放平台 + ChatGPT",
+      "time": "30 分钟 / 轮",
+      "detail": "同预算下跑 2-4 个变体，只看一个变量（标题或 CTA）。跑够样本后，让模型分析哪个有效、为什么，再迭代下一轮。",
+      "tips": "每次只测一个变量，两个一起变你永远不知道赢在哪。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "卖点写成功能",
+      "detail": "「加了 X」不如「省下 Y」；先谈用户收益。"
+    },
+    {
+      "title": "直接复制到全平台",
+      "detail": "各平台语境与长度不同，照搬转化率低；必须做变体。"
+    },
+    {
+      "title": "忽略合规",
+      "detail": "绝对化与夸大词轻则删稿重则处罚，医疗金融慎之又慎。"
+    },
+    {
+      "title": "测试没控制变量",
+      "detail": "AB 同时改多个变量，结果无法归因；一次一变量。"
+    }
+  ]
+}

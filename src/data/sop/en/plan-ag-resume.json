@@ -1,0 +1,78 @@
+{
+  "slug": "plan-ag-resume",
+  "title": "Plan AG: AI Resume Optimization",
+  "summary": "Job analysis → quantified achievements → rewrite → layout → iterate on applications",
+  "scenario": "For job seekers who need to quickly tailor a resume to a specific role — turning a generic resume into a high-match version.",
+  "meta": {
+    "duration": "1-3 hours / role",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chat.openai.com" },
+    { "name": "Claude", "url": "https://claude.ai" },
+    { "name": "Grammarly", "url": "https://www.grammarly.com" },
+    { "name": "Canva Magic Studio", "url": "https://www.canva.com" },
+    { "name": "Google Gemini", "url": "https://gemini.google.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Job analysis",
+      "tool": "ChatGPT / Claude",
+      "time": "20-30 min",
+      "detail": "Paste the full job description and have the model extract hard requirements, nice-to-haves and implied skills, then flag which of your experiences map to them. Know what the hiring side wants before you write a word.",
+      "tips": "Ask for a 'JD keyword list + your matching points' output so the rewrite is targeted."
+    },
+    {
+      "id": "s2",
+      "title": "Quantified achievements",
+      "tool": "ChatGPT / Claude",
+      "time": "20-30 min",
+      "detail": "Rewrite each experience as 'action verb + what you did + quantified result' and let the model add numeric framing. If you lack hard numbers, use ranges, frequency or time saved as proxies.",
+      "tips": "Every bullet needs at least one number — it's the single biggest filter for getting past screening."
+    },
+    {
+      "id": "s3",
+      "title": "Rewrite",
+      "tool": "ChatGPT / Claude + you",
+      "time": "30-60 min",
+      "detail": "Reorder experiences by relevance to the role and weave JD keywords naturally into experience and skills sections. Fact-check every line — models will embellish.",
+      "tips": "Keep your real data and duties; let the AI handle expression, never fabrication."
+    },
+    {
+      "id": "s4",
+      "title": "Layout",
+      "tool": "Canva Magic Studio",
+      "time": "20-30 min",
+      "detail": "Use a single-column template with consistent fonts and spacing, kept to one page (junior) or two (senior). Run a keyword-density check and keep the layout ATS-parseable.",
+      "tips": "Avoid tables and graphic layouts — ATS parsing breaks; plain text structure is safest."
+    },
+    {
+      "id": "s5",
+      "title": "Iterate on applications",
+      "tool": "ChatGPT + Grammarly",
+      "time": "20-30 min / round",
+      "detail": "Before each application, tweak keyword order and emphasis to the JD, then pass it through a grammar tool. Track responses and refine after a few rounds.",
+      "tips": "Two silent applications to the same role means swap the keyword set and retry — don't stick to one version."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Letting AI fabricate experience",
+      "detail": "Models over-polish and even invent data; one deep interview question exposes it. Everything must be true and verifiable."
+    },
+    {
+      "title": "One resume for every job",
+      "detail": "Match rate decides screening; tailor keywords per role."
+    },
+    {
+      "title": "Fancy layouts",
+      "detail": "Trendy templates fail ATS and read as amateur; clean single-column wins."
+    },
+    {
+      "title": "Writing without testing",
+      "detail": "Have the model role-play the interviewer and ask 5 questions, then prepare answers."
+    }
+  ]
+}

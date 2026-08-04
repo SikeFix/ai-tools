@@ -1,0 +1,74 @@
+{
+  "slug": "plan-v-ecommerce-video",
+  "title": "Plan V: AI E-commerce Video",
+  "summary": "Product points → hero video → scene clips → live-stream traffic → ad optimization",
+  "scenario": "For e-commerce products that need a hero video and traffic-driving shorts to lift clicks and conversion.",
+  "meta": {
+    "duration": "2-4 hours",
+    "cost": "Medium",
+    "difficulty": "Intermediate"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "可灵 Kling", "url": "https://klingai.com" },
+    { "name": "Runway", "url": "https://runwayml.com" },
+    { "name": "HeyGen", "url": "https://www.heygen.com" },
+    { "name": "Descript", "url": "https://www.descript.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Extract product points",
+      "tool": "ChatGPT",
+      "time": "15-20 min",
+      "detail": "Feed the model the product page, specs and real buyer reviews; have it distill the hero points and trust signals (materials, function, after-sales) and split them into 'showable on screen' vs 'better spoken' so each flows to the right script.",
+      "tips": "Pull selling points from actual buyer reviews — far more credible than the seller's own claims."
+    },
+    {
+      "id": "s2",
+      "title": "Hero video",
+      "tool": "可灵 Kling + Runway",
+      "time": "1 hour",
+      "detail": "Generate or enhance the product showcase: 360-degree spins, feature close-ups and usage scenes. For real footage, use Runway for motion enhancement, background removal or frame interpolation. Put the full product and its hero point in the first 2 seconds.",
+      "tips": "Attention spans in e-commerce are brutal — the most eye-catching shot belongs in the first two seconds."
+    },
+    {
+      "id": "s3",
+      "title": "Scene clips",
+      "tool": "可灵 Kling",
+      "time": "1 hour",
+      "detail": "Cut 3-5 self-contained clips of around 10 seconds following 'pain point → usage → result', each with bold captions, ready for live-stream shelves and ad placements.",
+      "tips": "Make every clip work on its own — if it can sell solo, it gets reused far more."
+    },
+    {
+      "id": "s4",
+      "title": "Live-stream traffic",
+      "tool": "HeyGen + Descript",
+      "time": "30-45 min",
+      "detail": "Produce live-stream teaser clips with an avatar or a real host, attach the product widget and live time, and add a 'live-room only price' hook to pull viewers in.",
+      "tips": "Frame the teaser as a 'miss it and you'll regret it' moment — it pulls better."
+    },
+    {
+      "id": "s5",
+      "title": "Ad optimization",
+      "tool": "Ad console + ChatGPT",
+      "time": "30 min",
+      "detail": "Feed CTR, CVR and cost-per-order data to the model to learn which opener, selling-point order and visuals win, then iterate 3-5 ad variants for a small-scale test.",
+      "tips": "Change one variable at a time (opener or BGM) so the results stay clean and attributable."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Over-rendering that mismatches the product",
+      "detail": "Overstated visuals get returns and bad reviews; keep the real details."
+    },
+    {
+      "title": "Claiming too much",
+      "detail": "Ad regulations are strict about efficacy claims — run AI copy through a compliance pass."
+    },
+    {
+      "title": "Static images only",
+      "detail": "E-commerce traffic has shifted to video; pure-image hero shots keep losing reach."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "slug": "plan-z-tutorial-video",
+  "title": "方案 Z：AI 教程课程视频",
+  "summary": "课程大纲 → 讲稿 → 录屏/生图 → AI 旁白 → 字幕导出",
+  "scenario": "做软件教程或在线课程视频，用 AI 低成本批量产出教学内容。",
+  "meta": {
+    "duration": "2-4 小时 / 集",
+    "cost": "低",
+    "difficulty": "入门"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Gamma", "url": "https://gamma.app" },
+    { "name": "Descript", "url": "https://www.descript.com" },
+    { "name": "ElevenLabs", "url": "https://elevenlabs.io" },
+    { "name": "剪映 CapCut", "url": "https://www.capcut.cn" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "课程大纲",
+      "tool": "ChatGPT",
+      "time": "20-30 分钟",
+      "detail": "明确目标学员与学习结果，让 AI 生成模块化大纲：每模块对应一个可交付成果，按依赖关系排序，每集定 5-10 分钟的目标时长。",
+      "tips": "把「学完能做什么」写进大纲标题，课程价值感立刻拉满。"
+    },
+    {
+      "id": "s2",
+      "title": "讲稿",
+      "tool": "ChatGPT",
+      "time": "1 小时",
+      "detail": "按大纲写口语化讲稿：一句话讲清一个概念，操作步骤用「先…再…」句式，并标注每步操作的画面提示与停顿点。",
+      "tips": "讲稿里写停顿标记，方便配音后和录屏对齐。"
+    },
+    {
+      "id": "s3",
+      "title": "录屏 / 生图",
+      "tool": "录屏软件 + AI 生图",
+      "time": "1-2 小时",
+      "detail": "实际操作时录制屏幕，原理示意图用 AI 生成统一风格的图解；每步操作对应讲稿小节，录完即时回看补录。",
+      "tips": "录屏前先写操作清单，一次录完，避免中途手忙脚乱。"
+    },
+    {
+      "id": "s4",
+      "title": "AI 旁白",
+      "tool": "ElevenLabs",
+      "time": "30-45 分钟",
+      "detail": "把讲稿转成清晰自然的 AI 旁白，教学场景语速稍慢；专业术语先试听确认读音再整段生成。",
+      "tips": "先出 30 秒样音听一遍读音，再生成全文，别到最后才发现读错术语。"
+    },
+    {
+      "id": "s5",
+      "title": "字幕导出",
+      "tool": "剪映 / Descript",
+      "time": "30-45 分钟",
+      "detail": "自动字幕加人工校对，导出课程平台 mp4 与短视频竖版多格式，附章节目录与练习任务。",
+      "tips": "每集结尾放下一集预告与练习任务，系列完课率更高。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "一集太长",
+      "detail": "超过 15 分钟流失率陡增，拆成 5-10 分钟一集。"
+    },
+    {
+      "title": "讲稿书面化",
+      "detail": "念稿像朗读，要口语化、加过渡语。"
+    },
+    {
+      "title": "画面切太快",
+      "detail": "录屏操作快，观众跟不上；关键步骤放慢或加高亮。"
+    },
+    {
+      "title": "不标版本",
+      "detail": "软件界面更新快，标题注明版本与日期，减少答疑。"
+    }
+  ]
+}

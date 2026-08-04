@@ -1,0 +1,79 @@
+{
+  "slug": "plan-ab-ad-film",
+  "title": "Plan AB: AI Ad & Seed Video",
+  "summary": "Product insight → creative script → visuals / live footage → editing → ad variants",
+  "scenario": "For brand feed ads and seed videos, producing ad variants in volume and iterating on performance.",
+  "meta": {
+    "duration": "3-5 hours",
+    "cost": "Medium",
+    "difficulty": "Intermediate"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Sora", "url": "https://sora.com" },
+    { "name": "可灵 Kling", "url": "https://klingai.com" },
+    { "name": "HeyGen", "url": "https://www.heygen.com" },
+    { "name": "Descript", "url": "https://www.descript.com" },
+    { "name": "Midjourney", "url": "https://www.midjourney.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Product insight",
+      "tool": "ChatGPT + data",
+      "time": "30 min",
+      "detail": "Gather product materials, competitor ads and real user reviews; distill the target audience's pains and your differentiators into an 'audience × pain × selling point' matrix that feeds every creative.",
+      "tips": "The sharpest pains come from negative reviews — complaints are selling-point opportunities."
+    },
+    {
+      "id": "s2",
+      "title": "Creative script",
+      "tool": "ChatGPT",
+      "time": "30-45 min",
+      "detail": "Write several creative scripts on the matrix — pain opener, scenario demo, before/after, call to action — and draft three different hooks for each script.",
+      "tips": "Hook with a concrete number or a counterintuitive claim; 'did you know' hooks underperform."
+    },
+    {
+      "id": "s3",
+      "title": "Visuals / live footage",
+      "tool": "Sora + 可灵 Kling + Midjourney",
+      "time": "2-3 hours",
+      "detail": "Generate product demos and usage scenes with video models, polish hero shots in Midjourney, use HeyGen avatars for talking-head spots, or mix with live footage.",
+      "tips": "Generate the same product in several lighting and scene variants so you have levers for ad testing."
+    },
+    {
+      "id": "s4",
+      "title": "Editing",
+      "tool": "Descript",
+      "time": "45-60 min",
+      "detail": "Cut a 15-30 second feed version with big captions, a hard hook in the first 3 seconds and brand exposure at the end; export 9:16, 16:9 and 1:1.",
+      "tips": "Feed ads mostly play on mute — bold captions and on-screen text are mandatory."
+    },
+    {
+      "id": "s5",
+      "title": "Ad variants",
+      "tool": "Ad console",
+      "time": "30 min",
+      "detail": "Combine different hooks, selling-point orders and visuals into 5-10 variants, run a small-budget test, and scale only the variants whose CTR and CVR clear the bar.",
+      "tips": "Find the top 20% of variants with small budgets first — never go all-in on a single unproven cut."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Claims that cross the line",
+      "detail": "Ad regulations are strict about efficacy claims; run AI copy through a compliance review."
+    },
+    {
+      "title": "Hook and body out of sync",
+      "detail": "Promises in the opener that the body never delivers tank conversion and drive refunds."
+    },
+    {
+      "title": "A single version",
+      "detail": "Feed ads are discovered by testing; one version rarely pops."
+    },
+    {
+      "title": "No brand exposure",
+      "detail": "Pure seeding with no brand leaves the traffic unclaimed."
+    }
+  ]
+}

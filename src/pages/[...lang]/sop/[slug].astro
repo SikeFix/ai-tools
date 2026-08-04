@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Callout from '../../../components/Callout.astro';
+import SopCard from '../../../components/SopCard.astro';
 import Timeline from '../../../components/Timeline.astro';
-import { getSopArticles } from '../../../lib/sop';
+import { getSopArticles, getSopGroup, getSopsByGroup } from '../../../lib/sop';
 import { findToolByName } from '../../../lib/tools';
 import { t, localePath } from '../../../lib/i18n';
+import { SITE_URL } from '../../../consts';
 import type { Lang } from '../../../lib/types';
 
 export function getStaticPaths() {
@@ -24,6 +26,31 @@ const idx = all.findIndex((item) => item.slug === article.slug);
 const prev = idx > 0 ? all[idx - 1] : undefined;
 const next = idx >= 0 && idx < all.length - 1 ? all[idx + 1] : undefined;
 const canonicalPath = `/sop/${article.slug}/`;
+const groupId = getSopGroup(article.slug);
+const related = getSopsByGroup(lang)
+  .flatMap((g) => g.articles)
+  .filter((a) => getSopGroup(a.slug) === groupId && a.slug !== article.slug)
+  .slice(0, 3);
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t(lang, 'breadcrumb.home'), item: SITE_URL },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: t(lang, 'breadcrumb.sop'),
+      item: SITE_URL + localePath(lang, '/sop/'),
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: article.title,
+      item: SITE_URL + localePath(lang, canonicalPath),
+    },
+  ],
+};
 ---
 
 <BaseLayout
@@ -32,6 +59,7 @@ const canonicalPath = `/sop/${article.slug}/`;
   description={article.summary}
   canonicalPath={canonicalPath}
   ogType="article"
+  ogSection={t(lang, `sop.group.${groupId}`)}
 >
   <Fragment slot="head">
     <script
@@ -50,6 +78,7 @@ const canonicalPath = `/sop/${article.slug}/`;
         })),
       })}
     />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
   </Fragment>
 
   <div class="mx-auto max-w-3xl px-4 py-12 sm:px-6">
@@ -130,6 +159,18 @@ const canonicalPath = `/sop/${article.slug}/`;
         ))}
       </div>
     </section>
+
+    <!-- 同类工作流（内链增强） -->
+    {related.length > 0 && (
+      <section class="mt-12">
+        <h2 class="title-h2 mb-4 text-lg font-semibold tracking-tight">{t(lang, 'sop.related')}</h2>
+        <div class="grid gap-4 sm:grid-cols-3">
+          {related.map((item) => (
+            <SopCard article={item} lang={lang} />
+          ))}
+        </div>
+      </section>
+    )}
 
     <!-- 上一篇 / 下一篇 -->
     <nav class="mt-12 flex flex-wrap items-center justify-between gap-3 border-t border-border pt-6">

@@ -1,0 +1,78 @@
+{
+  "slug": "plan-ap-competitor-analysis",
+  "title": "Plan AP: AI Competitor Analysis",
+  "summary": "Track competitors → feature teardown → pricing comparison → differentiation report → action items",
+  "scenario": "For startup and product teams running competitor research before new initiatives or quarterly planning, to quickly map how rivals play.",
+  "meta": {
+    "duration": "4-8 hours",
+    "cost": "Low",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "Perplexity", "url": "https://perplexity.ai" },
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Notion", "url": "https://notion.so" },
+    { "name": "RAGFlow", "url": "https://ragflow.io" },
+    { "name": "Google Gemini", "url": "https://gemini.google.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Track competitors",
+      "tool": "Perplexity / Google Gemini",
+      "time": "30-60 min",
+      "detail": "Define the competitor list and tracking dimensions (features, pricing, release cadence, marketing moves). Use Perplexity to search recent launches and press coverage, Google AI Overviews for industry trends, and log findings weekly in a Notion table.",
+      "tips": "Build the table in three tiers — direct / indirect / potential substitutes — so you don't miss replacement threats."
+    },
+    {
+      "id": "s2",
+      "title": "Feature teardown",
+      "tool": "ChatGPT / Google Gemini",
+      "time": "1-2 hours",
+      "detail": "Teardown each competitor: core features, unique features, gaps, plus hands-on impressions. Feed official pages, docs and reviews to the model and have it produce a comparison matrix by module.",
+      "tips": "Ask the model to break down each rival by the 5 core workflows their users must complete — that reveals real experience better than a menu-bar comparison."
+    },
+    {
+      "id": "s3",
+      "title": "Pricing comparison",
+      "tool": "ChatGPT / Perplexity",
+      "time": "30-60 min",
+      "detail": "Collect each competitor's pricing page: free tier, plan prices, billing model, and hidden charges (overages, seats, exports). Have the model compare 'what the same budget buys' across vendors.",
+      "tips": "Ask for the calculation 'what 50 USD/month gets you at each vendor in seats and volume' — only then does price comparison mean something."
+    },
+    {
+      "id": "s4",
+      "title": "Differentiation report",
+      "tool": "Claude / ChatGPT",
+      "time": "1 hour",
+      "detail": "Synthesize feature and pricing findings into a differentiation report: market gaps, rival weaknesses, our opening, and copy risks. Use RAGFlow to build a small knowledge base linking claims to source evidence so conclusions are traceable.",
+      "tips": "Attach a source to every 'opportunity' so the model's inference isn't mistaken for fact."
+    },
+    {
+      "id": "s5",
+      "title": "Action items",
+      "tool": "Notion",
+      "time": "30-60 min",
+      "detail": "Turn the report into an action list: features to build, pricing to adjust, competitors to watch, verification methods, owners and deadlines — and feed it into the roadmap.",
+      "tips": "Give every action a metric for 'how soon we can tell if it's right'; the value of analysis is action, not the report."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Trusting second-hand AI info",
+      "detail": "Models hallucinate and go stale; verify key claims against official sites and primary sources, especially pricing and release dates."
+    },
+    {
+      "title": "Feature comparison without the user's perspective",
+      "detail": "Comparing menu bars misses real experience; tear down by core user workflows and combine with hands-on use."
+    },
+    {
+      "title": "Reporting without action",
+      "detail": "Analysis that doesn't land is wasted; every conclusion needs an action, an owner and a verification metric."
+    },
+    {
+      "title": "Covering too many competitors",
+      "detail": "Bite off more than you can chew; deep-dive 3-5 most relevant rivals instead of skimming 20."
+    }
+  ]
+}

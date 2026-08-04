@@ -1,0 +1,79 @@
+{
+  "slug": "plan-aa-animation-short",
+  "title": "方案 AA：AI 动画短片",
+  "summary": "故事脚本 → 角色设定 → 分镜 → 生图/生视频 → 合成配乐",
+  "scenario": "做 1-3 分钟风格化动画短片，用 AI 完成角色、画面、配乐全流程。",
+  "meta": {
+    "duration": "1-2 天",
+    "cost": "中",
+    "difficulty": "进阶"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Midjourney", "url": "https://www.midjourney.com" },
+    { "name": "Flux", "url": "https://blackforestlabs.ai" },
+    { "name": "可灵 Kling", "url": "https://klingai.com" },
+    { "name": "Runway", "url": "https://runwayml.com" },
+    { "name": "Suno", "url": "https://suno.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "故事脚本",
+      "tool": "ChatGPT",
+      "time": "30-45 分钟",
+      "detail": "写一个短篇故事：单一主线、三幕结构、清晰的情绪曲线；1-3 分钟只讲一个转折，主要角色不超过 3 个。",
+      "tips": "先写一句话「主角想得到什么、遇到什么阻碍、如何解决」，再扩写，别上来写长文本。"
+    },
+    {
+      "id": "s2",
+      "title": "角色设定",
+      "tool": "Midjourney + Flux",
+      "time": "30-45 分钟",
+      "detail": "生成主要角色的多角度设定图，把发型、服装、配色、画风锁进统一的描述词，作为后续图生图的固定参考，建立角色一致性基线。",
+      "tips": "用一张角色图当固定参考图，跨镜头一致性最稳。"
+    },
+    {
+      "id": "s3",
+      "title": "分镜",
+      "tool": "ChatGPT",
+      "time": "30 分钟",
+      "detail": "把脚本转成分镜表：镜头号、画面、对白、时长、运镜，标注关键帧与情绪点；按每 3-5 秒一个镜头估数，1 分钟约 15-20 个镜头。",
+      "tips": "分镜画不了就写详细画面描述，AI 能帮你直接转成画面提示词。"
+    },
+    {
+      "id": "s4",
+      "title": "生图 / 生视频",
+      "tool": "Flux + 可灵 Kling + Runway",
+      "time": "3-5 小时",
+      "detail": "先用 Flux 生成关键帧，再图生视频出动态；重要动作与转场多生成几版择优，角色与背景可分开生成再合成。",
+      "tips": "背景与角色分开生成再合成，画风统一且改背景不用重绘角色。"
+    },
+    {
+      "id": "s5",
+      "title": "合成配乐",
+      "tool": "剪辑软件 + Suno",
+      "time": "1-2 小时",
+      "detail": "按分镜拼合镜头，转场与配乐卡住情绪点；用 Suno 生成片尾曲或氛围乐，最后统一调色、加字幕与音效。",
+      "tips": "先定配乐再剪辑，情绪节点跟着音乐走更顺。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "角色不一致",
+      "detail": "跨镜头长相或服装变样，是 AI 动画最大的痛点；务必锁参考图。"
+    },
+    {
+      "title": "镜头过多过碎",
+      "detail": "1-3 分钟塞 30 多个镜头，观众看不清；学会留白。"
+    },
+    {
+      "title": "硬追 3D 真实感",
+      "detail": "AI 生成 3D 人物容易崩坏，走风格化 2D 更稳。"
+    },
+    {
+      "title": "忽视声音设计",
+      "detail": "只有画面没有音效，片子很干；记得加环境音与拟音。"
+    }
+  ]
+}

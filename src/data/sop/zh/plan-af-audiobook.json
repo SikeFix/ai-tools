@@ -1,0 +1,78 @@
+{
+  "slug": "plan-af-audiobook",
+  "title": "方案 AF：AI 有声书与播客",
+  "summary": "文本处理 → TTS 选音 → 分段录制 → 配乐音效 → 发布",
+  "scenario": "适合把书、文章或选题做成有声书、播客或知识音频的个人与团队。",
+  "meta": {
+    "duration": "2-5 小时 / 30 分钟成片",
+    "cost": "中",
+    "difficulty": "进阶"
+  },
+  "toolsNeeded": [
+    { "name": "ElevenLabs", "url": "https://elevenlabs.io" },
+    { "name": "Fish Speech", "url": "https://speech.fish.audio" },
+    { "name": "Suno", "url": "https://suno.com" },
+    { "name": "Descript", "url": "https://www.descript.com" },
+    { "name": "Adobe Podcast", "url": "https://podcast.adobe.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "文本处理",
+      "tool": "ChatGPT / Claude",
+      "time": "20-30 分钟",
+      "detail": "把原文整理成口语化脚本：分章节、加段落标记、删书面语。标注每个段落的情绪与语速提示，供 TTS 使用。",
+      "tips": "分段控制在 30 秒内一句一段，TTS 出错时只需重录这一段。"
+    },
+    {
+      "id": "s2",
+      "title": "TTS 选音",
+      "tool": "ElevenLabs / Fish Speech",
+      "time": "20-30 分钟",
+      "detail": "在候选中试听 3-5 个音色，选与内容气质匹配的旁白音。中文优先试 Fish Speech 的预置音色，长文本优先 ElevenLabs。",
+      "tips": "试听时用同一段开场词对比，别只看音色列表描述。"
+    },
+    {
+      "id": "s3",
+      "title": "分段录制",
+      "tool": "ElevenLabs / Fish Speech",
+      "time": "1-2 小时",
+      "detail": "按段落批量生成语音，逐段试听修正重音、断句和专有名词发音。用「语音词典」固定人名地名读音，全篇才会统一。",
+      "tips": "生僻词先在词典里定音再生成，别生成完才发现每段读法不同。"
+    },
+    {
+      "id": "s4",
+      "title": "配乐与音效",
+      "tool": "Suno + Descript",
+      "time": "30-60 分钟",
+      "detail": "用 Suno 生成背景音乐或片头片尾，音量压到 -20dB 以下当底垫。在 Descript 里拼接段落、加淡入淡出与停顿，去掉口误与杂音。",
+      "tips": "BGM 与人声做侧链压缩，人声一响音乐自动让位。"
+    },
+    {
+      "id": "s5",
+      "title": "发布",
+      "tool": "播客平台 + Descript",
+      "time": "30 分钟",
+      "detail": "导出标准音频格式，生成封面与标题，上传播客平台或分发。附上章节时间戳和文字稿，方便听众跳转与搜索。",
+      "tips": "先发单集跑通 RSS 与审核流程，再批量排期。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "一次性录完整本",
+      "detail": "长文本 TTS 出错率高，分段生成便于修正；别指望一次成片。"
+    },
+    {
+      "title": "音色气质不符",
+      "detail": "有声书内容决定音色，试听对比再定，别贪图「听着好听」的网红音。"
+    },
+    {
+      "title": "配乐盖过人声",
+      "detail": "BGM 压音量、做人声优先；人声听不清立刻返工。"
+    },
+    {
+      "title": "版权与合成语音声明",
+      "detail": "平台对有 AI 声音内容有要求，检查规则再发布。"
+    }
+  ]
+}

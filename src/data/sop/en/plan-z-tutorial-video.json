@@ -1,0 +1,78 @@
+{
+  "slug": "plan-z-tutorial-video",
+  "title": "Plan Z: AI Tutorial Video",
+  "summary": "Course outline → script → screen capture / images → AI narration → captions",
+  "scenario": "For software tutorials or online course videos, using AI to produce teaching content at low cost and in volume.",
+  "meta": {
+    "duration": "2-4 hours / episode",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Gamma", "url": "https://gamma.app" },
+    { "name": "Descript", "url": "https://www.descript.com" },
+    { "name": "ElevenLabs", "url": "https://elevenlabs.io" },
+    { "name": "剪映 CapCut", "url": "https://www.capcut.cn" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Course outline",
+      "tool": "ChatGPT",
+      "time": "20-30 min",
+      "detail": "Define the target students and learning outcomes, then have the model build a modular outline where each module delivers something concrete, ordered by dependency, with 5-10 minute episodes.",
+      "tips": "Put 'what you'll be able to do' into the outline titles — perceived value jumps instantly."
+    },
+    {
+      "id": "s2",
+      "title": "Script",
+      "tool": "ChatGPT",
+      "time": "1 hour",
+      "detail": "Write the lesson in conversational language: one idea per sentence, steps framed as 'first… then…', with a note on what to show on screen and where to pause for each step.",
+      "tips": "Add pause markers in the script so the narration lines up with the screen recording later."
+    },
+    {
+      "id": "s3",
+      "title": "Screen capture / images",
+      "tool": "Screen recorder + AI images",
+      "time": "1-2 hours",
+      "detail": "Record the actual screen while you operate the software, and generate consistent-styled diagrams for concepts; match each step to a script section and re-record anything that's off right away.",
+      "tips": "Write the operation checklist before recording and finish in one take to avoid fumbling."
+    },
+    {
+      "id": "s4",
+      "title": "AI narration",
+      "tool": "ElevenLabs",
+      "time": "30-45 min",
+      "detail": "Turn the script into clear, natural AI narration at a slightly slower teaching pace; preview how technical terms are pronounced before committing to the full read.",
+      "tips": "Listen to a 30-second sample first — discovering a mispronounced term at the end means regenerating everything."
+    },
+    {
+      "id": "s5",
+      "title": "Captions & export",
+      "tool": "CapCut / Descript",
+      "time": "30-45 min",
+      "detail": "Auto-generate subtitles, proofread them, and export multiple formats — mp4 for course platforms plus vertical cuts for short video — with chapter markers and exercises.",
+      "tips": "End each episode with a next-episode teaser and a practice task to raise series completion."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Episodes too long",
+      "detail": "Completion craters past 15 minutes; split into 5-10 minute episodes."
+    },
+    {
+      "title": "Script reads like a textbook",
+      "detail": "Conversational writing with transitions beats reading aloud."
+    },
+    {
+      "title": "Cuts too fast",
+      "detail": "Fast screen edits lose students; slow down key steps or highlight them."
+    },
+    {
+      "title": "No version labeling",
+      "detail": "Software UI changes fast — put the version and date in the title to cut support questions."
+    }
+  ]
+}

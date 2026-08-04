@@ -1,0 +1,75 @@
+{
+  "slug": "plan-w-doc-narration",
+  "title": "Plan W: AI Documentary Narration",
+  "summary": "Research → narration script → voice-over → visual generation → music & captions",
+  "scenario": "For long-form educational videos on history, science or nature — AI brings the production cost down to a solo creator.",
+  "meta": {
+    "duration": "3-6 hours / episode",
+    "cost": "Medium",
+    "difficulty": "Intermediate"
+  },
+  "toolsNeeded": [
+    { "name": "Perplexity", "url": "https://www.perplexity.ai" },
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "ElevenLabs", "url": "https://elevenlabs.io" },
+    { "name": "海螺 Hailuo", "url": "https://hailuoai.com" },
+    { "name": "Sora", "url": "https://sora.com" },
+    { "name": "Suno", "url": "https://suno.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Research",
+      "tool": "Perplexity + ChatGPT",
+      "time": "30-60 min",
+      "detail": "Search with Perplexity and cross-check sources, then have ChatGPT assemble a narrative spine with a clear arc and a timeline of verifiable facts. This step decides whether viewers trust you on the facts.",
+      "tips": "Keep source links for every key fact so you can re-check during editing and avoid embarrassing errors."
+    },
+    {
+      "id": "s2",
+      "title": "Narration script",
+      "tool": "ChatGPT",
+      "time": "1 hour",
+      "detail": "Write the voice-over chapter by chapter in conversational short sentences with strong imagery, aiming for roughly 240-280 characters per minute in Chinese, and note what each section should show on screen.",
+      "tips": "Outline first, then expand section by section; asking for a whole film in one pass gets you a scattered structure."
+    },
+    {
+      "id": "s3",
+      "title": "Voice-over",
+      "tool": "ElevenLabs",
+      "time": "30-45 min",
+      "detail": "Turn the script into a calm, storytelling narration; generate long episodes in segments and stitch them, so a flubbed line only needs one segment re-recorded.",
+      "tips": "Put pause and emphasis marks into the text — the documentary feel shows up immediately."
+    },
+    {
+      "id": "s4",
+      "title": "Visual generation",
+      "tool": "海螺 Hailuo + Sora",
+      "time": "2-3 hours",
+      "detail": "Batch-generate atmospheric shots like historical reenactments, macro or aerial views from the shot prompts, and animate static images in Hailuo; keep real archival footage and maps for key facts.",
+      "tips": "Reuse a fixed 'tone + era' style prefix so the whole film looks like one piece."
+    },
+    {
+      "id": "s5",
+      "title": "Music & captions",
+      "tool": "Suno + editor",
+      "time": "30-45 min",
+      "detail": "Generate ambient score and bed sounds in Suno, then overlay narration captions, title cards and chapter headings.",
+      "tips": "Keep the score around -18 to -20 dB so it never buries the narration."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Factual errors",
+      "detail": "In the knowledge niche, fabricated details are fatal — verify every key fact by hand."
+    },
+    {
+      "title": "Narration that reads like a textbook",
+      "detail": "Educational video should be conversational; formal writing sounds like reading aloud."
+    },
+    {
+      "title": "Visuals out of sync with the narration",
+      "detail": "Write the narration first and build the visuals to match it."
+    }
+  ]
+}

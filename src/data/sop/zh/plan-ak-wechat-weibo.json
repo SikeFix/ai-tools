@@ -1,0 +1,78 @@
+{
+  "slug": "plan-ak-wechat-weibo",
+  "title": "方案 AK：AI 公众号/微博内容",
+  "summary": "选题 → 长文/短文 → 配图 → 多端适配 → 互动复盘",
+  "scenario": "适合同时运营公众号与微博的个人或团队，一条主线拆两处发布。",
+  "meta": {
+    "duration": "2-4 小时 / 内容主题",
+    "cost": "中",
+    "difficulty": "入门"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chat.openai.com" },
+    { "name": "Kimi", "url": "https://kimi.moonshot.cn" },
+    { "name": "DeepSeek", "url": "https://chat.deepseek.com" },
+    { "name": "Canva Magic Studio", "url": "https://www.canva.com" },
+    { "name": "Midjourney", "url": "https://www.midjourney.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "选题",
+      "tool": "ChatGPT / Kimi",
+      "time": "20-30 分钟",
+      "detail": "结合热点、账号定位与读者提问产出选题清单，按「受众痛点是啥、凭什么关注」打分。公众号选深度题，微博选轻快题。",
+      "tips": "一次囤 10 个选题，发的时候不慌；每周补新热点。"
+    },
+    {
+      "id": "s2",
+      "title": "长文/短文",
+      "tool": "Kimi / DeepSeek",
+      "time": "1-2 小时",
+      "detail": "公众号长文用「引入-论述-案例-结论」结构，先搭骨架再填肉。短文从长文提炼金句与观点，微博控制在 140 字内。",
+      "tips": "长文初稿让模型写到 70%，你补观点与案例，避免 AI 味。"
+    },
+    {
+      "id": "s3",
+      "title": "配图",
+      "tool": "Canva Magic Studio / Midjourney",
+      "time": "30 分钟",
+      "detail": "公众号封面用 Canva 模板做图文封面，正文插图用 Midjourney 按需生成。保持封面风格统一，形成栏目辨识度。",
+      "tips": "固定封面版式（标题+配色+图形），读者一眼认出你的号。"
+    },
+    {
+      "id": "s4",
+      "title": "多端适配",
+      "tool": "ChatGPT + 你",
+      "time": "30 分钟",
+      "detail": "公众号发长文，微博拆出 2-3 条短内容配话题标签；同一主题两处说法与节奏不同。检查两端的排版、链接与 @。",
+      "tips": "微博首条给「结论」，评论区放「详细展开」，转评赞更好。"
+    },
+    {
+      "id": "s5",
+      "title": "互动复盘",
+      "tool": "ChatGPT",
+      "time": "20-30 分钟",
+      "detail": "发布后收集阅读/转评赞/收藏数据，让模型对比分析哪种选题与写法表现好。把高互动写法存成模板，下期复用。",
+      "tips": "每周复盘一次，盯 3 个指标即可：打开率、完读率、转评赞。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "直接一稿两发",
+      "detail": "公众号长文丢进微博没人看；必须按平台语境重写。"
+    },
+    {
+      "title": "忽略互动评论",
+      "detail": "评论是最好的选题库；发布后预留 30 分钟回复。"
+    },
+    {
+      "title": "封面与内容不符",
+      "detail": "封面党一次就伤信任；封面承诺内容要兑现。"
+    },
+    {
+      "title": "不沉淀方法论",
+      "detail": "每期都从零写等于没积累；复盘后沉淀模板库。"
+    }
+  ]
+}

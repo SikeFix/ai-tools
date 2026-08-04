@@ -73,6 +73,7 @@ export const en: Record<UiKey, string> = {
   'sop.meta.difficulty': 'Difficulty',
   'sop.prev': 'Previous',
   'sop.next': 'Next',
+  'sop.related': 'Related Workflows',
   'sop.empty': 'No workflows yet',
   'sop.group.video': 'Video Production',
   'sop.group.content': 'Content Creation',

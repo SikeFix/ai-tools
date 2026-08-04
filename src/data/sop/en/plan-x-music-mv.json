@@ -1,0 +1,75 @@
+{
+  "slug": "plan-x-music-mv",
+  "title": "Plan X: AI Music Beat-Sync MV",
+  "summary": "Analyze song → storyboard → visual generation → beat-sync editing → publish",
+  "scenario": "For pairing an AI-generated song with a visual MV or beat-sync short for Douyin, Bilibili or music platforms.",
+  "meta": {
+    "duration": "3-5 hours",
+    "cost": "Low",
+    "difficulty": "Intermediate"
+  },
+  "toolsNeeded": [
+    { "name": "Suno", "url": "https://suno.com" },
+    { "name": "Udio", "url": "https://www.udio.com" },
+    { "name": "Midjourney", "url": "https://www.midjourney.com" },
+    { "name": "Runway", "url": "https://runwayml.com" },
+    { "name": "可灵 Kling", "url": "https://klingai.com" },
+    { "name": "Descript", "url": "https://www.descript.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Analyze the song",
+      "tool": "Suno + Udio",
+      "time": "15-20 min",
+      "detail": "After generating or choosing a track, use beat-detection or the waveform to mark BPM, downbeats and the climax section so the whole edit knows where the beats land. Verses and choruses should get very different visual density.",
+      "tips": "Let a beat-detection tool place the markers — faster and more reliable than by ear."
+    },
+    {
+      "id": "s2",
+      "title": "Storyboard",
+      "tool": "ChatGPT",
+      "time": "30 min",
+      "detail": "Write the storyboard from the lyrics' meaning and mood: each section gets its own density, the climax gets fast cuts and striking visuals, and ideally each line of lyrics becomes one shot so the sync stays clean.",
+      "tips": "Make the number of shots match the number of downbeats — beat-sync is just cuts landing on beats."
+    },
+    {
+      "id": "s3",
+      "title": "Visual generation",
+      "tool": "Midjourney + Runway + 可灵 Kling",
+      "time": "2-3 hours",
+      "detail": "Generate keyframes in a locked art style with Midjourney (reusing the same style prompt and character reference), then run image-to-video in Runway or Kling for motion; loopable shots give you flexible length to cover the beats.",
+      "tips": "Lock the character and scene design before generating video — that's how character stays consistent across shots."
+    },
+    {
+      "id": "s4",
+      "title": "Beat-sync editing",
+      "tool": "Descript",
+      "time": "1 hour",
+      "detail": "Snap clips to the beat with cuts on downbeats and 1-2 second cuts in the climax, adding zooms and flash frames for punch. Use Descript's waveform snapping to auto-align, then fine-tune by hand.",
+      "tips": "Get cuts frame-accurate; rough-cut first, then polish beat by beat — speed invites sloppy sync."
+    },
+    {
+      "id": "s5",
+      "title": "Publish",
+      "tool": "Platforms",
+      "time": "20 min",
+      "detail": "Export vertical 9:16 and horizontal 16:9 versions with lyric captions and hashtags; launch on one primary platform first and only spread once the data looks good.",
+      "tips": "Put the song title and style keywords in the title for music-platform and search traffic."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Inconsistent art style",
+      "detail": "Shots that jump styles break the film's cohesion; lock the style keywords first."
+    },
+    {
+      "title": "Off-beat cuts",
+      "detail": "A cut half a beat late reads as amateur; invest the time to fine-tune."
+    },
+    {
+      "title": "Drifting character design",
+      "detail": "The protagonist changing looks across shots ruins the MV; fix a reference image before generating."
+    }
+  ]
+}

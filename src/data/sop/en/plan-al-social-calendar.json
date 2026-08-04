@@ -1,0 +1,78 @@
+{
+  "slug": "plan-al-social-calendar",
+  "title": "Plan AL: AI Social Content Calendar",
+  "summary": "Audience profile → topic pool → scheduling → batch creation → attribution",
+  "scenario": "For teams planning monthly multi-platform social content — turning scattered creation into a steady calendar.",
+  "meta": {
+    "duration": "3-5 hours / month",
+    "cost": "Low",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chat.openai.com" },
+    { "name": "Notion", "url": "https://www.notion.com" },
+    { "name": "Zapier Agents", "url": "https://zapier.com/agents" },
+    { "name": "Canva Magic Studio", "url": "https://www.canva.com" },
+    { "name": "Perplexity", "url": "https://www.perplexity.ai" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Audience profile",
+      "tool": "Perplexity + ChatGPT",
+      "time": "30 min",
+      "detail": "Combine account analytics and competitor research to extract the audience's pains, topics and content preferences. Have the model produce a 'reader persona card' to guide every topic choice.",
+      "tips": "Make the persona concrete down to 'which keywords they search' — topics and copy then write themselves."
+    },
+    {
+      "id": "s2",
+      "title": "Topic pool",
+      "tool": "ChatGPT",
+      "time": "40 min",
+      "detail": "Generate 20-30 topics from the persona, classified as informational / emotional / promotional and scored. Leave room for trend slots and breaking news.",
+      "tips": "Keep the monthly pool at 30 topics, over-deliver, top it up as it drains."
+    },
+    {
+      "id": "s3",
+      "title": "Scheduling",
+      "tool": "Notion",
+      "time": "30 min",
+      "detail": "Build a content calendar in Notion's calendar view, assigning topics to dates and platforms with owners and status. Set three-stage reminders: draft due, review, publish.",
+      "tips": "Fix weekdays as update days and weekends for long-form or engagement posts — an expected rhythm."
+    },
+    {
+      "id": "s4",
+      "title": "Batch creation",
+      "tool": "ChatGPT + Canva Magic Studio",
+      "time": "1-2 hours",
+      "detail": "Dedicate half a day weekly to batch-generating copy and images per the calendar, using fixed templates for a consistent look. Stage drafts in a Notion 'to publish' board, queue after review.",
+      "tips": "Lock the structure and tone for the batch so the week reads like one voice."
+    },
+    {
+      "id": "s5",
+      "title": "Attribution",
+      "tool": "Zapier Agents + data tools",
+      "time": "30 min",
+      "detail": "Use automation to pool platform metrics in one place; at month's end, have the model compare topic type, timing and engagement. Write 'what works' into next month's plan.",
+      "tips": "Attribute by topic type rather than single posts — aggregated conclusions are steadier."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Scheduled but never executed",
+      "detail": "A pretty calendar that nobody acts on is zero; assign an owner and due date to every item."
+    },
+    {
+      "title": "Homogenized batch content",
+      "detail": "Over-templating creates an assembly-line feel; keep ~20% hand-crafted."
+    },
+    {
+      "title": "Ignoring data",
+      "detail": "Publishing without reviewing feedback is broadcasting into the void; review monthly."
+    },
+    {
+      "title": "No room for trends",
+      "detail": "A full calendar has no slack; leave 2-3 slots weekly for what's hot."
+    }
+  ]
+}

@@ -768,5 +768,857 @@
       "Cited research deliverables",
       "Competitor and academic research"
     ]
+  },
+  {
+    "slug": "filesystem-mcp",
+    "useCasesZh": [
+      "让 Claude 列出项目目录结构，快速了解代码组织",
+      "读取/修改本地文件，直接编辑代码或配置文件",
+      "跨目录移动或重命名文件，搜索特定文件"
+    ],
+    "useCasesEn": [
+      "Have Claude list the project directory tree to quickly understand code organization",
+      "Read and modify local files, editing code or config files directly",
+      "Move or rename files across directories and search for specific files"
+    ]
+  },
+  {
+    "slug": "fetch-mcp",
+    "useCasesZh": [
+      "抓取技术文档页面，让 Claude 基于最新文档回答问题",
+      "把网页文章转成 Markdown 用于整理笔记",
+      "读取在线 API 文档核对接口参数"
+    ],
+    "useCasesEn": [
+      "Fetch technical documentation pages so Claude can answer from the latest docs",
+      "Convert web articles to Markdown for note-taking",
+      "Read online API docs to verify interface parameters"
+    ]
+  },
+  {
+    "slug": "sequential-thinking-mcp",
+    "useCasesZh": [
+      "分解复杂算法问题，逐步推导再总结",
+      "让 Claude 在修改代码前先梳理推理链路",
+      "多步计划任务中分步推进，随时复盘调整"
+    ],
+    "useCasesEn": [
+      "Break down complex algorithmic problems, deriving step by step before summarizing",
+      "Have Claude lay out its reasoning chain before modifying code",
+      "Progress through multi-step plans while reviewing and adjusting along the way"
+    ]
+  },
+  {
+    "slug": "memory-mcp",
+    "useCasesZh": [
+      "记住用户偏好的代码风格或命名约定",
+      "跨会话保留项目架构与关键决策事实",
+      "记录常用命令与工具链配置，下次自动复用"
+    ],
+    "useCasesEn": [
+      "Remember user preferences like code style or naming conventions",
+      "Retain project architecture and key decision facts across sessions",
+      "Record frequently used commands and toolchain setup for reuse next time"
+    ]
+  },
+  {
+    "slug": "git-mcp",
+    "useCasesZh": [
+      "查看当前工作区状态与未提交的改动",
+      "查看 diff 与提交历史，定位代码变更原因",
+      "创建分支并提交，让 Claude 独立完成小型改动"
+    ],
+    "useCasesEn": [
+      "Check working tree status and uncommitted changes",
+      "Inspect diffs and commit history to trace why code changed",
+      "Create branches and commit, letting Claude complete small changes on its own"
+    ]
+  },
+  {
+    "slug": "postgres-mcp",
+    "useCasesZh": [
+      "查看表结构与索引，理解数据库设计",
+      "执行查询提取数据用于分析和报表",
+      "插入/更新数据，或为测试准备种子数据"
+    ],
+    "useCasesEn": [
+      "Inspect table schemas and indexes to understand database design",
+      "Run queries to extract data for analysis and reports",
+      "Insert or update records, or prepare seed data for testing"
+    ]
+  },
+  {
+    "slug": "redis-mcp",
+    "useCasesZh": [
+      "查看某个 key 的值，排查缓存问题",
+      "设置/删除缓存键，控制缓存过期",
+      "查看队列长度与内容，调试消息处理"
+    ],
+    "useCasesEn": [
+      "Inspect the value of a key to debug cache issues",
+      "Set or delete cache keys and control expiration",
+      "Check queue length and contents to debug message processing"
+    ]
+  },
+  {
+    "slug": "docker-mcp",
+    "useCasesZh": [
+      "查看运行中的容器与镜像列表",
+      "构建并运行容器，测试服务启动",
+      "清理停止的容器与悬空镜像"
+    ],
+    "useCasesEn": [
+      "List running containers and images",
+      "Build and run containers to test service startup",
+      "Clean up stopped containers and dangling images"
+    ]
+  },
+  {
+    "slug": "kubernetes-mcp",
+    "useCasesZh": [
+      "查看 Pod 与 Deployment 状态，判断服务是否健康",
+      "读取容器日志排查应用报错",
+      "检查 Service/Ingress 配置定位访问问题"
+    ],
+    "useCasesEn": [
+      "Check Pod and Deployment status to judge service health",
+      "Read container logs to troubleshoot application errors",
+      "Inspect Service/Ingress config to locate access issues"
+    ]
+  },
+  {
+    "slug": "terraform-mcp",
+    "useCasesZh": [
+      "根据需求草拟 Terraform 资源配置",
+      "审查现有配置，指出潜在问题与最佳实践",
+      "生成 plan 输出，预览将要执行的变更"
+    ],
+    "useCasesEn": [
+      "Draft Terraform resource configs from requirements",
+      "Review existing configs, flagging potential issues and best practices",
+      "Generate plan output to preview changes before applying"
+    ]
+  },
+  {
+    "slug": "aws-mcp",
+    "useCasesZh": [
+      "列出 S3 存储桶与对象，检查资源使用",
+      "查看 EC2 实例状态与 Lambda 函数",
+      "排查 IAM 权限配置与云资源访问问题"
+    ],
+    "useCasesEn": [
+      "List S3 buckets and objects to check resource usage",
+      "View EC2 instance status and Lambda functions",
+      "Troubleshoot IAM permissions and cloud resource access issues"
+    ]
+  },
+  {
+    "slug": "mongodb-mcp",
+    "useCasesZh": [
+      "对集合执行增删改查，管理文档数据",
+      "运行聚合管道统计分组数据",
+      "查看索引与慢查询，优化查询性能"
+    ],
+    "useCasesEn": [
+      "Perform CRUD operations on collections to manage document data",
+      "Run aggregation pipelines to summarize grouped data",
+      "Inspect indexes and slow queries to optimize performance"
+    ]
+  },
+  {
+    "slug": "firecrawl-mcp",
+    "useCasesZh": [
+      "输入网址整站抓取，输出结构化 Markdown 供知识库入库",
+      "用搜索接口快速找到目标网页并抓取正文",
+      "定期检查页面改版，监控官网或竞品变化"
+    ],
+    "useCasesEn": [
+      "Crawl a full site by URL and export structured Markdown for ingestion into a knowledge base",
+      "Use the search endpoint to locate target pages and scrape their content quickly",
+      "Run change-detection on pages to monitor official or competitor site updates"
+    ]
+  },
+  {
+    "slug": "tavily-mcp",
+    "useCasesZh": [
+      "调研主题时获取带引用来源的干净搜索结果",
+      "给 RAG 提供可信上下文，降低幻觉",
+      "从多来源聚合信息做竞品或行业分析"
+    ],
+    "useCasesEn": [
+      "Get clean search results with cited sources for topic research",
+      "Feed RAG pipelines trusted context to reduce hallucination",
+      "Aggregate information across sources for competitive or industry analysis"
+    ]
+  },
+  {
+    "slug": "exa-mcp",
+    "useCasesZh": [
+      "按自然语言描述语义查找相关网页",
+      "输入一个页面找相似内容，扩展研究范围",
+      "基于语义搜索收集技术资料与前沿动态"
+    ],
+    "useCasesEn": [
+      "Find relevant web pages by natural-language meaning, not just keywords",
+      "Give a page and retrieve similar content to expand research",
+      "Collect technical docs and latest developments through semantic search"
+    ]
+  },
+  {
+    "slug": "qdrant-mcp",
+    "useCasesZh": [
+      "创建 collection 并为文档生成向量写入",
+      "对查询做语义检索，召回最相关片段",
+      "构建知识库 RAG，为问答提供向量底库"
+    ],
+    "useCasesEn": [
+      "Create collections and embed documents as vectors",
+      "Run semantic retrieval against queries to recall the most relevant chunks",
+      "Build a knowledge-base RAG with the vector store as backend"
+    ]
+  },
+  {
+    "slug": "chroma-mcp",
+    "useCasesZh": [
+      "本地启动向量库，把文档转向量存进去",
+      "对私有文档做语义搜索，快速定位相关内容",
+      "无需外部服务即可搭建轻量 RAG 原型"
+    ],
+    "useCasesEn": [
+      "Run a local vector store and embed documents into it",
+      "Semantic-search private documents to quickly locate relevant content",
+      "Prototype a lightweight RAG without external services"
+    ]
+  },
+  {
+    "slug": "weaviate-mcp",
+    "useCasesZh": [
+      "管理类 schema，创建并维护向量对象",
+      "用向量加关键词的混合检索提升召回质量",
+      "支撑生产环境的知识库与推荐系统"
+    ],
+    "useCasesEn": [
+      "Manage class schemas and create or update vector objects",
+      "Combine vector and keyword hybrid search for better recall",
+      "Power production knowledge bases and recommendation systems"
+    ]
+  },
+  {
+    "slug": "excel-mcp",
+    "useCasesZh": [
+      "读取 Excel 各 sheet 数据供分析或入库",
+      "按规则写入单元格、填充整理后的数据",
+      "用公式做计算，完成报表类数据整理"
+    ],
+    "useCasesEn": [
+      "Read data from Excel sheets for analysis or ingestion",
+      "Write values into cells with cleaned and organized data",
+      "Apply formulas for calculations and report-style cleanup"
+    ]
+  },
+  {
+    "slug": "apify-mcp",
+    "useCasesZh": [
+      "从 Apify 市场挑选现成 actor 采集目标网站",
+      "批量抓取电商商品、评论与价格数据",
+      "采集社交平台公开数据做舆情或账号分析"
+    ],
+    "useCasesEn": [
+      "Pick ready-made actors from the Apify marketplace to scrape target sites",
+      "Batch-capture e-commerce products, reviews, and prices",
+      "Collect public social data for sentiment or account analysis"
+    ]
+  },
+  {
+    "slug": "youtube-transcript-mcp",
+    "useCasesZh": [
+      "输入视频链接获取完整字幕文本",
+      "把长视频转成文字后做 AI 摘要",
+      "整理课程或演讲笔记，方便复习与翻译"
+    ],
+    "useCasesEn": [
+      "Get full transcript text from a video URL",
+      "Convert long videos to text and run AI summaries",
+      "Turn lectures and talks into notes for review and translation"
+    ]
+  },
+  {
+    "slug": "pubmed-mcp",
+    "useCasesZh": [
+      "按关键词或作者检索 PubMed 文献",
+      "获取论文摘要、年份与引用信息",
+      "为医学科普文章或研究综述收集可信来源"
+    ],
+    "useCasesEn": [
+      "Search PubMed literature by keyword or author",
+      "Retrieve abstracts, publication years, and citation info",
+      "Collect trusted sources for health articles or research reviews"
+    ]
+  },
+  {
+    "slug": "puppeteer-mcp",
+    "useCasesZh": [
+      "打开需要 JS 渲染的页面并抓取最终内容",
+      "对网页截图，保存为图片做视觉记录",
+      "自动化交互流程，如填表、点击与翻页"
+    ],
+    "useCasesEn": [
+      "Open JS-rendered pages and scrape the final content",
+      "Screenshot pages and save images for visual records",
+      "Automate interactions such as form filling, clicks, and pagination"
+    ]
+  },
+  {
+    "slug": "google-drive-mcp",
+    "useCasesZh": [
+      "列出并搜索云端文件，快速定位文档",
+      "读取 Google 文档或表格内容喂给 AI 处理",
+      "把生成结果写回 Drive，打通文档工作流"
+    ],
+    "useCasesEn": [
+      "List and search cloud files to quickly locate documents",
+      "Read Google Docs or Sheets content into AI for processing",
+      "Write generated results back to Drive to close the docs workflow"
+    ]
+  },
+  {
+    "slug": "jira-mcp",
+    "useCasesZh": [
+      "让 Claude 帮我查 Jira 上「进行中」的所有 issue 并按优先级排好",
+      "把当前对话总结成一条 Jira 任务并指派给对应成员",
+      "从 Confluence 拉取某篇文档，结合项目背景回答问题",
+      "每周自动汇总 Jira/Confluence 的项目进展"
+    ],
+    "useCasesEn": [
+      "Ask Claude to list all in-progress Jira issues sorted by priority",
+      "Summarize the current discussion into a Jira ticket and assign it",
+      "Fetch a Confluence doc and answer questions with project context",
+      "Generate a weekly project status digest from Jira/Confluence"
+    ]
+  },
+  {
+    "slug": "sentry-mcp",
+    "useCasesZh": [
+      "贴一个 Sentry 报错，让 Claude 分析根因并给出修复建议",
+      "汇总最近 24 小时线上新增的错误和影响范围",
+      "把某个高频 issue 的堆栈转成排查笔记",
+      "对比两个环境同一错误的不同表现"
+    ],
+    "useCasesEn": [
+      "Paste a Sentry error and let Claude analyze the root cause and suggest fixes",
+      "Summarize new production errors and their impact over the last 24 hours",
+      "Turn a frequent issue's stack trace into a debugging note",
+      "Compare how the same error behaves across two environments"
+    ]
+  },
+  {
+    "slug": "gmail-mcp",
+    "useCasesZh": [
+      "帮我在 Gmail 里找到上周某客户的邮件并总结要点",
+      "起草一封回复邮件，语气礼貌简洁",
+      "把收件箱里未读的订阅邮件标记分类",
+      "根据邮件往来整理一份联系人时间线"
+    ],
+    "useCasesEn": [
+      "Find last week's email from a client in Gmail and summarize the key points",
+      "Draft a polite, concise reply email",
+      "Sort and categorize unread newsletter emails in the inbox",
+      "Build a contact timeline from email threads"
+    ]
+  },
+  {
+    "slug": "twilio-mcp",
+    "useCasesZh": [
+      "给客户批量发送通知短信并回传发送状态",
+      "查某条 WhatsApp 消息是否已送达",
+      "根据模板自动发送预约提醒",
+      "通过短信触发一个定时任务的回调"
+    ],
+    "useCasesEn": [
+      "Send bulk notification SMS to customers and report delivery status",
+      "Check whether a WhatsApp message has been delivered",
+      "Send automated appointment reminders from a template",
+      "Trigger a scheduled task callback via SMS"
+    ]
+  },
+  {
+    "slug": "resend-mcp",
+    "useCasesZh": [
+      "用 HTML 模板给用户发送注册确认邮件",
+      "把一段产品更新说明做成营销邮件发给订阅列表",
+      "查看某封邮件的送达与打开数据",
+      "测试发一封邮件到自己邮箱验证模板效果"
+    ],
+    "useCasesEn": [
+      "Send a signup confirmation email to users with an HTML template",
+      "Turn a product update note into a marketing email for a subscriber list",
+      "Check delivery and open metrics for an email",
+      "Send a test email to your own inbox to validate a template"
+    ]
+  },
+  {
+    "slug": "stripe-mcp",
+    "useCasesZh": [
+      "查某笔订单的支付状态和金额明细",
+      "为一名客户创建订阅并配置扣款周期",
+      "排查某笔失败的账单并给出修复方案",
+      "汇总本月收入与退款报表"
+    ],
+    "useCasesEn": [
+      "Look up a payment's status and line items for an order",
+      "Create a subscription for a customer with a billing cycle",
+      "Investigate a failed charge and recommend a fix",
+      "Summarize this month's revenue and refund report"
+    ]
+  },
+  {
+    "slug": "linear-mcp",
+    "useCasesZh": [
+      "把当前需求整理成 Linear issue 并设置优先级",
+      "查看某条 issue 的最新状态和评论",
+      "批量更新一批任务的负责人与截止时间",
+      "汇总本周团队完成与积压的任务"
+    ],
+    "useCasesEn": [
+      "Turn a requirement into a Linear issue with a priority",
+      "Check the latest status and comments on an issue",
+      "Batch-update assignees and due dates for a set of tasks",
+      "Summarize this week's completed and backlogged tasks"
+    ]
+  },
+  {
+    "slug": "obsidian-mcp",
+    "useCasesZh": [
+      "把这段对话内容整理成一篇 Obsidian 笔记",
+      "为已有笔记补上双链和标签",
+      "在知识库里搜索与某个主题相关的所有笔记",
+      "按日期归档今天的会议记录"
+    ],
+    "useCasesEn": [
+      "Save a discussion into an Obsidian note",
+      "Add backlinks and tags to existing notes",
+      "Search the vault for all notes related to a topic",
+      "File today's meeting notes under the date"
+    ]
+  },
+  {
+    "slug": "hooks-practice",
+    "useCasesZh": [
+      "配置 PreToolUse hook，在运行高危命令前自动拦截确认",
+      "提交前自动跑 lint 和测试，不通过就阻止提交",
+      "每次会话结束时把关键决策写入交接摘要",
+      "用 Stop hook 统一做代码格式化"
+    ],
+    "useCasesEn": [
+      "Set a PreToolUse hook to intercept and confirm risky commands",
+      "Auto-run lint and tests before every commit, blocking failure",
+      "Write key decisions into a handoff summary at session end",
+      "Use a Stop hook to format code consistently"
+    ]
+  },
+  {
+    "slug": "subagents",
+    "useCasesZh": [
+      "派一个 tester 子代理并行跑测试，主代理继续写代码",
+      "让 reviewer 子代理在后台审查 PR 并给出改进意见",
+      "拆分大需求为多个子代理分工实现，最后统一合入",
+      "为不同技术栈定义专属子代理角色"
+    ],
+    "useCasesEn": [
+      "Spawn a tester subagent to run tests in parallel while the main agent codes",
+      "Let a reviewer subagent review a PR and give feedback in the background",
+      "Split a large requirement into parallel subagents and merge the results",
+      "Define specialized subagent roles for different tech stacks"
+    ]
+  },
+  {
+    "slug": "slash-command-lib",
+    "useCasesZh": [
+      "把「提交并推送并发布」封装成一条 slash 命令",
+      "一条命令跑完代码生成、lint、测试的标准流程",
+      "团队共享一套 slash 命令保证流程一致",
+      "把常用的项目初始化步骤做成命令模板"
+    ],
+    "useCasesEn": [
+      "Package commit, push and deploy into a single slash command",
+      "Run the standard generate, lint, test pipeline with one command",
+      "Share a common slash-command set to keep team workflows consistent",
+      "Turn common project bootstrap steps into a command template"
+    ]
+  },
+  {
+    "slug": "session-resume",
+    "useCasesZh": [
+      "用交接摘要在新会话里无缝继续昨天的任务",
+      "把未完成事项写进 session 文件，下次自动读取",
+      "换机器后通过 resume 恢复之前的上下文",
+      "让新助手基于上次的结论继续推进而不重复提问"
+    ],
+    "useCasesEn": [
+      "Resume yesterday's task seamlessly with a handoff summary",
+      "Record open todos in a session file and pick them up next time",
+      "Restore prior context on a new machine via resume",
+      "Let a fresh assistant continue from previous conclusions without re-asking"
+    ]
+  },
+  {
+    "slug": "transcript-repurpose",
+    "useCasesZh": [
+      "输入一期 1 小时播客转写稿，自动拆出 3 个可独立成篇的博客主题与每个主题的要点。",
+      "把访谈问答改写成 5 条带引用的推文，保留原话金句。",
+      "把会议转写整理成给团队的决策摘要邮件，含结论、依据和下一步。",
+      "从同一份转写稿里抽取一段做 newsletter 专题，附延伸阅读链接。"
+    ],
+    "useCasesEn": [
+      "Feed a 1-hour podcast transcript and get 3 standalone blog topics with key points each.",
+      "Turn an interview Q&A into 5 quote-backed tweets that keep the original punchlines.",
+      "Turn a meeting transcript into a decision-summary email with conclusions, rationale, and next steps.",
+      "Extract one segment from the same transcript into a newsletter feature with further-reading links."
+    ]
+  },
+  {
+    "slug": "seo-brief",
+    "useCasesZh": [
+      "针对「Mac 外接显示器设置」这个关键词生成包含主标题和 3 个候选 H2 的写作简报。",
+      "分析目标词搜索结果，给出该写哪类内容（攻略/评测/对比）的判断。",
+      "在简报里标注 5 个需要自然嵌入的关键词与对应的段落位置。",
+      "为旧文章生成补写简报，指出缺哪些 H2 和内链机会。"
+    ],
+    "useCasesEn": [
+      "Generate a brief with a main title and 3 candidate H2s for the keyword \"Mac external monitor setup\".",
+      "Analyze search results for a target keyword and recommend the content type to write (guide/review/comparison).",
+      "Mark 5 keywords to weave in naturally and the paragraphs where each belongs.",
+      "Produce a refresh brief for an old article, calling out missing H2s and internal-link opportunities."
+    ]
+  },
+  {
+    "slug": "blog-outline",
+    "useCasesZh": [
+      "给「如何用 Notion 做年度复盘」搭出 6 节大纲，每节带一个钩子问题。",
+      "把零散素材按「问题-案例-方法-清单」整理成结构化大纲。",
+      "为大纲每一节预估字数，控制整篇博客在 2000 字以内。",
+      "针对同一主题输出面向新手和资深读者的两版大纲。"
+    ],
+    "useCasesEn": [
+      "Build a 6-section outline for \"how to do an annual review in Notion\", each with a hook question.",
+      "Organize scattered notes into a problem-case-method-checklist outline.",
+      "Estimate word count per section to keep the whole post under 2,000 words.",
+      "Produce two outlines for the same topic, one for beginners and one for advanced readers."
+    ]
+  },
+  {
+    "slug": "hook-generator",
+    "useCasesZh": [
+      "为「每天 5 点起床一年后的变化」给出 6 个开头：悬念、反常识、痛点、数据、故事、提问。",
+      "把一段平淡的开头改写成「前三秒抓住人」的版本。",
+      "按不同平台长度要求各生成一版钩子：标题、首句、前 15 秒口播。",
+      "对比两版钩子，给出哪个更符合目标读者注意力的判断理由。"
+    ],
+    "useCasesEn": [
+      "Generate 6 openings for \"what happened after waking at 5am for a year\": suspense, counterintuitive, pain-point, data, story, and question.",
+      "Rewrite a flat opening into a version that hooks readers in the first three seconds.",
+      "Produce hooks per platform length: a title, a first line, and a 15-second spoken opener.",
+      "Compare two hooks and justify which better matches the target reader's attention."
+    ]
+  },
+  {
+    "slug": "copywriting-pas",
+    "useCasesZh": [
+      "用 P.A.S. 框架为「企业级密码管理器」写落地页首屏文案，P 写痛点、A 写代价、S 写方案。",
+      "把一段功能罗列改写成激化-解决方案的销售信。",
+      "为同一产品写两版 P.A.S.：面向安全焦虑型和效率焦虑型客户。",
+      "在方案段给出具体数据与行动号召，引导点击试用。"
+    ],
+    "useCasesEn": [
+      "Write a landing-page hero with the P.A.S. framework for an enterprise password manager: Problem, Agitate, Solve.",
+      "Rewrite a feature list into a sales letter that agitates then solves.",
+      "Write two P.A.S. versions for the same product: one for security-anxious buyers, one for efficiency-anxious buyers.",
+      "Add concrete data and a CTA in the solve section to drive trial sign-ups."
+    ]
+  },
+  {
+    "slug": "ad-copy-gen",
+    "useCasesZh": [
+      "面向「独立开发者的 PDF 工具」生成 10 条 Facebook 广告变体，含主标题、副标题和 CTA。",
+      "把同一卖点改写为搜索广告（紧凑版）和展示广告（图文版）两套文案。",
+      "为每条变体标注人群痛点角度，方便按受众分组投放。",
+      "按「限时折扣」事件生成紧急感文案，附带最低库存提示的 CTA。"
+    ],
+    "useCasesEn": [
+      "Generate 10 Facebook ad variants for a PDF tool for indie devs, each with headline, subhead, and CTA.",
+      "Adapt one selling point into a tight search-ad version and an image-driven display-ad version.",
+      "Label each variant with the audience pain point so ads can be split by segment.",
+      "Produce urgency copy for a limited-time discount, with a low-stock CTA."
+    ]
+  },
+  {
+    "slug": "email-sequence",
+    "useCasesZh": [
+      "为 SaaS 免费试用设计 5 封欢迎序列：欢迎、上手、价值、案例、转化，间隔 1-2 天。",
+      "给弃单用户写 3 封挽回邮件，节奏由弱到强，避免骚扰感。",
+      "为 newsletter 设计 4 封培育序列，逐步建立信任再推产品。",
+      "每封邮件给出主题行候选与单一行动号召，控制转化路径。"
+    ],
+    "useCasesEn": [
+      "Design a 5-email welcome sequence for a SaaS free trial: welcome, onboarding, value, case study, conversion, spaced 1-2 days apart.",
+      "Write a 3-email win-back flow for abandoned carts that escalates gently without feeling spammy.",
+      "Design a 4-email nurture sequence for a newsletter that builds trust before pitching.",
+      "Give subject-line candidates and a single CTA per email to keep the conversion path clean."
+    ]
+  },
+  {
+    "slug": "podcast-notes",
+    "useCasesZh": [
+      "把一期 45 分钟访谈转写稿提炼成 5 个核心要点，每点配一句话概括。",
+      "生成带时间戳的分段大纲，方便听众直接跳转到感兴趣的话题。",
+      "提取嘉宾提到的书名、工具等资源清单，作为 show notes 附录。",
+      "把节目笔记改写成适合发布到小红书的图文文案。"
+    ],
+    "useCasesEn": [
+      "Distill a 45-minute interview transcript into 5 key takeaways, each with a one-line summary.",
+      "Produce a segment outline with timestamps so listeners can jump to topics of interest.",
+      "Extract a resource list (books, tools) the guest mentioned as a show-notes appendix.",
+      "Adapt the show notes into an image-and-caption post for Xiaohongshu."
+    ]
+  },
+  {
+    "slug": "youtube-script",
+    "useCasesZh": [
+      "为「10 分钟学会 Figma 基础」写 500 字开场钩子 + 分段口播脚本。",
+      "按每分钟约 150-160 字控制脚本长度，标注各段预计时长。",
+      "在每段结尾埋承上启下的衔接句，保持观看节奏不塌。",
+      "结尾设计 30 秒 CTA：点赞、评论互动问题、订阅理由。"
+    ],
+    "useCasesEn": [
+      "Write a 500-word opening hook plus segmented voiceover script for \"Learn Figma basics in 10 minutes\".",
+      "Control script length at ~150-160 words per minute and mark each segment's estimated runtime.",
+      "End each segment with a transitional line that keeps the viewing pace alive.",
+      "Design a 30-second CTA outro: like, a comment prompt, and a reason to subscribe."
+    ]
+  },
+  {
+    "slug": "social-caption",
+    "useCasesZh": [
+      "把一篇「时间管理」博客改写成小红书图文笔记，含封面标题和 3 组话题标签。",
+      "同一主题生成抖音口播文案与评论区置顶互动提问。",
+      "改写为微博短句版，控制 140 字内并带转评引导。",
+      "为每个平台标注合适的发布时段和话题词。"
+    ],
+    "useCasesEn": [
+      "Turn a \"time management\" blog post into a Xiaohongshu visual note with a cover title and 3 hashtag groups.",
+      "Generate a Douyin voiceover script and a pinned comment question for the same topic.",
+      "Rewrite it as a Weibo short version under 140 characters with share-and-comment prompts.",
+      "Note a recommended posting time and hashtags per platform."
+    ]
+  },
+  {
+    "slug": "brand-voice",
+    "useCasesZh": [
+      "根据品牌定位（专业但不冷、幽默但有边界）生成一份语气规范文档。",
+      "给出「这样说 / 不要这样说」对照表，含 10 组改写示例。",
+      "让品牌全平台文案按同一语气规范重写，保持一致口吻。",
+      "新增产品时用语气规范生成对齐的发布文案。"
+    ],
+    "useCasesEn": [
+      "Turn a brand positioning (expert but warm, witty but bounded) into a tone-of-voice guideline document.",
+      "Produce a do/don't comparison table with 10 rewrite examples.",
+      "Rewrite copy across platforms against the same guideline for a consistent voice.",
+      "Generate an aligned launch post for a new product using the tone guideline."
+    ]
+  },
+  {
+    "slug": "script-dialogue",
+    "useCasesZh": [
+      "为 60 秒短视频写 3 场分场对白，每场带动作和情绪提示。",
+      "给一段独白添加对手戏，突出人物冲突与性格反差。",
+      "为动画角色写符合人设的台词，标注语气与停顿。",
+      "把对白脚本整理成含景别建议的分镜表。"
+    ],
+    "useCasesEn": [
+      "Write 3 scenes of dialogue for a 60-second short video, each with action and emotion cues.",
+      "Turn a monologue into a two-person scene that highlights conflict and personality contrast.",
+      "Write on-character lines for an animated cast, marking tone and beats.",
+      "Format the dialogue script into a storyboard table with shot-size suggestions."
+    ]
+  },
+  {
+    "slug": "landing-page-gen",
+    "useCasesZh": [
+      "新产品上线要一夜搭出转化落地页",
+      "从一句产品卖点展开为 Hero/卖点/证据/FAQ/CTA 结构",
+      "让标题与按钮文案按 AIDA 顺序组织",
+      "给已有落地页补足证据与 FAQ 板块"
+    ],
+    "useCasesEn": [
+      "Ship a conversion landing page overnight for a new product",
+      "Expand one product bullet into Hero/benefits/proof/FAQ/CTA sections",
+      "Order headline and button copy along AIDA",
+      "Add missing proof and FAQ sections to an existing page"
+    ]
+  },
+  {
+    "slug": "wireframe-skill",
+    "useCasesZh": [
+      "做页面骨架先别想配色，先确认信息层级",
+      "用语义化占位（标题/正文/媒体/按钮）快速对齐需求",
+      "评审阶段先看结构而非视觉细节",
+      "为复杂页面梳理信息架构再进入高保真"
+    ],
+    "useCasesEn": [
+      "Define information hierarchy before thinking about color",
+      "Align on requirements fast with semantic placeholders (headings/body/media/buttons)",
+      "Review structure first, visual details later",
+      "Lock the IA of a complex page before moving to high fidelity"
+    ]
+  },
+  {
+    "slug": "icon-design",
+    "useCasesZh": [
+      "给应用统一画一整套 SVG 图标",
+      "让图标线宽/圆角与整体 UI 保持一致",
+      "快速补齐功能入口的配套图标",
+      "按统一网格重画风格混杂的旧图标"
+    ],
+    "useCasesEn": [
+      "Draw a unified SVG icon set for an app",
+      "Keep stroke weight and corner radius consistent with the rest of the UI",
+      "Quickly supply icons for new feature entry points",
+      "Redraw a mixed-style legacy set on one shared grid"
+    ]
+  },
+  {
+    "slug": "typography-skill",
+    "useCasesZh": [
+      "定一套全站字号/行高/字重的排版阶梯",
+      "中英文混排时各自给出行高与负字距",
+      "为大标题配负字距提升高级感",
+      "检查正文行宽与行高是否利于阅读"
+    ],
+    "useCasesEn": [
+      "Define a site-wide type scale for font-size, line-height and weight",
+      "Provide separate line-height and tracking for mixed CJK/Latin text",
+      "Apply negative tracking to display headlines for a polished feel",
+      "Check body measure and line-height for readability"
+    ]
+  },
+  {
+    "slug": "color-palette",
+    "useCasesZh": [
+      "从品牌主色推导一套完整配色",
+      "补齐成功/警告/错误等语义色",
+      "生成浅色与暗色两套主题变量",
+      "校验文字与背景的 WCAG 对比度"
+    ],
+    "useCasesEn": [
+      "Derive a full palette from a single brand color",
+      "Fill in status colors for success, warning and error",
+      "Generate both light and dark theme variables",
+      "Validate text-vs-background contrast against WCAG"
+    ]
+  },
+  {
+    "slug": "ui-components-lib",
+    "useCasesZh": [
+      "梳理按钮/表单等组件缺了哪些状态",
+      "统一定义组件尺寸（sm/md/lg）与间距",
+      "把重复出现的样式收敛为设计 tokens",
+      "让多页面组件保持一致的使用规范"
+    ],
+    "useCasesEn": [
+      "Enumerate missing states for buttons and form controls",
+      "Standardize component sizes (sm/md/lg) and spacing",
+      "Consolidate repeated styles into design tokens",
+      "Keep components consistent across pages"
+    ]
+  },
+  {
+    "slug": "micro-interactions",
+    "useCasesZh": [
+      "给按钮 hover 加轻量反馈但不抢戏",
+      "为卡片与浮层定统一的过渡时长与缓动",
+      "区分触感动效（120ms）与层动效（240ms）",
+      "为减少动态偏好的用户关闭动效"
+    ],
+    "useCasesEn": [
+      "Add lightweight hover feedback to buttons without stealing focus",
+      "Set consistent duration and easing for cards and overlays",
+      "Separate tactile (120ms) from layer (240ms) motion",
+      "Respect reduced-motion preferences and disable animation"
+    ]
+  },
+  {
+    "slug": "a11y-audit",
+    "useCasesZh": [
+      "发布前检查对比度与焦点可见性",
+      "找出缺失的 aria/alt 语义标签",
+      "验证是否可纯键盘走完流程",
+      "按严重度输出并修复 WCAG 问题清单"
+    ],
+    "useCasesEn": [
+      "Check contrast and focus visibility before release",
+      "Find missing aria/alt semantic labels",
+      "Verify the full flow is keyboard-operable",
+      "Produce and fix a severity-ranked WCAG issue list"
+    ]
+  },
+  {
+    "slug": "dark-mode-design",
+    "useCasesZh": [
+      "把浅色主题改成不刺眼的暗色主题",
+      "用降饱和表面代替纯黑背景",
+      "避免大面积纯白文字并重新校对比度",
+      "保持品牌色在暗色下的可读性"
+    ],
+    "useCasesEn": [
+      "Convert a light theme into an eye-friendly dark theme",
+      "Replace pure black backgrounds with desaturated surfaces",
+      "Avoid large blocks of pure white text and re-check contrast",
+      "Keep brand colors readable on dark surfaces"
+    ]
+  },
+  {
+    "slug": "mobile-ui",
+    "useCasesZh": [
+      "把桌面导航重排成手机端的抽屉/底部栏",
+      "确保点击目标不小于 44px",
+      "按拇指热区重新排布主要操作",
+      "针对窄屏优化表单与弹层可用性"
+    ],
+    "useCasesEn": [
+      "Rework desktop nav into mobile drawers and bottom bars",
+      "Ensure touch targets are at least 44px",
+      "Rearrange primary actions into thumb-friendly zones",
+      "Tune forms and overlays for narrow-screen usability"
+    ]
+  },
+  {
+    "slug": "design-critique",
+    "useCasesZh": [
+      "给界面做上线前的自检评审",
+      "按层级/间距/一致性/可用性逐项过清单",
+      "把泛泛评价拆成可执行的修改点",
+      "评审并打磨间距节奏与细节像素"
+    ],
+    "useCasesEn": [
+      "Self-review an interface before shipping",
+      "Run a checklist over hierarchy, spacing, consistency and usability",
+      "Turn vague feedback into concrete, actionable changes",
+      "Polish spacing rhythm and pixel details"
+    ]
+  },
+  {
+    "slug": "glassmorphism",
+    "useCasesZh": [
+      "给导航栏/浮层/侧栏做毛玻璃效果",
+      "只在层叠处使用玻璃，避免全局糊成一片",
+      "用高饱和背景图让模糊更有层次",
+      "保证玻璃上的前景文字对比度足够"
+    ],
+    "useCasesEn": [
+      "Apply frosted glass to nav bars, overlays and sidebars",
+      "Use glass only where layers overlap, not across the whole page",
+      "Add a saturated backdrop so the blur reads as depth",
+      "Keep foreground text on glass high-contrast"
+    ]
   }
 ]

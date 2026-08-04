@@ -1,0 +1,78 @@
+{
+  "slug": "plan-ah-marketing-copy",
+  "title": "Plan AH: AI Marketing Copy Matrix",
+  "summary": "Selling points → core copy → multi-channel variants → compliance check → A/B test",
+  "scenario": "For brands and operators rolling out one product across multiple channels — build once, reuse everywhere.",
+  "meta": {
+    "duration": "2-4 hours / product",
+    "cost": "Medium",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chat.openai.com" },
+    { "name": "Copy.ai", "url": "https://www.copy.ai" },
+    { "name": "Jasper", "url": "https://www.jasper.ai" },
+    { "name": "Writesonic", "url": "https://writesonic.com" },
+    { "name": "Grammarly", "url": "https://www.grammarly.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Distill selling points",
+      "tool": "ChatGPT",
+      "time": "20-30 min",
+      "detail": "Use a 'pain → solution → proof' template to extract 3-5 core selling points, each backed by one piece of evidence. Have the model play the target user and ask 'so what?' five times to force out real value.",
+      "tips": "Phrase benefits as 'what the user gains' not 'what the product has'."
+    },
+    {
+      "id": "s2",
+      "title": "Core copy",
+      "tool": "ChatGPT / Copy.ai",
+      "time": "30-40 min",
+      "detail": "Write master copy for each selling point — headline, subhead, body and CTA — in one consistent voice. This is the master version every channel variant derives from.",
+      "tips": "Draft three headlines (rational / emotional / urgent) and have peers or AI score them."
+    },
+    {
+      "id": "s3",
+      "title": "Multi-channel variants",
+      "tool": "Copy.ai / Jasper / Writesonic",
+      "time": "1 hour",
+      "detail": "Derive variants from the master: short social posts, email subject lines, ad hooks, product page paragraphs — mind each platform's character limits. Use each tool's built-in channel templates and swap in platform hot keywords.",
+      "tips": "Give each platform one exclusive hook (e.g. topic hashtags for Xiaohongshu)."
+    },
+    {
+      "id": "s4",
+      "title": "Compliance check",
+      "tool": "Grammarly + you",
+      "time": "20 min",
+      "detail": "Flag superlatives (best, first, cures), unproven claims and platform-banned words; health and finance content is especially strict. Have the model list potential compliance risks, then review by hand.",
+      "tips": "Feed the model a banned-words list and ask it to tag every occurrence."
+    },
+    {
+      "id": "s5",
+      "title": "A/B testing",
+      "tool": "Ad platform + ChatGPT",
+      "time": "30 min / round",
+      "detail": "Run 2-4 variants on the same budget, changing exactly one variable (headline or CTA). After enough samples, have the model analyze what worked and why, then iterate.",
+      "tips": "Test one variable per round — change two and you'll never know which one won."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Selling features, not benefits",
+      "detail": "'Added X' loses to 'saves you Y'; lead with user outcomes."
+    },
+    {
+      "title": "Copy-pasting across channels",
+      "detail": "Context and length differ; verbatim reuse tanks conversion — always adapt."
+    },
+    {
+      "title": "Skipping compliance",
+      "detail": "Superlatives and overclaims get copy pulled or fined; be extra careful in health and finance."
+    },
+    {
+      "title": "Testing without control",
+      "detail": "A/B tests with multiple changes can't be attributed; one variable at a time."
+    }
+  ]
+}

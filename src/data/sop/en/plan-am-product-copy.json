@@ -1,0 +1,78 @@
+{
+  "slug": "plan-am-product-copy",
+  "title": "Plan AM: AI E-commerce Product Copy",
+  "summary": "Product points → page structure → copy generation → visuals → conversion tuning",
+  "scenario": "For e-commerce operators and merchants writing high-converting product page copy and benefit graphics.",
+  "meta": {
+    "duration": "2-4 hours / product",
+    "cost": "Medium",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chat.openai.com" },
+    { "name": "Copy.ai", "url": "https://www.copy.ai" },
+    { "name": "Canva Magic Studio", "url": "https://www.canva.com" },
+    { "name": "Midjourney", "url": "https://www.midjourney.com" },
+    { "name": "Google Gemini", "url": "https://gemini.google.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Product selling points",
+      "tool": "ChatGPT / Google Gemini",
+      "time": "20-30 min",
+      "detail": "Gather specs, materials, certifications and use cases, then distill 3-5 core selling points and differentiators. Have the model compare competitor copy to find what only you can claim.",
+      "tips": "Write points as 'pain → solution → proof' and give each screen of the page one point to own."
+    },
+    {
+      "id": "s2",
+      "title": "Page structure",
+      "tool": "ChatGPT",
+      "time": "30 min",
+      "detail": "Build the page skeleton: hook above the fold → pain scenarios → selling points → technical details → brand trust → after-sales. Turn the skeleton into a per-screen copy checklist.",
+      "tips": "The first screen must say what problem it solves within three seconds — dwell time lives or dies there."
+    },
+    {
+      "id": "s3",
+      "title": "Copy generation",
+      "tool": "Copy.ai / ChatGPT",
+      "time": "40-60 min",
+      "detail": "Generate screen by screen — headline, subhead, selling-point copy, spec tables and FAQ. Watch platform-banned words and superlatives; dietary supplements need extra care.",
+      "tips": "Write benefit-first headlines, e.g. 'heats in 3 seconds, no more cold-water washing'."
+    },
+    {
+      "id": "s4",
+      "title": "Visuals",
+      "tool": "Midjourney / Canva Magic Studio",
+      "time": "40-60 min",
+      "detail": "Use real product shots or 3D renders for main images; generate lifestyle scenes in Midjourney and lay out typography in Canva. Make sure images and copy tell the same story.",
+      "tips": "Keep benefit graphics image-heavy with little text, one point per screen, easy to read on mobile."
+    },
+    {
+      "id": "s5",
+      "title": "Conversion tuning",
+      "tool": "ChatGPT + platform data",
+      "time": "30 min / round",
+      "detail": "After launch, watch dwell time, add-to-cart rate and refund reasons; have the model diagnose copy issues and propose A/B variants. Change one screen at a time and validate before rolling out.",
+      "tips": "Optimize the first screen and benefit graphics first — they move conversion the most."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Writing a spec sheet, not a page",
+      "detail": "Nobody reads parameter lists; reorder and rephrase around user benefits."
+    },
+    {
+      "title": "Overclaiming",
+      "detail": "Superlatives and efficacy claims get listings pulled and penalized; back every point with real evidence."
+    },
+    {
+      "title": "Copy/visual mismatch",
+      "detail": "Copy says A, image shows B — buyers feel tricked; align both."
+    },
+    {
+      "title": "Shipping without testing",
+      "detail": "Conversion is decided by data; keep A/B testing after launch instead of finalizing on gut feel."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "slug": "plan-ai-novel",
+  "title": "方案 AI：AI 小说创作",
+  "summary": "设定 → 大纲 → 章节生成 → 人物一致性 → 润色校对",
+  "scenario": "适合写长篇网文或小说的作者，用 AI 提效的同时保住自己的风格与版权。",
+  "meta": {
+    "duration": "3-6 小时 / 万字",
+    "cost": "中",
+    "difficulty": "进阶"
+  },
+  "toolsNeeded": [
+    { "name": "Claude", "url": "https://claude.ai" },
+    { "name": "ChatGPT", "url": "https://chat.openai.com" },
+    { "name": "Sudowrite", "url": "https://www.sudowrite.com" },
+    { "name": "Kimi", "url": "https://kimi.moonshot.cn" },
+    { "name": "DeepSeek", "url": "https://chat.deepseek.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "设定",
+      "tool": "Claude / ChatGPT",
+      "time": "30-40 分钟",
+      "detail": "建立世界观、力量体系、地图、角色档案与核心冲突，形成一份「圣经」文档。让模型反向追问设定漏洞，补齐前后逻辑。",
+      "tips": "把设定写进独立文件，之后每章生成都带上，全书才不会走样。"
+    },
+    {
+      "id": "s2",
+      "title": "大纲",
+      "tool": "ChatGPT / Claude",
+      "time": "40-60 分钟",
+      "detail": "从三幕/起承转合铺出全书大纲，再拆到卷、章，每章给「事件 + 视角 + 钩子」。标记高潮章与伏笔回收章。",
+      "tips": "每章钩子先写出来，卡文时照着大纲推进即可。"
+    },
+    {
+      "id": "s3",
+      "title": "章节生成",
+      "tool": "Sudowrite / Claude / DeepSeek",
+      "time": "1-2 小时 / 章",
+      "detail": "每章用「大纲 + 设定摘要 + 最近一章摘要」作上下文生成初稿，再人工改写。节奏部分让 AI 写初稿，关键对话与情绪爆发点你亲自写。",
+      "tips": "给模型 3-5 个范例段落确立文风，比口头描述风格有效。"
+    },
+    {
+      "id": "s4",
+      "title": "人物一致性",
+      "tool": "Claude / Kimi",
+      "time": "30 分钟 / 周",
+      "detail": "维护人物档案（性格、口头禅、关系、当前目标），每章生成前更新。用模型做「人设一致性审查」，标出崩人设的台词与行为。",
+      "tips": "把档案写成结构化 JSON，批量喂给模型效率最高。"
+    },
+    {
+      "id": "s5",
+      "title": "润色校对",
+      "tool": "Sudowrite / ChatGPT / Kimi",
+      "time": "40-60 分钟 / 卷",
+      "detail": "通读后让模型做三遍审校：逻辑漏洞、风格统一、错别字病句。用 Sudowrite 的改写功能重写弱段落，同时保留你的笔触。",
+      "tips": "润色后自己再通读一遍，AI 会把你的「味道」磨平。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "全书跑偏设定",
+      "detail": "不带设定直接生成，剧情会前后矛盾；每章都带设定摘要。"
+    },
+    {
+      "title": "人物集体失忆",
+      "detail": "角色会忘了上章动机；维护人物档案并每次更新。"
+    },
+    {
+      "title": "文风同质化",
+      "detail": "AI 写多易千篇一律；关键段落自己写，AI 只打草稿。"
+    },
+    {
+      "title": "版权归属不清",
+      "detail": "纯 AI 生成内容在部分平台有限制，确认平台规则与商业授权。"
+    }
+  ]
+}

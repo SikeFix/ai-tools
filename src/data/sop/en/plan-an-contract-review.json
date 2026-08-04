@@ -1,0 +1,78 @@
+{
+  "slug": "plan-an-contract-review",
+  "title": "Plan AN: AI Contract Review",
+  "summary": "Structure contract → flag risky clauses → suggest edits → negotiation points → archive",
+  "scenario": "Best for freelancers, founders and small teams doing a self-review before signing; the AI organizes and flags, it never replaces a lawyer.",
+  "meta": {
+    "duration": "2-4 hours / contract",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Claude", "url": "https://claude.ai" },
+    { "name": "Kimi", "url": "https://kimi.moonshot.cn" },
+    { "name": "DeepSeek", "url": "https://chat.deepseek.com" },
+    { "name": "Notion", "url": "https://notion.so" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Structure the contract",
+      "tool": "Claude / Kimi",
+      "time": "20-30 min",
+      "detail": "Upload the contract PDF or Word to an LLM and have it break the document into dimensions — parties, subject matter, amounts & payment, term, breach, IP, confidentiality, dispute resolution — and return a summary plus a clause index. Get the full picture before reviewing line by line.",
+      "tips": "Ask for original clause numbers on every item so you can cross-check the source text."
+    },
+    {
+      "id": "s2",
+      "title": "Flag risky clauses",
+      "tool": "Claude / ChatGPT",
+      "time": "30-60 min",
+      "detail": "Have the model rate each clause high/medium/low risk with reasons, hunting for the usual traps: harsh payment terms, excessive penalties, unlimited joint liability, unilateral termination, unfavorable governing law, or vague IP ownership.",
+      "tips": "Ask for a table — 'clause # | excerpt | risk level | why' — so you can scan the high-risk rows in seconds."
+    },
+    {
+      "id": "s3",
+      "title": "Suggest edits",
+      "tool": "ChatGPT / DeepSeek",
+      "time": "30-60 min",
+      "detail": "For high-risk clauses, have the model propose alternative language: how to rephrase, what to delete, what protective clause to add, and why it favors you. Confirm each change before it lands in the text.",
+      "tips": "Ask which proposed change the other side is most likely to accept, and prioritize those in negotiation."
+    },
+    {
+      "id": "s4",
+      "title": "Negotiation points",
+      "tool": "Claude / Kimi",
+      "time": "20-40 min",
+      "detail": "Consolidate confirmed edits into a negotiation brief: must-haves (bottom lines), tradeables (leverage), and one-line talking points for each. Prep before the client meeting or video call.",
+      "tips": "Have the model turn each ask into a one-liner — 'we need X because Y' — ready to say out loud."
+    },
+    {
+      "id": "s5",
+      "title": "Archive",
+      "tool": "Notion",
+      "time": "10-20 min",
+      "detail": "Store the original, the AI review report, the revised version and the negotiation brief in a Notion contract library, tagged by project and year, with signing status and effective date, so renewals and disputes are easy to research later.",
+      "tips": "Version your filenames, e.g. 20260801-cooperation-agreement-v2 — never overwrite the old copy."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Treating the AI as your lawyer",
+      "detail": "AI only organizes and flags common risks — it doesn't know your situation and carries no professional liability; for large or complex deals, still have a licensed lawyer review."
+    },
+    {
+      "title": "Uploading confidential contracts as-is",
+      "detail": "Contracts contain sensitive terms; redact company names, amounts and personal data before uploading, or use a privacy-focused product."
+    },
+    {
+      "title": "Reviewing clauses in isolation",
+      "detail": "Real risk lives in how clauses interact — penalties, termination and governing law usually work together; ask the model for an overall risk-thread check."
+    },
+    {
+      "title": "Signing without a full re-read",
+      "detail": "AI edits can introduce new problems; after applying changes, read the final version end to end before you sign."
+    }
+  ]
+}

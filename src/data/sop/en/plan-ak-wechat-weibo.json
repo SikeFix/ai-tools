@@ -1,0 +1,78 @@
+{
+  "slug": "plan-ak-wechat-weibo",
+  "title": "Plan AK: AI WeChat & Weibo Content",
+  "summary": "Topic → long / short posts → images → multi-platform adaptation → engagement review",
+  "scenario": "For individuals or teams running both a WeChat Official Account and Weibo — one theme, two placements.",
+  "meta": {
+    "duration": "2-4 hours / topic",
+    "cost": "Medium",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chat.openai.com" },
+    { "name": "Kimi", "url": "https://kimi.moonshot.cn" },
+    { "name": "DeepSeek", "url": "https://chat.deepseek.com" },
+    { "name": "Canva Magic Studio", "url": "https://www.canva.com" },
+    { "name": "Midjourney", "url": "https://www.midjourney.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Topic selection",
+      "tool": "ChatGPT / Kimi",
+      "time": "20-30 min",
+      "detail": "Combine trends, account positioning and reader questions into a topic list, scored by 'what pain does the audience feel and why care'. Deep topics for WeChat, light topics for Weibo.",
+      "tips": "Bank ten topics at once so publishing never stalls; refresh with new trends weekly."
+    },
+    {
+      "id": "s2",
+      "title": "Long / short posts",
+      "tool": "Kimi / DeepSeek",
+      "time": "1-2 hours",
+      "detail": "WeChat long-form follows 'hook → argument → examples → conclusion'; build the skeleton before filling prose. Distill quotes and angles from the long-form for Weibo, keeping posts under ~140 characters.",
+      "tips": "Let the model draft to ~70% for long-form; add your own views and cases to avoid the AI flavor."
+    },
+    {
+      "id": "s3",
+      "title": "Images",
+      "tool": "Canva Magic Studio / Midjourney",
+      "time": "30 min",
+      "detail": "Build the WeChat cover with a Canva template and generate in-body art with Midjourney on demand. Keep the cover style consistent so the column is recognizable.",
+      "tips": "Lock one cover layout (title + colors + graphic) so readers spot your account instantly."
+    },
+    {
+      "id": "s4",
+      "title": "Multi-platform adaptation",
+      "tool": "ChatGPT + you",
+      "time": "30 min",
+      "detail": "Publish long-form on WeChat and split into 2-3 short Weibo posts with hashtags — different framing and pacing per platform. Check layout, links and mentions on both.",
+      "tips": "Lead Weibo with the conclusion and put the fuller story in replies — it lifts shares and comments."
+    },
+    {
+      "id": "s5",
+      "title": "Engagement review",
+      "tool": "ChatGPT",
+      "time": "20-30 min",
+      "detail": "After posting, collect reads, shares, comments and saves; have the model compare which topics and styles performed. Save winning patterns as templates for reuse.",
+      "tips": "Review weekly and track just three metrics: open rate, completion rate, and shares/comments."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Posting the same text everywhere",
+      "detail": "A WeChat long-form dumped on Weibo gets ignored; rewrite for each platform's context."
+    },
+    {
+      "title": "Ignoring comments",
+      "detail": "Comments are your best topic mine; reserve 30 minutes after posting to reply."
+    },
+    {
+      "title": "Cover that lies",
+      "detail": "Clickbait covers burn trust once; make the cover deliver what it promises."
+    },
+    {
+      "title": "Not banking methodology",
+      "detail": "Starting from scratch every issue means no compounding; turn reviews into a template library."
+    }
+  ]
+}

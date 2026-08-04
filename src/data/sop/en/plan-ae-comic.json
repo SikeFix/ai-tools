@@ -1,0 +1,86 @@
+{
+  "slug": "plan-ae-comic",
+  "title": "Plan AE: AI Comic & Webtoon",
+  "summary": "Script → panels → image generation → character consistency → dialogue bubbles → publish",
+  "scenario": "For creators building a serialized comic or webtoon, from script to publishable art.",
+  "meta": {
+    "duration": "4-8 hours / episode",
+    "cost": "Medium",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chat.openai.com" },
+    { "name": "Midjourney", "url": "https://www.midjourney.com" },
+    { "name": "Flux", "url": "https://blackforestlabs.ai" },
+    { "name": "Leonardo AI", "url": "https://leonardo.ai" },
+    { "name": "Canva Magic Studio", "url": "https://www.canva.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Script",
+      "tool": "ChatGPT",
+      "time": "30-40 min",
+      "detail": "Write the episode script with beats for setup, development and resolution, and what each panel must communicate. Webtoons pace for vertical mobile screens — one information beat per screen.",
+      "tips": "Lock the cliffhanger ending of each episode before writing, or serialization loses readers."
+    },
+    {
+      "id": "s2",
+      "title": "Panel breakdown & storyboard",
+      "tool": "ChatGPT + you",
+      "time": "30 min",
+      "detail": "Turn the script into a shot list: panel count, shot size (close-up/wide), camera angle, expression and dialogue. Vertical webtoons usually run 8-15 panels; comic pages hold 4-6 panels.",
+      "tips": "One idea per panel — overloading a panel is the classic beginner mistake."
+    },
+    {
+      "id": "s3",
+      "title": "Image generation",
+      "tool": "Flux / Midjourney / Leonardo AI",
+      "time": "1-2 hours",
+      "detail": "Generate panels in batch with a consistent style prompt (same series and keywords). Leonardo's Flux models and character references work well for turning comic line art into color.",
+      "tips": "Keep one style template and change only scene, action and camera per panel."
+    },
+    {
+      "id": "s4",
+      "title": "Character consistency",
+      "tool": "Midjourney + Leonardo AI",
+      "time": "1-2 hours",
+      "detail": "Build a character reference sheet (front/side/full body/expressions) and use --cref or image-to-image feedback so characters don't warp across panels. Make 4-6 reference images for key characters and hand-pick the most faithful result per panel.",
+      "tips": "Test the consistency flow with one protagonist over three panels before rolling out a whole episode."
+    },
+    {
+      "id": "s5",
+      "title": "Dialogue bubbles",
+      "tool": "Canva Magic Studio",
+      "time": "30-60 min",
+      "detail": "Overlay bubbles, position dialogue, font size and balloon placement so reading order stays clear. Keep webtoon dialogue light — no more than two lines per screen.",
+      "tips": "Keep the balloon style uniform; read the dialogue aloud and cut anything clunky."
+    },
+    {
+      "id": "s6",
+      "title": "Publish",
+      "tool": "Publishing platform + Canva",
+      "time": "30 min",
+      "detail": "Export long images or pages sized for the platform (webtoons commonly 1080×1920 slices), add a cover and a first-episode teaser. Update the series and mine reader comments for the next episode.",
+      "tips": "Bank three episodes before announcing a schedule so you never miss an update."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Characters warping per panel",
+      "detail": "Consistency is the hardest part of comics; use reference sheets plus human picking, don't expect one-shot perfection."
+    },
+    {
+      "title": "Overloaded panels",
+      "detail": "Cramming too much into one panel confuses readers; one idea per panel, control pacing with panel count."
+    },
+    {
+      "title": "Bloated dialogue",
+      "detail": "AI loves verbose lines; keep dialogue under ~20 characters and skip anything the art already shows."
+    },
+    {
+      "title": "Style drift",
+      "detail": "Include the style keywords in every prompt and reinforce with image-to-image feedback."
+    }
+  ]
+}

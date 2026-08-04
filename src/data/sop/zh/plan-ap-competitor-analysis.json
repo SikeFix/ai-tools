@@ -1,0 +1,78 @@
+{
+  "slug": "plan-ap-competitor-analysis",
+  "title": "方案 AP：AI 竞品分析",
+  "summary": "竞品追踪 → 功能拆解 → 价格对比 → 差异化报告 → 行动项",
+  "scenario": "适合创业与产品团队在新品立项、季度规划前做竞品调研，快速摸清对手的打法。",
+  "meta": {
+    "duration": "4-8 小时",
+    "cost": "低",
+    "difficulty": "进阶"
+  },
+  "toolsNeeded": [
+    { "name": "Perplexity", "url": "https://perplexity.ai" },
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Notion", "url": "https://notion.so" },
+    { "name": "RAGFlow", "url": "https://ragflow.io" },
+    { "name": "Google Gemini", "url": "https://gemini.google.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "竞品追踪",
+      "tool": "Perplexity / Google Gemini",
+      "time": "30-60 分钟",
+      "detail": "确定竞品清单与追踪维度（功能、价格、更新节奏、营销动作）。用 Perplexity 检索对手近期发布与媒体报道，用 Google AI Overviews 补行业动态，按周记录到 Notion 表里。",
+      "tips": "按「直接竞品 / 间接竞品 / 潜在替代品」三档建表，别把替代品漏掉。"
+    },
+    {
+      "id": "s2",
+      "title": "功能拆解",
+      "tool": "ChatGPT / Google Gemini",
+      "time": "1-2 小时",
+      "detail": "逐个竞品做功能拆解：核心功能、独有功能、缺失功能，附上手体验结论。把官网介绍、帮助文档、评测文章喂给模型，让它按模块产出对比矩阵。",
+      "tips": "让模型按「对方用户必须用的 5 个核心流程」拆解，比按菜单栏拆更能看出真实体验。"
+    },
+    {
+      "id": "s3",
+      "title": "价格对比",
+      "tool": "ChatGPT / Perplexity",
+      "time": "30-60 分钟",
+      "detail": "整理各竞品的定价页：免费额度、各档价格、计费方式、隐藏收费项（超量、人数、导出）。让模型按「同样预算能买到什么」做换算对比。",
+      "tips": "让模型算「每月 50 美元分别在各家能用多少人、多少量」，比价才有意义。"
+    },
+    {
+      "id": "s4",
+      "title": "差异化报告",
+      "tool": "Claude / ChatGPT",
+      "time": "1 小时",
+      "detail": "把功能与价格结论汇成一份差异化报告：市场空白、对手弱点、我们的可乘之机与抄袭风险。用 RAGFlow 建个小知识库把报告与原始证据关联，结论可追溯。",
+      "tips": "给每条「机会点」标注证据来源，避免把模型推断当成事实。"
+    },
+    {
+      "id": "s5",
+      "title": "行动项",
+      "tool": "Notion",
+      "time": "30-60 分钟",
+      "detail": "把报告转成行动项清单：要做的功能、要调整的定价、要跟进的对手、验证方法，指定负责人与截止时间，进入产品路线图。",
+      "tips": "每个行动项配一个「多久能验证对不对」的指标，竞品分析的价值在行动不在报告。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "只信 AI 二手信息",
+      "detail": "模型会编造或过时；关键结论回到官网与一手资料核实，尤其是价格与发布日期。"
+    },
+    {
+      "title": "功能对比没有用户视角",
+      "detail": "按菜单栏列功能看不出真实体验；用「用户核心流程」拆解，再结合自己上手使用。"
+    },
+    {
+      "title": "报告写完没行动",
+      "detail": "分析不落地等于白做；每个结论都必须有一个行动项、一个负责人、一个验证指标。"
+    },
+    {
+      "title": "一次做太多竞品",
+      "detail": "贪多嚼不烂；聚焦 3-5 个最相关的对手深入拆解，好过 20 个浅尝辄止。"
+    }
+  ]
+}

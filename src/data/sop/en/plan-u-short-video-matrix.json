@@ -1,0 +1,77 @@
+{
+  "slug": "plan-u-short-video-matrix",
+  "title": "Plan U: AI Short-Video Matrix",
+  "summary": "Topic library → batch scripts → batch videos → multi-platform distribution → data review",
+  "scenario": "For running several accounts at once on Douyin, Xiaohongshu and Bilibili with one content factory that produces in volume.",
+  "meta": {
+    "duration": "1-2 days / batch",
+    "cost": "Medium",
+    "difficulty": "Intermediate"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT / Kimi", "url": "https://chatgpt.com" },
+    { "name": "Perplexity", "url": "https://www.perplexity.ai" },
+    { "name": "可灵 Kling", "url": "https://klingai.com" },
+    { "name": "PixVerse", "url": "https://pixverse.ai" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Build a topic library",
+      "tool": "ChatGPT / Kimi + Perplexity",
+      "time": "30-45 min",
+      "detail": "Have the model generate dozens of niche topics in batch and tag each one (pain-point, trend, tutorial, persona), then check real heat with Perplexity against platform trends and search data. Save the survivors into a ranked spreadsheet.",
+      "tips": "Rank topics by expected click-through and only make the top 20% — don't spread your effort thin."
+    },
+    {
+      "id": "s2",
+      "title": "Batch script generation",
+      "tool": "ChatGPT / Kimi",
+      "time": "30-60 min",
+      "detail": "Generate voice-over scripts from the topic library with one template: 3-second hook, body, call to action. Tweak tone per platform — fast and punchy for Douyin, deeper for Bilibili, aspirational for Xiaohongshu.",
+      "tips": "Ask for 5 hook variations per script and keep the most conflict-driven one."
+    },
+    {
+      "id": "s3",
+      "title": "Batch video production",
+      "tool": "可灵 Kling + PixVerse",
+      "time": "1-2 hours",
+      "detail": "Produce visuals or avatar voice-overs in batches with fixed characters, backgrounds and caption styles for a consistent series look. Default to one master version that can be reused everywhere, then make platform-specific cuts.",
+      "tips": "Perfect one full pipeline before going to volume — ten failures at once help no one."
+    },
+    {
+      "id": "s4",
+      "title": "Multi-platform distribution",
+      "tool": "Platforms + scheduler",
+      "time": "30 min",
+      "detail": "Export adapted versions per platform following best posting times, aspect ratio, hashtags and covers; generate A/B titles and covers with the model, then finalize manually.",
+      "tips": "Change the title and first 3 seconds for each platform — the same video verbatim is the easiest way to get ignored."
+    },
+    {
+      "id": "s5",
+      "title": "Data review",
+      "tool": "Platform analytics + ChatGPT",
+      "time": "30 min",
+      "detail": "Pull views, completion rate, likes and follower growth; feed the numbers to the model and let it tell you which topics, hooks and covers worked, then feed that back into the library and templates.",
+      "tips": "Review on a fixed weekly cadence and turn winners into reusable formulas."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "One-size-fits-all distribution",
+      "detail": "Platforms differ in style, length and copy; adapt each asset per platform."
+    },
+    {
+      "title": "Volume before validation",
+      "detail": "Scaling before one flow works means scaling the failures."
+    },
+    {
+      "title": "No feedback loop",
+      "detail": "Posting without reading data keeps the topic library stuck at guesswork."
+    },
+    {
+      "title": "Matrix means more accounts",
+      "detail": "A real matrix is a hero account with coordinated satellites, not a pile of random accounts."
+    }
+  ]
+}

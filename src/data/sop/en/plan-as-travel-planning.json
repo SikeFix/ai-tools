@@ -1,0 +1,78 @@
+{
+  "slug": "plan-as-travel-planning",
+  "title": "Plan AS: AI Travel Planning",
+  "summary": "Preferences → itinerary → transport & stay → checklist → live adjustments",
+  "scenario": "For independent and family travelers who want a workable itinerary fast and the flexibility to adjust it on the road.",
+  "meta": {
+    "duration": "2-3 hours",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Google Gemini", "url": "https://gemini.google.com" },
+    { "name": "Perplexity", "url": "https://perplexity.ai" },
+    { "name": "Notion", "url": "https://notion.so" },
+    { "name": "Google Maps", "url": "https://www.google.com/maps" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Collect preferences",
+      "tool": "ChatGPT / Google Gemini + you",
+      "time": "20-40 min",
+      "detail": "Write down party size, days, budget, dates, interests (food/culture/nature/family), pace preference, and whether seniors or kids are along. Let the model ask the constraints you forgot to mention, like dietary restrictions or limited mobility.",
+      "tips": "List what you absolutely won't do — for example, no rushing between sights — as its own line; that saves more worry than listing what you want."
+    },
+    {
+      "id": "s2",
+      "title": "Itinerary",
+      "tool": "ChatGPT / Google Gemini",
+      "time": "30-60 min",
+      "detail": "Have the model draft a day-by-day itinerary: daily theme, sight order, rough timing, and geographic routing that avoids backtracking. Mark how long to allow at each spot plus alternates for rain or fatigue.",
+      "tips": "Ask for a route ordered by map geography and one droppable flexible item per day — cut it instantly when legs give out."
+    },
+    {
+      "id": "s3",
+      "title": "Transport & stay",
+      "tool": "Perplexity / Google Maps",
+      "time": "30-60 min",
+      "detail": "Use Perplexity for transport options between sights (bus/metro/private car) and travel times, Google Maps to verify locations and opening hours, and booking platforms to compare hotels and guesthouses, prioritizing base areas near the main activity zone.",
+      "tips": "Have the model suggest where to stay that minimizes commuting to the major sights, then confirm prices on the platform."
+    },
+    {
+      "id": "s4",
+      "title": "Checklist",
+      "tool": "Notion",
+      "time": "20-30 min",
+      "detail": "Consolidate the itinerary, booking numbers, addresses, phone numbers, packing list and emergency contacts into a Notion travel page readable offline on your phone. Export each day's plan as a shareable checklist for the group.",
+      "tips": "Build a 'before-you-leave' list — documents, cash, chargers, medicine, weather — and check it off the night before departure."
+    },
+    {
+      "id": "s5",
+      "title": "Live adjustments",
+      "tool": "ChatGPT / Google Maps",
+      "time": "as needed on the trip",
+      "detail": "When a sight closes, weather changes, or energy drops, tell the model your current time and location and have it re-plan just today's remaining stops. Check real-time opening hours and crowds on Google Maps before deciding.",
+      "tips": "After every adjustment, have the model replan only the rest of today — don't tear up the next few days."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Relying on stale information",
+      "detail": "Opening hours, ticket prices and transport lines change constantly; verify on official sites and Google Maps before you go, and keep the schedule loose."
+    },
+    {
+      "title": "Over-packing the itinerary",
+      "detail": "A checklist-style itinerary collapses at the first queue or traffic jam; keep 1-2 droppable items and some free time every day."
+    },
+    {
+      "title": "Trusting AI without booking",
+      "detail": "AI suggestions need actual confirmation on official sites or platforms — don't live in the illusion of 'already booked'; also read the change policies."
+    },
+    {
+      "title": "One pace for the whole family",
+      "detail": "If you plan at a young adult's pace with seniors or kids along, everyone's exhausted by day three; design daily intensity around the slowest member."
+    }
+  ]
+}

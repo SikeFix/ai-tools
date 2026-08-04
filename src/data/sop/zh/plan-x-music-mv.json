@@ -1,0 +1,75 @@
+{
+  "slug": "plan-x-music-mv",
+  "title": "方案 X：AI 音乐卡点 MV",
+  "summary": "歌曲分析 → 分镜 → 画面生成 → 卡点剪辑 → 发布",
+  "scenario": "为 AI 生成的歌曲配画面感 MV 或卡点短视频，发抖音、B 站或音乐平台。",
+  "meta": {
+    "duration": "3-5 小时",
+    "cost": "低",
+    "difficulty": "进阶"
+  },
+  "toolsNeeded": [
+    { "name": "Suno", "url": "https://suno.com" },
+    { "name": "Udio", "url": "https://www.udio.com" },
+    { "name": "Midjourney", "url": "https://www.midjourney.com" },
+    { "name": "Runway", "url": "https://runwayml.com" },
+    { "name": "可灵 Kling", "url": "https://klingai.com" },
+    { "name": "Descript", "url": "https://www.descript.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "歌曲分析",
+      "tool": "Suno + Udio",
+      "time": "15-20 分钟",
+      "detail": "生成或选定歌曲后，用节拍检测工具或音频波形标出 BPM、重拍位置与高潮段落，明确整片的卡点节奏；副歌与主歌的画面密度要不同。",
+      "tips": "用节拍检测工具自动打点，比靠耳朵听更准、更省时间。"
+    },
+    {
+      "id": "s2",
+      "title": "分镜",
+      "tool": "ChatGPT",
+      "time": "30 分钟",
+      "detail": "基于歌词含义与情绪写分镜：主歌、副歌、高潮各段对应不同画面密度，高潮段用快切与强视觉画面；每句歌词尽量拆一个镜头，方便后面卡点。",
+      "tips": "镜头数对齐重拍数，卡点对齐就等于镜头切换对齐节拍。"
+    },
+    {
+      "id": "s3",
+      "title": "画面生成",
+      "tool": "Midjourney + Runway + 可灵 Kling",
+      "time": "2-3 小时",
+      "detail": "先用 Midjourney 生成统一画风的关键帧图（锁死画风描述词与角色参考），再图生视频用 Runway 或可灵出动态；循环镜头时长可控，方便补齐卡点。",
+      "tips": "先把角色和场景定稿再生成视频，跨镜头的角色一致性才有保障。"
+    },
+    {
+      "id": "s4",
+      "title": "卡点剪辑",
+      "tool": "Descript",
+      "time": "1 小时",
+      "detail": "把视频片段对齐到节拍：切换点压在重拍上，高潮段 1-2 秒一切，配合缩放、闪帧增强节奏；用 Descript 的波形对齐功能自动吸附，再手动微调关键帧。",
+      "tips": "切点精确到帧，宁可先粗剪再逐卡点精修，也别一口气贪快。"
+    },
+    {
+      "id": "s5",
+      "title": "发布",
+      "tool": "各平台",
+      "time": "20 分钟",
+      "detail": "导出竖版 9:16 与横版 16:9 双版本，配歌词字幕与话题标签发布；首发选一个主平台，数据好再同步其他渠道。",
+      "tips": "发布标题带歌名与风格关键词，利于音乐平台与搜索流量。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "画风不统一",
+      "detail": "不同镜头风格跳变，MV 没有整体感；先定统一画风关键词。"
+    },
+    {
+      "title": "卡点不准",
+      "detail": "切换点差半拍就显业余，多花时间精修节奏。"
+    },
+    {
+      "title": "角色形象漂移",
+      "detail": "跨镜头主角长相变化大，锁死参考图再生成。"
+    }
+  ]
+}

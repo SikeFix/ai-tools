@@ -6,7 +6,11 @@
     "category": "design",
     "source": "community",
     "install": "claude plugin add naplesblue/apple-design-skill",
-    "tags": ["apple", "liquid-glass", "ui"],
+    "tags": [
+      "apple",
+      "liquid-glass",
+      "ui"
+    ],
     "descZh": "Apple 液态玻璃设计规范：冷灰白地 + 统一面板 + 发丝分割线，玻璃只用于导航/浮层，正文黑白灰 + 一个蓝色强调。",
     "descEn": "The macOS Liquid Glass aesthetic: cool grey-white ground, unified panels with hairline dividers, glass only on nav/overlays, grayscale body with a single blue accent."
   },
@@ -17,7 +21,11 @@
     "category": "design",
     "source": "official",
     "install": "claude plugin add anthropic/frontend-design",
-    "tags": ["anthropic", "frontend", "aesthetic"],
+    "tags": [
+      "anthropic",
+      "frontend",
+      "aesthetic"
+    ],
     "descZh": "Anthropic 官方插件：写码前强制确定美学方向，规避 AI 默认套路（Inter 字体 + 紫色渐变），要求统一色彩系统。",
     "descEn": "Anthropic's official plugin: forces an aesthetic direction before coding, avoiding AI clichés (Inter font + purple gradients) and enforcing a unified color system."
   },
@@ -28,7 +36,11 @@
     "category": "design",
     "source": "community",
     "install": "plugin marketplace 安装",
-    "tags": ["ui", "ux", "styles"],
+    "tags": [
+      "ui",
+      "ux",
+      "styles"
+    ],
     "descZh": "62k★ 社区热门：240+ 样式、127 组字体搭配、99 条 UX 准则，自动匹配产品类型。",
     "descEn": "Popular community skill (62k★): 240+ styles, 127 font pairings, 99 UX guidelines, auto-matched to product type."
   },
@@ -39,7 +51,11 @@
     "category": "design",
     "source": "official",
     "install": "plugin marketplace add anthropics/skills",
-    "tags": ["theme", "brand", "tokens"],
+    "tags": [
+      "theme",
+      "brand",
+      "tokens"
+    ],
     "descZh": "官方 skills 集合中的主题应用：把品牌色/设计系统一键应用为 CSS 变量。",
     "descEn": "Theme application from the official skills set: turns brand colors / design systems into CSS variables."
   },
@@ -50,7 +66,11 @@
     "category": "design",
     "source": "official",
     "install": "plugin marketplace add anthropics/skills",
-    "tags": ["layout", "visual", "export"],
+    "tags": [
+      "layout",
+      "visual",
+      "export"
+    ],
     "descZh": "官方 skills：布局型视觉设计，导出 PNG / PDF。",
     "descEn": "Official skill: layout-focused visual design with PNG / PDF export."
   },
@@ -60,7 +80,11 @@
     "url": "https://github.com/ItsssssJack",
     "category": "design",
     "source": "community",
-    "tags": ["rules", "wcag", "typography"],
+    "tags": [
+      "rules",
+      "wcag",
+      "typography"
+    ],
     "descZh": "社区 skill：20 条数字化设计规则（可用性 / WCAG / 可读性阈值），自动应用到页面。",
     "descEn": "Community skill: 20 digital-design rules (usability, WCAG, readability thresholds) auto-applied to pages."
   },
@@ -71,7 +95,11 @@
     "category": "dev",
     "source": "official",
     "install": "plugin marketplace add anthropics/skills",
-    "tags": ["react", "tailwind", "single-file"],
+    "tags": [
+      "react",
+      "tailwind",
+      "single-file"
+    ],
     "descZh": "官方 skills：用 React + Tailwind + shadcn/ui 构建多文件项目，再打包成单个 HTML。",
     "descEn": "Official skill: build multi-file projects with React + Tailwind + shadcn/ui, then bundle into a single HTML."
   },
@@ -82,7 +110,11 @@
     "category": "dev",
     "source": "official",
     "install": "plugin marketplace add anthropics/skills",
-    "tags": ["testing", "browser", "qa"],
+    "tags": [
+      "testing",
+      "browser",
+      "qa"
+    ],
     "descZh": "官方 skills：网页自动化测试，点选 / 截图 / 校验渲染结果。",
     "descEn": "Official skill: automated web testing — click, screenshot and validate rendered results."
   },
@@ -92,7 +124,11 @@
     "url": "https://docs.anthropic.com",
     "category": "dev",
     "source": "official",
-    "tags": ["api", "sdk", "reference"],
+    "tags": [
+      "api",
+      "sdk",
+      "reference"
+    ],
     "descZh": "Claude API / Anthropic SDK 参考：模型 ID、定价、参数、流式、工具调用、缓存。",
     "descEn": "Claude API / Anthropic SDK reference: model IDs, pricing, params, streaming, tool use, caching."
   },
@@ -102,7 +138,11 @@
     "url": "https://github.com/anthropics/claude-code",
     "category": "dev",
     "source": "official",
-    "tags": ["review", "pr", "quality"],
+    "tags": [
+      "review",
+      "pr",
+      "quality"
+    ],
     "descZh": "代码审查技能：审查 PR 或当前改动，给出可执行的安全 / 正确性 / 性能发现。",
     "descEn": "Code-review skill: reviews PRs or the working diff with actionable security, correctness and performance findings."
   },
@@ -112,7 +152,11 @@
     "url": "https://github.com/speechlab0210/video-production-skill",
     "category": "content",
     "source": "community",
-    "tags": ["video", "tts", "ffmpeg"],
+    "tags": [
+      "video",
+      "tts",
+      "ffmpeg"
+    ],
     "descZh": "AI Agent 自动产出口播教学视频：脚本 → 生图 → TTS → Whisper 回验 → FFmpeg 合成 → 字幕。",
     "descEn": "An AI agent skill that auto-produces talking-head videos: script → image gen → TTS → Whisper back-check → FFmpeg → captions."
   },
@@ -122,7 +166,11 @@
     "url": "https://fhl.mom",
     "category": "content",
     "source": "builtin",
-    "tags": ["image", "fhl", "generate"],
+    "tags": [
+      "image",
+      "fhl",
+      "generate"
+    ],
     "descZh": "统一的图片生成技能（FHL OpenAI 兼容接口），用于配图、图标、插画、海报。",
     "descEn": "A unified image-generation skill (FHL OpenAI-compatible API) for illustrations, icons, art and posters."
   },
@@ -131,7 +179,11 @@
     "name": "UI Slicing",
     "category": "content",
     "source": "builtin",
-    "tags": ["ui", "slice", "assets"],
+    "tags": [
+      "ui",
+      "slice",
+      "assets"
+    ],
     "descZh": "UI 图批量切图：从设计稿提取图标 / 按钮 / 插画，输出像素版 + 高清透明底素材。",
     "descEn": "Batch UI slicing: extract icons, buttons and illustrations from a design, outputting pixel crops plus clean transparent PNGs."
   },
@@ -140,7 +192,11 @@
     "name": "Data Visualization",
     "category": "data",
     "source": "builtin",
-    "tags": ["chart", "dashboard", "accessibility"],
+    "tags": [
+      "chart",
+      "dashboard",
+      "accessibility"
+    ],
     "descZh": "任何图表 / 仪表盘 / 数据可视化之前的必读规范：统一配色、明暗主题、可访问性。",
     "descEn": "Required reading before any chart, dashboard or visualization: unified palette, light/dark themes, accessibility."
   },
@@ -149,7 +205,11 @@
     "name": "Update Config",
     "category": "efficiency",
     "source": "builtin",
-    "tags": ["settings", "hooks", "permissions"],
+    "tags": [
+      "settings",
+      "hooks",
+      "permissions"
+    ],
     "descZh": "配置 Claude Code 环境：hooks、权限、环境变量、settings.json 的自动化调整。",
     "descEn": "Configure the Claude Code harness: hooks, permissions, env vars and settings.json automation."
   },
@@ -158,7 +218,11 @@
     "name": "Loop",
     "category": "efficiency",
     "source": "builtin",
-    "tags": ["recurring", "interval", "automation"],
+    "tags": [
+      "recurring",
+      "interval",
+      "automation"
+    ],
     "descZh": "定时循环执行某个 prompt / 命令，用于轮询状态、定时任务、重复检查。",
     "descEn": "Run a prompt or command on a recurring interval — polling, scheduled jobs, repeated checks."
   },
@@ -167,7 +231,10 @@
     "name": "Keybindings Help",
     "category": "efficiency",
     "source": "builtin",
-    "tags": ["shortcuts", "keymap"],
+    "tags": [
+      "shortcuts",
+      "keymap"
+    ],
     "descZh": "定制 Claude Code 键盘快捷键、绑定键位、修改 keybindings.json。",
     "descEn": "Customize Claude Code keyboard shortcuts, rebind keys and edit keybindings.json."
   },
@@ -176,7 +243,10 @@
     "name": "Simplify",
     "category": "efficiency",
     "source": "builtin",
-    "tags": ["refactor", "cleanup"],
+    "tags": [
+      "refactor",
+      "cleanup"
+    ],
     "descZh": "审查改动并应用复用 / 简化 / 效率优化，专注代码质量而非找 bug。",
     "descEn": "Reviews changes and applies reuse, simplification and efficiency cleanups — quality-focused, not bug-hunting."
   },
@@ -185,7 +255,10 @@
     "name": "Fewer Permission Prompts",
     "category": "efficiency",
     "source": "builtin",
-    "tags": ["permissions", "allowlist"],
+    "tags": [
+      "permissions",
+      "allowlist"
+    ],
     "descZh": "扫描常用只读命令，写入 allowlist 以减少权限弹窗，让长任务更流畅。",
     "descEn": "Scans common read-only commands into an allowlist to reduce permission prompts for smoother long tasks."
   },
@@ -196,7 +269,11 @@
     "category": "data",
     "source": "community",
     "install": "claude mcp add context7",
-    "tags": ["mcp", "docs", "up-to-date"],
+    "tags": [
+      "mcp",
+      "docs",
+      "up-to-date"
+    ],
     "descZh": "MCP 服务器：实时拉取任意库的最新文档，减少 AI 对 API 的幻觉。",
     "descEn": "An MCP server that pulls live, up-to-date docs for any library, reducing API hallucination."
   },
@@ -207,7 +284,11 @@
     "category": "design",
     "source": "official",
     "install": "plugin marketplace add anthropics/skills",
-    "tags": ["brand", "identity", "tokens"],
+    "tags": [
+      "brand",
+      "identity",
+      "tokens"
+    ],
     "descZh": "官方 skills：把品牌色、字体、语气规范固化为可复用的设计准则。",
     "descEn": "Official skill: codifies brand colors, type and tone into reusable design guidelines."
   },
@@ -216,7 +297,11 @@
     "name": "Design System Architect",
     "category": "design",
     "source": "community",
-    "tags": ["tokens", "theming", "tailwind"],
+    "tags": [
+      "tokens",
+      "theming",
+      "tailwind"
+    ],
     "descZh": "用单个品牌色生成整套 OKLCH 语义化明暗主题 token，输出 Tailwind v4 主题配置。",
     "descEn": "Derives a full OKLCH semantic light/dark token set from a single brand hue, outputting Tailwind v4 theme config."
   },
@@ -226,7 +311,11 @@
     "url": "https://github.com/anthropics/claude-code",
     "category": "dev",
     "source": "official",
-    "tags": ["security", "audit", "review"],
+    "tags": [
+      "security",
+      "audit",
+      "review"
+    ],
     "descZh": "对当前分支的改动做安全审查：注入、敏感信息、依赖漏洞与不安全的默认值。",
     "descEn": "Security review of the working tree: injection, leaked secrets, vulnerable deps and unsafe defaults."
   },
@@ -236,7 +325,11 @@
     "url": "https://github.com/anthropics/claude-code",
     "category": "dev",
     "source": "official",
-    "tags": ["pr", "code-quality", "diff"],
+    "tags": [
+      "pr",
+      "code-quality",
+      "diff"
+    ],
     "descZh": "审查 GitHub PR 或当前工作区 diff，输出正确性 / 安全 / 性能的分级发现。",
     "descEn": "Reviews a GitHub PR or the working diff with ranked correctness, security and performance findings."
   },
@@ -246,7 +339,10 @@
     "url": "https://github.com/anthropics/claude-code",
     "category": "dev",
     "source": "official",
-    "tags": ["onboarding", "claude-md"],
+    "tags": [
+      "onboarding",
+      "claude-md"
+    ],
     "descZh": "为项目生成 CLAUDE.md 代码库文档，让后续 AI 会话快速理解项目约定。",
     "descEn": "Generates a CLAUDE.md codebase doc so future AI sessions pick up project conventions quickly."
   },
@@ -256,7 +352,11 @@
     "url": "https://github.com/anthropics/claude-code",
     "category": "dev",
     "source": "official",
-    "tags": ["launch", "preview", "dev"],
+    "tags": [
+      "launch",
+      "preview",
+      "dev"
+    ],
     "descZh": "启动并驱动当前项目，在真实运行环境中验证改动（浏览器 / 服务器 / CLI）。",
     "descEn": "Launches and drives the current project to verify changes in a real running environment."
   },
@@ -266,7 +366,11 @@
     "url": "https://github.com/anthropics/claude-code",
     "category": "data",
     "source": "community",
-    "tags": ["scrape", "fetch", "mcp"],
+    "tags": [
+      "scrape",
+      "fetch",
+      "mcp"
+    ],
     "descZh": "抓取网页结构化数据、处理登录与反爬，接入 Claude Code 的 MCP 工具。",
     "descEn": "Scrapes structured web data, handling auth and anti-bot, exposed as Claude Code MCP tools."
   },
@@ -275,7 +379,11 @@
     "name": "Localization",
     "category": "efficiency",
     "source": "official",
-    "tags": ["i18n", "translate", "l10n"],
+    "tags": [
+      "i18n",
+      "translate",
+      "l10n"
+    ],
     "descZh": "把项目文案批量翻译成多语言并保持占位符与格式一致，输出语言包。",
     "descEn": "Batch-translates project copy into multiple languages while preserving placeholders and format, outputting locale packs."
   },
@@ -286,7 +394,11 @@
     "category": "dev",
     "source": "official",
     "install": "claude mcp add playwright",
-    "tags": ["browser", "testing", "automation"],
+    "tags": [
+      "browser",
+      "testing",
+      "automation"
+    ],
     "descZh": "Microsoft 官方浏览器自动化：点选、截图、读渲染后 DOM、测 Core Web Vitals。",
     "descEn": "Microsoft's official browser automation: click, screenshot, read rendered DOM and measure Core Web Vitals."
   },
@@ -297,7 +409,11 @@
     "category": "dev",
     "source": "official",
     "install": "claude mcp add figma",
-    "tags": ["figma", "design-to-code", "design-tokens"],
+    "tags": [
+      "figma",
+      "design-to-code",
+      "design-tokens"
+    ],
     "descZh": "读取 Figma 设计稿的结构化变量（颜色/间距/字体）直接转成代码。",
     "descEn": "Reads structured Figma design variables (colors, spacing, fonts) and turns them straight into code."
   },
@@ -308,7 +424,11 @@
     "category": "dev",
     "source": "official",
     "install": "claude mcp add chrome-devtools",
-    "tags": ["debug", "console", "performance"],
+    "tags": [
+      "debug",
+      "console",
+      "performance"
+    ],
     "descZh": "浏览器控制台、网络与性能调试，配 Playwright 做「开发→验证→调试」闭环。",
     "descEn": "Browser console, network and performance debugging — pairs with Playwright for a develop-verify-debug loop."
   },
@@ -319,7 +439,11 @@
     "category": "dev",
     "source": "community",
     "install": "claude mcp add v0",
-    "tags": ["prototype", "ui", "vercel"],
+    "tags": [
+      "prototype",
+      "ui",
+      "vercel"
+    ],
     "descZh": "Vercel v0 多屏 UI 原型工作流：描述需求，生成多屏界面与代码。",
     "descEn": "Vercel v0 multi-screen UI prototyping: describe a need and get multi-screen interfaces and code."
   },
@@ -330,7 +454,11 @@
     "category": "data",
     "source": "community",
     "install": "claude mcp add sqlite",
-    "tags": ["database", "sql", "query"],
+    "tags": [
+      "database",
+      "sql",
+      "query"
+    ],
     "descZh": "让 Claude 直接查询与操作 SQLite 数据库，做数据探索与报表。",
     "descEn": "Lets Claude query and operate a SQLite database directly for data exploration and reports."
   },
@@ -341,7 +469,11 @@
     "category": "data",
     "source": "official",
     "install": "plugin marketplace add anthropics/skills",
-    "tags": ["pdf", "office", "extract"],
+    "tags": [
+      "pdf",
+      "office",
+      "extract"
+    ],
     "descZh": "官方文档技能集：解析 PDF、Word、Excel、PPT，提取文字、表格与结构。",
     "descEn": "Official document skills: parse PDF, Word, Excel and PowerPoint, extracting text, tables and structure."
   },
@@ -351,7 +483,11 @@
     "url": "https://github.com/anthropics/skills",
     "category": "data",
     "source": "official",
-    "tags": ["vision", "ocr", "analysis"],
+    "tags": [
+      "vision",
+      "ocr",
+      "analysis"
+    ],
     "descZh": "看图分析：OCR 文字、识别物体、读取图表与截图信息。",
     "descEn": "Vision analysis: OCR text, recognize objects, and read charts and screenshots."
   },
@@ -360,7 +496,11 @@
     "name": "Voice Cloning",
     "category": "content",
     "source": "community",
-    "tags": ["tts", "clone", "dubbing"],
+    "tags": [
+      "tts",
+      "clone",
+      "dubbing"
+    ],
     "descZh": "用几秒到几分钟样本克隆声音做配音（ElevenLabs / MiniMax / RVC）。",
     "descEn": "Clone a voice from seconds to minutes of samples for dubbing (ElevenLabs / MiniMax / RVC)."
   },
@@ -369,7 +509,11 @@
     "name": "Subtitle Generation",
     "category": "content",
     "source": "community",
-    "tags": ["caption", "whisper", "transcript"],
+    "tags": [
+      "caption",
+      "whisper",
+      "transcript"
+    ],
     "descZh": "Whisper 转录生成词级时间戳字幕，对齐导出 SRT / 烧录。",
     "descEn": "Whisper transcription with word-level timestamps, aligned into SRT / burned-in captions."
   },
@@ -378,7 +522,11 @@
     "name": "Thumbnail Maker",
     "category": "content",
     "source": "community",
-    "tags": ["cover", "youtube", "design"],
+    "tags": [
+      "cover",
+      "youtube",
+      "design"
+    ],
     "descZh": "批量生成视频/社媒封面：选图、加标题字、统一模板风格。",
     "descEn": "Batch-generate video/social covers: pick imagery, add headline text, keep a consistent template."
   },
@@ -388,7 +536,10 @@
     "url": "https://github.com/anthropics/claude-code",
     "category": "efficiency",
     "source": "official",
-    "tags": ["ideation", "divergent"],
+    "tags": [
+      "ideation",
+      "divergent"
+    ],
     "descZh": "多角度头脑风暴：发散选项、分类收敛、再按标准打分，帮你做「想不到」的补充。",
     "descEn": "Structured brainstorming: diverge options, cluster them, then score against criteria to surface what you'd miss."
   },
@@ -397,7 +548,11 @@
     "name": "Decision Maker",
     "category": "efficiency",
     "source": "community",
-    "tags": ["choice", "pros-cons", "matrix"],
+    "tags": [
+      "choice",
+      "pros-cons",
+      "matrix"
+    ],
     "descZh": "把选择变成可比较的决策矩阵：标准权重打分，给出推荐与理由。",
     "descEn": "Turns a choice into a comparable decision matrix: weighted scoring across criteria, with a recommendation and reasoning."
   },
@@ -406,7 +561,11 @@
     "name": "Email Drafting",
     "category": "efficiency",
     "source": "community",
-    "tags": ["email", "writing", "tone"],
+    "tags": [
+      "email",
+      "writing",
+      "tone"
+    ],
     "descZh": "按语气（正式/亲切/简短）起草与改写邮件，处理多收件人与跟进度。",
     "descEn": "Draft and rewrite emails by tone (formal / friendly / brief), handling multiple recipients and follow-up threads."
   },
@@ -416,7 +575,11 @@
     "url": "https://github.com/anthropics/claude-code",
     "category": "efficiency",
     "source": "official",
-    "tags": ["summary", "extract", "key-points"],
+    "tags": [
+      "summary",
+      "extract",
+      "key-points"
+    ],
     "descZh": "长文/视频/音频一键提炼要点，输出结构化摘要与行动项。",
     "descEn": "One-click key-point extraction from long text, video or audio into a structured summary plus action items."
   },
@@ -426,7 +589,11 @@
     "url": "https://github.com/anthropics/skills",
     "category": "dev",
     "source": "official",
-    "tags": ["create", "author", "custom"],
+    "tags": [
+      "create",
+      "author",
+      "custom"
+    ],
     "descZh": "把反复做的事封装成自己的 skill：按规范生成 SKILL.md 与参考文件。",
     "descEn": "Package what you do repeatedly into your own skill: generate SKILL.md and reference files to spec."
   },
@@ -437,7 +604,11 @@
     "category": "dev",
     "source": "community",
     "install": "claude mcp add github",
-    "tags": ["github", "issues", "pr"],
+    "tags": [
+      "github",
+      "issues",
+      "pr"
+    ],
     "descZh": "直接操作 GitHub：建 issue、开 PR、审代码、查仓库状态。",
     "descEn": "Operate GitHub directly: create issues, open PRs, review code and inspect repo state."
   },
@@ -447,7 +618,11 @@
     "url": "https://github.com/modelcontextprotocol/servers",
     "category": "dev",
     "source": "community",
-    "tags": ["screenshot", "image", "capture"],
+    "tags": [
+      "screenshot",
+      "image",
+      "capture"
+    ],
     "descZh": "网页/桌面截图并读取截图内容，用于视觉验证与文档配图。",
     "descEn": "Capture web/desktop screenshots and read them back — for visual verification and docs."
   },
@@ -456,7 +631,11 @@
     "name": "Web Research",
     "category": "data",
     "source": "official",
-    "tags": ["research", "sources", "report"],
+    "tags": [
+      "research",
+      "sources",
+      "report"
+    ],
     "descZh": "多来源深度网络研究：检索、交叉验证、整理成带引用的报告。",
     "descEn": "Multi-source deep web research: search, cross-verify and assemble a cited report."
   },
@@ -467,7 +646,11 @@
     "category": "efficiency",
     "source": "community",
     "install": "claude mcp add notion",
-    "tags": ["notion", "database", "wiki"],
+    "tags": [
+      "notion",
+      "database",
+      "wiki"
+    ],
     "descZh": "读写 Notion 页面与数据库：记笔记、建知识库、查 Wiki。",
     "descEn": "Read and write Notion pages and databases: note-taking, knowledge bases and wiki lookups."
   },
@@ -477,7 +660,11 @@
     "category": "efficiency",
     "source": "community",
     "install": "claude mcp add calendar",
-    "tags": ["calendar", "schedule", "events"],
+    "tags": [
+      "calendar",
+      "schedule",
+      "events"
+    ],
     "descZh": "查询与创建日历事件，让 AI 帮你排日程、查空闲、建提醒。",
     "descEn": "Query and create calendar events — let the AI schedule, find free time and set reminders."
   },
@@ -486,7 +673,11 @@
     "name": "Mind Map",
     "category": "efficiency",
     "source": "community",
-    "tags": ["mindmap", "outline", "brainstorm"],
+    "tags": [
+      "mindmap",
+      "outline",
+      "brainstorm"
+    ],
     "descZh": "把要点整理成思维导图/大纲结构，导出 Markdown 或 Mermaid。",
     "descEn": "Organize points into a mind map / outline structure, exportable as Markdown or Mermaid."
   },
@@ -495,7 +686,11 @@
     "name": "Speech-to-Text",
     "category": "content",
     "source": "community",
-    "tags": ["stt", "transcription", "meeting"],
+    "tags": [
+      "stt",
+      "transcription",
+      "meeting"
+    ],
     "descZh": "语音/音频转文字：会议、访谈、口述转写并标注时间戳。",
     "descEn": "Turn speech and audio into text: meetings, interviews and dictation with timestamps."
   },
@@ -506,7 +701,11 @@
     "category": "dev",
     "source": "community",
     "install": "plugin marketplace 搜索 superpowers",
-    "tags": ["framework", "tdd", "plan-first"],
+    "tags": [
+      "framework",
+      "tdd",
+      "plan-first"
+    ],
     "descZh": "社区第一的 Claude Code 技能框架：plan-first + TDD + 子代理开发方法论，26 万+ star。",
     "descEn": "The #1 community Claude Code skill framework: plan-first + TDD + subagent development, 260k+ stars."
   },
@@ -516,7 +715,11 @@
     "url": "https://github.com/affaan-m/ECC",
     "category": "dev",
     "source": "community",
-    "tags": ["harness", "toolkit", "config"],
+    "tags": [
+      "harness",
+      "toolkit",
+      "config"
+    ],
     "descZh": "Agent 工具箱：罗列 100+ 技能/记忆/安全工具，Claude Code 配置的入口级仓库。",
     "descEn": "An agent harness cataloging 100+ skills, memory and security tools — the entry point for Claude Code config."
   },
@@ -526,7 +729,11 @@
     "url": "https://github.com/mattpocock/skills",
     "category": "dev",
     "source": "community",
-    "tags": ["testing", "refactor", "debug"],
+    "tags": [
+      "testing",
+      "refactor",
+      "debug"
+    ],
     "descZh": "真工程场景的实战 skills（测试、重构、调试等），20 万+ star，实用派代表。",
     "descEn": "Production-grade engineering skills (testing, refactoring, debugging), 200k+ stars — the pragmatic pick."
   },
@@ -536,7 +743,11 @@
     "url": "https://github.com/multica-ai/andrej-karpathy-skills",
     "category": "dev",
     "source": "community",
-    "tags": ["behavior", "rules", "single-file"],
+    "tags": [
+      "behavior",
+      "rules",
+      "single-file"
+    ],
     "descZh": "基于 Karpathy 观察提炼的 Claude Code 行为规则（单文件），史上 star 最多的单文件仓库之一。",
     "descEn": "Claude Code behavior rules distilled from Karpathy's observations (single file) — among the most-starred single-file repos."
   },
@@ -546,7 +757,11 @@
     "url": "https://github.com/garrytan/gstack",
     "category": "dev",
     "source": "community",
-    "tags": ["config", "reference", "yc"],
+    "tags": [
+      "config",
+      "reference",
+      "yc"
+    ],
     "descZh": "YC 总裁 Garry Tan 的完整 Claude Code 配置（23 工具 + skills），可直接照抄的工程模板。",
     "descEn": "YC president Garry Tan's complete Claude Code config (23 tools + skills) — a copy-ready engineering template."
   },
@@ -556,7 +771,11 @@
     "url": "https://github.com/thedotmack/claude-mem",
     "category": "efficiency",
     "source": "community",
-    "tags": ["memory", "persistent", "history"],
+    "tags": [
+      "memory",
+      "persistent",
+      "history"
+    ],
     "descZh": "Claude Code 跨会话持久记忆：压缩历史会话可检索，8.9 万+ star 的记忆事实标准。",
     "descEn": "Cross-session persistent memory for Claude Code: compresses past sessions into searchable memory, 89k+ stars."
   },
@@ -566,7 +785,11 @@
     "url": "https://github.com/punkpeye/awesome-mcp-servers",
     "category": "data",
     "source": "community",
-    "tags": ["mcp", "directory", "index"],
+    "tags": [
+      "mcp",
+      "directory",
+      "index"
+    ],
     "descZh": "最大的 MCP 服务器精选目录，9 万+ star，找工具与能力按图索骥。",
     "descEn": "The largest curated MCP server directory, 91k+ stars — browse tools and capabilities by category."
   },
@@ -576,8 +799,874 @@
     "url": "https://github.com/assafelovic/gpt-researcher",
     "category": "data",
     "source": "official",
-    "tags": ["research", "report", "citations"],
+    "tags": [
+      "research",
+      "report",
+      "citations"
+    ],
     "descZh": "自主深研 Agent：问题分解 → 并行检索 → 交叉验证 → 带引文成稿，深研赛道成熟度第一。",
     "descEn": "Autonomous deep-research agent: decompose → parallel search → cross-verify → cited report. The most mature deep-research tool."
+  },
+  {
+    "slug": "filesystem-mcp",
+    "name": "Filesystem MCP",
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "category": "dev",
+    "source": "community",
+    "install": "claude mcp add filesystem",
+    "tags": [
+      "filesystem",
+      "file-management",
+      "local"
+    ],
+    "descZh": "本地文件系统读写：查看目录、读写文件、移动/搜索文件，让 Claude 直接操作你的项目文件。",
+    "descEn": "Read and write local files: list directories, read/write files, move and search files, letting Claude work directly with your project files."
+  },
+  {
+    "slug": "fetch-mcp",
+    "name": "Fetch MCP",
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "category": "dev",
+    "source": "community",
+    "install": "claude mcp add fetch",
+    "tags": [
+      "web",
+      "fetch",
+      "http"
+    ],
+    "descZh": "抓取网页内容并转为文本/Markdown，让 Claude 读取在线文档与网页。",
+    "descEn": "Fetch web pages and convert them to text/Markdown so Claude can read online docs and pages."
+  },
+  {
+    "slug": "sequential-thinking-mcp",
+    "name": "Sequential Thinking MCP",
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "category": "dev",
+    "source": "community",
+    "install": "claude mcp add sequential-thinking",
+    "tags": [
+      "reasoning",
+      "thinking",
+      "problem-solving"
+    ],
+    "descZh": "强制 Claude 显式地一步一步推理并复盘，解决复杂问题时减少跳步。",
+    "descEn": "Forces Claude to reason explicitly step by step and revisit its reasoning, reducing leaps when solving complex problems."
+  },
+  {
+    "slug": "memory-mcp",
+    "name": "Memory MCP",
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "category": "dev",
+    "source": "community",
+    "install": "claude mcp add memory",
+    "tags": [
+      "memory",
+      "knowledge-graph",
+      "persistence"
+    ],
+    "descZh": "基于知识图谱的长期记忆，跨会话记住用户偏好与项目事实。",
+    "descEn": "Knowledge-graph based long-term memory that remembers user preferences and project facts across sessions."
+  },
+  {
+    "slug": "git-mcp",
+    "name": "Git MCP",
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "category": "dev",
+    "source": "community",
+    "install": "claude mcp add git",
+    "tags": [
+      "git",
+      "version-control",
+      "code"
+    ],
+    "descZh": "直接操作 Git：查看状态/diff/log、创建分支、提交代码，配合代码工作流。",
+    "descEn": "Operates Git directly: view status/diff/log, create branches, commit code, fitting into coding workflows."
+  },
+  {
+    "slug": "postgres-mcp",
+    "name": "PostgreSQL MCP",
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "category": "dev",
+    "source": "community",
+    "install": "claude mcp add postgres",
+    "tags": [
+      "database",
+      "postgres",
+      "sql"
+    ],
+    "descZh": "连接 PostgreSQL：查看表结构、执行查询、读写数据，做分析与报表。",
+    "descEn": "Connects to PostgreSQL: inspect schemas, run queries, read and write data for analysis and reporting."
+  },
+  {
+    "slug": "redis-mcp",
+    "name": "Redis MCP",
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "category": "dev",
+    "source": "community",
+    "install": "claude mcp add redis",
+    "tags": [
+      "database",
+      "redis",
+      "cache"
+    ],
+    "descZh": "操作 Redis：读写键值、管理缓存与队列，方便调试缓存逻辑。",
+    "descEn": "Works with Redis: read/write key-values, manage caches and queues, handy for debugging cache logic."
+  },
+  {
+    "slug": "docker-mcp",
+    "name": "Docker MCP",
+    "url": "https://github.com/docker/mcp",
+    "category": "dev",
+    "source": "community",
+    "install": "claude mcp add docker",
+    "tags": [
+      "docker",
+      "containers",
+      "devops"
+    ],
+    "descZh": "Docker 官方 MCP：管理容器/镜像/网络，Claude 直接执行 docker 命令运维环境。",
+    "descEn": "Official Docker MCP: manage containers, images and networks so Claude can run docker commands to maintain environments."
+  },
+  {
+    "slug": "kubernetes-mcp",
+    "name": "Kubernetes MCP",
+    "url": "https://github.com/manusa/kubernetes-mcp-server",
+    "category": "dev",
+    "source": "community",
+    "install": "claude mcp add kubernetes",
+    "tags": [
+      "kubernetes",
+      "k8s",
+      "devops"
+    ],
+    "descZh": "管理 Kubernetes 集群：查看 Pod/Deployment、排查服务问题、读取日志。",
+    "descEn": "Manages Kubernetes clusters: inspect Pods/Deployments, troubleshoot services, and read logs."
+  },
+  {
+    "slug": "terraform-mcp",
+    "name": "Terraform MCP",
+    "url": "https://github.com/hashicorp/terraform-mcp-server",
+    "category": "dev",
+    "source": "community",
+    "install": "claude mcp add terraform",
+    "tags": [
+      "terraform",
+      "iac",
+      "infrastructure"
+    ],
+    "descZh": "HashiCorp 官方：生成/审查 Terraform 配置，管理基础设施即代码。",
+    "descEn": "Official HashiCorp server: generate and review Terraform configurations, manage infrastructure as code."
+  },
+  {
+    "slug": "aws-mcp",
+    "name": "AWS MCP",
+    "url": "https://github.com/awslabs/mcp",
+    "category": "dev",
+    "source": "community",
+    "install": "claude mcp add aws（需 API Key）",
+    "tags": [
+      "aws",
+      "cloud",
+      "devops"
+    ],
+    "descZh": "AWS 官方 MCP 集合：查询 S3/EC2/Lambda 等资源，做云上排查与部署。",
+    "descEn": "Official AWS MCP collection: query resources like S3/EC2/Lambda for cloud troubleshooting and deployment."
+  },
+  {
+    "slug": "mongodb-mcp",
+    "name": "MongoDB MCP",
+    "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+    "category": "dev",
+    "source": "community",
+    "install": "claude mcp add mongodb",
+    "tags": [
+      "database",
+      "mongodb",
+      "nosql"
+    ],
+    "descZh": "官方 MongoDB MCP：对文档做增删改查、运行聚合管道、分析数据。",
+    "descEn": "Official MongoDB MCP: CRUD documents, run aggregations, and analyze data."
+  },
+  {
+    "slug": "firecrawl-mcp",
+    "name": "Firecrawl MCP",
+    "url": "https://github.com/firecrawl/firecrawl-mcp-server",
+    "category": "data",
+    "source": "community",
+    "install": "claude mcp add firecrawl（需 API Key）",
+    "tags": [
+      "web-scraping",
+      "crawling",
+      "search",
+      "markdown"
+    ],
+    "descZh": "整站抓取并转成结构化 Markdown，附带搜索与改版检测，是抓取网页数据时的重器。",
+    "descEn": "Crawls entire websites into clean structured Markdown with search and change-detection, a heavyweight for turning web content into data."
+  },
+  {
+    "slug": "tavily-mcp",
+    "name": "Tavily MCP",
+    "url": "https://github.com/tavily-ai/tavily-mcp",
+    "category": "data",
+    "source": "community",
+    "install": "claude mcp add tavily（需 API Key）",
+    "tags": [
+      "search",
+      "rag",
+      "research",
+      "api"
+    ],
+    "descZh": "面向 AI 优化的搜索 API，返回干净结果并附引用来源，适合 RAG 检索与调研。",
+    "descEn": "An AI-optimized search API returning clean results with cited sources, ideal for RAG and research."
+  },
+  {
+    "slug": "exa-mcp",
+    "name": "Exa MCP",
+    "url": "https://github.com/exa-labs/exa-mcp-server",
+    "category": "data",
+    "source": "community",
+    "install": "claude mcp add exa（需 API Key）",
+    "tags": [
+      "semantic-search",
+      "research",
+      "web",
+      "neural-search"
+    ],
+    "descZh": "神经语义搜索，按含义找网页与相似内容，深度研究和知识发现利器。",
+    "descEn": "Neural semantic search that finds pages and related content by meaning, built for deep research."
+  },
+  {
+    "slug": "qdrant-mcp",
+    "name": "Qdrant MCP",
+    "url": "https://github.com/qdrant/mcp-server-qdrant",
+    "category": "data",
+    "source": "community",
+    "install": "claude mcp add qdrant",
+    "tags": [
+      "vector-database",
+      "rag",
+      "semantic-search",
+      "embeddings"
+    ],
+    "descZh": "高性能向量数据库，可建 collection、写入向量并做语义检索，常作 RAG 后端。",
+    "descEn": "A high-performance vector database to create collections, store embeddings, and run semantic retrieval as a RAG backend."
+  },
+  {
+    "slug": "chroma-mcp",
+    "name": "Chroma MCP",
+    "url": "https://github.com/chroma-core/chroma-mcp",
+    "category": "data",
+    "source": "community",
+    "install": "claude mcp add chroma",
+    "tags": [
+      "vector-database",
+      "semantic-search",
+      "local",
+      "rag"
+    ],
+    "descZh": "嵌入式向量库，本地建知识库做语义搜索，轻量易用、上手快。",
+    "descEn": "An embedded vector store for local knowledge bases with semantic search, lightweight and easy to use."
+  },
+  {
+    "slug": "weaviate-mcp",
+    "name": "Weaviate MCP",
+    "url": "https://github.com/weaviate/mcp-server-weaviate",
+    "category": "data",
+    "source": "community",
+    "install": "claude mcp add weaviate",
+    "tags": [
+      "vector-database",
+      "rag",
+      "hybrid-search",
+      "production"
+    ],
+    "descZh": "生产级向量库，管理 schema 与对象、支持混合检索，适合正式 RAG 系统。",
+    "descEn": "A production-grade vector database managing schemas and objects with hybrid search, built for real RAG systems."
+  },
+  {
+    "slug": "excel-mcp",
+    "name": "Excel MCP",
+    "url": "https://github.com/harmonydata/excel-mcp-server",
+    "category": "data",
+    "source": "community",
+    "install": "claude mcp add excel",
+    "tags": [
+      "spreadsheet",
+      "excel",
+      "data-analysis",
+      "productivity"
+    ],
+    "descZh": "直接读写 Excel 文件，读 sheet、写单元格、做公式计算与数据整理。",
+    "descEn": "Reads and writes Excel files directly — sheets, cells, formulas, and data cleanup."
+  },
+  {
+    "slug": "apify-mcp",
+    "name": "Apify MCP",
+    "url": "https://github.com/apify/actors-mcp-server",
+    "category": "data",
+    "source": "community",
+    "install": "claude mcp add apify（需 API Key）",
+    "tags": [
+      "web-scraping",
+      "automation",
+      "actors",
+      "marketplace"
+    ],
+    "descZh": "云爬虫市场，上千个现成爬虫 actor，可采集网页、电商与社交媒体数据。",
+    "descEn": "A cloud scraping marketplace with thousands of ready-made actors for web, e-commerce, and social media data."
+  },
+  {
+    "slug": "youtube-transcript-mcp",
+    "name": "YouTube Transcript MCP",
+    "url": "https://github.com/kimtaeyoon83/mcp-server-youtube-transcript",
+    "category": "data",
+    "source": "community",
+    "install": "claude mcp add youtube-transcript",
+    "tags": [
+      "youtube",
+      "transcript",
+      "subtitle",
+      "video"
+    ],
+    "descZh": "拉取 YouTube 视频字幕，把长视频转成文字，方便做摘要、笔记与翻译。",
+    "descEn": "Fetches YouTube video transcripts to turn long videos into text for summaries, notes, and translation."
+  },
+  {
+    "slug": "pubmed-mcp",
+    "name": "PubMed MCP",
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "category": "data",
+    "source": "community",
+    "install": "claude mcp add pubmed",
+    "tags": [
+      "medical",
+      "literature",
+      "search",
+      "research"
+    ],
+    "descZh": "检索医学文献库 PubMed，获取论文摘要与引用信息，供医学科普与研究使用。",
+    "descEn": "Searches the PubMed medical literature database for paper abstracts and citations for health research."
+  },
+  {
+    "slug": "puppeteer-mcp",
+    "name": "Puppeteer MCP",
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "category": "data",
+    "source": "community",
+    "install": "claude mcp add puppeteer",
+    "tags": [
+      "browser",
+      "automation",
+      "scraping",
+      "screenshot"
+    ],
+    "descZh": "无头浏览器自动化，加载 JS 页面、截图并提取渲染后的内容。",
+    "descEn": "Headless browser automation that loads JavaScript pages, takes screenshots, and extracts rendered content."
+  },
+  {
+    "slug": "google-drive-mcp",
+    "name": "Google Drive MCP",
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "category": "data",
+    "source": "community",
+    "install": "claude mcp add google-drive（需 OAuth 配置）",
+    "tags": [
+      "google-drive",
+      "cloud",
+      "documents",
+      "storage"
+    ],
+    "descZh": "操作 Google Drive，列出文件、搜索并读写文档，把文档工作流接入 AI。",
+    "descEn": "Operates Google Drive — list files, search, and read/write documents to plug docs workflows into AI."
+  },
+  {
+    "slug": "jira-mcp",
+    "name": "Jira / Atlassian MCP",
+    "url": "https://github.com/sooperset/mcp-atlassian",
+    "category": "efficiency",
+    "source": "community",
+    "install": "claude mcp add jira（需 API Key）",
+    "tags": [
+      "jira",
+      "confluence",
+      "project-management",
+      "atlassian"
+    ],
+    "descZh": "读写 Jira/Confluence：查 issue、建任务、抓文档，项目管理直接接入对话。",
+    "descEn": "Read and write Jira/Confluence: query issues, create tasks, fetch docs — project management right in the chat."
+  },
+  {
+    "slug": "sentry-mcp",
+    "name": "Sentry MCP",
+    "url": "https://github.com/getsentry/sentry-mcp",
+    "category": "efficiency",
+    "source": "community",
+    "install": "claude mcp add sentry（需 API Key）",
+    "tags": [
+      "sentry",
+      "error-tracking",
+      "debugging"
+    ],
+    "descZh": "拉取 Sentry 错误与 issue 详情，让 Claude 直接分析线上报错并给出修复建议。",
+    "descEn": "Pull Sentry errors, issues and details so Claude can analyze production errors and suggest fixes."
+  },
+  {
+    "slug": "gmail-mcp",
+    "name": "Gmail MCP",
+    "url": "https://github.com/GongRzhe/Gmail-MCP-Server",
+    "category": "efficiency",
+    "source": "community",
+    "install": "claude mcp add gmail（需 API Key）",
+    "tags": [
+      "gmail",
+      "email",
+      "communication"
+    ],
+    "descZh": "读写 Gmail：搜索邮件、起草回复、整理收件箱，邮件处理交给对话。",
+    "descEn": "Read and send Gmail: search emails, draft replies, tidy the inbox."
+  },
+  {
+    "slug": "twilio-mcp",
+    "name": "Twilio MCP",
+    "url": "https://github.com/twilio-labs/twilio-mcp-server",
+    "category": "efficiency",
+    "source": "community",
+    "install": "claude mcp add twilio（需 API Key）",
+    "tags": [
+      "twilio",
+      "sms",
+      "whatsapp",
+      "automation"
+    ],
+    "descZh": "Twilio 官方服务器：发短信/WhatsApp、查消息状态，通信流程自动化。",
+    "descEn": "Official Twilio server: send SMS/WhatsApp, check message status — automate communications."
+  },
+  {
+    "slug": "resend-mcp",
+    "name": "Resend MCP",
+    "url": "https://github.com/resend/mcp-server-resend",
+    "category": "efficiency",
+    "source": "community",
+    "install": "claude mcp add resend（需 API Key）",
+    "tags": [
+      "resend",
+      "email",
+      "marketing",
+      "api"
+    ],
+    "descZh": "邮件 API：让 Claude 直接撰写并发送事务邮件与营销邮件。",
+    "descEn": "Email API: let Claude write and send transactional or marketing emails."
+  },
+  {
+    "slug": "stripe-mcp",
+    "name": "Stripe MCP",
+    "url": "https://github.com/stripe/agent-toolkit",
+    "category": "efficiency",
+    "source": "community",
+    "install": "claude mcp add stripe（需 API Key）",
+    "tags": [
+      "stripe",
+      "payments",
+      "ecommerce",
+      "billing"
+    ],
+    "descZh": "Stripe 官方：查支付、建客户/订阅、排查账单，电商后端直接接入。",
+    "descEn": "Official Stripe: check payments, create customers/subscriptions, debug billing — wire in e-commerce backends."
+  },
+  {
+    "slug": "linear-mcp",
+    "name": "Linear MCP",
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "category": "efficiency",
+    "source": "community",
+    "install": "claude mcp add linear（需 API Key）",
+    "tags": [
+      "linear",
+      "issue-tracking",
+      "project-management",
+      "team"
+    ],
+    "descZh": "管理 Linear issue：建任务、查状态、更新进度，开发团队协作顺手。",
+    "descEn": "Manage Linear issues: create tasks, check status, update progress — handy for dev teams."
+  },
+  {
+    "slug": "obsidian-mcp",
+    "name": "Obsidian MCP",
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "category": "efficiency",
+    "source": "community",
+    "install": "claude mcp add obsidian",
+    "tags": [
+      "obsidian",
+      "notes",
+      "knowledge-base",
+      "markdown"
+    ],
+    "descZh": "读写 Obsidian 库：记笔记、建双链、整理知识库，第二大脑连进对话。",
+    "descEn": "Read and write an Obsidian vault: take notes, create backlinks, organize your knowledge base."
+  },
+  {
+    "slug": "hooks-practice",
+    "name": "Hooks 实践",
+    "category": "efficiency",
+    "source": "community",
+    "tags": [
+      "hooks",
+      "automation",
+      "safety"
+    ],
+    "descZh": "用 Claude Code 的 hooks 在关键节点自动执行检查，把提交前 lint/测试、权限拦截固化进流程。",
+    "descEn": "Use Claude Code hooks to run checks automatically at key points — lint/tests before commits, permission guards — turning workflows into automation."
+  },
+  {
+    "slug": "subagents",
+    "name": "子代理编排",
+    "category": "efficiency",
+    "source": "community",
+    "tags": [
+      "subagents",
+      "parallel",
+      "roles"
+    ],
+    "descZh": "定义 reviewer/tester/planner 等专用子代理，大任务并行分工、主代理统筹。",
+    "descEn": "Define dedicated subagents (reviewer/tester/planner) so big tasks split in parallel with a main agent coordinating."
+  },
+  {
+    "slug": "slash-command-lib",
+    "name": "Slash 命令库",
+    "category": "efficiency",
+    "source": "community",
+    "tags": [
+      "slash",
+      "commands",
+      "workflow"
+    ],
+    "descZh": "把常用操作封装成自定义 slash 命令，一条命令触发整段工作流。",
+    "descEn": "Wrap frequent operations into custom slash commands so one command kicks off a whole workflow."
+  },
+  {
+    "slug": "session-resume",
+    "name": "会话续接",
+    "category": "efficiency",
+    "source": "community",
+    "tags": [
+      "resume",
+      "context",
+      "handoff"
+    ],
+    "descZh": "用 session 文件与交接摘要在新会话里无缝续接任务，跨会话保持上下文。",
+    "descEn": "Use session files and handoff summaries to resume work seamlessly in a new session, keeping context across sessions."
+  },
+  {
+    "slug": "transcript-repurpose",
+    "name": "转写再创作",
+    "category": "content",
+    "source": "community",
+    "tags": [
+      "repurpose",
+      "transcript",
+      "blog"
+    ],
+    "descZh": "把播客/视频/会议转写稿拆解成博客、推文、newsletter 等多形态内容，一份素材多次产出。",
+    "descEn": "Turn podcast, video, or meeting transcripts into blog posts, tweets, newsletters and more — one source, many formats."
+  },
+  {
+    "slug": "seo-brief",
+    "name": "SEO 简报",
+    "category": "content",
+    "source": "community",
+    "tags": [
+      "seo",
+      "brief",
+      "keywords"
+    ],
+    "descZh": "围绕目标关键词产出带标题、大纲、H 结构与内链外链建议的 SEO 写作简报，落笔前先对齐搜索意图。",
+    "descEn": "Generate an SEO writing brief with title, outline, H-structure, and internal/external link suggestions aligned to search intent."
+  },
+  {
+    "slug": "blog-outline",
+    "name": "博客大纲",
+    "category": "content",
+    "source": "community",
+    "tags": [
+      "outline",
+      "structure",
+      "blog"
+    ],
+    "descZh": "快速搭出有信息层级和逻辑钩子的博客大纲，再逐节扩写，避免写到一半跑题。",
+    "descEn": "Rapidly build a blog outline with clear information hierarchy and logical hooks, then expand section by section."
+  },
+  {
+    "slug": "hook-generator",
+    "name": "开头钩子",
+    "category": "content",
+    "source": "community",
+    "tags": [
+      "hook",
+      "opening",
+      "engagement"
+    ],
+    "descZh": "批量生成悬念、反常识、痛点等不同风格的开头钩子，多选一提高完读率。",
+    "descEn": "Batch-generate opening hooks in suspense, counterintuitive, and pain-point styles to lift completion rates."
+  },
+  {
+    "slug": "copywriting-pas",
+    "name": "P.A.S. 文案框架",
+    "category": "content",
+    "source": "community",
+    "tags": [
+      "copywriting",
+      "framework",
+      "persuasion"
+    ],
+    "descZh": "用「问题-激化-方案」三段框架写说服型文案，直接套用到落地页、广告和销售信。",
+    "descEn": "Write persuasive copy with the Problem-Agitate-Solve framework, ready for landing pages, ads, and sales letters."
+  },
+  {
+    "slug": "ad-copy-gen",
+    "name": "广告文案",
+    "category": "content",
+    "source": "community",
+    "tags": [
+      "ads",
+      "variants",
+      "cta"
+    ],
+    "descZh": "按受众和投放渠道批量生成广告文案变体，含主标题、副标题与行动号召，方便 A/B 测试。",
+    "descEn": "Generate ad copy variants for a target audience and channel, with headlines, subheads, and CTAs for A/B testing."
+  },
+  {
+    "slug": "email-sequence",
+    "name": "邮件序列",
+    "category": "content",
+    "source": "community",
+    "tags": [
+      "email",
+      "sequence",
+      "drip"
+    ],
+    "descZh": "设计欢迎、培育、挽回三类邮件序列，按节奏推进打开与转化，每封只做一件事。",
+    "descEn": "Design welcome, nurture, and win-back email sequences that move opens and conversions forward with deliberate pacing."
+  },
+  {
+    "slug": "podcast-notes",
+    "name": "播客节目笔记",
+    "category": "content",
+    "source": "community",
+    "tags": [
+      "podcast",
+      "show-notes",
+      "summary"
+    ],
+    "descZh": "从音频转写稿提炼节目笔记：核心要点、时间戳和行动项，可直接发布。",
+    "descEn": "Distill show notes from audio transcripts: key takeaways, timestamps, and action items, ready to publish."
+  },
+  {
+    "slug": "youtube-script",
+    "name": "YouTube 脚本",
+    "category": "content",
+    "source": "community",
+    "tags": [
+      "youtube",
+      "script",
+      "hook"
+    ],
+    "descZh": "写带开头钩子、段落节奏和 CTA 的口播脚本，按字数控制成片时长。",
+    "descEn": "Write voiceover scripts with opening hooks, segment pacing, and CTAs, with word count to control runtime."
+  },
+  {
+    "slug": "social-caption",
+    "name": "社媒文案",
+    "category": "content",
+    "source": "community",
+    "tags": [
+      "social",
+      "caption",
+      "platform"
+    ],
+    "descZh": "一套内容改写成抖音、小红书、微博等平台适配文案，带话题标签和互动引导。",
+    "descEn": "Adapt one piece of content into platform-fit captions for Douyin, Xiaohongshu, Weibo, and more, with hashtags and engagement prompts."
+  },
+  {
+    "slug": "brand-voice",
+    "name": "品牌语气",
+    "category": "content",
+    "source": "community",
+    "tags": [
+      "brand",
+      "voice",
+      "tone"
+    ],
+    "descZh": "把品牌调性固化为语气规范，让所有 AI 产出的文案保持同一种声音。",
+    "descEn": "Turn brand personality into a tone-of-voice guideline so every piece of AI-generated copy sounds like one brand."
+  },
+  {
+    "slug": "script-dialogue",
+    "name": "剧本对白",
+    "category": "content",
+    "source": "community",
+    "tags": [
+      "script",
+      "dialogue",
+      "story"
+    ],
+    "descZh": "写短视频、动画、微短剧的分场对白，含动作与情绪提示，可直接进分镜。",
+    "descEn": "Write scene-by-scene dialogue for short videos, animation, and micro-dramas, with action and emotion cues for storyboards."
+  },
+  {
+    "slug": "landing-page-gen",
+    "name": "落地页生成",
+    "category": "design",
+    "source": "community",
+    "tags": [
+      "landing",
+      "conversion",
+      "copy"
+    ],
+    "descZh": "从产品卖点一键产出结构化落地页：Hero/卖点/证据/FAQ/CTA，标题与按钮文案遵循 AIDA 转化逻辑。",
+    "descEn": "Generate a structured landing page from product bullets: Hero/benefits/proof/FAQ/CTA, with copy following AIDA conversion logic."
+  },
+  {
+    "slug": "wireframe-skill",
+    "name": "线框图",
+    "category": "design",
+    "source": "community",
+    "tags": [
+      "wireframe",
+      "layout",
+      "structure"
+    ],
+    "descZh": "内容优先：先输出语义化的线框（标题/正文/图片/按钮占位），确认信息架构后再谈视觉，避免一上来堆视觉。",
+    "descEn": "Content-first: output semantic wireframes (headings/body/media/button placeholders) to lock the IA before any visual polish."
+  },
+  {
+    "slug": "icon-design",
+    "name": "图标设计",
+    "category": "design",
+    "source": "community",
+    "tags": [
+      "icon",
+      "svg",
+      "set"
+    ],
+    "descZh": "在统一网格上生成 SVG 图标集：一致的线宽、圆角、端点与描边对齐，保证整套图标风格统一。",
+    "descEn": "Produce a consistent SVG icon set on a shared grid: uniform stroke width, corner radius, caps and stroke alignment."
+  },
+  {
+    "slug": "typography-skill",
+    "name": "字体排版",
+    "category": "design",
+    "source": "community",
+    "tags": [
+      "typography",
+      "font",
+      "spacing"
+    ],
+    "descZh": "输出字号阶梯（12/14/16/20/24/32…）、字重、行高与负字距规范，中文字号行高按方块字单独适配。",
+    "descEn": "Ship a type scale (12/14/16/20/24/32…), weight, line-height and negative-tracking spec, tuned separately for CJK text."
+  },
+  {
+    "slug": "color-palette",
+    "name": "配色方案",
+    "category": "design",
+    "source": "community",
+    "tags": [
+      "color",
+      "palette",
+      "contrast"
+    ],
+    "descZh": "从品牌色推导完整语义配色：强调/中性/语义色（成功·警告·错误）加深浅两套主题，并用工具校验 WCAG 对比度。",
+    "descEn": "Derive a full semantic palette from a brand color: accents/neutrals/status (success, warning, danger) plus light/dark, contrast-checked for WCAG."
+  },
+  {
+    "slug": "ui-components-lib",
+    "name": "组件库规范",
+    "category": "design",
+    "source": "community",
+    "tags": [
+      "components",
+      "design-system",
+      "tokens"
+    ],
+    "descZh": "梳理按钮/卡片/表单等组件的状态（hover/focus/disabled/loading）与尺寸（sm/md/lg），输出统一的组件规范与 tokens。",
+    "descEn": "Define states (hover/focus/disabled/loading) and sizes (sm/md/lg) for buttons, cards and forms, outputting a unified component spec with tokens."
+  },
+  {
+    "slug": "micro-interactions",
+    "name": "微交互",
+    "category": "design",
+    "source": "community",
+    "tags": [
+      "motion",
+      "hover",
+      "transition"
+    ],
+    "descZh": "为按钮/卡片/浮层设计克制的 hover 与过渡动效：统一时长与缓动（120ms 触感 + 240ms 层动效），并尊重 reduced-motion。",
+    "descEn": "Design restrained hover and transition motion for buttons/cards/overlays: consistent duration and easing (120ms tactile, 240ms layer), honoring reduced-motion."
+  },
+  {
+    "slug": "a11y-audit",
+    "name": "无障碍审查",
+    "category": "design",
+    "source": "community",
+    "tags": [
+      "a11y",
+      "wcag",
+      "accessibility"
+    ],
+    "descZh": "按 WCAG 2.2 审查界面：对比度、可见焦点环、aria/语义标签与键盘可达性，输出按严重度排序的修复清单。",
+    "descEn": "Audit UI against WCAG 2.2: contrast, visible focus, aria/semantic labels and keyboard reachability, with a severity-ranked fix list."
+  },
+  {
+    "slug": "dark-mode-design",
+    "name": "暗色模式设计",
+    "category": "design",
+    "source": "community",
+    "tags": [
+      "dark",
+      "theme",
+      "contrast"
+    ],
+    "descZh": "把浅色主题正确转为暗色：不用纯黑地面、表面降饱和、避免纯白文字，暗色下的对比度与发光感重新调校。",
+    "descEn": "Convert a light theme to dark correctly: no pure-black ground, desaturated surfaces, no pure-white text, with re-tuned contrast and glow."
+  },
+  {
+    "slug": "mobile-ui",
+    "name": "移动端 UI",
+    "category": "design",
+    "source": "community",
+    "tags": [
+      "mobile",
+      "responsive",
+      "touch"
+    ],
+    "descZh": "窄屏重排：导航折叠为抽屉/底部栏、点击区不小于 44px、按拇指热区优化布局，兼顾触控与单手操作。",
+    "descEn": "Rework UI for narrow screens: fold nav into drawers/bottom bars, keep touch targets ≥44px, and optimize thumb zones for one-handed use."
+  },
+  {
+    "slug": "design-critique",
+    "name": "设计评审",
+    "category": "design",
+    "source": "community",
+    "tags": [
+      "critique",
+      "review",
+      "standards"
+    ],
+    "descZh": "按清单评审界面：层级、间距比例、一致性、可用性与细节像素，每条给出可执行修改而非泛泛评价。",
+    "descEn": "Review UI against a checklist: hierarchy, spacing rhythm, consistency, usability and pixel detail, with an actionable fix per finding."
+  },
+  {
+    "slug": "glassmorphism",
+    "name": "玻璃拟态",
+    "category": "design",
+    "source": "community",
+    "tags": [
+      "glass",
+      "blur",
+      "layers"
+    ],
+    "descZh": "正确使用毛玻璃：只在层叠处用（导航/浮层/侧栏），背景色彩饱和 + backdrop-blur，前景配高对比文本避免糊成一片。",
+    "descEn": "Use glass correctly: only where layers overlap (nav/overlays/sidebars), saturated colorful backdrop with backdrop-blur, and high-contrast foreground to avoid a muddy blur."
   }
 ]

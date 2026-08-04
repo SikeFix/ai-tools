@@ -1,0 +1,78 @@
+{
+  "slug": "plan-as-travel-planning",
+  "title": "方案 AS：AI 旅行规划",
+  "summary": "偏好 → 行程 → 交通住宿 → 清单 → 实时调整",
+  "scenario": "适合自由行、家庭出游前快速产出可执行行程，并在旅途中随实际情况调整。",
+  "meta": {
+    "duration": "2-3 小时",
+    "cost": "低",
+    "difficulty": "入门"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Google Gemini", "url": "https://gemini.google.com" },
+    { "name": "Perplexity", "url": "https://perplexity.ai" },
+    { "name": "Notion", "url": "https://notion.so" },
+    { "name": "Google Maps", "url": "https://www.google.com/maps" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "偏好收集",
+      "tool": "ChatGPT / Google Gemini + 你",
+      "time": "20-40 分钟",
+      "detail": "把人数、天数、预算、出行日期、兴趣（美食/人文/自然/亲子）、节奏偏好、有没有老人小孩等信息写清楚。让模型按这些条件反问补齐你没说的约束（如忌口、行动不便）。",
+      "tips": "把你「绝对不能接受」的事单列一条（比如全程不赶景点），比罗列想要什么更省心。"
+    },
+    {
+      "id": "s2",
+      "title": "行程",
+      "tool": "ChatGPT / Google Gemini",
+      "time": "30-60 分钟",
+      "detail": "让模型按天生成行程草案：每日主题、景点顺序、大致时间与地理顺路度，避免折返跑。标注每个景点的预留时长与备选方案，雨天或累了的替换项。",
+      "tips": "要求模型按「地图上的地理顺序」排行程，并给每天一个可删的弹性项，玩不动时直接砍。"
+    },
+    {
+      "id": "s3",
+      "title": "交通住宿",
+      "tool": "Perplexity / Google Maps",
+      "time": "30-60 分钟",
+      "detail": "用 Perplexity 查景点间交通方式（公交/地铁/包车）与耗时，用 Google Maps 核对位置与营业时间，在预订平台比价酒店/民宿，位置优先选在主要活动区域附近。",
+      "tips": "让模型按「住哪里到各主要景点最省通勤」给出住宿建议，再回平台核实价格。"
+    },
+    {
+      "id": "s4",
+      "title": "清单",
+      "tool": "Notion",
+      "time": "20-30 分钟",
+      "detail": "把行程、预订号、地址、联系电话、打包清单、紧急联系信息汇总进 Notion 旅行页，手机离线也能看。把每天的行程导成便于分享的清单给同行人。",
+      "tips": "建一个「出发前检查」列表：证件、现金、充电、药、天气，出发前一晚逐项打勾。"
+    },
+    {
+      "id": "s5",
+      "title": "实时调整",
+      "tool": "ChatGPT / Google Maps",
+      "time": "旅途中按需",
+      "detail": "旅途中遇到景点闭馆、天气变化、体力不支时，把当前时间与位置告诉模型，让它重新排当天剩余行程。用 Google Maps 查实时营业与排队情况再定。",
+      "tips": "每次调整后让模型只重排「当天剩余」，别把后面几天的行程也推倒。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "依赖过时信息",
+      "detail": "营业时间、门票价格、交通线路说变就变；出发前用官网与 Google Maps 复核，行程只把时间留宽松。"
+    },
+    {
+      "title": "行程排太满",
+      "detail": "打卡式行程遇上排队与堵车就全线崩溃；每天留出 1-2 个可删项与一段自由时间。"
+    },
+    {
+      "title": "只信 AI 不核预订",
+      "detail": "AI 给的建议要回官网/平台实际下单确认，别只存在 AI 生成的「已订好」印象里；改签政策也看清。"
+    },
+    {
+      "title": "全家人的节奏不一样",
+      "detail": "带老人小孩还按年轻人的节奏排，第三天就累垮；按最慢成员的节奏设计每天的强度。"
+    }
+  ]
+}

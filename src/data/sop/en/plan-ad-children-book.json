@@ -1,0 +1,78 @@
+{
+  "slug": "plan-ad-children-book",
+  "title": "Plan AD: AI Children's Picture Book",
+  "summary": "Storyline → page-by-page script → illustrations → layout → print / digital",
+  "scenario": "For parents and creators making an original children's picture book — from a one-line idea to a printable or publishable book.",
+  "meta": {
+    "duration": "3-6 hours / book",
+    "cost": "Medium",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chat.openai.com" },
+    { "name": "Midjourney", "url": "https://www.midjourney.com" },
+    { "name": "DALL·E 3", "url": "https://openai.com/dall-e-3" },
+    { "name": "Flux", "url": "https://blackforestlabs.ai" },
+    { "name": "Canva Magic Studio", "url": "https://www.canva.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Storyline",
+      "tool": "ChatGPT",
+      "time": "20-30 min",
+      "detail": "Expand a one-line idea into a full storyline — protagonist, conflict, turning point, resolution — and check the pacing against a three-act structure. Give the model a list of interests for a 3-6 year old so the story lands in daily life.",
+      "tips": "Generate three protagonist options and only develop the one that moves you."
+    },
+    {
+      "id": "s2",
+      "title": "Page-by-page script",
+      "tool": "ChatGPT",
+      "time": "30-40 min",
+      "detail": "Break the story into 16-24 pages, each with one line of narration plus a visual description (characters, setting, mood, shot). Keep each page's information load even so the art has room to breathe.",
+      "tips": "Lock the protagonist's look (hair color, outfit) in the descriptions so every later illustration stays consistent."
+    },
+    {
+      "id": "s3",
+      "title": "Illustration generation",
+      "tool": "Midjourney / DALL·E 3 / Flux",
+      "time": "1-2 hours",
+      "detail": "Generate the art page by page, anchoring the protagonist with a character reference in Midjourney before each page. Save the description of your favorite first image as a template and change only scene and action per page, so the style never drifts.",
+      "tips": "Use --cref or feed back the previous finished image via image-to-image for the most stable character."
+    },
+    {
+      "id": "s4",
+      "title": "Layout",
+      "tool": "Canva Magic Studio",
+      "time": "1 hour",
+      "detail": "Drag illustrations and text into a canvas, standardize fonts and sizes, and add page numbers, cover and back cover. Use Magic Studio's copy and background features to finish details, then export PDF for print or digital release.",
+      "tips": "Build one sample page to confirm font size and bleed before batch-laying the rest, so you never redo a whole book."
+    },
+    {
+      "id": "s5",
+      "title": "Print / digital",
+      "tool": "Canva + publishing platform",
+      "time": "30 min",
+      "detail": "Export a 300dpi PDF for print and check that text isn't clipped or crossing the gutter. Upload to Kindle or a print-on-demand service, or send a preview link to friends for a test read.",
+      "tips": "Print one or two test pages first to check color and trimming before the full run."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Inconsistent characters",
+      "detail": "Generating the protagonist randomly per page creates a shapeshifter; anchor a fixed character reference first, then vary per page."
+    },
+    {
+      "title": "Text overlapping art / crossing the gutter",
+      "detail": "Children's books use big type; keep generous margins and never run text across the spine."
+    },
+    {
+      "title": "Generating all pages at once",
+      "detail": "Test two or three images to lock the style before batching, or the art style will drift out of control."
+    },
+    {
+      "title": "Ignoring licensing",
+      "detail": "Before publishing on a commercial platform, confirm the commercial-use terms of your model and assets."
+    }
+  ]
+}

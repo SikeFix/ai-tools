@@ -1,0 +1,74 @@
+{
+  "slug": "plan-t-product-demo",
+  "title": "Plan T: AI Product Demo Video",
+  "summary": "Extract selling points → script & storyboard → visual generation → voice & music → final assembly",
+  "scenario": "For new or small products that need a 30-90 second promo video to launch fast on a website, store or social feed.",
+  "meta": {
+    "duration": "3-5 hours",
+    "cost": "Medium",
+    "difficulty": "Intermediate"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT / Claude", "url": "https://chatgpt.com" },
+    { "name": "Sora / 可灵 Kling", "url": "https://sora.com" },
+    { "name": "ElevenLabs", "url": "https://elevenlabs.io" },
+    { "name": "Suno", "url": "https://suno.com" },
+    { "name": "Descript", "url": "https://www.descript.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Extract selling points",
+      "tool": "ChatGPT / Claude",
+      "time": "10-15 min",
+      "detail": "Feed the model your product materials, feature list and real customer reviews, and ask it to distill 3-5 core selling points plus a one-line value proposition from the user's point of view: who it is for, which pain it solves, and what makes it different. A point only counts if it fits in one sentence and can be shown on screen.",
+      "tips": "Paste in two or three competitor pages too, so the model can position against them — the points land harder."
+    },
+    {
+      "id": "s2",
+      "title": "Script & storyboard",
+      "tool": "ChatGPT / Claude",
+      "time": "30-45 min",
+      "detail": "Turn the points into a 30-90 second storyboard script: the first 3 seconds hit the pain point or product highlight, the middle walks through each selling point, and the end carries the call to action. For every shot, note the on-screen text, narration and duration.",
+      "tips": "Put the pain point and the product in the same frame in the first 3 seconds — wait time kills completion."
+    },
+    {
+      "id": "s3",
+      "title": "Visual generation",
+      "tool": "Sora / 可灵 Kling",
+      "time": "1-2 hours",
+      "detail": "Generate each shot with a video model, or run image-to-video on real product footage; lock the same product description, color palette and lighting so the whole film feels consistent. Generate 2-3 takes per shot and pick the best.",
+      "tips": "Write the shot language (scale, camera move, duration) before generating — way fewer duds."
+    },
+    {
+      "id": "s4",
+      "title": "Voice & music",
+      "tool": "ElevenLabs + Suno",
+      "time": "20-30 min",
+      "detail": "Turn the narration script into natural voice-over with ElevenLabs and pick a voice that matches the product; make the backing track in Suno or pick from a library and length it to the cut. Slightly fast, rhythmic delivery fits short videos best.",
+      "tips": "Write 'tone: excited, up' into the script — it beats a flat read every time."
+    },
+    {
+      "id": "s5",
+      "title": "Final assembly",
+      "tool": "Descript",
+      "time": "30-45 min",
+      "detail": "In Descript, assemble visuals, voice, captions, music and transitions, time the ending to land on the beat, and export 16:9 and 9:16 versions for different channels.",
+      "tips": "Watch it muted once before exporting — audio-video drift is the most common rookie mistake."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Too many selling points",
+      "detail": "In 30-90 seconds, nail one hero point plus 2-3 supporting ones; cramming everything in means nothing lands."
+    },
+    {
+      "title": "Visuals and narration drifting apart",
+      "detail": "Write the voice-over first and build the shots around it, not the other way around."
+    },
+    {
+      "title": "Ignoring delivery rhythm",
+      "detail": "Long script sentences make the narration dull; write short lines with pauses and punctuation."
+    }
+  ]
+}

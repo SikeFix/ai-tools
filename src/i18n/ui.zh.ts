@@ -78,6 +78,7 @@ export const zh = {
   'sop.meta.difficulty': '难度',
   'sop.prev': '上一篇',
   'sop.next': '下一篇',
+  'sop.related': '同类工作流',
   'sop.empty': '暂无工作流',
   'sop.group.video': '视频制作',
   'sop.group.content': '内容创作',

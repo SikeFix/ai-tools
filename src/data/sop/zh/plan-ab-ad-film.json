@@ -1,0 +1,79 @@
+{
+  "slug": "plan-ab-ad-film",
+  "title": "方案 AB：AI 广告种草视频",
+  "summary": "产品洞察 → 创意脚本 → 画面生成/实拍 → 剪辑 → 投放变体",
+  "scenario": "给品牌做信息流广告与种草视频，批量产出投放变体并持续优化。",
+  "meta": {
+    "duration": "3-5 小时",
+    "cost": "中",
+    "difficulty": "进阶"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Sora", "url": "https://sora.com" },
+    { "name": "可灵 Kling", "url": "https://klingai.com" },
+    { "name": "HeyGen", "url": "https://www.heygen.com" },
+    { "name": "Descript", "url": "https://www.descript.com" },
+    { "name": "Midjourney", "url": "https://www.midjourney.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "产品洞察",
+      "tool": "ChatGPT + 数据分析",
+      "time": "30 分钟",
+      "detail": "收集产品资料、竞品广告与真实用户评论，提炼目标人群的痛点与差异化卖点，形成「人群 × 痛点 × 卖点」组合表，作为所有创意的源头。",
+      "tips": "从用户差评里找痛点最准——差评即卖点机会。"
+    },
+    {
+      "id": "s2",
+      "title": "创意脚本",
+      "tool": "ChatGPT",
+      "time": "30-45 分钟",
+      "detail": "基于洞察写多个创意脚本：痛点开场 → 场景演示 → 效果对比 → 行动号召，每个脚本写 3 个不同钩子备用。",
+      "tips": "钩子直接给「结果数字」或「反常识结论」，比「你知道吗」更有力。"
+    },
+    {
+      "id": "s3",
+      "title": "画面生成 / 实拍",
+      "tool": "Sora + 可灵 Kling + Midjourney",
+      "time": "2-3 小时",
+      "detail": "用视频模型生成产品演示与使用场景，产品主图可用 Midjourney 精修；人物口播可用 HeyGen 数字人，或配合实拍素材混剪。",
+      "tips": "同一产品多生成不同光线与场景版本，投放时才好做变量测试。"
+    },
+    {
+      "id": "s4",
+      "title": "剪辑",
+      "tool": "Descript",
+      "time": "45-60 分钟",
+      "detail": "剪成 15-30 秒信息流版本：大字字幕、前 3 秒强钩子、结尾品牌露出；导出 9:16、16:9、1:1 多比例。",
+      "tips": "信息流默认静音播放，字幕与大字报是标配，别只靠声音。"
+    },
+    {
+      "id": "s5",
+      "title": "投放变体",
+      "tool": "投流后台",
+      "time": "30 分钟",
+      "detail": "按「不同钩子 × 不同卖点顺序 × 不同画面」组合出 5-10 个变体，小预算测试，CTR 与 CVR 达标再放大预算。",
+      "tips": "先用小预算跑出前 20% 的变体再加量，别一上来全量投放。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "虚假宣传踩线",
+      "detail": "广告法对功效宣称严格，AI 文案必须过合规审查。"
+    },
+    {
+      "title": "钩子与正文脱节",
+      "detail": "开头承诺的内容正文没兑现，转化差还易退款。"
+    },
+    {
+      "title": "只做单一版本",
+      "detail": "信息流是靠测试跑出来的，单版本很难一炮而红。"
+    },
+    {
+      "title": "忽略品牌露出",
+      "detail": "纯种草不带品牌，流量来了也沉淀不下来。"
+    }
+  ]
+}

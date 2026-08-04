@@ -1,0 +1,86 @@
+{
+  "slug": "plan-ar-paper-writing",
+  "title": "Plan AR: AI Academic Writing",
+  "summary": "Topic → literature search → outline → draft → de-duplicate & polish → submit",
+  "scenario": "For students and researchers using AI as a writing and search aid, with strict academic integrity — AI assists, it never writes or thinks for you.",
+  "meta": {
+    "duration": "1-2 weeks",
+    "cost": "Low",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Claude", "url": "https://claude.ai" },
+    { "name": "DeepSeek", "url": "https://chat.deepseek.com" },
+    { "name": "Perplexity", "url": "https://perplexity.ai" },
+    { "name": "Grammarly", "url": "https://grammarly.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Choose a topic",
+      "tool": "ChatGPT / DeepSeek",
+      "time": "1-2 days",
+      "detail": "Brainstorm with the model: from your area of interest, have AI list research gaps, feasibility and material availability. Write the research question in one sentence — problem → method → contribution — and let the model stress-test whether it's too narrow or too broad.",
+      "tips": "Ask the model for 5 likely reviewer questions on this topic to expose defense or review risk early."
+    },
+    {
+      "id": "s2",
+      "title": "Literature search",
+      "tool": "Perplexity / CNKI · Google Scholar",
+      "time": "2-3 days",
+      "detail": "Use Perplexity for an initial scan, then read highly-cited and recent papers in detail on CNKI or Google Scholar. Build a literature table (authors, year, method, findings, your notes). Verify key data against original sources — AI invents references.",
+      "tips": "Require source links from Perplexity and click through; delete anything that won't open or can't be found."
+    },
+    {
+      "id": "s3",
+      "title": "Outline",
+      "tool": "Claude / ChatGPT",
+      "time": "1-2 days",
+      "detail": "Build the outline to the target journal's structure: introduction → literature review → methods → results → discussion → conclusion, each section stating the core claim and supporting material. Have the model check the logical chain and fill any gaps.",
+      "tips": "Run the outline past your advisor or a peer before writing further — a wrong direction means rework no matter how much you write."
+    },
+    {
+      "id": "s4",
+      "title": "Draft",
+      "tool": "Claude / ChatGPT",
+      "time": "3-5 days",
+      "detail": "Write section by section: methods first, then results (most objective), then introduction and literature review, discussion last. Feed your own material, data and rough paragraphs to the model to expand or rephrase — you judge and correct.",
+      "tips": "Never let AI write your core arguments wholesale; have it fill blanks inside your materials and framework so the author stays you."
+    },
+    {
+      "id": "s5",
+      "title": "De-duplicate & polish",
+      "tool": "ChatGPT / Grammarly",
+      "time": "1-2 days",
+      "detail": "Run a similarity check first; for high-overlap paragraphs, have AI rewrite sentence structures and word choice, then use Grammarly for grammar and academic tone. Read the whole paper after to confirm meaning survived the rewrites.",
+      "tips": "After de-duplication, ask the model 'did the core claim of this paragraph change?' so you don't lose meaning to similarity."
+    },
+    {
+      "id": "s6",
+      "title": "Submit",
+      "tool": "ChatGPT / submission portal",
+      "time": "1-2 days",
+      "detail": "Use the model to draft the cover letter, author contributions and submission checklist, then verify against the target journal's formatting requirements item by item. Before submitting, have AI run a final self-check: figure numbering, citation format, headers, author info.",
+      "tips": "Have the model check each item against a 'submission checklist' and compare against it literally rather than by feel."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Submitting AI-written text directly",
+      "detail": "That's the academic integrity line — AI-generated content passed off as original can constitute misconduct; AI does search, expansion and polishing, but the core ideas and data must be yours."
+    },
+    {
+      "title": "Citing hallucinated references",
+      "detail": "Models invent non-existent papers and wrong volume/issue numbers; verify every citation against a database — better to omit than to fabricate."
+    },
+    {
+      "title": "Losing authorship to wholesale generation",
+      "detail": "If the core argument isn't yours, a defense or reviewer question exposes it instantly; let AI work inside your framework and material while you own the conclusions."
+    },
+    {
+      "title": "Skipping advisor/peer review",
+      "detail": "AI can't supply real disciplinary judgment; have an advisor or peer read the full draft before you submit and fix major issues first."
+    }
+  ]
+}

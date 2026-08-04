@@ -1,0 +1,78 @@
+{
+  "slug": "plan-aq-course-design",
+  "title": "Plan AQ: AI Course Design",
+  "summary": "Goal analysis → outline → lesson plan → exercises & assessment → iterate",
+  "scenario": "For instructors, knowledge-commerce authors and internal training teams designing a complete course from objectives to delivery.",
+  "meta": {
+    "duration": "2-3 days",
+    "cost": "Low",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Gamma", "url": "https://gamma.app" },
+    { "name": "Notion", "url": "https://notion.so" },
+    { "name": "Canva Magic Studio", "url": "https://www.canva.com" },
+    { "name": "剪映 (CapCut)", "url": "https://www.capcut.cn" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Analyze goals",
+      "tool": "ChatGPT / you",
+      "time": "1-2 hours",
+      "detail": "Define who the learners are, their current level, and what measurable outcome they should achieve after the course, then break that into module goals. Have the model surface prerequisite skills learners probably lack but you didn't think of.",
+      "tips": "Write goals as verb sentences — 'by the end you can independently do X' — never vague words like 'understand' or 'be familiar with'."
+    },
+    {
+      "id": "s2",
+      "title": "Outline",
+      "tool": "ChatGPT / Gamma",
+      "time": "2-4 hours",
+      "detail": "Have the model draft an outline from easy to hard, learn-then-use: modules, sessions, per-session objectives and deliverables. Lay it out as a visual outline in Gamma and show it to peers or a trial learner before finalizing.",
+      "tips": "Ask the model to mark each session's pedagogical reason — why not teach this later — so the outline isn't just a list of topics."
+    },
+    {
+      "id": "s3",
+      "title": "Lesson plan",
+      "tool": "ChatGPT / Claude",
+      "time": "4-8 hours",
+      "detail": "Write a lesson plan for each session: opening case, teaching points, demonstration, interactive questions, in-class exercise, summary. Have the model pair every point with a real example and a common misconception to raise teaching density.",
+      "tips": "Open every session with a 3-minute icebreaker case — learner attention is most valuable in the first five minutes."
+    },
+    {
+      "id": "s4",
+      "title": "Exercises & assessment",
+      "tool": "ChatGPT",
+      "time": "2-3 hours",
+      "detail": "Generate in-class drills, homework and stage quizzes mapped to learning objectives, with difficulty tags. Have the model provide grading rubrics and a capstone project that strings multiple modules together for the final assessment.",
+      "tips": "Ask the model to include answers and explanations with every quiz item, so learners can self-check and you can grade faster."
+    },
+    {
+      "id": "s5",
+      "title": "Review & iterate",
+      "tool": "Notion / Canva Magic Studio",
+      "time": "1-2 hours per cohort",
+      "detail": "Log learner feedback, homework accuracy and completion rates in Notion to find weak spots; rebuild slide visuals quickly with Canva Magic Studio and cut trial-lecture videos with 剪映 (CapCut). Revise lesson plans before the next cohort.",
+      "tips": "Track which quiz items have the highest error rate — the topics they cluster on are what you must re-teach next time."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "A rich outline with unfocused goals",
+      "detail": "Piling up topics is pointless if learners can't say what they can do afterward; fix measurable goals first, then design backward."
+    },
+    {
+      "title": "Lesson plans detached from the outline",
+      "detail": "Plans that don't map to module goals drift as you teach; state the target goal at the top of every plan."
+    },
+    {
+      "title": "Teaching without practice",
+      "detail": "Without exercises and assessment, learners get it in class and blank on it in practice; every module needs at least one exercise."
+    },
+    {
+      "title": "Perfecting everything before launch",
+      "detail": "Ship an 80-point first version and iterate on real feedback — steadier than hoarding a 100-point release."
+    }
+  ]
+}

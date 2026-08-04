@@ -1,0 +1,78 @@
+{
+  "slug": "plan-al-social-calendar",
+  "title": "方案 AL：AI 社媒内容日历",
+  "summary": "人群画像 → 选题池 → 排期 → 批量生成 → 效果归因",
+  "scenario": "适合团队按月规划多平台社媒内容，把散乱创作变成有节奏的日历。",
+  "meta": {
+    "duration": "3-5 小时 / 月",
+    "cost": "低",
+    "difficulty": "进阶"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chat.openai.com" },
+    { "name": "Notion", "url": "https://www.notion.com" },
+    { "name": "Zapier Agents", "url": "https://zapier.com/agents" },
+    { "name": "Canva Magic Studio", "url": "https://www.canva.com" },
+    { "name": "Perplexity", "url": "https://www.perplexity.ai" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "人群画像",
+      "tool": "Perplexity + ChatGPT",
+      "time": "30 分钟",
+      "detail": "结合账号后台数据与竞品分析，提炼目标人群的痛点、关注话题与内容偏好。让模型生成「读者画像卡」，指导后续选题。",
+      "tips": "画像写具体到「会搜什么关键词」，选题和文案就有的放矢。"
+    },
+    {
+      "id": "s2",
+      "title": "选题池",
+      "tool": "ChatGPT",
+      "time": "40 分钟",
+      "detail": "从画像出发产出 20-30 个选题，按「信息性/情感性/促销性」分类并打分。预留热点位，给突发话题留弹性。",
+      "tips": "选题池每月固定 30 个，宁多勿缺；用完再补。"
+    },
+    {
+      "id": "s3",
+      "title": "排期",
+      "tool": "Notion",
+      "time": "30 分钟",
+      "detail": "在 Notion 日历视图建内容日历，把选题按日期与平台排进格子，标注负责人与状态。设定「截止草稿-审核-发布」三级提醒。",
+      "tips": "周一到周五固定更新日，周末放长内容或互动帖，节奏可预期。"
+    },
+    {
+      "id": "s4",
+      "title": "批量生成",
+      "tool": "ChatGPT + Canva Magic Studio",
+      "time": "1-2 小时",
+      "detail": "每周抽半天按排期批量生成文案与配图，套用固定模板统一画风。存到 Notion 待发区，审核后排队发布。",
+      "tips": "批量时固定「结构+语气」，让一周内容读起来是一个声音。"
+    },
+    {
+      "id": "s5",
+      "title": "效果归因",
+      "tool": "Zapier Agents + 数据工具",
+      "time": "30 分钟",
+      "detail": "用自动化把各平台数据汇到一处，月底让模型对比选题类型、发布时间与互动的关系。把「什么有效」写进下月规划。",
+      "tips": "归因别只看单帖数据，按选题类型聚合再比，结论才稳。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "排期但没人执行",
+      "detail": "日历好看不动手等于零；给每项定负责人和截止。"
+    },
+    {
+      "title": "批量内容同质化",
+      "detail": "套模板过头会变流水线味；保持 20% 手工打磨比例。"
+    },
+    {
+      "title": "无视数据反馈",
+      "detail": "排期只顾发不看数据；每月必须复盘迭代。"
+    },
+    {
+      "title": "热点塞不进去",
+      "detail": "日历排满没弹性；每周留 2-3 个空位给热点。"
+    }
+  ]
+}

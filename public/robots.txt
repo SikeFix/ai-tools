@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ai-tools.example.com/sitemap-index.xml
+Sitemap: https://ai-tools.keorigin.com/sitemap-index.xml

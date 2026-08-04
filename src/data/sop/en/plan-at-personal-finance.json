@@ -1,0 +1,78 @@
+{
+  "slug": "plan-at-personal-finance",
+  "title": "Plan AT: AI Personal Finance",
+  "summary": "Cash-flow review → budget → goals → investment plan → monthly review",
+  "scenario": "For individuals and families tracking spending, budgeting and planning; AI assists with organizing and math — it is not investment advice and carries no decision responsibility.",
+  "meta": {
+    "duration": "1-2 days initial + 1-2 hours/month",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Claude", "url": "https://claude.ai" },
+    { "name": "Notion", "url": "https://notion.so" },
+    { "name": "Microsoft 365 Copilot", "url": "https://www.microsoft.com/microsoft-365/copilot" },
+    { "name": "Google Gemini", "url": "https://gemini.google.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Review cash flow",
+      "tool": "ChatGPT / Microsoft 365 Copilot",
+      "time": "1-3 hours",
+      "detail": "Pull the last 3-6 months of income and expenses (bills, bank statements) into a spreadsheet and categorize by dining, housing, transport, entertainment and more. Have the model compute each category's share, monthly averages and anomalies to see where the money actually goes.",
+      "tips": "Aggregate three months first, then let the model categorize — steadier than guessing month by month; flag unclear charges as 'to verify'."
+    },
+    {
+      "id": "s2",
+      "title": "Budget",
+      "tool": "ChatGPT / Notion",
+      "time": "1-2 hours",
+      "detail": "Set a monthly budget across three buckets — essential / non-essential / savings & investments — and have the model set a reasonable cap per category against your history, with 10% headroom. Write it into a Notion tracking page.",
+      "tips": "Don't budget to zero flexibility; keep a 'free spend' allowance — consistency beats perfection."
+    },
+    {
+      "id": "s3",
+      "title": "Goals",
+      "tool": "ChatGPT / Claude",
+      "time": "30-60 min",
+      "detail": "Define short-term (3-6 months emergency fund), mid-term (down payment, further study) and long-term (retirement) goals with amounts and deadlines. Have the model work backward to how much you must save each month and rank priorities.",
+      "tips": "Ask for the concrete number — 'save X per month to hit the goal in Y months' — that drives action better than a vague 'I'll save'."
+    },
+    {
+      "id": "s4",
+      "title": "Investment plan",
+      "tool": "Claude / Google Gemini",
+      "time": "1-2 hours",
+      "detail": "Based on risk tolerance and horizon, have the model compare common vehicles (deposits, money-market funds, index funds, bonds, stocks) in characteristics and use cases, and sketch an allocation direction. For specific products or trades, verify on official channels and consult a licensed advisor.",
+      "tips": "Ask the model to spell out 'what volatility this plan has and how much it can fall at worst'; if you can't stomach it, start with the conservative tier."
+    },
+    {
+      "id": "s5",
+      "title": "Monthly review",
+      "tool": "Notion / ChatGPT",
+      "time": "1-2 hours per month",
+      "detail": "At month-end, compare actuals to budget, have the model surface overspend and savings opportunities, update goal progress, and adjust next month's budget. Turn the review into a one-line action — halve takeout, switch to a cheaper plan.",
+      "tips": "Set a fixed monthly reminder; the quality of the review depends on the few entries you bother to record."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Treating AI as an investment advisor",
+      "detail": "AI doesn't know your full financial picture or risk capacity and can't give compliant advice; for real investment decisions consult a licensed advisor and treat model output as reference only."
+    },
+    {
+      "title": "Budgeting too tightly to last",
+      "detail": "A budget with zero slack collapses within a week or two; keep 10% headroom plus a free-spend allowance so it's sustainable."
+    },
+    {
+      "title": "Tracking without reviewing",
+      "detail": "Three months of entries never reviewed equals no tracking; set a fixed monthly time to compare actuals against budget."
+    },
+    {
+      "title": "Exposing sensitive financial data",
+      "detail": "Don't feed full account numbers or IDs to the model; use aggregated category totals and prefer privacy mode."
+    }
+  ]
+}

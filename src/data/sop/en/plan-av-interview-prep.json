@@ -1,0 +1,78 @@
+{
+  "slug": "plan-av-interview-prep",
+  "title": "Plan AV: AI Interview Preparation",
+  "summary": "Requirements → predict questions → mock interview → STAR polish → review",
+  "scenario": "For job seekers preparing efficiently for technical and behavioral interviews, starting from the job requirements.",
+  "meta": {
+    "duration": "2-4 hours / round",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Claude", "url": "https://claude.ai" },
+    { "name": "Google Gemini", "url": "https://gemini.google.com" },
+    { "name": "DeepSeek", "url": "https://chat.deepseek.com" },
+    { "name": "Notion", "url": "https://notion.so" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Analyze requirements",
+      "tool": "ChatGPT / Claude + you",
+      "time": "30-60 min",
+      "detail": "Paste the job description to the model and have it extract hard skills, soft skills, experience requirements and keywords, then line them up against your resume to mark matches, gaps, and stories you need to prepare.",
+      "tips": "Ask the model for the 5 most-likely-to-be-challenged resume points and prepare your answer for each."
+    },
+    {
+      "id": "s2",
+      "title": "Predict questions",
+      "tool": "ChatGPT / Google Gemini",
+      "time": "30-60 min",
+      "detail": "Based on the requirements, have the model generate a question list: technical (fundamentals, project deep-dives, scenario questions) and behavioral (STAR) separately, ranked by likelihood. Ask for personalized follow-ups targeting your resume.",
+      "tips": "Have the model produce 20 questions, then you pick the 5 you're least confident about — don't spread your effort evenly."
+    },
+    {
+      "id": "s3",
+      "title": "Mock interview",
+      "tool": "Claude / DeepSeek",
+      "time": "30-60 min per session",
+      "detail": "Run a mock: the model plays the interviewer and asks questions one by one at a real pace; you answer out loud, and at the end it scores your responses, flags gaps and suggests improvements. Record yourself and listen for hesitation and tone.",
+      "tips": "Instruct the model to keep drilling until you can't answer — that's how you expose real on-the-spot weaknesses."
+    },
+    {
+      "id": "s4",
+      "title": "STAR polish",
+      "tool": "ChatGPT / Claude",
+      "time": "30-60 min",
+      "detail": "Rewrite behavioral stories in the STAR structure (Situation-Task-Action-Result) and have the model check completeness, concreteness of actions, and quantified results. Polish into 1-2 minute versions and practice them out loud.",
+      "tips": "End every behavioral answer with a data-backed result — strong stories close on measurable impact."
+    },
+    {
+      "id": "s5",
+      "title": "Review",
+      "tool": "Notion / ChatGPT",
+      "time": "30 min per session",
+      "detail": "After each real interview, log the actual questions, how you answered, the model's model answer and improvement points into a Notion interview library. Before the next round, have the model generate targeted predictions and drills from the log.",
+      "tips": "Don't just record the question — record 'how I answered and where I froze'; that's the most valuable review material."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Memorizing AI answers without internalizing",
+      "detail": "A couple of follow-ups expose a memorized answer; treat AI output as reference and retell it in your own experience to be convincing."
+    },
+    {
+      "title": "Practicing only technical questions",
+      "detail": "Many interviews end at the behavioral stage; prepare 5-8 reusable STAR stories covering leadership, conflict, failure and learning."
+    },
+    {
+      "title": "Mock interviews without real pressure",
+      "detail": "Practicing against a teleprompter isn't a mock; let the model drill continuously and record yourself to simulate real tension."
+    },
+    {
+      "title": "Not customizing to the role",
+      "detail": "100 generic questions beat 20 focused on the target JD; decompose the job description first, then practice."
+    }
+  ]
+}

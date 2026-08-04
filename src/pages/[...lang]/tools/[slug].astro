@@ -13,6 +13,7 @@ import {
   toolUseCases,
 } from '../../../lib/tools';
 import { t, localePath } from '../../../lib/i18n';
+import { SITE_URL } from '../../../consts';
 import { getSopsUsingTool } from '../../../lib/sop';
 import type { Lang } from '../../../lib/types';
 
@@ -47,6 +48,36 @@ const jsonLd = {
     priceCurrency: tool.price === 'Paid' ? undefined : 'USD',
   },
 };
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t(lang, 'breadcrumb.home'), item: SITE_URL },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: t(lang, 'breadcrumb.tools'),
+      item: SITE_URL + localePath(lang, '/'),
+    },
+    ...(cat
+      ? [
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: categoryName(cat, lang),
+            item: `${SITE_URL + localePath(lang, '/')}#cat-${cat.id}`,
+          },
+        ]
+      : []),
+    {
+      '@type': 'ListItem',
+      position: cat ? 4 : 3,
+      name: tool.name,
+      item: SITE_URL + localePath(lang, canonicalPath),
+    },
+  ],
+};
 ---
 
 <BaseLayout
@@ -55,9 +86,12 @@ const jsonLd = {
   description={desc}
   canonicalPath={canonicalPath}
   ogType="article"
+  ogSection={cat?.nameZh}
+  ogTags={tool.tags ?? []}
 >
   <Fragment slot="head">
     <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
   </Fragment>
 
   <div class="mx-auto max-w-4xl px-4 py-10 sm:px-6">

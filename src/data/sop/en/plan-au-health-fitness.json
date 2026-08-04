@@ -1,0 +1,78 @@
+{
+  "slug": "plan-au-health-fitness",
+  "title": "Plan AU: AI Fitness & Health Plan",
+  "summary": "Assessment → training plan → nutrition → check-ins → periodization",
+  "scenario": "For fitness beginners customizing training and nutrition around their own situation; not medical advice — see a doctor first if you have injuries or chronic conditions.",
+  "meta": {
+    "duration": "1-2 hours initial + 30 min/week",
+    "cost": "Low",
+    "difficulty": "Beginner"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Claude", "url": "https://claude.ai" },
+    { "name": "Google Gemini", "url": "https://gemini.google.com" },
+    { "name": "Keep", "url": "https://www.gotokeep.com" },
+    { "name": "Notion", "url": "https://notion.so" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Assess baseline",
+      "tool": "ChatGPT / Google Gemini + you",
+      "time": "20-40 min",
+      "detail": "Record height, weight, body fat if known, age, sex, schedule, injury history, current activity level and goal (fat loss / muscle gain / recomp / fitness). Have the model set a baseline of what you can do now — don't start at high intensity.",
+      "tips": "List any sore or injured body part explicitly and have the model avoid related movements — this isn't a minor detail."
+    },
+    {
+      "id": "s2",
+      "title": "Training plan",
+      "tool": "ChatGPT / Claude",
+      "time": "30-60 min",
+      "detail": "Have the model lay out a plan across your available days (aim for 3-4): how strength / cardio / rest days distribute, and each exercise's sets, reps and rest. Ask for form cues and common mistakes, plus why this arrangement.",
+      "tips": "Ask for a table — 'exercise | sets × reps | weight cue | form points' — so you can follow it at the gym."
+    },
+    {
+      "id": "s3",
+      "title": "Nutrition",
+      "tool": "ChatGPT / Google Gemini",
+      "time": "30-60 min",
+      "detail": "Based on your goal (deficit for fat loss, surplus for muscle gain), have the model estimate daily protein/carb/fat ratios and rough calories, with swap-in food examples. Skip precise counting — palm/fist estimates are more sustainable.",
+      "tips": "Change just one thing first (like swapping the sugary drink at dinner), not every habit at once."
+    },
+    {
+      "id": "s4",
+      "title": "Check-ins",
+      "tool": "Keep / Notion",
+      "time": "5-10 min per session",
+      "detail": "After each workout, log exercises and weights in Keep, or use a Notion check-in page for completion, feel (easy/hard/impossible), sleep and weight trend. Records are the basis for adjustment.",
+      "tips": "Log only two fields — 'done or not' and 'how it felt' — five seconds keeps the habit alive."
+    },
+    {
+      "id": "s5",
+      "title": "Periodization",
+      "tool": "ChatGPT / Claude",
+      "time": "30-60 min every 2-4 weeks",
+      "detail": "Feed the last 2-4 weeks of check-ins to the model to review progress: did weights go up, did body weight or measurements change, how do you feel — then adjust weight, exercises or frequency (progressive overload). At a plateau, swap exercises or add volume.",
+      "tips": "Have the model compare last week's completed weights to this week's for concrete numbers — don't just stare at the scale."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Treating the AI plan as medical advice",
+      "detail": "AI doesn't know your history or body; stop any movement that causes discomfort, and consult a doctor or certified coach for pre-existing conditions."
+    },
+    {
+      "title": "Starting way too intense",
+      "detail": "Beginners who hit high intensity in week one are injured or quit by week two; make 'showing up consistently' the goal for the first two weeks."
+    },
+    {
+      "title": "Planning without executing",
+      "detail": "A plan in your saved folder burns zero calories; check-ins plus a weekly review are the engine — run four weeks and look at data."
+    },
+    {
+      "title": "Ignoring recovery and sleep",
+      "detail": "Gains happen in recovery; training hard without sleep stalls progress anyway — schedule sleep and rest days into the plan."
+    }
+  ]
+}

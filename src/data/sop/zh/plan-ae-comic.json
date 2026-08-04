@@ -1,0 +1,86 @@
+{
+  "slug": "plan-ae-comic",
+  "title": "方案 AE：AI 漫画/条漫",
+  "summary": "脚本 → 分格 → 生图 → 角色一致性 → 气泡对白 → 发布",
+  "scenario": "适合想做连载漫画或条漫的创作者，从脚本到可发布的成品画面。",
+  "meta": {
+    "duration": "4-8 小时 / 话",
+    "cost": "中",
+    "difficulty": "进阶"
+  },
+  "toolsNeeded": [
+    { "name": "ChatGPT", "url": "https://chat.openai.com" },
+    { "name": "Midjourney", "url": "https://www.midjourney.com" },
+    { "name": "Flux", "url": "https://blackforestlabs.ai" },
+    { "name": "Leonardo AI", "url": "https://leonardo.ai" },
+    { "name": "Canva Magic Studio", "url": "https://www.canva.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "脚本",
+      "tool": "ChatGPT",
+      "time": "30-40 分钟",
+      "detail": "写出单话脚本：起承转合的剧情节拍、每格要传达的信息。条漫按手机竖屏节奏写，一屏一个信息点。",
+      "tips": "先定每话结尾的钩子，连载才留得住读者。"
+    },
+    {
+      "id": "s2",
+      "title": "分格与分镜",
+      "tool": "ChatGPT + 你",
+      "time": "30 分钟",
+      "detail": "把脚本拆成分镜表：格数、景别（特写/全景）、机位、人物表情与台词。竖屏条漫一般 8-15 格，漫画页则 4-6 格一页。",
+      "tips": "每格只传达一个信息，画面信息量超载是新手常见问题。"
+    },
+    {
+      "id": "s3",
+      "title": "生图",
+      "tool": "Flux / Midjourney / Leonardo AI",
+      "time": "1-2 小时",
+      "detail": "按分镜批量生成画面，用一致的画风提示词（同一系列、同一关键词）。Leonardo 的 Flux 模型和角色参考适合漫画线稿转彩图。",
+      "tips": "固定一套画风模板词，每格只改场景、人物动作与机位。"
+    },
+    {
+      "id": "s4",
+      "title": "角色一致性",
+      "tool": "Midjourney + Leonardo AI",
+      "time": "1-2 小时",
+      "detail": "建立角色参考卡（正脸/侧脸/全身/表情），用 --cref 或图生图回传确保跨格不变形。重点角色建 4-6 张参考图，每格生成后人工挑选最像的一张。",
+      "tips": "先只做 1 个主角的 3 格测试，跑通一致性流程再扩到全话。"
+    },
+    {
+      "id": "s5",
+      "title": "气泡对白",
+      "tool": "Canva Magic Studio",
+      "time": "30-60 分钟",
+      "detail": "在画面叠气泡，调整台词、字号与对话框位置，保证阅读顺序清晰。条漫对白别太多，一屏不超过两句。",
+      "tips": "气泡样式保持统一；对白先念一遍，拗口就改短。"
+    },
+    {
+      "id": "s6",
+      "title": "发布",
+      "tool": "发布平台 + Canva",
+      "time": "30 分钟",
+      "detail": "导出符合平台尺寸的长图或分页（条漫常见 1080×1920 切片），加封面和首话预告。更新连载进度并收集读者评论做下一话调整。",
+      "tips": "先发 3 话存稿再定更期，避免断更掉粉。"
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "角色每格变形",
+      "detail": "一致性是漫画最大难点；用参考图加人工筛选，别指望一次成型。"
+    },
+    {
+      "title": "分镜信息过载",
+      "detail": "一格塞太多内容读者读不懂；一格一事，节奏靠格数控制。"
+    },
+    {
+      "title": "对白冗长",
+      "detail": "AI 容易写话痨台词；对白控制在 20 字内，能靠画面传达的就不写。"
+    },
+    {
+      "title": "画风漂移",
+      "detail": "画风提示词每次都要带上，再配图生图回传稳定画风。"
+    }
+  ]
+}
