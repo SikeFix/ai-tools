@@ -88,12 +88,40 @@ const groupLabel = (id: SopGroupId) => t(lang, groupLabels[id]);
           <a href={localePath(lang, '/skills/')} class="text-muted transition hover:text-accent">{t(lang, 'skills.title')}</a>
         </li>
         <li>
-          <a href={localePath(lang, '/')} class="text-muted transition hover:text-accent">{t(lang, 'nav.home')}</a>
+          <a
+            href="https://github.com/SikeFix/ai-tools"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted transition hover:text-accent"
+          >
+            {t(lang, 'footer.github')} ↗
+          </a>
         </li>
         <li>
-          <a href={localePath(lang, '/')} class="text-muted transition hover:text-accent">{t(lang, 'footer.copyright')}</a>
+          <button
+            type="button"
+            data-scroll-top
+            class="text-muted transition hover:text-accent"
+          >
+            {t(lang, 'common.backToTop')} ↑
+          </button>
         </li>
       </ul>
     </nav>
   </div>
+
+  <div class="border-t border-border">
+    <p class="mx-auto max-w-6xl px-4 py-4 text-xs text-muted sm:px-6">
+      {t(lang, 'footer.copyright')}
+    </p>
+  </div>
 </footer>
+
+<script>
+  // 页脚「回到顶部」：平滑滚动回页面顶部
+  document
+    .querySelector<HTMLElement>('[data-scroll-top]')
+    ?.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>

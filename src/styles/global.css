@@ -191,3 +191,27 @@ body {
 .title-h3 {
   letter-spacing: var(--tracking-h3);
 }
+
+/* ── 锚点目标高亮：从导航/页脚跳到 #cat-xxx、#video 等区块时短暂提示 ── */
+@keyframes target-flash-light {
+  0% {
+    background-color: rgba(0, 113, 227, 0.07);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+@keyframes target-flash-dark {
+  0% {
+    background-color: rgba(10, 132, 255, 0.12);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+:target {
+  animation: target-flash-light 2s ease-out;
+}
+.dark :target {
+  animation: target-flash-dark 2s ease-out;
+}

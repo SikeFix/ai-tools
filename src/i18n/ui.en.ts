@@ -48,6 +48,7 @@ export const en: Record<UiKey, string> = {
   'breadcrumb.skills': 'Skills',
 
   'skills.title': 'Useful AI Skills',
+  'skills.statsCount': 'skills',
   'skills.subtitle': 'Curated Claude Code / AI agent skills, ready to install — design, development, content and productivity.',
   'skills.source.official': 'Official',
   'skills.source.community': 'Community',
@@ -82,9 +83,11 @@ export const en: Record<UiKey, string> = {
 
   'footer.note': 'Tool listings are compiled from public research and are for reference only.',
   'footer.official': 'Official Website',
+  'footer.github': 'GitHub Repo',
   'footer.copyright': '© 2026 · Always updating',
   'theme.toggle': 'Toggle dark / light',
   'lang.toggle': '切换到中文',
+  'lang.short': '中文',
   'common.backHome': 'Back to home',
   'common.backToTop': 'Back to top',
   '404.title': 'Page not found',

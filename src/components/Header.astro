@@ -47,7 +47,7 @@ const isActive = (href: string, exact: boolean) =>
           class={[
             'rounded-full px-3 py-1.5 transition-colors',
             isActive(item.href, item.exact)
-              ? 'font-semibold text-text'
+              ? 'bg-accent/10 font-semibold text-accent'
               : 'text-muted hover:text-text',
           ].join(' ')}
         >
@@ -57,9 +57,24 @@ const isActive = (href: string, exact: boolean) =>
 
       <a
         href={counterpartPath(lang, pathname)}
-        class="ml-1 rounded-full border border-border bg-surface/70 px-3 py-1.5 text-muted transition-colors hover:text-text"
+        aria-label={t(lang, 'lang.toggle')}
+        class="ml-1 inline-flex items-center gap-1.5 rounded-full border border-border bg-surface/70 px-2.5 py-1.5 text-xs font-medium text-muted transition-colors hover:text-text"
       >
-        {t(lang, 'lang.toggle')}
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"></path>
+        </svg>
+        {t(lang, 'lang.short')}
       </a>
 
       <button

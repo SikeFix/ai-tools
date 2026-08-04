@@ -2,7 +2,7 @@ export const zh = {
   // 导航
   'nav.home': '首页',
   'nav.sop': '工作流',
-  'nav.skills': '常用 Skills',
+  'nav.skills': 'Skills',
 
   // Hero
   'hero.badge': '持续更新',
@@ -52,6 +52,7 @@ export const zh = {
 
   // Skills
   'skills.title': '常用 AI Skills',
+  'skills.statsCount': '个技能',
   'skills.subtitle': '精选 Claude Code / AI Agent 技能，即装即用，覆盖设计、开发、内容与效率。',
   'skills.source.official': '官方',
   'skills.source.community': '社区',
@@ -88,9 +89,11 @@ export const zh = {
   // 页脚 / 通用
   'footer.note': '工具清单来自公开调研整理，仅供参考。',
   'footer.official': '官方网站',
+  'footer.github': 'GitHub 仓库',
   'footer.copyright': '© 2026 · 持续更新',
   'theme.toggle': '切换深色/浅色',
   'lang.toggle': 'Switch to English',
+  'lang.short': 'EN',
   'common.backHome': '返回首页',
   'common.backToTop': '回到顶部',
   '404.title': '页面不存在',
