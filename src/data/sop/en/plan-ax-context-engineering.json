@@ -1,0 +1,84 @@
+{
+  "slug": "plan-ax-context-engineering",
+  "title": "Plan AX: Context Engineering — Feed the Right Context, Get It Right the First Time",
+  "summary": "Document project memory → spec first → give enough relevant files → iterative feedback → verify & commit",
+  "scenario": "Best for everyday development tasks in an existing codebase — let AI write code that respects your architecture and constraints, cutting guesswork and rework.",
+  "meta": {
+    "duration": "1-3 hours / task",
+    "cost": "Low",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "Claude Code", "url": "https://claude.com/claude-code" },
+    { "name": "Claude", "url": "https://claude.ai" },
+    { "name": "Git", "url": "https://git-scm.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Build project memory",
+      "tool": "Claude Code + you",
+      "time": "20-40 min (one-time investment)",
+      "detail": "Use CLAUDE.md / AGENTS.md to capture architecture conventions, common commands, code style and the 'gotchas to avoid', so every session starts from the same understanding. Project memory is the persistent context you feed the AI — write once, benefit for the long run.",
+      "tips": "Only write what's high-frequency: directory layout, build/test commands, dependency constraints, and traps you've hit; keep it lean and iterable rather than a long document nobody maintains."
+    },
+    {
+      "id": "s2",
+      "title": "Spec first",
+      "tool": "Claude Code / Claude",
+      "time": "10-20 min",
+      "detail": "Write the inputs, outputs and acceptance criteria up front, and have the AI propose a plan before writing code; if it doesn't meet the spec, rework. The spec is the most important part of the context — it decides what the AI should and shouldn't build.",
+      "tips": "Put 'when X happens, then Y' into the spec; ask the AI to restate your requirements to confirm alignment before it starts."
+    },
+    {
+      "id": "s3",
+      "title": "Feed enough relevant files",
+      "tool": "Claude Code",
+      "time": "10-20 min",
+      "detail": "Use @file references to bring the relevant code, interfaces and docs into context, bounding the change scope so the AI doesn't improvise. Enough context plus a clear boundary is the key to getting it right the first time.",
+      "tips": "Feed only the files directly involved (interfaces, data structures, call sites) rather than dumping the whole repo; pointing the AI at the right files to read itself also works."
+    },
+    {
+      "id": "s4",
+      "title": "Iterative feedback",
+      "tool": "Claude Code / Claude",
+      "time": "30-60 min",
+      "detail": "Feed the error message, reproduction steps, and expected vs. actual output back together, so the AI fixes within the correct context. The more complete the feedback, the less the AI has to guess and the sharper the fix.",
+      "tips": "Paste the raw error log plus a minimal reproduction; saying 'expected vs. actual' beats just saying 'it doesn't work'."
+    },
+    {
+      "id": "s5",
+      "title": "Verify and commit",
+      "tool": "Git + tests",
+      "time": "20-30 min",
+      "detail": "Run tests, review the diff, confirm the change fits the architecture constraints, then commit in small steps. Verification turns the AI's correctness into your certainty.",
+      "tips": "Scan the diff for unexpected changes before committing; commit every verifiable unit so rollbacks are easy and bugs localize fast."
+    },
+    {
+      "id": "s6",
+      "title": "Retrospect and update memory",
+      "tool": "Claude Code + you",
+      "time": "10-20 min",
+      "detail": "Write the traps you hit and the conventions you added back into CLAUDE.md / AGENTS.md, so the next session starts from a higher baseline. Context engineering compounds: each update makes the AI understand your codebase a little better.",
+      "tips": "Have the AI extract the takeaways from the conversation and append them to the project memory; keep entries short and actionable so they don't rot."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Letting the AI loose without constraints",
+      "detail": "The less context you give, the more the AI guesses from generic patterns — code that mismatches your style or calls nonexistent APIs; feed in the architecture constraints and acceptance criteria before it starts."
+    },
+    {
+      "title": "Too much, too messy context",
+      "detail": "Dumping dozens of files into context burns tokens and drowns the key constraints in noise; feed only the relevant files and call out the specific lines that matter."
+    },
+    {
+      "title": "Judging output without the reasoning",
+      "detail": "A correct result can still rest on wrong assumptions; ask the AI to state its plan and assumptions, referencing the context you gave, and align on key decisions before bugs get baked in."
+    },
+    {
+      "title": "Never accumulating project memory",
+      "detail": "Every session starts from zero and you re-trip the same traps; writing conventions into CLAUDE.md / AGENTS.md is what makes the AI keep getting smarter about your codebase."
+    }
+  ]
+}

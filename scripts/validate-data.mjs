@@ -162,6 +162,40 @@ if (existsSync(sopDir)) {
   }
 }
 
+// ---- viable-coding（AI 编程 / Viable Coding 教学资源） ----
+const viable = readJson('viable-coding.json');
+if (viable) {
+  const stageIds = new Set();
+  (viable.stages || []).forEach((s, i) => {
+    const where = `viable-coding.stages[${i}] (${s?.id || '?'})`;
+    if (typeof s?.id !== 'string' || !s.id) errors.push(`${where}: id 缺失`);
+    else if (stageIds.has(s.id)) errors.push(`${where}: id 重复`);
+    else stageIds.add(s.id);
+    if (!s.nameZh || !s.nameEn || !s.descZh || !s.descEn) errors.push(`${where}: 名称/描述缺失`);
+  });
+  const catIds = new Set();
+  (viable.categories || []).forEach((c, i) => {
+    const where = `viable-coding.categories[${i}] (${c?.id || '?'})`;
+    if (typeof c?.id !== 'string' || !c.id) errors.push(`${where}: id 缺失`);
+    else if (catIds.has(c.id)) errors.push(`${where}: id 重复`);
+    else catIds.add(c.id);
+    if (!c.nameZh || !c.nameEn) errors.push(`${where}: 名称缺失`);
+  });
+  const slugs = new Set();
+  (viable.resources || []).forEach((r, i) => {
+    const where = `viable-coding.resources[${i}] (${r?.slug || r?.name || '?'})`;
+    if (typeof r?.slug !== 'string' || !r.slug) errors.push(`${where}: slug 缺失`);
+    else if (slugs.has(r.slug)) errors.push(`${where}: slug 重复`);
+    else slugs.add(r.slug);
+    if (!r.name) errors.push(`${where}: name 缺失`);
+    if (!r.url || !/^https?:\/\//.test(r.url)) errors.push(`${where}: url 非法`);
+    if (typeof r.stars !== 'number' || r.stars < 0) errors.push(`${where}: stars 非法`);
+    if (!catIds.has(r.category)) errors.push(`${where}: category '${r.category}' 不在分类表`);
+    if (!r.descZh) errors.push(`${where}: descZh 缺失`);
+    if (!r.descEn) errors.push(`${where}: descEn 缺失`);
+  });
+}
+
 if (warn.length) {
   console.log('⚠️  警告:');
   warn.forEach((w) => console.log(`  - ${w}`));
@@ -171,4 +205,4 @@ if (errors.length) {
   errors.forEach((e) => console.error(`  - ${e}`));
   process.exit(1);
 }
-console.log(`✅ 数据校验通过 (${(tools || []).length} 款工具, ${(categories || []).length} 个分类)`);
+console.log(`✅ 数据校验通过 (${(tools || []).length} 款工具, ${(categories || []).length} 个分类, ${(viable?.resources || []).length} 条 viable 资源)`);

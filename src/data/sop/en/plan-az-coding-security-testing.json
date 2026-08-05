@@ -1,0 +1,77 @@
+{
+  "slug": "plan-az-coding-security-testing",
+  "title": "Plan AZ: AI Coding Security & Testing Checkup — Mandatory Before Shipping",
+  "summary": "Input validation → secret management → dependency audit → automated tests → review checklist",
+  "scenario": "Best for the final pre-delivery gate — systematically checking AI-generated code for security and quality issues.",
+  "meta": {
+    "duration": "1-2 hours / delivery",
+    "cost": "Low",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "Claude Code", "url": "https://claude.com/claude-code" },
+    { "name": "npm audit / dependency scanner", "url": "https://docs.npmjs.com/cli/v11/commands/npm-audit" },
+    { "name": "Vitest / Jest (test framework)", "url": "https://vitest.dev" },
+    { "name": "Git", "url": "https://git-scm.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Input validation & injection protection",
+      "tool": "Claude Code + you",
+      "time": "10-15 min",
+      "detail": "List every user input point: URL params, form fields, request bodies, file paths, export filenames. Focus on the three flaws AI code most often ships — XSS (unescaped front-end rendering), SQL injection (string-concatenated queries) and path traversal (user input used to build file paths). Confirm each entry point is validated or escaped, and at minimum rejects invalid input — never rely on client-side validation alone.",
+      "tips": "Ask Claude to trace where every piece of data coming from a user or request ends up, then confirm each entry has allowlist validation or parameterized queries."
+    },
+    {
+      "id": "s2",
+      "title": "Secrets & sensitive information",
+      "tool": "gitleaks / git log + .env",
+      "time": "10-15 min",
+      "detail": "Check that API keys, tokens and passwords aren't hardcoded in code, in git history, or in logs. Models sometimes write sample secrets or env vars straight into source, and once a secret lands in a repo the damage is permanent. Standard practice: inject via .env + environment variables, gitignore the .env file, and scrub anything already committed from history.",
+      "tips": "Scan history with git log -p | grep or gitleaks; once a secret leaks, rotation beats deleting the commit."
+    },
+    {
+      "id": "s3",
+      "title": "Dependency audit",
+      "tool": "npm audit / Snyk",
+      "time": "10-20 min",
+      "detail": "Run npm audit or a dependency scanner to surface known vulnerabilities and outdated versions. AI-generated dependencies tend to be the latest or whatever the model 'remembers', which may carry known CVEs or be end-of-life. Triage results by severity — fix high/critical first, and when no fix exists, assess the risk or replace the library.",
+      "tips": "Don't blind-install packages — check download counts, maintenance cadence and author reputation; lock exact versions so transitive dependencies can't silently shift."
+    },
+    {
+      "id": "s4",
+      "title": "Automated tests",
+      "tool": "Vitest / Jest / Playwright",
+      "time": "30-60 min",
+      "detail": "Write unit tests for critical logic and end-to-end tests for the key business paths. Don't just test the happy path — add edge cases, bad input, insufficient permissions and timeouts. Have the AI generate cases from your code, but manually add the scenarios where 'the user will do the wrong thing'.",
+      "tips": "Write a failing test first (red), then make it pass (green) — it exposes real problems better than back-filling tests after the fact."
+    },
+    {
+      "id": "s5",
+      "title": "Delivery review checklist",
+      "tool": "review checklist + you",
+      "time": "15-30 min",
+      "detail": "Walk a checklist item by item: input validation, secrets, dependency audit, test coverage, access control, error handling and log redaction. Write the conclusion of every item into the delivery notes — who checked, what was found, what risk remains. This turns the 'checkup' into a traceable delivery artifact instead of a formality.",
+      "tips": "Keep the checklist as a fixed template committed to the repo (e.g. checklist.md) so you reuse it next time and gaps jump out."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Only testing the happy path (edges will blow up)",
+      "detail": "Empty, oversized, invalid and concurrent inputs are where bugs live; a suite that only exercises the happy path makes the error branch run for the first time in production."
+    },
+    {
+      "title": "Hardcoding secrets into code/repo (leaks are permanent)",
+      "detail": "Once a secret enters git history, deleting the commit doesn't help — the history is still there. On any leak: rotate the secret, scrub history, and check logs and third-party services for exposure."
+    },
+    {
+      "title": "Blind-installing dependencies brings in vulnerabilities (the chain is long)",
+      "detail": "The dependency chain is long, and one compromised transitive dependency can sink the whole project; vet a package before installing and audit immediately after."
+    },
+    {
+      "title": "All green but critical paths untested (green doesn't mean real)",
+      "detail": "Good coverage numbers don't mean the critical path is covered; take the single most important user journey and verify it end-to-end, from entry to persistence."
+    }
+  ]
+}

@@ -17,6 +17,7 @@ const groupLabels: Record<SopGroupId, UiKey> = {
   video: 'sop.group.video',
   content: 'sop.group.content',
   productivity: 'sop.group.productivity',
+  coding: 'sop.group.coding',
 };
 const groupLabel = (id: SopGroupId) => t(lang, groupLabels[id]);
 ---
@@ -86,6 +87,9 @@ const groupLabel = (id: SopGroupId) => t(lang, groupLabels[id]);
       <ul class="space-y-2 text-sm">
         <li>
           <a href={localePath(lang, '/skills/')} class="text-muted transition hover:text-accent">{t(lang, 'skills.title')}</a>
+        </li>
+        <li>
+          <a href={localePath(lang, '/viable-coding/')} class="text-muted transition hover:text-accent">{t(lang, 'breadcrumb.viableCoding')}</a>
         </li>
         <li>
           <a

@@ -1,0 +1,271 @@
+{
+  "stages": [
+    {
+      "id": "foundation",
+      "nameZh": "打基础 · Vibe Coding 入门",
+      "nameEn": "Foundation · Vibe Coding Basics",
+      "descZh": "先用提示词把原型跑起来，理解 AI 代码的边界——能做什么、会在哪里翻车。",
+      "descEn": "Get prototypes running with prompts first, and learn where AI code breaks — what it can do and where it fails."
+    },
+    {
+      "id": "context",
+      "nameZh": "上下文 · Context Engineering",
+      "nameEn": "Context · Context Engineering",
+      "descZh": "把架构约束、规格与相关文件喂给 AI，让它在正确的上下文里一次写对，减少臆测与返工。",
+      "descEn": "Feed AI your architecture constraints, specs and relevant files so it writes correctly on the first pass, cutting guesswork and rework."
+    },
+    {
+      "id": "agentic",
+      "nameZh": "工程化 · Agentic Engineering",
+      "nameEn": "Engineering · Agentic Engineering",
+      "descZh": "用规划优先、测试驱动与子代理分工，让 Agent 自主完成更大、更可靠的任务。",
+      "descEn": "Use plan-first, test-driven and subagent division of labor to let agents complete bigger, more reliable tasks."
+    },
+    {
+      "id": "viable",
+      "nameZh": "交付 · 打磨到 Viable",
+      "nameEn": "Delivery · Polish to Viable",
+      "descZh": "上线前的打磨清单：测试、错误处理、性能、安全与可维护性，让代码真正可交付。",
+      "descEn": "A pre-launch polish checklist — tests, error handling, performance, security and maintainability — so the code actually ships."
+    }
+  ],
+  "categories": [
+    {
+      "id": "basics",
+      "nameZh": "入门教程",
+      "nameEn": "Getting Started",
+      "descZh": "从零开始的 Vibe Coding 教程与课程，中英文都有。",
+      "descEn": "Tutorials and courses to start Vibe Coding from scratch, in Chinese and English."
+    },
+    {
+      "id": "context",
+      "nameZh": "Context Engineering",
+      "nameEn": "Context Engineering",
+      "descZh": "如何把上下文喂给 AI：项目记忆、规格与文件引用。",
+      "descEn": "How to feed context to AI: project memory, specs and file references."
+    },
+    {
+      "id": "engineering",
+      "nameZh": "Agentic Engineering",
+      "nameEn": "Agentic Engineering",
+      "descZh": "让 AI Agent 自主规划与执行工程任务的最佳实践。",
+      "descEn": "Best practices for AI agents to plan and execute engineering tasks."
+    },
+    {
+      "id": "viable",
+      "nameZh": "打磨实战",
+      "nameEn": "Polish in Practice",
+      "descZh": "把原型打磨成可交付产品的实战模板与清单。",
+      "descEn": "Practical templates and checklists for turning prototypes into shippable products."
+    },
+    {
+      "id": "awesome",
+      "nameZh": "资源清单",
+      "nameEn": "Awesome Lists",
+      "descZh": "一站式精选资源合集，持续更新。",
+      "descEn": "One-stop curated resource collections, continuously updated."
+    }
+  ],
+  "resources": [
+    {
+      "slug": "vibe-coding-cn",
+      "name": "Vibe Coding 中文指南",
+      "url": "https://github.com/2025Emma/vibe-coding-cn",
+      "stars": 22654,
+      "category": "basics",
+      "tags": ["tutorial", "chinese", "beginner"],
+      "descZh": "最火的 Vibe Coding 中文教程，从零到上手，配完整实操示例，零基础也能跟着做出东西。",
+      "descEn": "The most popular Chinese Vibe Coding tutorial — from zero to hands-on, with complete examples anyone can follow."
+    },
+    {
+      "slug": "ai-guide",
+      "name": "鱼皮 AI 导航 & 教程",
+      "url": "https://github.com/liyupi/ai-guide",
+      "stars": 18031,
+      "category": "basics",
+      "tags": ["guide", "chinese", "resources"],
+      "descZh": "程序员鱼皮的开源 AI 资源大全：Vibe Coding 零基础教程、大模型玩法、Prompt 大全与 AI 编程教程，已升级为 AI 导航站。",
+      "descEn": "Fish's open-source AI resource hub: zero-to-one Vibe Coding tutorials, LLM playbooks, a prompt library and AI coding guides."
+    },
+    {
+      "slug": "vibe-vibe",
+      "name": "Vibe Vibe 全民 AI 教程",
+      "url": "https://github.com/datawhalechina/vibe-vibe",
+      "stars": 5862,
+      "category": "basics",
+      "tags": ["course", "chinese", "fullstack"],
+      "descZh": "首个系统化 Vibe Coding 开源教程：零基础到全栈实战，在线地址 vibevibe.cn，让人人能用 AI 实现自己的想法。",
+      "descEn": "The first systematic open-source Vibe Coding course: from zero to full-stack (vibevibe.cn), helping everyone build with AI."
+    },
+    {
+      "slug": "cs146s-cn",
+      "name": "动手学 CS146S 中文",
+      "url": "https://github.com/ShouZhengAI/CS146S_CN",
+      "stars": 1461,
+      "category": "basics",
+      "tags": ["course", "chinese", "assignments"],
+      "descZh": "斯坦福 CS146S「AI 时代的软件工程」中文版课程，含作业与 vibe coding 工具链，长期维护。",
+      "descEn": "Chinese translation of Stanford's CS146S (software engineering for the AI era), with assignments and vibe coding tooling."
+    },
+    {
+      "slug": "context-engineering-intro",
+      "name": "Context Engineering 入门",
+      "url": "https://github.com/coleam00/context-engineering-intro",
+      "stars": 13759,
+      "category": "context",
+      "tags": ["context", "guide", "claude-code"],
+      "descZh": "「Context engineering is the new vibe coding」——讲清如何给 AI 编程助手喂对上下文，以 Claude Code 为主、可迁移到任何助手。",
+      "descEn": "Context engineering is the new vibe coding — how to feed AI coding assistants the right context, centered on Claude Code."
+    },
+    {
+      "slug": "context-engineering",
+      "name": "Context Engineering 艺术",
+      "url": "https://github.com/jasontang-ai/Context-Engineering",
+      "stars": 9193,
+      "category": "context",
+      "tags": ["context", "tutorial", "agents"],
+      "descZh": "把「往上下文窗口里装对信息」讲成系统方法：索引、分段、引用与多代理上下文的艺术与科学。",
+      "descEn": "Treats filling the context window as a discipline: indexing, chunking, references and multi-agent context, art and science."
+    },
+    {
+      "slug": "awesome-context-engineering",
+      "name": "Awesome Context Engineering",
+      "url": "https://github.com/Meirtz/Awesome-Context-Engineering",
+      "stars": 3268,
+      "category": "context",
+      "tags": ["awesome", "context", "research"],
+      "descZh": "Context Engineering 全景调研清单：从 prompt engineering 到生产级 AI 系统的数百份资料。",
+      "descEn": "A comprehensive survey of Context Engineering: hundreds of resources from prompt engineering to production AI systems."
+    },
+    {
+      "slug": "get-shit-done",
+      "name": "Get Shit Done (GSD)",
+      "url": "https://github.com/gsd-build/get-shit-done",
+      "stars": 64760,
+      "category": "context",
+      "tags": ["meta-prompting", "spec-driven", "claude"],
+      "descZh": "轻量而强大的 meta-prompting 与规格驱动开发系统：用「规格先行的上下文工程」让 Claude 一次写对。",
+      "descEn": "A lightweight, powerful meta-prompting and spec-driven development system — spec-first context engineering for Claude."
+    },
+    {
+      "slug": "claude-code-best-practice",
+      "name": "Claude Code 最佳实践",
+      "url": "https://github.com/shanraisshan/claude-code-best-practice",
+      "stars": 64019,
+      "category": "engineering",
+      "tags": ["claude-code", "best-practice", "agentic"],
+      "descZh": "「from vibe coding to agentic engineering」——AI 编程领域最权威的实践仓库，系统化提升 Claude Code 用法。",
+      "descEn": "From vibe coding to agentic engineering — the most authoritative AI coding practice repo, systematizing Claude Code workflows."
+    },
+    {
+      "slug": "glm-5",
+      "name": "GLM-5：Agentic Engineering",
+      "url": "https://github.com/zai-org/GLM-5",
+      "stars": 6891,
+      "category": "engineering",
+      "tags": ["glm", "agentic", "framework"],
+      "descZh": "GLM-5 官方文档与思考：从 Vibe Coding 到 Agentic Engineering 的工程化落地。",
+      "descEn": "GLM-5 official repo — the path from Vibe Coding to Agentic Engineering, applied to a production agent framework."
+    },
+    {
+      "slug": "ai-engineering-coach",
+      "name": "AI Engineering Coach",
+      "url": "https://github.com/microsoft/AI-Engineering-Coach",
+      "stars": 3462,
+      "category": "engineering",
+      "tags": ["microsoft", "coach", "best-practice"],
+      "descZh": "微软出品的「更好的 agentic engineering」教练：把工程化 AI 编程拆成可练习的方法与反馈循环。",
+      "descEn": "Microsoft's coach for better agentic engineering — turns disciplined AI-assisted development into a learnable practice."
+    },
+    {
+      "slug": "codex-cli-best-practice",
+      "name": "Codex CLI 最佳实践",
+      "url": "https://github.com/shanraisshan/codex-cli-best-practice",
+      "stars": 954,
+      "category": "engineering",
+      "tags": ["codex", "best-practice", "cli"],
+      "descZh": "Codex CLI 版「vibe coding → agentic engineering」最佳实践，终端 AI 编程工作流。",
+      "descEn": "Codex CLI counterpart to the Claude Code best-practice repo — vibe coding to agentic engineering in the terminal."
+    },
+    {
+      "slug": "codebase-to-course",
+      "name": "Codebase → Course",
+      "url": "https://github.com/zarazhangrui/codebase-to-course",
+      "stars": 5330,
+      "category": "viable",
+      "tags": ["claude-code", "skill", "teaching"],
+      "descZh": "一个 Claude Code skill：把任何代码库变成漂亮的单页 HTML 教学课程，给非技术背景的 vibe coder 学。",
+      "descEn": "A Claude Code skill that turns any codebase into a beautiful single-page HTML course for non-technical vibe coders."
+    },
+    {
+      "slug": "vibe-coding-prompt-template",
+      "name": "Vibe Coding 提示词模板",
+      "url": "https://github.com/KhazP/vibe-coding-prompt-template",
+      "stars": 2806,
+      "category": "viable",
+      "tags": ["template", "prd", "workflow"],
+      "descZh": "生成 PRD、技术设计、MVP 的提示词模板与工作流：先想清楚再让 AI 写，是 viable coding 的起点。",
+      "descEn": "Templates and workflows for generating PRDs, tech designs and MVPs — think first, then code. The starting point of viable coding."
+    },
+    {
+      "slug": "vibe-security-skill",
+      "name": "Vibe 安全审计 Skill",
+      "url": "https://github.com/raroque/vibe-security-skill",
+      "stars": 913,
+      "category": "viable",
+      "tags": ["security", "audit", "skill"],
+      "descZh": "用 Agent skill 自动审计 vibe-coded 应用，扫描 AI 助手常引入的安全漏洞。",
+      "descEn": "An agent skill that audits vibe-coded apps for the common security vulnerabilities AI coding assistants introduce."
+    },
+    {
+      "slug": "lingyi-vibe-coding",
+      "name": "Claude Code 实战记录",
+      "url": "https://github.com/LingyiChen-AI/vibe-coding",
+      "stars": 692,
+      "category": "viable",
+      "tags": ["case-study", "claude-code", "fullstack"],
+      "descZh": "AI 时代的 Vibe Coding 实践：用 Claude Code 从零开发一个 AI 平台的完整记录，技术选型到上线全流程。",
+      "descEn": "A complete record of building an AI platform from scratch with Claude Code — stack choices through launch, in the open."
+    },
+    {
+      "slug": "awesome-vibe-coding",
+      "name": "Awesome Vibe Coding",
+      "url": "https://github.com/filipecalegario/awesome-vibe-coding",
+      "stars": 5086,
+      "category": "awesome",
+      "tags": ["awesome", "vibe-coding", "references"],
+      "descZh": "最全面的 vibe coding 参考资料清单，与 AI 协作写代码的精选索引。",
+      "descEn": "A curated list of vibe coding references — collaborating with AI to write code, all in one index."
+    },
+    {
+      "slug": "awesome-ai-coding-tools",
+      "name": "Awesome AI Coding Tools",
+      "url": "https://github.com/ai-for-developers/awesome-ai-coding-tools",
+      "stars": 1948,
+      "category": "awesome",
+      "tags": ["awesome", "tools", "ai-coding"],
+      "descZh": "AI 编程工具精选清单，覆盖编辑器、Agent、测试与部署全链路。",
+      "descEn": "A curated list of AI-powered coding tools — editors, agents, testing and deployment across the whole pipeline."
+    },
+    {
+      "slug": "awesome-vibe-coding-tools",
+      "name": "Awesome Vibe Coding Tools",
+      "url": "https://github.com/ai-for-developers/awesome-vibe-coding",
+      "stars": 808,
+      "category": "awesome",
+      "tags": ["awesome", "tools", "vibe-coding"],
+      "descZh": "Vibe Coding 工具与资源精选合集，手工挑选、持续更新。",
+      "descEn": "A hand-picked collection of tools and resources for Vibe Coding, kept fresh."
+    },
+    {
+      "slug": "awesome-ai-coding-techniques",
+      "name": "Awesome AI Coding 技巧",
+      "url": "https://github.com/inmve/awesome-ai-coding-techniques",
+      "stars": 348,
+      "category": "awesome",
+      "tags": ["awesome", "techniques", "how-to"],
+      "descZh": "用 AI 助手（Claude Code / Codex / Cursor / Copilot）的实用技巧清单，在线教程站点配套。",
+      "descEn": "Practical techniques for coding with AI assistants (Claude Code, Codex CLI, Cursor, Copilot), with an online tutorial site."
+    }
+  ]
+}

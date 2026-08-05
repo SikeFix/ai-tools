@@ -2,12 +2,13 @@
 
 > 🚀 **线上地址：https://ai-tools.keorigin.com** ｜ 中英双语 ｜ Apple Liquid Glass 视觉风格
 
-一个「AI 工具汇总 + AI 视频 SOP + 常用 Skills」多板块静态网站，中英双语，Apple Liquid Glass 视觉风格。
+一个「AI 工具汇总 + AI 视频 SOP + 常用 Skills + Viable Coding 教学」多板块静态网站，中英双语，Apple Liquid Glass 视觉风格。
 
 - **工具板块**：12 大类、106 款主流 AI 工具（含 2026 GitHub 热榜项目 OpenClaw / browser-use / RAGFlow 等），含**真实图标**、**能力标签**与**使用场景**；支持搜索 / 分类 / 价格筛选、暗色模式、每款工具独立详情页。
-- **SOP 板块**：49 套可复用的 AI 工作流，按「视频制作 / 内容创作 / 效率提升」分组（视频 16 套：口播/分镜/数字人/电影级/直播/剪辑/宣传片/短视频矩阵/电商/科普旁白/MV/直播切片/教程/动画/广告/品牌 vlog；内容 17 套：写作/出图/翻译/播客/社媒/音乐/绘本/漫画/有声书/简历/营销文案/小说/简报/公众号/内容日历/电商文案；效率 16 套：编程/PPT/数据分析/会议/学习/客服/电商/合同/PRD/竞品/课程/论文/旅行/理财/健身/面试/团队 SOP），含分步骤、工具、耗时与避坑清单；工作流内工具可直达站内工具详情页，详情页含「同类工作流」内链。
+- **SOP 板块**：52 套可复用的 AI 工作流，按「视频制作 / 内容创作 / 效率提升 / AI 编程」分组（视频 16 套：口播/分镜/数字人/电影级/直播/剪辑/宣传片/短视频矩阵/电商/科普旁白/MV/直播切片/教程/动画/广告/品牌 vlog；内容 16 套：写作/出图/翻译/播客/社媒/音乐/绘本/漫画/有声书/简历/营销文案/小说/简报/公众号/内容日历/电商文案；效率 16 套：PPT/数据分析/会议/学习/客服/电商/合同/PRD/竞品/课程/论文/旅行/理财/健身/面试/团队 SOP；AI 编程 4 套：编程基础/上下文工程/打磨到 Viable/安全测试体检），含分步骤、工具、耗时与避坑清单；工作流内工具可直达站内工具详情页，详情页含「同类工作流」内链。
 - **Skills 板块**：118 个常用 Claude Code / AI 技能与 MCP 目录（含 superpowers / ECC / karpathy-skills 热榜与 filesystem / fetch / firecrawl / docker 等真实 MCP），每个技能有独立详情页（能做什么 / 安装方式 / 来源 / 相关技能），标注官方/社区/内置来源。
-- **全局体验**：工具 / SOP / Skills 三页均有搜索过滤（首页支持 `?q=` 搜索深链）；工具详情「推荐工作流」直达相关 SOP，SOP 内工具直达工具详情（双向互链）；回到顶部按钮；增强页脚导航；键盘 focus 可访问性。
+- **AI 编程 · Viable Coding 板块**：教你把 AI 写的代码打磨成真正可用的产品。聚合页含「什么是 Viable Coding」概念区、4 阶段学习路径（Vibe 入门 → Context Engineering → Agentic Engineering → 打磨交付）与 20 个精选 GitHub 学习资源（5 组：入门 / Context Engineering / Agentic Engineering / 打磨实战 / 资源清单），并配套教学工作流直达。
+- **全局体验**：工具 / 工作流 / Skills 页面均有搜索过滤（首页支持 `?q=` 搜索深链）；工具详情「推荐工作流」直达相关 SOP，SOP 内工具直达工具详情（双向互链）；回到顶部按钮；增强页脚导航；键盘 focus 可访问性。
 - **SEO**：中英 hreflang + canonical + sitemap；首页 WebSite/SearchAction、详情页 BreadcrumbList + SoftwareApplication/HowTo、列表页 ItemList 结构化数据；og 完整标签（locale:alternate / image 尺寸 / article:section / article:tag）；theme-color。
 
 技术栈：**Astro 5+ · Tailwind CSS 4 · 纯前端渐进增强 JS**（无 React，零运行时框架）。视觉遵循 `.claude/skills/apple-design/`（Apple 液态玻璃规范：冷灰白地 + 统一面板 + 发丝分割线 + 单一蓝色强调）。
@@ -36,6 +37,10 @@
 ## 如何新增 Skill
 
 编辑 `src/data/skills.json` 加一条（category 需在 `src/data/skillCategories.json` 内），`npm run validate` 通过即可。
+
+## 如何新增 Viable Coding 资源
+
+编辑 `src/data/viable-coding.json` 的 `resources` 数组加一条：`slug / name / url / stars / category / tags / descZh / descEn`（`category` 需在 `categories` 数组内，`slug` 需唯一），`npm run validate` 通过即可。配套教学 SOP 见「如何新增 SOP」。
 
 ## 目录速览
 

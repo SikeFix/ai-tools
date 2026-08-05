@@ -51,8 +51,8 @@ export function getSopLetter(slug: string): string {
   return m ? m[1].toUpperCase() : slug.toUpperCase();
 }
 
-// ── SOP 分组（视频制作 / 内容创作 / 效率提升） ──
-export const sopGroupIds = ['video', 'content', 'productivity'] as const;
+// ── SOP 分组（视频制作 / 内容创作 / 效率提升 / AI 编程） ──
+export const sopGroupIds = ['video', 'content', 'productivity', 'coding'] as const;
 export type SopGroupId = (typeof sopGroupIds)[number];
 
 const SOP_GROUPS: Record<string, SopGroupId> = {
@@ -88,7 +88,7 @@ const SOP_GROUPS: Record<string, SopGroupId> = {
   'plan-ak-wechat-weibo': 'content',
   'plan-al-social-calendar': 'content',
   'plan-am-product-copy': 'content',
-  'plan-g-coding': 'productivity',
+  'plan-g-coding': 'coding',
   'plan-i-slides': 'productivity',
   'plan-j-data-analysis': 'productivity',
   'plan-k-meeting-notes': 'productivity',
@@ -105,6 +105,9 @@ const SOP_GROUPS: Record<string, SopGroupId> = {
   'plan-au-health-fitness': 'productivity',
   'plan-av-interview-prep': 'productivity',
   'plan-aw-team-sop': 'productivity',
+  'plan-ax-context-engineering': 'coding',
+  'plan-ay-vibe-to-viable': 'coding',
+  'plan-az-coding-security-testing': 'coding',
 };
 
 export function getSopGroup(slug: string): SopGroupId {

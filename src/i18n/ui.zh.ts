@@ -3,6 +3,7 @@ export const zh = {
   'nav.home': '首页',
   'nav.sop': '工作流',
   'nav.skills': 'Skills',
+  'nav.viableCoding': 'AI 编程',
 
   // Hero
   'hero.badge': '持续更新',
@@ -18,6 +19,9 @@ export const zh = {
   'home.sopSectionTitle': 'AI 工作流速览',
   'home.sopSectionDesc': '从 AI 视频到写作、出图与编程，覆盖常见任务的可复用工作流。',
   'home.viewAllSops': '查看全部工作流',
+  'home.vcSectionTitle': 'AI 编程 · Viable Coding',
+  'home.vcSectionDesc': '让 AI 写的代码真正可用：入门教程、上下文工程与打磨实战资源。',
+  'home.viewViableCoding': '进入 AI 编程',
   'home.ctaTitle': '把 AI 用进你的工作流',
   'home.ctaDesc': '从 {n} 款工具到 {m} 套工作流，找到属于你的 AI 组合拳。',
   'home.ctaButton': '开始浏览',
@@ -49,6 +53,7 @@ export const zh = {
   'breadcrumb.tools': '工具',
   'breadcrumb.sop': '工作流',
   'breadcrumb.skills': 'Skills',
+  'breadcrumb.viableCoding': 'AI 编程',
 
   // Skills
   'skills.title': '常用 AI Skills',
@@ -83,9 +88,31 @@ export const zh = {
   'sop.group.video': '视频制作',
   'sop.group.content': '内容创作',
   'sop.group.productivity': '效率提升',
+  'sop.group.coding': 'AI 编程',
   'sop.group.video.desc': 'AI 视频生成、剪辑与数字人出镜。',
   'sop.group.content.desc': '写作、出图、翻译与播客等内容产出。',
   'sop.group.productivity.desc': '编程、PPT、数据分析与会议效率。',
+  'sop.group.coding.desc': 'Viable Coding：把 AI 写的代码打磨成可运行、可测试、可交付的产品。',
+
+  // Viable Coding 教学
+  'vc.title': 'AI 编程 · Viable Coding',
+  'vc.subtitle': '让 AI 写的代码真正可用：从 Vibe 原型到可运行、可测试、可交付、可维护的代码。',
+  'vc.statsCount': '个精选资源',
+  'vc.conceptTitle': '什么是 Viable Coding',
+  'vc.conceptP1': 'Vibe Coding 让「会打字」的人也能写出原型，但 AI 生成的代码常常跑不通、没测试、难维护。Viable Coding 就是在 Vibe 原型之上再加一层工程纪律：让 AI 写的代码真正能运行、可测试、可交付、可维护。',
+  'vc.conceptP2': '这条路径拆成 4 个阶段：先打基础理解边界，再学会把上下文喂对，接着用工程化方法让 Agent 自主干活，最后用打磨清单把原型做成产品。',
+  'vc.conceptP3': '下面 20 个精选 GitHub 仓库按主题分组，搭配配套工作流，把每个阶段的方法落地成一步步可执行的操作。',
+  'vc.stagesTitle': '4 阶段学习路径',
+  'vc.stagesDesc': '从零到一，把 AI 编程从「能生成」升级为「能交付」。',
+  'vc.learnMore': '去学习',
+  'vc.resourcesTitle': '精选 GitHub 资源',
+  'vc.resourcesDesc': '按主题整理的 20 个高质量仓库，覆盖入门、上下文、Agent 工程与打磨实战。',
+  'vc.awesomeTitle': '必收清单',
+  'vc.awesomeDesc': '一站式资源合集，持续更新。',
+  'vc.workflowsTitle': '配套工作流（SOP）',
+  'vc.workflowsDesc': '把上面这些方法落地成一步步可执行的操作手册。',
+  'vc.viewAllSops': '查看全部工作流',
+  'vc.viewSource': 'GitHub',
 
   // 页脚 / 通用
   'footer.note': '工具清单来自公开调研整理，仅供参考。',

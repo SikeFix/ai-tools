@@ -1,0 +1,194 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SopCard from '../../../components/SopCard.astro';
+import ViableResourceCard from '../../../components/ViableResourceCard.astro';
+import Callout from '../../../components/Callout.astro';
+import {
+  getViableResources,
+  getViableSections,
+  getViableStages,
+  viableCategoryDesc,
+  viableCategoryName,
+} from '../../../lib/viable';
+import { getSopArticles, getSopGroup } from '../../../lib/sop';
+import { t, localePath } from '../../../lib/i18n';
+import type { Lang } from '../../../lib/types';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: undefined } }, // zh → /viable-coding/
+    { params: { lang: 'en' } }, // en → /en/viable-coding/
+  ];
+}
+
+const lang: Lang = (Astro.params.lang as Lang | undefined) ?? 'zh';
+const stages = getViableStages();
+const sections = getViableSections();
+const resources = getViableResources();
+const codingSops = getSopArticles(lang).filter((a) => getSopGroup(a.slug) === 'coding');
+
+// 学习路径各阶段对应的教学工作流（无独立 SOP 的阶段不显示「去学习」链接）
+const stageSop: Record<string, string> = {
+  foundation: 'plan-g-coding',
+  context: 'plan-ax-context-engineering',
+  viable: 'plan-ay-vibe-to-viable',
+};
+---
+
+<BaseLayout
+  lang={lang}
+  title={t(lang, 'vc.title')}
+  description={t(lang, 'vc.subtitle')}
+  canonicalPath="/viable-coding/"
+  ogType="website"
+>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: t(lang, 'vc.title'),
+        itemListElement: resources.map((r, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: r.name,
+          url: r.url,
+        })),
+      })}
+    />
+  </Fragment>
+
+  <div class="mx-auto max-w-6xl px-4 pt-14 pb-20 sm:px-6">
+    <!-- Hero -->
+    <div class="max-w-2xl">
+      <div class="reveal flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+        <span class="live-dot h-1.5 w-1.5 rounded-full" aria-hidden="true"></span>
+        {t(lang, 'hero.badge')}
+      </div>
+      <h1 class="reveal title-h1 mt-3 text-3xl font-bold tracking-tight sm:text-4xl" style="--reveal-delay: 60ms">
+        {t(lang, 'vc.title')}
+      </h1>
+      <p class="reveal mt-3 text-base leading-relaxed text-muted" style="--reveal-delay: 120ms">
+        {t(lang, 'vc.subtitle')}
+      </p>
+      <div class="reveal mt-5 flex items-baseline gap-1.5 text-sm text-muted" style="--reveal-delay: 180ms">
+        <span class="text-2xl font-semibold tabular-nums text-text">{resources.length}</span>
+        {t(lang, 'vc.statsCount')}
+      </div>
+    </div>
+
+    <!-- 概念区 -->
+    <section class="reveal mt-12 max-w-3xl">
+      <h2 class="title-h2 text-xl font-semibold tracking-tight">{t(lang, 'vc.conceptTitle')}</h2>
+      <div class="mt-4 space-y-4 text-sm leading-relaxed text-muted sm:text-base">
+        <Callout tone="info" title={t(lang, 'vc.conceptTitle')}>
+          {t(lang, 'vc.conceptP1')}
+        </Callout>
+        <p>{t(lang, 'vc.conceptP2')}</p>
+        <p>{t(lang, 'vc.conceptP3')}</p>
+      </div>
+    </section>
+
+    <!-- 学习路径 -->
+    <section class="reveal mt-12">
+      <h2 class="title-h2 text-xl font-semibold tracking-tight">{t(lang, 'vc.stagesTitle')}</h2>
+      <p class="mt-1 text-sm text-muted">{t(lang, 'vc.stagesDesc')}</p>
+      <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {stages.map((stage, i) => {
+          const sopSlug = stageSop[stage.id];
+          return (
+            <article class="flex flex-col rounded-2xl border border-border bg-surface p-5 shadow-card">
+              <span class="font-mono text-xs font-semibold text-accent">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <h3 class="mt-2 font-semibold tracking-tight">
+                {lang === 'zh' ? stage.nameZh : stage.nameEn}
+              </h3>
+              <p class="mt-1.5 flex-1 text-sm leading-relaxed text-muted">
+                {lang === 'zh' ? stage.descZh : stage.descEn}
+              </p>
+              {sopSlug && (
+                <a
+                  href={localePath(lang, `/sop/${sopSlug}/`)}
+                  class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"
+                >
+                  {t(lang, 'vc.learnMore')} <span aria-hidden="true">→</span>
+                </a>
+              )}
+            </article>
+          );
+        })}
+      </div>
+    </section>
+
+    <!-- 精选 GitHub 资源 -->
+    <section class="mt-12">
+      <h2 class="reveal title-h2 text-xl font-semibold tracking-tight">{t(lang, 'vc.resourcesTitle')}</h2>
+      <p class="reveal mt-1 text-sm text-muted" style="--reveal-delay: 40ms">{t(lang, 'vc.resourcesDesc')}</p>
+
+      <div class="mt-6 space-y-10">
+        {sections.map(({ category, resources: group }) => {
+          const isAwesome = category.id === 'awesome';
+          const body = (
+            <>
+              <h3 class="flex items-baseline gap-2 text-lg font-semibold tracking-tight">
+                {viableCategoryName(category, lang)}
+                <span class="text-sm font-normal tabular-nums text-muted">{group.length}</span>
+              </h3>
+              {viableCategoryDesc(category, lang) && (
+                <p class="mb-4 mt-1 text-sm text-muted">{viableCategoryDesc(category, lang)}</p>
+              )}
+              <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {group.map((resource) => (
+                  <ViableResourceCard resource={resource} lang={lang} />
+                ))}
+              </div>
+            </>
+          );
+          return isAwesome ? (
+            <section
+              class="reveal rounded-3xl border border-accent/20 bg-accent/5 p-6"
+              aria-labelledby="vc-awesome"
+            >
+              <h3 id="vc-awesome" class="flex items-baseline gap-2 text-lg font-semibold tracking-tight">
+                {t(lang, 'vc.awesomeTitle')}
+                <span class="text-sm font-normal tabular-nums text-muted">{group.length}</span>
+              </h3>
+              <p class="mb-4 mt-1 text-sm text-muted">{t(lang, 'vc.awesomeDesc')}</p>
+              <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {group.map((resource) => (
+                  <ViableResourceCard resource={resource} lang={lang} />
+                ))}
+              </div>
+            </section>
+          ) : (
+            <section class="reveal">{body}</section>
+          );
+        })}
+      </div>
+    </section>
+
+    <!-- 配套工作流 -->
+    <section class="reveal mt-12 border-t border-border pt-12">
+      <div class="mb-6 flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <h2 class="title-h2 text-xl font-semibold tracking-tight">{t(lang, 'vc.workflowsTitle')}</h2>
+          <p class="mt-1 text-sm text-muted">{t(lang, 'vc.workflowsDesc')}</p>
+        </div>
+        <a
+          href={localePath(lang, '/sop/')}
+          class="inline-flex items-center gap-1 rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent transition hover:bg-accent/20"
+        >
+          {t(lang, 'vc.viewAllSops')} <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {codingSops.map((article) => (
+          <SopCard article={article} lang={lang} />
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

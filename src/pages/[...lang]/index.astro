@@ -5,7 +5,7 @@ import CategoryNav from '../../components/CategoryNav.astro';
 import PriceFilter from '../../components/PriceFilter.astro';
 import CategorySection from '../../components/CategorySection.astro';
 import { getAllTools, getCategorySections } from '../../lib/tools';
-import { getSopArticles } from '../../lib/sop';
+import { getSopArticles, getSopGroup } from '../../lib/sop';
 import { t, localePath } from '../../lib/i18n';
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE, SITE_URL } from '../../consts';
 import SopCard from '../../components/SopCard.astro';
@@ -23,9 +23,10 @@ const sections = getCategorySections();
 const totalTools = getAllTools().length;
 const sopArticles = getSopArticles(lang);
 const sopCount = sopArticles.length;
+const codingSops = sopArticles.filter((article) => getSopGroup(article.slug) === 'coding');
 
 // 首页精选工作流（视频旗舰 + 非视频代表）
-const featuredSopSlugs = ['plan-b-storyboard', 'plan-d-cinematic', 'plan-e-writing', 'plan-g-coding'];
+const featuredSopSlugs = ['plan-b-storyboard', 'plan-d-cinematic', 'plan-e-writing', 'plan-an-contract-review'];
 const featuredSops = featuredSopSlugs
   .map((slug) => sopArticles.find((article) => article.slug === slug))
   .filter((article): article is NonNullable<typeof article> => Boolean(article));
@@ -169,6 +170,28 @@ const featuredSops = featuredSopSlugs
     </div>
     <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
       {featuredSops.map((article) => (
+        <SopCard article={article} lang={lang} />
+      ))}
+    </div>
+  </section>
+
+  <!-- AI 编程 · Viable Coding 速览 -->
+  <section class="reveal mx-auto max-w-6xl border-t border-border px-4 py-14 sm:px-6">
+    <div class="mb-6 flex flex-wrap items-end justify-between gap-3">
+      <div>
+        <h2 class="title-h2 text-xl font-semibold tracking-tight">{t(lang, 'home.vcSectionTitle')}</h2>
+        <p class="mt-1 text-sm text-muted">{t(lang, 'home.vcSectionDesc')}</p>
+      </div>
+      <a
+        href={localePath(lang, '/viable-coding/')}
+        class="inline-flex items-center gap-1 rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent transition hover:bg-accent/20"
+      >
+        {t(lang, 'home.viewViableCoding')}
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      {codingSops.map((article) => (
         <SopCard article={article} lang={lang} />
       ))}
     </div>

@@ -100,3 +100,34 @@ export interface SopArticle {
   steps: SopStep[];
   pitfalls: { title: string; detail: string }[];
 }
+
+export interface ViableStage {
+  id: string;
+  nameZh: string;
+  nameEn: string;
+  descZh: string;
+  descEn: string;
+}
+
+export interface ViableCategory {
+  id: string;
+  nameZh: string;
+  nameEn: string;
+  descZh?: string;
+  descEn?: string;
+}
+
+/** 精选 GitHub 学习资源 */
+export interface ViableResource {
+  slug: string;
+  name: string;
+  /** GitHub 仓库 URL */
+  url: string;
+  /** GitHub star 数 */
+  stars: number;
+  /** 对应 ViableCategory.id */
+  category: string;
+  tags?: string[];
+  descZh: string;
+  descEn: string;
+}

@@ -1,0 +1,84 @@
+{
+  "slug": "plan-ay-vibe-to-viable",
+  "title": "Plan AY: From Vibe Prototype to Viable Product — Pre-Launch Polish Checklist",
+  "summary": "Lock down requirements → make it testable → error handling → performance → maintainability → documentation",
+  "scenario": "For the stage of polishing a working prototype into a shippable product, covering robustness and delivery quality — so it doesn't run locally but break in production.",
+  "meta": {
+    "duration": "0.5-2 days",
+    "cost": "Medium",
+    "difficulty": "Advanced"
+  },
+  "toolsNeeded": [
+    { "name": "Claude Code", "url": "https://claude.com/claude-code" },
+    { "name": "Playwright / browser DevTools", "url": "https://playwright.dev" },
+    { "name": "Git", "url": "https://git-scm.com" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Lock down requirements & acceptance criteria",
+      "tool": "Claude Code + you",
+      "time": "30-60 min",
+      "detail": "Define what 'it works' means as verifiable acceptance criteria: the core paths, edge behaviors, and what must be handled versus deferred — so polishing doesn't go off the rails. Write out 'when X happens, then Y' cases as the bar for every round of changes.",
+      "tips": "A 'not in scope' list matters just as much; bounding the scope is how you keep effort on the critical paths."
+    },
+    {
+      "id": "s2",
+      "title": "Make the code testable",
+      "tool": "Test framework + Claude Code",
+      "time": "1-2 hours",
+      "detail": "Add unit tests for critical logic and end-to-end tests for critical paths, so later changes stay regression-safe. Start with the logic most likely to break (data handling, state transitions, external dependencies), then cover the core user flows.",
+      "tips": "Drive real user paths with Playwright instead of clicking ten times by hand; make the suite reliably green before chasing coverage."
+    },
+    {
+      "id": "s3",
+      "title": "Error handling & edge cases",
+      "tool": "Claude Code + Playwright",
+      "time": "1-3 hours",
+      "detail": "Handle empty states, failure states and invalid inputs one by one so you never show a blank screen or crash; write error messages for the user, not raw stack traces. Timeouts, abnormal API responses and missing data — things that never happen in 'normal' runs — are the most common failure points in production.",
+      "tips": "Use Playwright to simulate offline, slow responses and empty data to reproduce failure states; every error path needs a visible fallback message."
+    },
+    {
+      "id": "s4",
+      "title": "Performance & experience",
+      "tool": "Browser DevTools + Claude Code",
+      "time": "1-3 hours",
+      "detail": "Use the DevTools Performance and Network panels to find load, interaction and response-time bottlenecks; optimize the slow parts first and avoid over-optimizing. Usually 80% of the gain comes from a few spots: big first-screen requests, uncached resources and render blocking.",
+      "tips": "Measure before you act and record before/after numbers; set a 'good enough' target (e.g. first screen under 3 seconds) and stop once you hit it."
+    },
+    {
+      "id": "s5",
+      "title": "Maintainability",
+      "tool": "Claude Code",
+      "time": "1-2 hours",
+      "detail": "Unify naming, split oversized functions and files, add types and delete dead code so the project can be handed to someone else — or to you in three months. The temporary hacks and hardcoding from the vibe-coding phase get settled back into place here.",
+      "tips": "Have the AI do a 'readability pass' and confirm each change; keep commits small so everything stays reversible."
+    },
+    {
+      "id": "s6",
+      "title": "Documentation & handoff notes",
+      "tool": "Claude Code",
+      "time": "30-60 min",
+      "detail": "Write down how to run it, environment variables, deployment steps, known issues and limitations — a README or handoff doc anyone can follow. Don't expect someone (or future you) to guess the startup command and prerequisites from the code.",
+      "tips": "Run the full 'clone to launch' sequence once and record it; every command that appears in the docs must actually work."
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Treating a working prototype as done",
+      "detail": "Running locally and staying up in production are different things: caching, concurrency, permissions and weak networks will trip you immediately. Walk through all six steps of this plan before launch."
+    },
+    {
+      "title": "Polishing without tests",
+      "detail": "Changes verified only by hand fix one thing while breaking another, with regressions caught by eye; automate tests at least for the critical paths so changes stay regression-safe."
+    },
+    {
+      "title": "Ignoring performance & edge cases",
+      "detail": "Testing only the happy path leaves empty data, failure states and slow networks all uncovered — and production will find them. Treat edge cases as first-class citizens, not afterthoughts."
+    },
+    {
+      "title": "No documentation, no handoff",
+      "detail": "If only you understand the code, the project goes dark when you leave or take time off; run and deployment notes are the cheapest way to keep it alive."
+    }
+  ]
+}
