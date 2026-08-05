@@ -113,6 +113,14 @@ export const zh = {
   'vc.workflowsDesc': '把上面这些方法落地成一步步可执行的操作手册。',
   'vc.viewAllSops': '查看全部工作流',
   'vc.viewSource': 'GitHub',
+  'vc.detail.intro': '简介',
+  'vc.detail.audience': '适合人群',
+  'vc.detail.sections': '核心内容',
+  'vc.detail.practice': '实践建议',
+  'vc.detail.workflows': '配套工作流',
+  'vc.detail.related': '同类资源',
+  'vc.detail.source': 'GitHub 仓库',
+  'vc.detail.notFound': '未找到该资源',
 
   // 页脚 / 通用
   'footer.note': '工具清单来自公开调研整理，仅供参考。',

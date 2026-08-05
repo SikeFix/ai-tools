@@ -1,0 +1,63 @@
+{
+  "slug": "vibe-coding-cn",
+  "introZh": "一份 22.6k+ star 的中文 Vibe Coding 实操指南，定位是「与 AI 结对编程、把想法变成现实的终极工作站」。它不讲空泛概念，而是给出一整套从项目构思、技术选型、实施规划到分步开发、调试与扩展的完整流程，核心信条是「规划驱动 + 上下文固定 + AI 结对执行」。仓库自带成体系的提示词库、Skills 技能包和多语言翻译，可以直接当作日常工作台来用。",
+  "introEn": "A 22.6k+ star Chinese Vibe Coding playbook, positioned as an 'ultimate workstation' for turning ideas into reality through AI pair programming. Instead of vague concepts, it lays out an end-to-end flow — ideation, tech stack selection, implementation planning, step-by-step development, debugging and extension — built on 'planning-driven, fixed context, AI pair execution'. The repo ships a full prompt library, Skills packs and multilingual translations you can use as a daily workstation.",
+  "audienceZh": "想系统上手 Vibe Coding 的开发者，特别是受够了「AI 写完代码就跑偏、项目变成一团乱麻」的人。",
+  "audienceEn": "Developers who want to systematically master Vibe Coding — especially those burned by AI code that runs off track and leaves projects a tangled mess.",
+  "sectionsZh": [
+    {
+      "title": "核心信条：规划驱动，别让 AI 失控",
+      "body": "仓库反复强调「规划就是一切」：谨慎让 AI 自主规划，否则代码库会变成无法管理的乱麻。整条工作流都由文档驱动——先把游戏设计文档（GDD）/产品需求文档（PRD）、技术栈、实施计划写成 Markdown，再让 AI 按步骤执行，而不是一句话让它全写完。"
+    },
+    {
+      "title": "方法论四层：道、法、术、器",
+      "body": "内容按中国传统思维框架组织：道（原则，如「凡是 AI 能做的就不要人工做」「上下文是 Vibe Coding 的第一性要素」）、法（方法，如「一句话目标 + 非目标」「接口先行，实现后补」「一次只改一个模块」）、术（具体技法，如 Debug 只给「预期 vs 实际 + 最小复现」、代码一多就切会话）、器（工具清单：Claude Code / Codex CLI、Cursor、Warp、Neovim 等）。"
+    },
+    {
+      "title": "完整工作流：从文档到记忆库",
+      "body": "上手流程非常具体：先让 AI 生成游戏设计文档与推荐技术栈，用 /init 生成 CLAUDE.md/Agents.md 规则并强制 AI「写代码前先读 memory-bank」；再生成分步的实施计划，配合 progress.md 和 architecture.md 组成的记忆库，让每次新会话都能续上进度。"
+    },
+    {
+      "title": "提示词与技能资产：拿来即用",
+      "body": "仓库最大的资产是可复用的提示词体系：coding_prompts（需求澄清、计划、执行的全链路脚本）、system_prompts（约束 AI 行为边界）、元提示词（生成提示词的提示词）以及可集成的 Skills 技能库，甚至配套了 Excel/Markdown 互转的提示词管理工具。"
+    },
+    {
+      "title": "避坑与技巧",
+      "body": "汇集了大量实操经验：给 AI 明确「能改什么、不能改什么」；用 /rewind 或 git reset 回退跑偏的迭代；卡壳时用工具把整个代码库合成单文件丢给模型求助；也给出了模型分级参考，建议复杂任务只用第一梯队模型。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "Core belief: planning-driven, don't let AI run wild",
+      "body": "The repo insists 'planning is everything': be careful about letting AI plan on its own, or your codebase becomes an unmanageable mess. The whole workflow is document-driven — first write a Game Design Document (GDD) / PRD, tech stack and implementation plan as Markdown, then have the AI execute step by step, instead of letting it write everything in one prompt."
+    },
+    {
+      "title": "Four layers of method: philosophy, method, technique, tools",
+      "body": "Content is organized around a classical Chinese thinking framework: principles (e.g. 'whatever AI can do, don't do by hand', 'context is the first principle of Vibe Coding'), methods (e.g. 'one-sentence goal + non-goals', 'interfaces first, implementation later', 'change one module at a time'), concrete techniques (e.g. debug by giving only 'expected vs actual + minimal reproduction', switch sessions when code grows large), and tools (Claude Code / Codex CLI, Cursor, Warp, Neovim, etc.)."
+    },
+    {
+      "title": "End-to-end workflow: from documents to a memory bank",
+      "body": "The onboarding flow is very concrete: have the AI draft a game design document and recommend a tech stack, run /init to generate CLAUDE.md/Agents.md rules that force the AI to 'read memory-bank before writing any code'; then produce a step-by-step implementation plan, paired with progress.md and architecture.md as a memory bank so every new session can pick up where the last left off."
+    },
+    {
+      "title": "Prompt and skill assets: ready to use",
+      "body": "The repo's biggest asset is a reusable prompt system: coding_prompts (the full chain from requirement clarification to planning to execution), system_prompts (constraining AI behavior), meta-prompts (prompts that generate prompts), plus an integrable Skills library — even a small tool that converts prompts between Excel and Markdown."
+    },
+    {
+      "title": "Pitfalls and tips",
+      "body": "It packs hard-won experience: tell the AI clearly what it can and cannot change; use /rewind or git reset to roll back a derailed iteration; when truly stuck, bundle the whole codebase into a single file and hand it to the model; it also provides a model-tier reference suggesting complex tasks should only use the top-tier models."
+    }
+  ],
+  "practiceZh": [
+    "选一个真实小想法（不一定是游戏，做应用就把 GDD 换成 PRD），从零走一遍「设计文档 → 技术栈 → 实施计划 → memory-bank」的完整流程。",
+    "写代码前先把 CLAUDE.md 规则设好，尤其是强制 AI 先读 memory-bank 的 Always 规则，避免它乱写巨型单文件。",
+    "Debug 时只给 AI「预期 vs 实际 + 最小复现」，并多用 /rewind 或 git reset 小步回退，不要让它越修越乱。",
+    "从仓库的 prompts/skills 里挑几个最贴合你工作的提示词和技能，直接集成进日常会话，再用元提示词慢慢沉淀自己的版本。"
+  ],
+  "practiceEn": [
+    "Pick one real small idea (swap GDD for a PRD if it's an app, not a game) and walk the full flow: design doc → tech stack → implementation plan → memory-bank.",
+    "Set up CLAUDE.md rules before writing code — especially an 'Always' rule forcing the AI to read memory-bank first, so it won't dump one giant monolith file.",
+    "When debugging, give the AI only 'expected vs actual + minimal reproduction', and roll back in small steps with /rewind or git reset instead of letting it keep digging.",
+    "Pick a few prompts and skills from the repo's prompts/skills folders that fit your work, integrate them into daily sessions, then gradually build your own versions with the meta-prompts."
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "context-engineering",
+  "introZh": "Karpathy 定义的「context engineering」被系统化成的一份前沿手册（9.2k+ star）：在上下文窗口里放进「刚好够下一步用」的正确信息。它用「从原子到语义场」的生物隐喻组织学习路径，把上下文拆成 token 预算、few-shot、记忆、检索、控制流等可量化组件，并整理了一批前沿研究证据（IBM 苏黎世、新加坡-MIT、ICML Princeton）。适合想超越 prompt engineering、系统化理解上下文设计的开发者。",
+  "introEn": "A first-principles frontier handbook that systematizes 'context engineering' as Karpathy defined it (9.2k+ stars): filling the context window with just the right information for the next step. It organizes a learning path through a biological metaphor (atoms to semantic fields), decomposes context into measurable components like token budget, few-shot, memory, retrieval and control flow, and curates frontier research evidence (IBM Zurich, Singapore-MIT, ICML Princeton). For developers who want to move beyond prompt engineering toward systematic context design.",
+  "audienceZh": "已熟悉 prompt engineering、想进阶到「设计整个上下文窗口」的学习者；仓库提供了从 5 分钟基础到前沿研究的渐进路径。",
+  "audienceEn": "Learners already familiar with prompt engineering who want to level up to designing the whole context window; the repo offers a path from a 5-minute primer to frontier research.",
+  "sectionsZh": [
+    {
+      "title": "核心理念：Prompt Engineering vs Context Engineering",
+      "body": "仓库开篇引用 Karpathy：「context engineering 是在上下文窗口里填入刚好够下一步用的正确信息的精细艺术与科学」。它把界限划得很清楚：Prompt Engineering 是你「说了什么」（单条指令），Context Engineering 是「模型还看到了什么」——示例、记忆、检索、工具、状态与控制流，即整个信息载荷。比喻起来：prompt 是给演员的一句台词，context 是布景、灯光、前史与走位。"
+    },
+    {
+      "title": "系统化的学习路径：从零到前沿",
+      "body": "它是一个渐进式课程而非零散技巧：00_foundations 讲理论基础与核心概念，10_guides_zero_to_hero 提供可运行的引导示例（如 min_prompt.py），20_templates 给可复制进自己项目的模板，30_examples 是逐渐复杂的真实项目，40_reference 做深挖与评估，50_contrib 收社区贡献。新手建议从「5 分钟读懂为什么单条 prompt 常不够」开始，再跑一个最小示例。"
+    },
+    {
+      "title": "可量化的上下文组件：预算、示例、记忆、检索、剪枝",
+      "body": "仓库把上下文工程拆成可量化组件：Token Budget（优化每个 token，直接关系成本与速度）、Few-Shot Learning（给示例常比讲道理更有效）、Memory Systems（跨轮持久化，让交互有状态）、Retrieval Augmentation（注入相关文档，让回答有据可依、减少幻觉）、Control Flow（把复杂任务拆成小步骤）、Context Pruning（果断删除无关信息）。方法论强调「测量一切」：token 成本、延迟、质量分都要有数。"
+    },
+    {
+      "title": "从原子到语义场：理解上下文的层次",
+      "body": "仓库用生物隐喻组织认知层级：atoms（单条指令、简单约束）→ molecules（few-shot 示例对）→ cells（记忆、状态、上下文窗口管理）→ organs（多步骤流程、专家分工、系统编排）→ neural systems（推理框架、验证工具、认知工具）→ neural & semantic field theory（连续意义、吸引子与共振）。这套隐喻帮助你理解：上下文不是一条 prompt，而是可以像生物体一样分层构造、逐层演化的系统。"
+    },
+    {
+      "title": "研究证据与多代理上下文",
+      "body": "仓库不只讲理论，还整理了前沿研究：IBM 苏黎世发现给 GPT-4.1 配「认知工具」（把推理步骤模块化成可调用的提示模板）能让 AIME2024 的 pass@1 从 26.7% 升到 43.3%；新加坡-MIT 的 MEM1 用「推理驱动的记忆合并」对抗长任务上下文膨胀；ICML Princeton 揭示 LLM 内部会涌现符号机制，这也是 Markdown/JSON 等结构化格式更好解析的原因之一。仓库还提供多套 Agent Commands，适配 Claude Code、OpenCode、Codex、Gemini CLI 等，让多代理上下文编排直接可用。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "Core idea: Prompt Engineering vs Context Engineering",
+      "body": "The repo opens with Karpathy: 'Context engineering is the delicate art and science of filling the context window with just the right information for the next step.' It draws a sharp line: Prompt Engineering is 'what you say' (a single instruction); Context Engineering is 'everything else the model sees' — examples, memory, retrieval, tools, state and control flow, i.e. the complete information payload. By analogy: a prompt is one line of dialogue, context is the set, lighting, backstory and staging."
+    },
+    {
+      "title": "A systematized learning path: from zero to frontier",
+      "body": "It's a progressive course, not scattered tricks: 00_foundations covers theory and core concepts, 10_guides_zero_to_hero offers runnable walkthroughs (e.g. min_prompt.py), 20_templates gives copy-paste templates, 30_examples holds increasingly complex real projects, 40_reference provides deep dives and an eval cookbook, and 50_contrib collects community contributions. Beginners are told to start with a 5-minute read on why a single prompt often underperforms, then run a minimal example."
+    },
+    {
+      "title": "Measurable context components: budget, few-shot, memory, retrieval, pruning",
+      "body": "The repo decomposes context engineering into quantifiable components: Token Budget (optimize every token — it drives cost and latency), Few-Shot Learning (showing examples often beats explaining), Memory Systems (persist across turns for stateful interactions), Retrieval Augmentation (inject relevant documents to ground answers and reduce hallucination), Control Flow (split hard tasks into steps) and Context Pruning (ruthlessly delete what's irrelevant). The methodology insists you 'measure everything': token cost, latency and quality scores."
+    },
+    {
+      "title": "From atoms to semantic fields: levels of context",
+      "body": "The repo uses a biological metaphor for cognitive levels: atoms (single instructions, simple constraints) → molecules (few-shot example pairs) → cells (memory, state, context-window management) → organs (multi-step flows, specialists, system orchestration) → neural systems (reasoning frameworks, verification tools, cognitive tools) → neural and semantic field theory (continuous meaning, attractors and resonance). The metaphor helps you see context not as one prompt but as a system that can be layered and evolved like an organism."
+    },
+    {
+      "title": "Research evidence and multi-agent context",
+      "body": "The repo grounds theory in frontier research: IBM Zurich showed that giving GPT-4.1 'cognitive tools' (modular prompt templates invoked as reasoning steps) lifted AIME2024 pass@1 from 26.7% to 43.3%; Singapore-MIT's MEM1 uses reasoning-driven memory consolidation to fight context bloat in long-horizon agents; ICML Princeton revealed that symbolic mechanisms emerge inside LLMs — one reason structured formats like Markdown/JSON parse more reliably. It also ships Agent Commands for Claude Code, OpenCode, Codex, Gemini CLI and more, making multi-agent context orchestration directly usable."
+    }
+  ],
+  "practiceZh": [
+    "从 00_foundations/01_atoms_prompting.md 读起（约 5 分钟），理解为什么单条 prompt 常不够用。",
+    "运行 10_guides_zero_to_hero/01_min_prompt.py，再把 20_templates/minimal_context.yaml 抄进你的项目。",
+    "对照「What You'll Learn」表，挑一个你最弱的组件（比如 context pruning）专项练习并测量效果。",
+    "选一篇研究证据精读（如认知工具），用它改造你手头一个 prompt，对比改造前后的输出质量。"
+  ],
+  "practiceEn": [
+    "Start with 00_foundations/01_atoms_prompting.md (about 5 minutes) to understand why a single prompt often underperforms.",
+    "Run 10_guides_zero_to_hero/01_min_prompt.py, then copy 20_templates/minimal_context.yaml into your own project.",
+    "Using the 'What You'll Learn' table, pick your weakest component (e.g. context pruning), practice it deliberately, and measure the effect.",
+    "Read one research evidence item closely (e.g. cognitive tools) and use its method to rework a prompt you're working on, then compare output quality."
+  ]
+}

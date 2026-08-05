@@ -1,0 +1,63 @@
+{
+  "slug": "cs146s-cn",
+  "introZh": "斯坦福大学 CS146S《Vibe Coding Together》课程的中文版（1.5k+ star），聚焦「AI 时代的软件工程」：当 LLM 重塑传统软件开发生命周期，下一代工程师如何用 AI 把工作效率提升十倍。课程论证了软件开发已从 0-1 的代码编写演变为「规划 → AI 生成 → 修改 → 重复」的迭代工作流，并通过动手作业与行业先驱讲座（Claude Code、Warp、Vercel、a16z 等）传授 AI 辅助开发、自动化测试、智能文档与漏洞检测等实战技能。",
+  "introEn": "A Chinese edition of Stanford's CS146S 'Vibe Coding Together' course (1.5k+ stars), focused on software engineering in the AI era: as LLMs reshape the traditional software development lifecycle, how the next generation of engineers can use AI to become 10x more productive. It argues that development has shifted from 0-1 code writing to an iterative loop of plan → AI-generate → modify → repeat, and uses hands-on assignments plus guest lectures from industry pioneers (Claude Code, Warp, Vercel, a16z) to teach AI-assisted development, automated testing, smart documentation and vulnerability detection.",
+  "audienceZh": "有编程基础（约 CS111 水平）、想跟上 AI 辅助开发前沿的人，也适合把斯坦福课程当自学者资源的同学。",
+  "audienceEn": "Programmers with roughly CS111-level experience who want to keep up with AI-assisted development, plus self-learners who treat Stanford courses as a resource.",
+  "sectionsZh": [
+    {
+      "title": "课程定位：AI 时代的软件工程",
+      "body": "课程回答一个关键问题：下一代软件工程师如何利用 LLM 把效率提升十倍，并为未来职业做准备。它强调 AI 工具不仅能大幅提高生产力，还能让更广泛的受众更容易从事软件工程，并展示软件开发已从 0-1 写代码变成「规划 → 利用 AI 生成 → 修改 → 重复」的迭代流程。"
+    },
+    {
+      "title": "考核与先修：动手即评分",
+      "body": "先修要求相当于 CS111 水平的编程经验（推荐 CS221/229 知识）。评分构成为期末项目 80%、每周作业 15%、课堂参与 5%，体现了「实践驱动」的定位——不是听会，而是做会。课程官方建议每周投入约 10-12 小时。"
+    },
+    {
+      "title": "十周大纲：从 LLM 原理到智能体部署",
+      "body": "大纲覆盖 10 周：编码 LLM 与提示工程、编码智能体剖析（含 MCP）、AI IDE、智能体模式、现代终端（Warp）、AI 测试与安全、现代软件支持（代码审查）、自动化 UI 与应用构建、智能体部署后（可观测性与事件响应）、AI 软件工程的未来。每周配有阅读材料、PPT（含中文版）与嘉宾讲座。"
+    },
+    {
+      "title": "作业与工具链：每周天发布的高质量 Assignments",
+      "body": "项目正在持续维护高质量作业，每周天发布；已发布作业覆盖 LLM 提示词实践、AI IDE 初探、构建自定义 MCP 服务器、用 Claude Code 编码、用 Warp 做智能体开发、安全编码、代码审查练习、多技术栈 Web 应用构建等。仓库还整理了命令行工具清单与国产编程平台（GLM-4.6、Kimi K2、Doubao-Seed-Code、DeepSeek-Coder、Qwen3-Coder 等）的选型信息。"
+    },
+    {
+      "title": "怎么用：旁听式自学路径",
+      "body": "即使进不了斯坦福，也可以按周自学：每周围绕一个主题，读阅读材料、看（双语）PPT 与嘉宾讲座、动手做作业。FAQ 也回答了语言问题（示例以 Python/JavaScript 为主，重在理解现代开发实践而非特定语言）与是否需要有 AI 工具经验（不需要，从基础讲起）。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "Course positioning: software engineering in the AI era",
+      "body": "The course answers one key question: how next-generation engineers should leverage LLMs to become 10x more productive and prepare for future careers. It argues AI tools not only dramatically boost developer productivity but also make software engineering more accessible to a broader audience, and it demonstrates how development has shifted from 0-1 coding into an iterative loop of plan → AI-generate → modify → repeat."
+    },
+    {
+      "title": "Grading and prerequisites: you learn by doing",
+      "body": "The prerequisite is programming experience roughly at CS111 level (CS221/229 knowledge recommended). Grades are 80% final project, 15% weekly assignments and 5% class participation — a strongly hands-on design: you don't learn by listening, you learn by building. The course advises budgeting about 10-12 hours per week."
+    },
+    {
+      "title": "A ten-week outline: from LLM fundamentals to post-agent deployment",
+      "body": "The syllabus spans ten weeks: coding LLMs and prompt engineering, anatomy of coding agents (including MCP), AI IDEs, coding agent patterns, the modern terminal (Warp), AI testing and security, modern software support (code review), automated UI and app building, life after agents (observability and incident response), and the future of AI software engineering. Each week ships readings, slides (with Chinese versions) and guest lectures."
+    },
+    {
+      "title": "Assignments and toolchain: quality assignments published every Sunday",
+      "body": "The project actively maintains high-quality assignments and releases new ones every Sunday; published ones cover LLM prompting practice, first steps in the AI IDE, building a custom MCP server, coding with Claude Code, agentic development with Warp, secure AI coding, code-review reps and multi-stack web app builds. The repo also curates a CLI tool list and a comparison of Chinese coding platforms (GLM-4.6, Kimi K2, Doubao-Seed-Code, DeepSeek-Coder, Qwen3-Coder, etc.)."
+    },
+    {
+      "title": "How to use it: a self-study audit path",
+      "body": "Even if you can't attend Stanford, you can audit it weekly on your own: for each topic, read the materials, watch the (bilingual) slides and guest lectures, then do the assignment. The FAQ also answers the language question (examples lean on Python/JavaScript; the point is modern development practices, not any specific language) and whether AI tool experience is needed (no — it starts from the basics)."
+    }
+  ],
+  "practiceZh": [
+    "按周自学：每周只攻一个主题，先读阅读材料，再翻双语 PPT 和嘉宾讲座，最后用当天发布的作业检验。",
+    "第 2 周的重点是 MCP——照着作业做一个自定义 MCP 服务器，你对智能体如何「用工具」会有质变的理解。",
+    "把你正在用的编程工具对号入座（Claude Code / Codex / Cursor / Warp 等），把每周主题映射到自己项目里做一次小实验。",
+    "组一个学习小组或加入课程交流群，把每周作业互相 review，正对课程第 7 周「代码审查」的主题。"
+  ],
+  "practiceEn": [
+    "Audit it week by week: one topic per week — read the materials, flip through the bilingual slides and guest talks, then verify yourself with that week's assignment.",
+    "Week 2 is all about MCP — build a custom MCP server for the assignment and you'll have a transformed understanding of how agents 'use tools'.",
+    "Map the tools you already use (Claude Code / Codex / Cursor / Warp, etc.) onto the syllabus and run one small experiment per week in your own project.",
+    "Form a study group or join the course chat, and review each other's weekly assignments — right on theme for Week 7, 'code review'."
+  ]
+}

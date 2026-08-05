@@ -1,0 +1,63 @@
+{
+  "slug": "vibe-vibe",
+  "introZh": "Datawhale 出品的国内首个系统化 Vibe Coding 开源教程（5.9k+ star，www.vibevibe.cn），面向零基础学习者，从「我有一个想法」走到「我做出了一个产品」。它践行 Karpathy 的理念——从 Coder 到 Commander，通过自然语言与 AI 对话，让编程从「写代码」变成「对话式创作」。教程按基础篇、进阶篇、实践篇、优质文章篇四大板块渐进展开。",
+  "introEn": "Datawhale's first systematic open-source Vibe Coding tutorial in China (5.9k+ stars, www.vibevibe.cn), built for complete beginners, walking from 'I have an idea' to 'I shipped a product'. It follows Karpathy's idea — from Coder to Commander — turning programming from 'writing code' into 'conversational creation' with AI. The tutorial progresses through four parts: Basics, Advanced, Practice and Curated Articles.",
+  "audienceZh": "编程零基础者、大学生、创业者、传统程序员，以及任何想用 AI 快速把想法变成产品的人。",
+  "audienceEn": "Absolute beginners, college students, founders, traditional programmers — anyone who wants to turn ideas into products fast with AI.",
+  "sectionsZh": [
+    {
+      "title": "学习路径设计：先按你的起点选入口",
+      "body": "README 为不同人群划了推荐起点：完全零基础从「基础篇 → 第 1 章 觉醒」开始；用过 ChatGPT 但没做过项目的人从「第 2 章 心法」入手；有编程基础的快速浏览基础篇后直接进进阶篇；想直接动手的从「第 4 章 实战」切入；想找项目练手的去实践篇。"
+    },
+    {
+      "title": "基础篇：从觉醒到第一个作品",
+      "body": "基础篇共 5 章：觉醒（为什么现在是编程最好的时代、工具选型、3 分钟做出第一个网页）、心法（像产品经理一样思考、MVP 思维、灵魂三问）、技法（提示词工程、把想法变成用户旅程、写第一份 PRD）、实战（环境准备、先做静态页面再注入逻辑、Debug 指南）、精进（从「能用」到「好用」、上线、安全意识、Vibe Coding 的能与不能）。"
+    },
+    {
+      "title": "进阶篇：从 0 到上线的避坑指南",
+      "body": "进阶篇以完整的产品交付流程为主线共 16 章：环境搭建、PRD 与文档驱动开发、UI/UX、环境变量与安全、数据库、测试、Git、无服务器部署与 CI/CD、域名与网络、云服务器运维、SEO 与数据统计、用户反馈迭代。技术栈为 Next.js 16 + React + TypeScript + Tailwind CSS + shadcn/ui + Drizzle ORM + PostgreSQL。"
+    },
+    {
+      "title": "实践篇与优质文章篇",
+      "body": "实践篇按人群分项目实战（文科生/商科生做内容创作与数据展示、理工科做算法可视化与数据处理、职场人士做工作流自动化），进阶部分覆盖上线应用、AI Agent（RAG、向量数据库、MCP）、全栈 SaaS 与移动应用。优质文章篇精选 OpenAI、Anthropic、Vercel 等技术博客、播客、研究报告与 Newsletter，保持行业敏感度。"
+    },
+    {
+      "title": "私有化部署与在线 IDE 预告",
+      "body": "教程站点本身提供了 Dockerfile 与 docker-compose.yml，一条命令即可在本地或内网部署阅读；团队还预告了带云端 IDE（内置 Node.js/Python/Docker 环境）与 50+ 个预装 AI Skills 的在线开发环境，把学习门槛降到最低。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "Path design: pick your starting point first",
+      "body": "The README maps recommended entry points by persona: absolute beginners start at 'Basics → Chapter 1 Awakening'; those who've used ChatGPT but never built a project begin at 'Chapter 2 Mindset'; people with coding experience skim the Basics and jump straight to the Advanced part; hands-on learners start at 'Chapter 4 Practice'; and those hunting for projects go to the Practice part."
+    },
+    {
+      "title": "Basics: from awakening to a first product",
+      "body": "The Basics part has five chapters: Awakening (why this is the best era for programming, tool selection, a 3-minute first web page), Mindset (think like a product manager, MVP thinking, the three soul-searching questions), Craft (prompt engineering, turning ideas into user journeys, writing a first PRD), Practice (environment setup, build a static page first then inject logic, a debugging guide), and Refinement (from 'works' to 'good to use', shipping, security awareness, the limits of Vibe Coding)."
+    },
+    {
+      "title": "Advanced: a pitfall-avoidance guide from zero to launch",
+      "body": "The Advanced part follows a complete product-delivery flow across 16 chapters: environment setup, PRD and document-driven development, UI/UX, environment variables and security, databases, testing, Git, serverless deployment and CI/CD, domains and networking, cloud-server operations, SEO and analytics, and user feedback loops. The stack is Next.js 16 + React + TypeScript + Tailwind CSS + shadcn/ui + Drizzle ORM + PostgreSQL."
+    },
+    {
+      "title": "Practice and curated articles",
+      "body": "The Practice part runs audience-specific projects (liberal-arts/business students build content-creation and data-visualization apps, STEM students do algorithm visualization and data processing, working professionals build workflow automation), while the advanced track covers shipping apps, AI Agents (RAG, vector databases, MCP), full-stack SaaS and mobile apps. The Curated Articles part picks tech blogs from OpenAI, Anthropic, Vercel, plus podcasts, research reports and newsletters to keep you industry-aware."
+    },
+    {
+      "title": "Self-hosting and a preview of the online IDE",
+      "body": "The tutorial site ships a Dockerfile and docker-compose.yml, so you can deploy it locally or on an intranet with one command. The team also previews a cloud IDE (bundling Node.js/Python/Docker environments) and 50+ preinstalled AI Skills to lower the learning barrier to its minimum."
+    }
+  ],
+  "practiceZh": [
+    "先对号入座选起点：零基础就从基础篇第 1 章一路读完，别一上来就啃进阶篇。",
+    "基础篇第 3 章前先自己动手写一份 PRD（哪怕很简陋），你会发现后面让 AI 干活时它不再乱编。",
+    "进阶篇每章都对应真实交付环节，建议跟着文档驱动开发那一章，把「先写文档再写代码」变成习惯。",
+    "学完基础篇就去实践篇挑一个自己身份对应的项目做，做完再回头看进阶篇，理解会深很多。"
+  ],
+  "practiceEn": [
+    "First locate your entry point: complete beginners should read the Basics from Chapter 1 straight through — don't jump into the Advanced part early.",
+    "Write your own PRD (even a rough one) before reaching Chapter 3 of the Basics; you'll notice the AI stops making things up when you do.",
+    "Each Advanced chapter maps to a real delivery stage — follow the document-driven development chapter and make 'docs before code' a habit.",
+    "After the Basics, pick a project in the Practice part that matches your identity; do it, then revisit the Advanced part — it will click much harder."
+  ]
+}

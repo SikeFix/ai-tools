@@ -1,0 +1,63 @@
+{
+  "slug": "ai-engineering-coach",
+  "introZh": "微软开源（社区项目，非官方产品）的 AI 编程「教练」：一个 VS Code 扩展，读取你本地所有 AI 编程会话日志，把它变成可执行的改进建议——slogan 就是 better agentic engineering。它不限定特定工具，任何 harness（Claude Code / Copilot 等）的日志都能分析，所有解析与统计都在本机完成，只读、不上传、无遥测。它把「工程化地使用 AI」拆成观察、量化、改进、进阶四个闭环。",
+  "introEn": "Microsoft's open-source (community project, not an official product) AI coding 'coach': a VS Code extension that reads your local AI coding session logs and turns them into actionable improvement advice — its slogan is 'better agentic engineering'. It is harness-agnostic, analyzing logs from Claude Code, Copilot and more, with all parsing and analytics running locally, read-only, no telemetry. It breaks 'using AI engineering-grade' into an observe → measure → improve → level-up loop.",
+  "audienceZh": "正在用 Claude Code / Copilot 等 AI 编程工具、想知道自己的用法是否「工程化」、并愿意根据数据反馈改进习惯的开发者。",
+  "audienceEn": "Developers actively using AI coding assistants who want to know whether their usage is truly 'engineering-grade' and are willing to improve habits based on evidence.",
+  "sectionsZh": [
+    {
+      "title": "它是什么：把 AI 会话日志变成改进建议",
+      "body": "AI Engineer Coach 读取你本地的 AI 编程会话日志，产出可执行的洞察：跟踪实践评分、周趋势与每日活动；用 45 条规则检测反模式；按语言 / 工作区 / 模型 / harness 统计 AI 生成代码量；发现重复 prompt 并固化成可复用技能；为上下文健康打分（agentic readiness 检查、指令文件审计、工作区上下文地图）。核心承诺是隐私：只读会话文件、全部本地分析、不擅自改动、无专属遥测。"
+    },
+    {
+      "title": "把「工程化 AI 编程」拆成四段闭环",
+      "body": "Observe：Dashboard / Timeline / Coding Moments，看实践评分、周同比、每日活动甘特式会话时间线；Measure：Output / Burndown / Patterns，量化 AI 生成代码量、token 预算与 7×24 活动热图；Improve：Anti-Patterns / Context Health 等，指出反模式并给出具体行动；Level Up：Learning Center / Achievements / Agentic SDLC，基于你的真实用法生成个性化测验与代码对比题，还有 XP 成就体系。"
+    },
+    {
+      "title": "反模式检测：45 条可编辑规则",
+      "body": "Anti-Patterns 页用 45 条 markdown 规则覆盖五大维度——prompt 质量、会话卫生、代码审查、工具掌握度、上下文管理——每个反模式带严重度评级、具体行动建议和示例 prompt。Rule Editor 让你可视化或直接改 markdown 规则并实时对着自己的数据测试，Rule Playground 则是一个规则 DSL 的交互式 REPL，配字段浏览器、函数目录与指标列表。"
+    },
+    {
+      "title": "技能发现与上下文健康",
+      "body": "Skill Finder 从你的重复 prompt 中找出规律，并匹配开源目录里的社区技能，把「习惯性操作」沉淀成可复用技能；Context Health 给出整体上下文评分、agentic readiness 检查清单、工作区上下文地图，还能用 AI 评审指令文件。这些正是 agentic engineering 的核心杠杆：上下文质量与可复用能力。"
+    },
+    {
+      "title": "怎么装怎么用",
+      "body": "扩展没有发布到 marketplace 或 Releases，需要自己构建 .vsix：克隆后 npm ci && npm run package，再用 code --install-extension 安装（或在 VS Code 里 Install from VSIX）。装好后命令面板跑 AI Engineer Coach: Open Dashboard，侧边栏按工作区或 harness 过滤。同一个 Dashboard 也能作为 GitHub Copilot App 里的 canvas 运行，无需 VS Code。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "What it is: turning session logs into improvement advice",
+      "body": "AI Engineer Coach reads your local AI coding session logs and produces actionable insights: track practice scores, weekly trends and daily activity; detect anti-patterns with 45 rules; measure AI-generated code volume by language, workspace, model and harness; discover repeated prompts and turn them into reusable skills; and score context health (agentic readiness checks, instruction-file audits, workspace context maps). The privacy promise is central: read-only on your session files, fully local analysis, no proprietary telemetry."
+    },
+    {
+      "title": "Breaking 'engineering-grade AI coding' into a four-stage loop",
+      "body": "Observe: Dashboard / Timeline / Coding Moments for practice scores, week-over-week trends and a Gantt-style per-day session timeline; Measure: Output / Burndown / Patterns for generated-code volume, token budget and a 7×24 activity heatmap; Improve: Anti-Patterns / Context Health that point out anti-patterns with concrete actions; Level Up: Learning Center / Achievements / Agentic SDLC that generate personalized quizzes and code-comparison rounds from your actual usage, plus an XP progression system."
+    },
+    {
+      "title": "Anti-pattern detection: 45 editable rules",
+      "body": "The Anti-Patterns page uses 45 markdown rules across five dimensions — prompt quality, session hygiene, code review, tool mastery and context management — each with severity ratings, concrete actions and example prompts. The Rule Editor lets you create, edit and tune rules visually or as raw markdown and live-test them against your own data; the Rule Playground is an interactive REPL for the rule DSL with a field browser, function catalog and metric list."
+    },
+    {
+      "title": "Skill discovery and context health",
+      "body": "Skill Finder detects patterns in your repeated prompts and matches community skills from the open-source catalog, turning habitual operations into reusable skills; Context Health delivers an overall context score, an agentic-readiness checklist, a workspace context map and AI-powered instruction-file review. These are the core levers of agentic engineering: context quality and reusable capability."
+    },
+    {
+      "title": "How to install and use",
+      "body": "The extension is not published to a marketplace or Releases page, so you build the .vsix yourself: clone, run npm ci && npm run package, then install via code --install-extension (or 'Install from VSIX' in the VS Code UI). After install, run 'AI Engineer Coach: Open Dashboard' from the command palette and filter by workspace or harness in the sidebar. The same dashboard also runs as a canvas inside the GitHub Copilot app, no VS Code needed."
+    }
+  ],
+  "practiceZh": [
+    "先正常用一周 Claude Code / Copilot 攒下会话日志，再打开 Dashboard 看实践评分基线，别急着改进。",
+    "打开 Anti-Patterns 页，挑命中率最高的 2-3 条，照着「具体行动」改你的 prompt 习惯，隔周回来对比。",
+    "在 Rule Playground 里用规则 DSL 调一条检测规则，对着自己的真实数据实时测试，理解规则怎么写的。",
+    "用 Skill Finder 把高频重复 prompt 固化成可复用技能，记录固化前后的效率变化。"
+  ],
+  "practiceEn": [
+    "Use Claude Code / Copilot normally for a week to accumulate session logs, then open the Dashboard to see your practice-score baseline before changing anything.",
+    "Open Anti-Patterns, pick the 2-3 rules with the highest hit rate, follow the 'concrete actions' to adjust your prompting habits, and compare again next week.",
+    "In Rule Playground, tune one detection rule with the rule DSL and live-test it against your real data to learn how rules are written.",
+    "Use Skill Finder to turn your high-frequency repeated prompts into reusable skills and track efficiency before vs. after."
+  ]
+}

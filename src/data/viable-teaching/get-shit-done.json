@@ -1,0 +1,63 @@
+{
+  "slug": "get-shit-done",
+  "introZh": "一个 64.7k+ star 的 meta-prompting + context engineering + spec-driven（规格驱动）开发系统，口号是「Git. Ship. Done.」。它用「规格先行 + 干净上下文的子代理」来解决 AI 编程最常见的翻车原因——context rot（上下文随会话变长而质量劣化）。原仓库 gsd-build/get-shit-done 已归档，项目继续以 GSD Core 的形式在 open-gsd/gsd-core 开发，支持 Claude Code、Codex、Cursor、Windsurf 等多种编码助手。",
+  "introEn": "A 64.7k+ star meta-prompting, context engineering and spec-driven development system whose motto is 'Git. Ship. Done.' It attacks the most common AI-coding failure mode — context rot, the quality degradation that accumulates as a session's context window fills — by running heavy work in fresh-context subagents. The original gsd-build/get-shit-done repo is archived; development continues as GSD Core in open-gsd/gsd-core, supporting Claude Code, Codex, Cursor, Windsurf and more.",
+  "audienceZh": "用编码 Agent 做真实项目、被「上下文越用越糊、改来改去还是不对」困扰的开发者；愿意把工作流从「对话式开发」改成「规格 + 相位循环」的人。",
+  "audienceEn": "Developers building real projects with coding agents who are frustrated by degrading context and endless revision loops — and who are willing to shift from conversational development to a spec + phase-loop workflow.",
+  "sectionsZh": [
+    {
+      "title": "核心理念：规格先行，让 Claude 一次写对",
+      "body": "GSD 的三根支柱是 meta-prompting（用元提示驱动 AI 自己拆解与规划）、context engineering（主动管理上下文，避免质量劣化）与 spec-driven development（规格先行，先写清楚要什么再写代码）。核心思路不是「写完再改」，而是动手前把需求、计划与验收标准定清楚，让编码助手第一次就接近正确。仓库原描述就叫「for Claude Code by TÂCHES」的轻量系统。"
+    },
+    {
+      "title": "它解决什么：context rot 与「干净上下文」解法",
+      "body": "它直指的痛点是 context rot：随着会话进行，AI 的上下文窗口被历史对话、无关文件与中间产物填满，输出质量持续下降；同时会话之间没有共享记忆，也没有人真正验证代码能不能跑。GSD 的解法是把重活放进「干净上下文」的子代理里执行——每个执行器都从全新的 200k token 上下文开始，主会话保持精简，关键推理不被旧信息污染。"
+    },
+    {
+      "title": "五步相位循环：Discuss → Plan → Execute → Verify → Ship",
+      "body": "每个里程碑都走同一条循环，一次只做一个相位：Discuss（动手规划前先记录实现决策）→ Plan（研究、拆解并验证计划装得进一个干净上下文）→ Execute（并行波次执行，每个执行器从干净上下文开始）→ Verify（走查建了什么、诊断并修复，才宣布完成）→ Ship（创建 PR、归档该相位，进入下一个里程碑）。"
+    },
+    {
+      "title": "关键产物：STATE.md / CONTEXT.md 与验证步骤",
+      "body": "跨会话的记忆靠结构化产物承载：STATE.md 记录当前状态，CONTEXT.md 保存决策与背景，它们能在会话边界之间存活，弥补「会话之间没有共享记忆」的缺口。Verify 一步尤其关键——不是看测试跑没跑，而是逐项走查产物、生成修复计划，未通过前不算完成。这三点（干净上下文、跨会话产物、验证）就是它「为什么能规模化」的答案。"
+    },
+    {
+      "title": "怎么上手：安装器、命令与教程",
+      "body": "上手很简单：运行 npx @opengsd/gsd-core@latest，安装器会询问你的运行时（Claude Code、OpenCode、Antigravity CLI、Kimi CLI、Codex、Copilot、Cursor、Windsurf 等）并完成配置——官方明确要求用安装器而非手动拷贝文件。然后对新项目跑 /gsd-new-project、对已有代码库跑 /gsd-onboard，再按官方教程走完第一个 phase 并完成首次发布。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "Core idea: spec first, let Claude get it right once",
+      "body": "GSD rests on three pillars: meta-prompting (meta-prompts drive the AI to decompose and plan for itself), context engineering (actively manage context to avoid quality degradation) and spec-driven development (spec first — write down what you want before writing code). The point is not 'write then fix', but nailing down requirements, plans and acceptance criteria before touching code so the coding assistant is close to right the first time. The original repo was described as a lightweight system 'for Claude Code by TÂCHES'."
+    },
+    {
+      "title": "What it solves: context rot and the clean-context answer",
+      "body": "The pain point it targets is context rot: as a session goes on, the AI's context window fills with history, irrelevant files and intermediate artifacts, silently degrading output quality; meanwhile there is no shared memory between sessions and nothing verifies the code actually works. GSD's answer is to run heavy work in fresh-context subagents — every executor starts with a clean 200k-token context while the main session stays lean, so key reasoning isn't polluted by stale information."
+    },
+    {
+      "title": "The five-step phase loop: Discuss → Plan → Execute → Verify → Ship",
+      "body": "Every milestone repeats the same loop, one phase at a time: Discuss (capture implementation decisions before anything is planned), Plan (research, decompose and verify the plan fits a fresh context window), Execute (run plans in parallel waves, each executor starting with clean context), Verify (walk through what was built, diagnose and fix before declaring done), then Ship (create the PR, archive the phase, repeat for the next milestone)."
+    },
+    {
+      "title": "Key artifacts: STATE.md / CONTEXT.md and the verify step",
+      "body": "Cross-session memory is carried by structured artifacts: STATE.md records current state and CONTEXT.md preserves decisions and background, surviving session boundaries to fill the 'no shared memory between sessions' gap. The Verify step matters most — it isn't about whether tests ran, but walking through what was built and generating fix plans before a phase is declared done. These three things (clean context, cross-session artifacts, verification) are why the system scales."
+    },
+    {
+      "title": "Getting started: installer, commands and tutorials",
+      "body": "Getting started is simple: run npx @opengsd/gsd-core@latest. The installer asks which runtime you use (Claude Code, OpenCode, Antigravity CLI, Kimi CLI, Codex, Copilot, Cursor, Windsurf and more) and configures it — the docs explicitly say to use the installer rather than copying files by hand. Then run /gsd-new-project for a greenfield project or /gsd-onboard for an existing codebase, and follow the official tutorial through your first shipped phase."
+    }
+  ],
+  "practiceZh": [
+    "用 npx @opengsd/gsd-core@latest 安装器在你的主力运行时上装好 GSD，注意别手动拷文件。",
+    "拿一个已有项目跑 /gsd-onboard，观察它如何生成 CONTEXT.md 与 STATE.md 这类跨会话产物。",
+    "完整走一遍一个里程碑的五个相位，重点体验 Execute 的干净上下文与 Verify 的走查-修复环节。",
+    "对比你平时的对话式开发与 GSD 的规格先行流程，记录两者在产出质量上的差异。"
+  ],
+  "practiceEn": [
+    "Install GSD on your primary runtime with the npx @opengsd/gsd-core@latest installer — don't copy files by hand.",
+    "Run /gsd-onboard on an existing project and watch how it produces cross-session artifacts like CONTEXT.md and STATE.md.",
+    "Walk one milestone through all five phases, paying special attention to Execute's clean context and Verify's walkthrough-and-fix step.",
+    "Compare your usual conversational development against GSD's spec-first loop and note the difference in output quality."
+  ]
+}

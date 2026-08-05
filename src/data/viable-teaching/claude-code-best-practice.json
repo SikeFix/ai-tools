@@ -1,0 +1,63 @@
+{
+  "slug": "claude-code-best-practice",
+  "introZh": "AI 编程圈最权威的实践仓库之一（64k+ star），slogan 就是「from vibe coding to agentic engineering」——教你把 Claude Code 从「随手生成代码」提升到「工程化地编排 Agent 干活」。它不只是文档，而是一套带实现示例、可以直接照抄进你项目的配置体系。",
+  "introEn": "One of the most authoritative AI coding repos (64k+ stars), built around 'from vibe coding to agentic engineering'. It takes Claude Code from casually generating code to engineering-grade agent orchestration — with runnable implementation examples you can copy into your own projects.",
+  "audienceZh": "已经在用 Claude Code、想让 AI 更可靠地参与生产代码的开发者。零基础也能看，但它的价值要「用过一段时间后回来对照」才能最大化。",
+  "audienceEn": "Developers already using Claude Code who want AI to reliably participate in production code. Beginners can follow along, but the value compounds when you return to compare after real usage.",
+  "sectionsZh": [
+    {
+      "title": "核心理念：从 Vibe Coding 到 Agentic Engineering",
+      "body": "仓库把 AI 编程分两个层次：Vibe Coding 是「把需求丢给 AI、接受它的输出」，快但脆弱；Agentic Engineering 是「你当架构师，拆任务、管上下文、审查每个 diff」，可靠可交付。Claude Code 是这套方法的最佳载体，因为它在终端里能真正读写文件、跑命令、自测。"
+    },
+    {
+      "title": "三件套：Subagents / Commands / Skills",
+      "body": "仓库系统化讲解 Claude Code 的三大扩展点：Subagents（.claude/agents/<名字>.md，给不同任务配不同「专家分身」）、Commands（.claude/commands/<名字>.md，把常用流程固化成一键指令）、Skills（复用 Claude Code 的技能包）。每个都配了最佳实践与可直接落地的实现示例。"
+    },
+    {
+      "title": "最佳实践 + 实现：光说不练不是真实践",
+      "body": "每个概念都有两套文件：best-practice 目录讲「应该怎么做、为什么」，implementation 目录给「开箱即用的实现」。这种「理论 + 可运行示例」配对，是仓库区别于普通教程的最大亮点——照抄实现再回看理论，学习效率最高。"
+    },
+    {
+      "title": "编排工作流：多 Agent 协作",
+      "body": "仓库提供 orchestration-workflow 文档，讲如何让多个 Agent 分工协作：规划、编码、审查、测试各司其职，你只做决策与验收。这正是 Agentic Engineering 的落地点：不是让 AI 一口气写完，而是编排它分步、自查、交作业。"
+    },
+    {
+      "title": "避坑与技巧（Boris Cherny 等社区实践）",
+      "body": "仓库收集了大量社区一线经验：如何写 CLAUDE.md 让每个会话从同一认知出发、如何给 Agent 明确的验收标准、如何通过小步提交把风险摊薄。这些「经验之谈」往往比官方文档更能提升实际产出质量。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "Core idea: from Vibe Coding to Agentic Engineering",
+      "body": "The repo splits AI coding into two levels: Vibe Coding is 'throw requirements at the AI and accept its output' — fast but fragile; Agentic Engineering is 'you act as architect, decompose tasks, manage context, review every diff' — reliable and shippable. Claude Code is the best vehicle because it can actually read/write files, run commands and self-test in the terminal."
+    },
+    {
+      "title": "The trio: Subagents / Commands / Skills",
+      "body": "The repo systematically covers Claude Code's three extension points: Subagents (.claude/agents/<name>.md — dedicated 'expert personas' per task), Commands (.claude/commands/<name>.md — solidify recurring flows into one-shot prompts) and Skills (reuse Claude Code skill packs). Each comes with best practices and ready-to-run implementations."
+    },
+    {
+      "title": "Best practice + implementation: practice beats theory",
+      "body": "Every concept has two files: best-practice explains 'how and why', implementation provides 'drop-in working code'. This pairing of theory with runnable examples is what sets the repo apart from ordinary tutorials — copy the implementation, then revisit the theory for maximum learning."
+    },
+    {
+      "title": "Orchestration workflows: multi-agent collaboration",
+      "body": "The orchestration-workflow docs show how to coordinate multiple agents — planning, coding, reviewing and testing each take a role while you own decisions and sign-off. This is where Agentic Engineering lands: not letting AI write everything at once, but orchestrating it to work in steps, self-check and deliver."
+    },
+    {
+      "title": "Tips & tricks (Boris Cherny and community practice)",
+      "body": "The repo gathers hard-won community experience: how to write CLAUDE.md so every session starts from the same understanding, how to give agents explicit acceptance criteria, and how small commits spread risk. These field notes often move the needle more than official docs."
+    }
+  ],
+  "practiceZh": [
+    "先只做一件小事：给项目写一个 CLAUDE.md，沉淀架构约定与常用命令，跑一个会话对比差异。",
+    "从 implementation 目录挑一个子代理示例照抄到 .claude/agents/，观察它对你的任务质量的影响。",
+    "按 orchestration-workflow 试一次「规划→编码→审查→测试」的多 Agent 流程，再回到常规单 Agent 对比体验。",
+    "每周回读一次 best-practice 目录，随着你的 Claude Code 熟练度提升，同一份文档会有不同的体会。"
+  ],
+  "practiceEn": [
+    "Start small: add a CLAUDE.md to one project documenting architecture conventions and common commands, then compare one session's difference.",
+    "Copy one subagent example from the implementation folder into .claude/agents/ and observe its effect on task quality.",
+    "Run one multi-agent orchestration flow (plan → code → review → test) and compare it against your usual single-agent loop.",
+    "Re-read the best-practice folder weekly — as your Claude Code skill grows, the same docs will hit differently."
+  ]
+}

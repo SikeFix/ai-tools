@@ -1,0 +1,63 @@
+{
+  "slug": "codex-cli-best-practice",
+  "introZh": "OpenAI Codex CLI 版的「from vibe coding to agentic engineering」最佳实践仓库，与 claude-code-best-practice 是同一个作者（shanraisshan）的姊妹项目，把 Claude Code 那套「最佳实践 + 已实现」体系完整搬到 Codex CLI。每个概念都配 best-practice 文档和 .codex/ 下的可运行配置，另收集 50 条社区 Tips、多种开发工作流与一个编排工作流示例，slogan 是 practice makes codex perfect。",
+  "introEn": "A 'from vibe coding to agentic engineering' best-practice repo for OpenAI's Codex CLI — the sibling project to claude-code-best-practice by the same author (shanraisshan), porting the entire 'best practice + implementation' system to Codex CLI. Every concept pairs a best-practice doc with runnable config under .codex/, alongside 50 community tips, multiple development workflows and one orchestration workflow example — its slogan is 'practice makes codex perfect'.",
+  "audienceZh": "已经在用 Codex CLI（或想从 Claude Code 迁移过来）的开发者，想把终端 AI 编程从 vibe coding 提升到 agentic engineering。",
+  "audienceEn": "Developers already using Codex CLI — or coming over from Claude Code — who want to push terminal AI coding from vibe coding to agentic engineering.",
+  "sectionsZh": [
+    {
+      "title": "它是什么：Codex CLI 版最佳实践，与 claude-code-best-practice 同源",
+      "body": "作者 shanraisshan 同时维护 claude-code-best-practice（Claude Code）与本仓库（Codex CLI），两者是同一套方法论的两个载体，仓库之间互相引用、还提供 Claude Code + Codex 跨模型协作工作流。仓库用徽章标注每项能力属于 best-practice / implemented / orchestration-workflow / codex / community，并明确指出：Codex CLI 目前不支持自定义命令（.codex/commands/），所以 Claude Code 那套完整的 Command → Agent → Skill 模式还无法原样照搬。"
+    },
+    {
+      "title": "概念地图：Commands / Subagents / Skills 三件套 + 周边生态",
+      "body": "内置斜杠命令覆盖 /plan、/fast、/fork、/review、/status、/mcp、/agent、/apps、/model、/permissions 等会话控制；Subagents 放在 .codex/agents/<name>.toml，用 [agents.<name>] 配置角色，支持并行编排（max_threads、max_depth 等全局设置）；Skills 是 .agents/skills/<name>/SKILL.md，靠 name + description 元数据被自动发现，通过 scripts/、references/、assets/ 做渐进披露。周边还有 Plugins / Marketplace（可分发插件与技能）、Memories 跨会话记忆、MCP Servers、AGENTS.md（项目上下文，32 KiB 上限，AGENTS.override.md 个人覆盖）、Hooks 与 /review 代码审查。"
+    },
+    {
+      "title": "每项概念都「最佳实践 + 已实现」成对",
+      "body": "这是与 claude-code-best-practice 一脉相承的学习法：best-practice/ 目录讲「应该怎么做、为什么」，.codex/ 目录给可直接照抄的配置实现，徽章一眼区分。仓库还自带一个编排工作流示例：一个 Agent 从 Open-Meteo 拉取温度，再调用 SVG 生成 skill 产出天气卡片——演示 Agent → Skill 的完整链路。"
+    },
+    {
+      "title": "开发工作流：收敛到 Research → Plan → Execute → Review → Ship",
+      "body": "仓库把社区主流工作流全部拆解成同一条主线：Superpowers（头脑风暴 → 写计划 → 子代理驱动开发 → TDD → 请求代码审查）、Spec Kit、gstack（多级评审后实施）、Get Shit Done、oh-my-codex、Compound Engineering。黄色标记表示子循环（在父步骤内重复的步骤）。还有 Cross-Model 工作流：用 Claude Code 做计划与实现审查，Codex 执行，扬长避短。"
+    },
+    {
+      "title": "50 条 Tips：把经验落到日常操作",
+      "body": "Tips 覆盖 Prompting、Planning、AGENTS.md、Agents、Skills、Hooks、Memories、Workflows、Git/PR、Debugging、Utilities、Daily 十三类。高频经验包括：把 AGENTS.md 写得让任何人第一次 `codex` 说「run the tests」就能成功；技能 description 是触发器不是摘要（写给模型看，而不是给人类看）；用多 agent 分离上下文窗口——一个 agent 造 bug、另一个找 bug；用 hooks 做安全扫描与格式化兜底；用 iTerm/Ghostty/tmux 代替 IDE；小 PR + squash merge + 频繁提交。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "What it is: Codex CLI best practice, sibling of claude-code-best-practice",
+      "body": "Author shanraisshan maintains both claude-code-best-practice (Claude Code) and this repo (Codex CLI) as two vehicles for the same methodology — the repos cross-reference each other and even ship a cross-model (Claude Code + Codex) workflow. Badges mark each capability as best-practice / implemented / orchestration-workflow / codex / community. It is explicit that Codex CLI does not yet support custom commands (.codex/commands/), so the full Command → Agent → Skill pattern from the Claude Code repo cannot be ported verbatim."
+    },
+    {
+      "title": "Concept map: the Commands / Subagents / Skills trio + ecosystem",
+      "body": "Built-in slash commands cover /plan, /fast, /fork, /review, /status, /mcp, /agent, /apps, /model, /permissions and more for session control; Subagents live in .codex/agents/<name>.toml under [agents.<name>] with dedicated role configs, supporting parallel orchestration (globals like max_threads, max_depth); Skills are .agents/skills/<name>/SKILL.md, auto-discovered via name + description frontmatter with progressive disclosure through scripts/, references/ and assets/. Around them: Plugins / Marketplace for distributable bundles, Memories for cross-session memory, MCP Servers, AGENTS.md (project context, 32 KiB cap, AGENTS.override.md for personal overrides), Hooks and /review code review."
+    },
+    {
+      "title": "Every concept comes as 'best practice + implemented' pairs",
+      "body": "This is the learning method inherited directly from claude-code-best-practice: the best-practice/ folder explains 'how and why', while .codex/ provides drop-in config implementations, with badges telling them apart at a glance. The repo also ships one orchestration workflow example: an agent fetches temperature from Open-Meteo and invokes an SVG-creating skill to produce a weather card — demonstrating the full Agent → Skill chain."
+    },
+    {
+      "title": "Development workflows: converging on Research → Plan → Execute → Review → Ship",
+      "body": "The repo decomposes major community workflows onto one spine: Superpowers (brainstorming → writing plans → subagent-driven development → TDD → requesting code review), Spec Kit, gstack (multi-level review then implement), Get Shit Done, oh-my-codex and Compound Engineering — yellow tags mark sub-loops that repeat inside a parent step. A cross-model workflow uses Claude Code for plan and implementation review while Codex executes, playing to each tool's strengths."
+    },
+    {
+      "title": "50 tips: turning experience into daily habits",
+      "body": "Tips span thirteen categories: Prompting, Planning, AGENTS.md, Agents, Skills, Hooks, Memories, Workflows, Git/PR, Debugging, Utilities and Daily. High-frequency lessons include: write AGENTS.md so any developer can launch Codex, say 'run the tests' and have it work first try; the skill description is a trigger, not a summary (write it for the model, not for humans); use multi-agent with separate context windows — one agent can cause bugs and another can find them; use hooks for security scanning and formatting fallback; prefer iTerm/Ghostty/tmux terminals over IDEs; keep PRs small, squash-merge and commit often."
+    }
+  ],
+  "practiceZh": [
+    "把仓库的 .codex/ 目录照抄进自己的项目，按「best-practice 文档 + 已实现配置」成对阅读，先落地再回看理论。",
+    "给一个多步任务先用 /plan 建立带测试门禁的分阶段计划，再逐步执行，对比直接一句 prompt 的结果。",
+    "建一个带 name + description 元数据的 skill（可先用内置 $skill-creator 脚手架），把重复工作固化并写一个 Gotchas 段。",
+    "读 Tips 的 AGENTS.md 与 Skills 两节，动手改写你自己的 AGENTS.md，让它精简到 150 行左右启发值（字节上限 32 KiB）。"
+  ],
+  "practiceEn": [
+    "Copy the repo's .codex/ directory into your own project and read each best-practice doc + implemented config as a pair — land the implementation first, then revisit the theory.",
+    "For one multi-step task, use /plan to build a phased, gated plan with tests, execute it step by step, and compare against a one-line prompt.",
+    "Create a skill with name + description frontmatter (scaffold it with the built-in $skill-creator), solidify recurring work and add a Gotchas section.",
+    "Work through the AGENTS.md and Skills tips, then rewrite your own AGENTS.md to stay lean (~150 lines as a heuristic, 32 KiB byte cap)."
+  ]
+}

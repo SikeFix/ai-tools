@@ -1,0 +1,63 @@
+{
+  "slug": "context-engineering-intro",
+  "introZh": "一个教你给 AI 编程助手「喂对上下文」的入门模板仓库（13.8k+ star），slogan 就是「Context Engineering 比 prompt engineering 好 10 倍，比 vibe coding 好 100 倍」。它把 Claude Code 变成一套可复制的流程：用 CLAUDE.md 定全局规则、用 INITIAL.md 写初始需求、用 PRP（产品需求提示）生成带验证门控的实现蓝图。clone 下来就能用，适合想从「随手写 prompt」升级到「系统化喂上下文」的开发者。",
+  "introEn": "A starter-template repo for 'feeding the right context' to AI coding assistants (13.8k+ stars), built around 'Context Engineering is 10x better than prompt engineering and 100x better than vibe coding'. It turns Claude Code into a repeatable pipeline: CLAUDE.md for global rules, INITIAL.md for feature requests, and PRPs (Product Requirements Prompts) that generate implementation blueprints with validation gates. Clone it and start — made for developers moving from casual prompts to systematic context engineering.",
+  "audienceZh": "用 Claude Code 或类似编程助手写过代码、但觉得「让 AI 靠谱地干完整件活」很难的人；零基础也能跟着模板走。",
+  "audienceEn": "Anyone who has used Claude Code or similar coding assistants but finds it hard to get the AI to reliably finish whole tasks; beginners can follow the template too.",
+  "sectionsZh": [
+    {
+      "title": "核心理念：Context Engineering 是什么",
+      "body": "仓库把 AI 编程的方式分层对比：Vibe Coding 是「随便聊聊就生成代码」，Prompt Engineering 是「靠巧妙措辞让 AI 干活」，而 Context Engineering 是把整个上下文当作系统工程来设计——包括文档、示例、规则、模式与验证。它用「便利贴」比喻 prompt engineering（只交代一句话），用「写完整剧本」比喻 context engineering（把布景、灯光、前史、走位全部写清楚）。"
+    },
+    {
+      "title": "为什么它更可靠：大多数 Agent 失败是上下文失败",
+      "body": "仓库的核心论点：多数 Agent 失败不是模型能力不够，而是「上下文失败」——AI 没有拿到完成端到端任务所需的信息。喂对上下文后，AI 会遵循你的项目模式与约定（一致性）、能处理多步骤复杂功能，还能靠验证循环自纠错误。这就是「10 倍于 prompt engineering、100 倍于 vibe coding」的含义。"
+    },
+    {
+      "title": "模板结构：CLAUDE.md + INITIAL.md + examples/ + PRP",
+      "body": "模板是一个可直接 clone 的项目骨架：CLAUDE.md 存放全局规则（代码结构、文件大小、测试要求、风格约定）；INITIAL.md 用来写初始功能需求；examples/ 放参考代码模式（仓库强调它是「关键中的关键」）；PRPs/ 存放生成的实现蓝图；.claude/commands/ 定义 /generate-prp 与 /execute-prp 两个斜杠命令。体系以 Claude Code 为主，但理念完全可迁移到其他编程助手。"
+    },
+    {
+      "title": "PRP 工作流：从需求到带验证门控的实现",
+      "body": "核心工作流是两条命令的闭环：先写 INITIAL.md，跑 /generate-prp 让它研究代码库模式、检索相关文档并生成一份完整的 PRP；再跑 /execute-prp 让它按蓝图拆计划、分步实现、跑测试与 lint 验证、失败就修复迭代。PRP 类似产品需求文档（PRD），但专门为给 AI 编程助手下达指令而设计，每个都带验证门控（validation gates），提高「一次写对」的概率。"
+    },
+    {
+      "title": "最佳实践：写具体需求 + 喂足示例",
+      "body": "仓库给出的实践要点：把 INITIAL.md 写具体——FEATURE 别写「做个爬虫」，要写成「用 BeautifulSoup 写异步爬虫、处理限流、存 PostgreSQL」；在 examples/ 里放足参考模式（AI 看到模式后表现显著提升，示例要同时展示该做的和不该做的）；设置验证门控（必须通过的测试命令）；善用官方文档与 MCP 资源；按项目定制 CLAUDE.md。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "Core idea: what Context Engineering is",
+      "body": "The repo contrasts levels of AI coding: Vibe Coding is 'casually chat and generate code', Prompt Engineering is 'get things done with clever wording', and Context Engineering is designing the entire context as a system — including docs, examples, rules, patterns and validation. It likens prompt engineering to handing someone a sticky note, and context engineering to writing a full screenplay with every detail spelled out."
+    },
+    {
+      "title": "Why it's more reliable: most agent failures are context failures",
+      "body": "The core argument: most agent failures are not model failures but 'context failures' — the AI never got the information needed to finish the job end to end. With the right context, the AI follows your project's patterns and conventions (consistency), handles multi-step features, and self-corrects through validation loops. That's what '10x better than prompt engineering, 100x better than vibe coding' means."
+    },
+    {
+      "title": "Template structure: CLAUDE.md + INITIAL.md + examples/ + PRP",
+      "body": "The template is a clone-and-go project skeleton: CLAUDE.md holds global rules (code structure, file size limits, testing requirements, style conventions); INITIAL.md is where you write the initial feature request; examples/ holds reference code patterns (called 'critical'); PRPs/ stores generated implementation blueprints; and .claude/commands/ defines the /generate-prp and /execute-prp slash commands. It's Claude Code-first, but the ideas port to other coding assistants."
+    },
+    {
+      "title": "The PRP workflow: from request to validation-gated implementation",
+      "body": "The core loop is two slash commands: write INITIAL.md, run /generate-prp so the AI researches your codebase patterns, finds relevant docs, and produces a complete PRP; then run /execute-prp to break the blueprint into a plan, implement step by step, run tests and lint, and iterate on failures. A PRP is like a PRD but crafted specifically to instruct an AI coding assistant — each one carries validation gates to raise the odds of getting it right the first time."
+    },
+    {
+      "title": "Best practices: be specific, feed plenty of examples",
+      "body": "Key takeaways: write INITIAL.md explicitly — FEATURE should not be 'build a scraper' but 'build an async scraper with BeautifulSoup, handle rate limiting, store in PostgreSQL'; fill examples/ with reference patterns (the AI performs dramatically better with patterns to follow, and examples should show both what to do and what not to do); add validation gates (test commands that must pass); leverage official docs and MCP resources; and customize CLAUDE.md per project."
+    }
+  ],
+  "practiceZh": [
+    "clone 模板，把 CLAUDE.md 改成你自己项目的规则与约定，跑一个真实会话对比差异。",
+    "用 INITIAL.md 写一个你想做的功能，分别试「一句话需求」和「填写全部字段」，对比生成的 PRP 质量。",
+    "在 examples/ 里放一个你项目最典型的模块，让 AI 模仿它的结构写新代码。",
+    "为一个小功能完整走一遍 /generate-prp → /execute-prp 闭环，观察验证门控如何逼 AI 自测。"
+  ],
+  "practiceEn": [
+    "Clone the template, adapt CLAUDE.md to your project's rules and conventions, and run one real session to see the difference.",
+    "Write a feature you want in INITIAL.md — try both a one-line request and a fully filled-out one, then compare the resulting PRPs.",
+    "Drop your most typical module into examples/ and ask the AI to mimic its structure for new code.",
+    "Run one small feature through the full /generate-prp → /execute-prp loop and watch how validation gates force the AI to self-test."
+  ]
+}

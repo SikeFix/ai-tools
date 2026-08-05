@@ -1,0 +1,55 @@
+{
+  "slug": "awesome-vibe-coding",
+  "introZh": "这是 vibe coding 领域最知名的开源清单之一（5.1k+ star），收录与「和 AI 一起写代码」相关的参考文章、工具与讨论。它把生态按使用环节分成浏览器工具、IDE、插件、命令行工具、任务管理、文档、社区等十几个分区，是了解 vibe coding 全貌的最佳入口。",
+  "introEn": "One of the most well-known open-source lists in the vibe coding space (5.1k+ stars), collecting references, tools and discussions about coding with AI. It organizes the ecosystem into a dozen categories — browser tools, IDEs, plugins, CLI tools, task management, documentation and communities — making it the best entry point for a full picture of vibe coding.",
+  "audienceZh": "想系统了解 vibe coding 生态、或正想为某个环节（从原型到部署）挑工具的人。",
+  "audienceEn": "Anyone who wants a systematic overview of the vibe coding ecosystem, or needs to pick a tool for a specific stage from prototyping to deployment.",
+  "sectionsZh": [
+    {
+      "title": "收录什么：概念、工具与媒体并重",
+      "body": "清单开头「About the concept」放的是 Karpathy 定义 vibe coding 的原始推文、维基百科词条等背景资料，后面才是工具清单。它不是纯工具榜，而是把「概念、工具、文档、社区、新闻」都归到一处，方便按需查阅——想搞懂定义、想挑工具、想看业界讨论都能在这一份里找到入口。"
+    },
+    {
+      "title": "按使用环节切分的目录",
+      "body": "目录按用途划分：浏览器端构建（Bolt.new、Lovable、v0、Replit）、IDE 与编辑器（Cursor、Windsurf、Zed）、移动端应用、插件与扩展（Cline、Copilot、avante.nvim）、本地应用（Dyad、bolt.diy）、命令行工具（Claude Code、aider、OpenHands、Codex CLI、Gemini CLI）。想快速出原型看 Browser-based Tools，想融入日常开发看 IDEs / Plugins / Command Line Tools。"
+    },
+    {
+      "title": "值得关注的分区：任务管理、文档与新闻",
+      "body": "除工具外，「Task Management for AI Coding」收录了 vibe-kanban、Claude Task Master 等编排多个 AI 编码 Agent 的任务管理工具；「Documentation for AI Coding」收录 AGENTS.md、awesome-cursorrules、llms.txt、Context7 等面向 AI 的文档标准与工具；「News and Social Media」按时间倒序汇总业界讨论，包括 vibe coding 引发生产事故的复盘与「是否终结开源」的争论。"
+    },
+    {
+      "title": "社区与贡献",
+      "body": "清单最后提供 Vibehackers、Reddit 子版块等社区与招聘入口，并附 CONTRIBUTING 贡献指南，鼓励读者为清单补充新工具与资源。它本身是持续生长的活文档，而不是一份一次性盘点。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "What it collects: concepts, tools and media together",
+      "body": "The 'About the concept' section opens with background material — Karpathy's original tweet defining vibe coding and the Wikipedia article — before the tool list. Rather than a pure tool ranking, it gathers concepts, tools, documentation, communities and news in one place, so you can look up definitions, pick tools and follow industry debate from a single source."
+    },
+    {
+      "title": "A directory organized by usage stage",
+      "body": "The table of contents is split by purpose: browser-based builders (Bolt.new, Lovable, v0, Replit), IDEs and editors (Cursor, Windsurf, Zed), mobile apps, plugins and extensions (Cline, Copilot, avante.nvim), local apps (Dyad, bolt.diy) and command-line tools (Claude Code, aider, OpenHands, Codex CLI, Gemini CLI). For fast prototypes check Browser-based Tools; for daily development, look at IDEs / Plugins / Command Line Tools."
+    },
+    {
+      "title": "Sections worth a look: task management, docs and news",
+      "body": "Beyond tools, 'Task Management for AI Coding' covers tools for orchestrating multiple coding agents like vibe-kanban and Claude Task Master; 'Documentation for AI Coding' covers agent-facing doc standards such as AGENTS.md, awesome-cursorrules, llms.txt and Context7; 'News and Social Media' lists, newest first, industry discussions including postmortems of vibe-coding-caused production outages and debates over whether vibe coding is killing open source."
+    },
+    {
+      "title": "Community and contributing",
+      "body": "The list ends with community and job-board entries like Vibehackers and Reddit subreddits, plus a CONTRIBUTING guide encouraging readers to add new tools and resources. It is a living document that keeps growing, not a one-time inventory."
+    }
+  ],
+  "practiceZh": [
+    "从 Browser-based Tools 挑一个工具（如 v0 或 Bolt.new），用一个周末验证一个想法，亲自体会「描述→运行→迭代」的 vibe 工作流。",
+    "把 IDEs 与命令行工具分区的 Cursor 或 Claude Code 装进日常开发，跑一周真实任务，再回到清单对照你的选择。",
+    "浏览 News and Social Media，读 2-3 篇关于 vibe coding 风险的文章（如生产事故复盘），建立对 AI 生成代码边界的判断。",
+    "为清单贡献一个你觉得值得收录的工具，走一遍 CONTRIBUTING 流程，反向检验你对生态的理解。"
+  ],
+  "practiceEn": [
+    "Pick one tool from Browser-based Tools (e.g. v0 or Bolt.new) to validate an idea over a weekend and feel the describe-run-iterate vibe workflow firsthand.",
+    "Install a Cursor or Claude Code from the IDE and command-line sections into daily development, run it for a week, then return to the list and compare your choices.",
+    "Read 2-3 articles under News and Social Media about vibe coding risks (e.g. outage postmortems) to build judgment on the boundaries of AI-generated code.",
+    "Contribute a tool you find worth adding through CONTRIBUTING, and use that process to stress-test your understanding of the ecosystem."
+  ]
+}

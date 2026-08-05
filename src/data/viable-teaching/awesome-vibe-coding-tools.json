@@ -1,0 +1,63 @@
+{
+  "slug": "awesome-vibe-coding-tools",
+  "introZh": "这是 ai-for-developers 团队手工挑选的 vibe coding 工具与资源合集（808 star），聚焦「通过提示、迭代与探索来构建软件」的工作流。相比同团队按环节切分的大而全清单 awesome-ai-coding-tools，这份更轻、更聚焦 vibe 场景，且配套 aifordevelopers.org 上的可搜索详细版本。",
+  "introEn": "A hand-picked collection of vibe coding tools and references from the ai-for-developers team (808 stars), focused on building software through prompts, iteration and exploration. Compared with the team's broader, stage-based awesome-ai-coding-tools, this one is lighter and more vibe-focused, and pairs with a searchable detailed version on aifordevelopers.org.",
+  "audienceZh": "想用「提示词驱动、快速迭代」方式做软件的人，尤其是不想被大而全目录淹没、希望有一份精选起点的新手。",
+  "audienceEn": "People who want to build software prompt-first with fast iteration — especially beginners who want a curated starting point rather than an overwhelming directory.",
+  "sectionsZh": [
+    {
+      "title": "定位与差异",
+      "body": "清单以「What is」开篇，引用 Karpathy 的 vibe coding 心态描述与 Automata 的 AI 编程入门指南，随后按 Web-Based Builders、Editors and IDEs、Extensions & Plugins、CLI Tools 等分区铺开。与 awesome-ai-coding-tools 相比，它更强调「想法→快速迭代→上线」的 vibe 场景，而非全链路工程选型，定位是精选起点。"
+    },
+    {
+      "title": "从想法到应用：Web-Based Builders",
+      "body": "分区收录 Bolt.new、Lovable、v0、Replit、Capacity、Firebase Studio 等浏览器端构建器，还包含 Rosebud AI（3D 游戏）、MyVibe（AI 生成网页即时部署）等特色工具。多数支持「一句话描述→生成→部署」，适合在浏览器里快速验证想法，无需搭本地环境。"
+    },
+    {
+      "title": "编辑器、插件与命令行生态",
+      "body": "Editors and IDEs 收录 Windsurf、Cursor、Zed、Amazon Kiro；Extensions & Plugins 收录 Cline、Roo Code、GitHub Copilot、avante.nvim 等；CLI Tools 收录 claude-code、aider、Goose、MyCoder、Codex CLI、Gemini CLI。从图形界面到纯终端，覆盖不同习惯的开发者。"
+    },
+    {
+      "title": "配套维度：任务管理、成本与文档",
+      "body": "除构建工具外，清单专设 AI-Driven Task Management（Boomerang Tasks、Claude Task Master）、Monitoring & Cost Tracking（Budi 这类追踪 token 用量与花费的工具）、Project Documentation（CodeGuide、LynxPrompt 等管理 AGENTS.md / CLAUDE.md 的配置平台），以及 Articles & Updates 文章列表，覆盖 vibe 开发的周边需求。"
+    },
+    {
+      "title": "怎么用",
+      "body": "把它当精选入口：先在 Web-Based Builders 快速验证想法，再按需进入 CLI 或插件把流程沉淀进日常开发；需要更全、可搜索的目录时，去配套的 aifordevelopers.org 检索，或在清单内通过「What is」与 Articles 建立对 vibe coding 的基础认知。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "Positioning and differences",
+      "body": "The list opens with 'What is', citing Karpathy's description of the vibe coding mindset and Automata's AI coding guide, then spreads across Web-Based Builders, Editors and IDEs, Extensions & Plugins, CLI Tools and more. Compared with awesome-ai-coding-tools, it emphasizes the idea → iterate fast → ship vibe scenario over full-lifecycle engineering selection — it is a curated starting point."
+    },
+    {
+      "title": "From idea to app: Web-Based Builders",
+      "body": "This section covers browser builders like Bolt.new, Lovable, v0, Replit, Capacity and Firebase Studio, plus distinctive tools such as Rosebud AI (3D games) and MyVibe (instant deployment for AI-generated web apps). Most support a describe-generate-deploy flow, ideal for validating ideas quickly in the browser without a local environment."
+    },
+    {
+      "title": "Editors, plugins and the CLI ecosystem",
+      "body": "Editors and IDEs cover Windsurf, Cursor, Zed and Amazon Kiro; Extensions & Plugins cover Cline, Roo Code, GitHub Copilot and avante.nvim; CLI Tools cover claude-code, aider, Goose, MyCoder, Codex CLI and Gemini CLI. From GUI to pure terminal, developers with different habits are covered."
+    },
+    {
+      "title": "Around the build: task management, cost and docs",
+      "body": "Beyond builders, the list dedicates sections to AI-Driven Task Management (Boomerang Tasks, Claude Task Master), Monitoring & Cost Tracking (tools like Budi that track token usage and spend), Project Documentation (CodeGuide, LynxPrompt and other platforms for managing AGENTS.md / CLAUDE.md), plus an Articles & Updates reading list covering the peripheral needs of vibe development."
+    },
+    {
+      "title": "How to use it",
+      "body": "Treat it as a curated entry point: validate ideas fast in Web-Based Builders first, then move to CLI tools or plugins to embed the flow into daily development; for a fuller searchable directory, go to the companion aifordevelopers.org, or build basic vibes understanding via 'What is' and the Articles section."
+    }
+  ],
+  "practiceZh": [
+    "用一个 Web-Based Builder（如 Lovable 或 v0）从一句话想法做出可运行原型，体验完整的「描述→生成→部署」闭环。",
+    "把同一个任务分别交给 Web 构建器与 CLI 工具（如 claude-code）各做一遍，对比手感，判断哪种更贴合你的工作流。",
+    "用 Monitoring & Cost Tracking 里的工具跟踪一周的 token 花费，建立 vibe 开发的成本意识。",
+    "读 2-3 篇 Articles & Updates 里的文章，写下你认同与不认同的观点，形成自己的 vibe coding 判断。"
+  ],
+  "practiceEn": [
+    "Use a Web-Based Builder (e.g. Lovable or v0) to turn a one-line idea into a runnable prototype, experiencing the full describe-generate-deploy loop.",
+    "Do the same task once with a web builder and once with a CLI tool (e.g. claude-code), compare the feel, and judge which fits your workflow better.",
+    "Track a week of token spend with a Monitoring & Cost Tracking tool to build cost awareness for vibe development.",
+    "Read 2-3 Articles & Updates, note what you agree and disagree with, and form your own view of vibe coding."
+  ]
+}

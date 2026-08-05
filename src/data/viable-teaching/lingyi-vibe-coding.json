@@ -1,0 +1,63 @@
+{
+  "slug": "lingyi-vibe-coding",
+  "introZh": "一份完整、真实、用中文写的 Vibe Coding 实战记录（692+ star）：作者用 Claude Code 从零开发了一个 AI 漫剧生成平台，把技术选型、Skill 装配、Agent 开发、bug 修复、UI 优化到功能迭代的每一步都截图留档。仓库不卖理念，而是展示「文档为王」这套方法论在一个真实项目上的完整落地过程。",
+  "introEn": "A complete, real, Chinese-language record of Vibe Coding in action (692+ stars): the author uses Claude Code to build an AI comic-drama (漫剧) generation platform from zero, documenting every step with screenshots — tech selection, skill setup, agent-driven development, bug fixing, UI polish, and feature iteration. Rather than selling a philosophy, it shows the 'documentation is king' methodology fully applied to a real project.",
+  "audienceZh": "想看到「Vibe Coding 在一整个真实项目里到底怎么跑」的人——尤其想照着一套可复制的流程（技术选型文档 → 执行计划 → 小步提交 → 截图迭代）从零做出自己产品的中文开发者。",
+  "audienceEn": "Anyone who wants to see what Vibe Coding looks like across an entire real project — especially Chinese-speaking developers who want a copyable playbook (tech-selection doc → execution plan → small commits → screenshot-driven iteration) for building their own product from zero.",
+  "sectionsZh": [
+    {
+      "title": "开篇定调：什么是 Vibe Coding，文档为王",
+      "body": "仓库先讲清概念：Vibe Coding 是 Andrej Karpathy 于 2025 年 2 月提出的——「There's a new kind of coding I call 'vibe coding', where you fully give in to the vibes, embrace exponentials, and forget that the code even exists.」你不再真正「写」代码，而是用自然语言描述想要什么，看结果、不对再调。核心特点：自然语言驱动、迭代式开发、关注「做什么」而非「怎么做」、文档即代码——所以作者把「文档为王」当成 AI 时代编程的纲领。"
+    },
+    {
+      "title": "从技术选型到上线：45 分钟做出初版",
+      "body": "作者只给 AI 一句技术选型提示词（Next.js 全栈 + SQLite 快速集成），让 AI 生成「技术选型和系统设计」文档，自己 check 后再 @ 这份文档启动开发。AI 会自动生成执行计划并自我 review、二次修改不合理处，再用 superpowers:subagent-driven-development 按计划补齐项目结构、队列处理与数据库集成。全程约 45 分钟，初版系统开发完成。"
+    },
+    {
+      "title": "关键工程习惯：小步提交、截图反馈、UI 一轮轮磨",
+      "body": "用 superpowers 开发的一大好处是每完成一个功能就 commit 一次，AI 把代码改坏了也能方便回退。运行时遇到 bug 不用写长描述——直接把截图发给 AI 就能修。初版 UI 丑，作者一句话触发 ui-ux-pro-max 重新设计各个环节的 UI 与交互，经过 3 轮优化才满意；这类「截图 + 自然语言」的反馈闭环贯穿整个项目。"
+    },
+    {
+      "title": "功能迭代：从环境变量到用户可配模型",
+      "body": "上线后继续迭代：把模型配置从环境变量改成用户自己配置 key 的设置页，文本/图像模型支持 OpenAI 与 Gemini 协议，视频模型支持字节 seedance 与 Google，默认走 /model/list API、失败可手填 model_id，key 存本地；还做了用户隔离、模型点击拦截、Veo 模型接入、分镜子流程（分镜描述 → 首尾帧 → 视频生成）等。每一处改动都有原始提示词与前后对比图。"
+    },
+    {
+      "title": "学习价值：一套可照抄的 Skill 装配清单",
+      "body": "仓库完整列出作者实测用到的 Skills 及安装命令：superpowers（14 个可组合技能，强制 TDD、四阶段调试）、frontend-design、planning-with-files（Manus 风格持久化规划）、skill-creator、notebooklm、best-minds（模拟器思维）、find-skills、ui-ux-pro-max、内置 simplify。想复制这套「全副武装」的开发环境，按清单装一遍即可。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "Setting the tone: what Vibe Coding is, and 'documentation is king'",
+      "body": "The repo first defines the concept: Vibe Coding was coined by Andrej Karpathy in February 2025 — 'There's a new kind of coding I call vibe coding, where you fully give in to the vibes, embrace exponentials, and forget that the code even exists.' You no longer really 'write' code; you describe what you want in natural language, look at the result, and adjust. Core traits: natural-language driven, iterative, focused on 'what' rather than 'how', and docs-as-code — which is why the author crowns 'documentation is king' as the doctrine of AI-era programming."
+    },
+    {
+      "title": "From tech selection to launch: an initial version in 45 minutes",
+      "body": "The author gives the AI a single tech-selection prompt (Next.js full-stack + SQLite for fast integration), has it produce a 'tech selection and system design' document, checks it, then @-mentions that document to kick off development. The AI auto-generates an execution plan, reviews and revises it, then uses superpowers:subagent-driven-development to fill in project structure, queue processing and database integration. About 45 minutes later, the first version is done."
+    },
+    {
+      "title": "Key engineering habits: small commits, screenshot feedback, iterated UI",
+      "body": "A big benefit of building with superpowers is that the agent commits after each feature, so you can easily roll back if the AI breaks code. When the app hits a bug at runtime, no long description is needed — just send a screenshot and the AI fixes it. The initial UI was ugly, so the author triggered ui-ux-pro-max with one sentence to redesign the UI and interactions across every section, polishing through 3 rounds; this 'screenshot + natural language' feedback loop runs through the whole project."
+    },
+    {
+      "title": "Feature iteration: from env vars to user-configurable models",
+      "body": "Post-launch iteration continued: model config moved from environment variables to a settings page where users configure their own keys — text/image models support OpenAI and Gemini protocols, video models support ByteDance seedance and Google, defaulting to the /model/list API with manual model_id fallback and local key storage. The author also added user isolation, model-access interception, Veo model integration, and a storyboard sub-flow (shot description → first/last frames → video generation). Every change ships with the original prompt and before/after screenshots."
+    },
+    {
+      "title": "Learning value: a copy-pasteable skill setup checklist",
+      "body": "The repo lists every skill the author actually used, with install commands: superpowers (14 composable skills enforcing TDD and four-stage debugging), frontend-design, planning-with-files (Manus-style persistent planning), skill-creator, notebooklm, best-minds (simulator thinking), find-skills, ui-ux-pro-max, and the built-in simplify. If you want to replicate this fully-loaded development environment, install the list as-is."
+    }
+  ],
+  "practiceZh": [
+    "照作者的方式走一遍 0 到 1：只给 AI 一句技术选型提示词，让它生成设计文档，你 check 后再 @ 文档启动开发，记录从想法到初版的时间。",
+    "装上 superpowers 后刻意使用 subagent-driven-development，体会「每完成一个功能 commit 一次」对出错回退的帮助。",
+    "遇到 bug 或 UI 问题，先截图再配一句话自然语言描述发给 AI，体验这种反馈闭环与写长文字描述的差异。",
+    "从作者的 Skill 清单里挑 2-3 个装进自己的环境（如 planning-with-files、best-minds），用在下一次项目里，对照它沉淀的执行计划质量。"
+  ],
+  "practiceEn": [
+    "Reproduce the author's 0-to-1 path: give the AI one tech-selection prompt, let it generate a design doc, check it, then @-mention the doc to start development — and time the journey from idea to first version.",
+    "Install superpowers and deliberately use subagent-driven-development to feel how 'commit after each feature' helps you roll back when the AI breaks something.",
+    "When you hit a bug or a UI problem, send a screenshot plus one line of natural language to the AI, and compare that feedback loop against writing long descriptions.",
+    "Pick 2-3 skills from the author's list (e.g. planning-with-files, best-minds), install them, and judge the quality of the execution plans they produce in your next project."
+  ]
+}

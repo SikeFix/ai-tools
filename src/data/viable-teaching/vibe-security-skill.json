@@ -1,0 +1,55 @@
+{
+  "slug": "vibe-security-skill",
+  "introZh": "一个给 AI 编程助手用的安全审计 skill（913+ star），专门修补 vibe coding 应用里反复出现的漏洞模式。作者 Chris Raroque 与 Aloa 团队发现：AI 助手做功能很快，但总在安全上出错——硬编码密钥、跳过行级安全、信任客户端提交的价格、把 token 存进 localStorage。这个 skill 让 Agent 在上线前就抓住这些模式。",
+  "introEn": "An agent skill that helps secure vibe-coded apps from the security vulnerability patterns that keep recurring (913+ stars). Built by Chris Raroque with the team at Aloa, it stems from the observation that AI assistants build features fast but consistently get security wrong — hardcoding secrets, skipping row-level security, trusting client-submitted prices, storing tokens in localStorage. This skill gives your agent the knowledge to catch those patterns before they ship.",
+  "audienceZh": "用 Claude Code、OpenAI Codex 等 AI 助手写应用、尤其用到鉴权/支付/数据库/AI 接口的开发者——想让 AI 在写完代码时顺手把安全漏洞也堵上的人。",
+  "audienceEn": "Developers building apps with Claude Code, OpenAI Codex or similar AI assistants — especially anything touching auth, payments, database access, AI APIs or user data — who want the AI to close security holes as part of writing the code.",
+  "sectionsZh": [
+    {
+      "title": "它审计什么：AI 助手最常见的安全漏洞",
+      "body": "规则按技术栈分类加载，不浪费上下文：用 Supabase 就查 RLS 策略、用 Stripe 就查支付流、用 React Native 就查 JS bundle 里的密钥。覆盖九大类：密钥与环境变量（硬编码 key、NEXT_PUBLIC_/VITE_ 前缀暴露、缺 .gitignore）、数据库安全（Supabase RLS 被关、USING (true)、缺 WITH CHECK、Firebase allow: if true）、鉴权授权（jwt.decode 不校验、中间件级鉴权、Server Actions 无保护）、限流、支付（客户端提交价格、缺 webhook 签名校验）、移动端（token 存 AsyncStorage、API key 进 bundle）、AI/LLM（key 暴露、无用量上限、提示注入、不安全输出渲染）、部署（生产开调试模式、暴露 source map、.git 可访问）、数据访问（SQL 注入、Prisma 操作符注入、$queryRawUnsafe）。"
+    },
+    {
+      "title": "为什么 vibe coding 应用更需要安全审计",
+      "body": "用 AI 快速构建时，安全基本功往往被跳过——更糟的是，漏洞常常就是 AI 助手自己引入的。这正是本 skill 的出发点：不是「加一层检查」，而是让 Agent 本身具备识别这些反模式的知识。作者把它定位为社区资源，鼓励大家把「AI 反复引入的安全反模式」继续往里加。"
+    },
+    {
+      "title": "怎么用：一键审计或自然语言触发",
+      "body": "安装后，在 Claude Code 里用 /vibe-security 触发完整安全审计，或直接自然语言提问「check my code for security issues」「is this safe?」「audit this project」；Codex 里用 $vibe-security。skill 还会在你写/审涉及鉴权、支付、数据库访问、API key 或用户数据的代码时自动激活，不需要每次手动调用。"
+    },
+    {
+      "title": "怎么安装：支持 Claude Code 与 Codex",
+      "body": "官方推荐一行命令安装：npx skills add https://github.com/raroque/vibe-security-skill --skill vibe-security；在 Codex 下安装时选「Codex」平台即可。也支持手动安装：把 vibe-security/ 文件夹复制到项目级 .claude/skills/ 或全局 ~/.claude/skills/。它采用 Agent Skills 格式，与 Claude Code、OpenAI Codex 等兼容的 Agent 都能用。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "What it audits: the vulnerabilities AI assistants keep introducing",
+      "body": "Rules load by technology stack so no context is wasted: Supabase → RLS policies, Stripe → payment flows, React Native → secrets in the JS bundle. Nine categories: secrets & env vars (hardcoded API keys, NEXT_PUBLIC_/VITE_ exposure, missing .gitignore), database security (disabled Supabase RLS, USING (true), missing WITH CHECK, Firebase allow: if true), auth & authorization (jwt.decode() without verify, middleware-only auth, unprotected Server Actions), rate limiting, payments (client-submitted prices, missing webhook signature verification), mobile (tokens in AsyncStorage, API keys in the bundle), AI/LLM (exposed keys, no usage caps, prompt injection, unsafe output rendering), deployment (debug mode in production, exposed source maps, accessible .git), and data access (SQL injection, Prisma operator injection, $queryRawUnsafe)."
+    },
+    {
+      "title": "Why vibe-coded apps especially need security audits",
+      "body": "When you build fast with AI, security fundamentals get skipped — and the AI assistants themselves are often the ones introducing the vulnerabilities. That's the skill's starting point: not an extra check layered on top, but giving the agent the knowledge to recognize these anti-patterns in the first place. It's positioned as a community resource, and contributors are encouraged to keep adding the security anti-patterns AI keeps producing."
+    },
+    {
+      "title": "How to use it: one-shot audit or natural language",
+      "body": "Once installed, trigger a full security audit in Claude Code with /vibe-security, or just ask naturally — 'check my code for security issues', 'is this safe?', 'audit this project'. In Codex, use $vibe-security or describe what you need. The skill also activates automatically when you're writing or reviewing code that handles authentication, payments, database access, API keys, or user data — no manual invocation needed each time."
+    },
+    {
+      "title": "How to install: works with Claude Code and Codex",
+      "body": "The official path is a one-liner: npx skills add https://github.com/raroque/vibe-security-skill --skill vibe-security — select 'Codex' when prompted if installing for Codex. Manual install is also supported: copy the vibe-security/ folder into a project-level .claude/skills/ or the global ~/.claude/skills/. It uses the Agent Skills format, so it works with Claude Code, OpenAI Codex and other compatible agents."
+    }
+  ],
+  "practiceZh": [
+    "给你的项目装好 skill 后跑一次 /vibe-security，把报告里的每一项按「密钥/鉴权/支付/数据访问」分类整理，先修最容易爆雷的硬编码密钥。",
+    "如果你在用 Supabase 或 Firebase，专门让 Agent 检查 RLS/规则是否真的生效，而不是只验证「能连上数据库」。",
+    "上线前把安全审计做成固定步骤：每次部署前跑一遍，重点看新增的支付、鉴权或 AI 接口代码。",
+    "遇到 AI 反复犯的新安全错误，按 CONTRIBUTING 把它补充进 skill，让这个社区资源跟着你的实战一起变强。"
+  ],
+  "practiceEn": [
+    "Install the skill in your project, run /vibe-security once, and triage the report into secrets / auth / payments / data-access buckets — fixing hardcoded keys first.",
+    "If you use Supabase or Firebase, specifically ask the agent to verify RLS/rules actually take effect rather than just confirming the database is reachable.",
+    "Make security audit a fixed pre-launch step: run it before every deploy, paying special attention to new payment, auth or AI-integration code.",
+    "When AI keeps introducing a new security mistake, add it to the skill per CONTRIBUTING so this community resource grows with your real-world practice."
+  ]
+}

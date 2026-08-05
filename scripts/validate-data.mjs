@@ -196,6 +196,36 @@ if (viable) {
   });
 }
 
+// ---- viable-teaching（站内教学页：每个资源都要有，且双语结构齐全） ----
+const viableTeachingDir = path.join(dataDir, 'viable-teaching');
+const viableResourceSlugs = new Set((viable?.resources || []).map((r) => r.slug));
+if (existsSync(viableTeachingDir)) {
+  const covered = new Set();
+  for (const file of readdirSync(viableTeachingDir).filter((f) => f.endsWith('.json'))) {
+    const t = readJson(path.join('viable-teaching', file));
+    const where = `viable-teaching/${file}`;
+    if (!t?.slug) {
+      errors.push(`${where}: slug 缺失`);
+      continue;
+    }
+    covered.add(t.slug);
+    for (const f of ['introZh', 'introEn', 'audienceZh', 'audienceEn']) {
+      if (!t[f]) errors.push(`${where}: ${f} 缺失`);
+    }
+    for (const f of ['sectionsZh', 'sectionsEn', 'practiceZh', 'practiceEn']) {
+      if (!Array.isArray(t[f]) || t[f].length === 0) errors.push(`${where}: ${f} 为空`);
+    }
+  }
+  for (const slug of viableResourceSlugs) {
+    if (!covered.has(slug)) errors.push(`viable-teaching 缺少教学页: ${slug}`);
+  }
+  for (const slug of covered) {
+    if (!viableResourceSlugs.has(slug)) errors.push(`viable-teaching 多余文件（非资源）: ${slug}`);
+  }
+} else {
+  if (viableResourceSlugs.size > 0) errors.push(`缺少 viable-teaching/ 目录（需为 ${viableResourceSlugs.size} 个资源提供教学页）`);
+}
+
 if (warn.length) {
   console.log('⚠️  警告:');
   warn.forEach((w) => console.log(`  - ${w}`));
@@ -205,4 +235,7 @@ if (errors.length) {
   errors.forEach((e) => console.error(`  - ${e}`));
   process.exit(1);
 }
-console.log(`✅ 数据校验通过 (${(tools || []).length} 款工具, ${(categories || []).length} 个分类, ${(viable?.resources || []).length} 条 viable 资源)`);
+const teachingCount = viableTeachingDir && existsSync(viableTeachingDir)
+  ? readdirSync(viableTeachingDir).filter((f) => f.endsWith('.json')).length
+  : 0;
+console.log(`✅ 数据校验通过 (${(tools || []).length} 款工具, ${(categories || []).length} 个分类, ${(viable?.resources || []).length} 条 viable 资源, ${teachingCount} 个教学页)`);

@@ -1,0 +1,55 @@
+{
+  "slug": "ai-guide",
+  "introZh": "程序员鱼皮维护的免费 AI 知识库（18k+ star），核心是那份《Vibe Coding 零基础入门教程》：上千张图、几十万字，目标是「哪怕零基础，也能快速开发上线自己的产品并盈利」。除了教程，它还是一座 AI 工具与资讯的导航站，聚合了提示词大全、工具测评、实战项目、产品变现等大量内容，全部免费开源。",
+  "introEn": "A free AI knowledge base curated by programmer Yupi (18k+ stars), built around a zero-to-one 'Vibe Coding for Complete Beginners' course: thousands of images and hundreds of thousands of words aimed at 'getting even total beginners to ship a product and make money'. Beyond the course it's also an AI directory, aggregating prompt collections, tool reviews, hands-on projects and monetization guides — all free and open source.",
+  "audienceZh": "完全零基础、想用 AI 做出产品并变现的人，以及想系统补齐 AI 编程认知和工具选型的开发者。",
+  "audienceEn": "Total beginners who want to build and monetize with AI, plus developers looking to systematically fill in AI coding knowledge and tool selection.",
+  "sectionsZh": [
+    {
+      "title": "板块结构：教程 / 工具 / 实战 / 变现一条龙",
+      "body": "教程内容梳理成七大板块：基础必读（10 分钟做出第一个作品）、编程工具（模型选择、零代码平台、智能体平台、编辑器、命令行工具、IDE 插件）、项目实战（个人工具、AI 应用、全栈应用、小程序）、经验技巧（心法、对话工程、上下文管理、幻觉处理）、产品变现（需求分析、盈利模式、SEO、自媒体运营）、编程学习（学习路线、知识百科、MCP 开发）、资源宝库（工具大全、提示词模板、常见问题）。"
+    },
+    {
+      "title": "给零基础的学习路径",
+      "body": "README 给了明确节奏：第 1 天读完基础必读，理解 Vibe Coding 并做出第一个作品；第 1-2 周学习 AI 编程工具并做几个简单项目；之后再按需学习经验技巧和产品变现。它反复强调「10 分钟后你就能做出第一个作品」，用快速正反馈带人入门。"
+    },
+    {
+      "title": "给有编程基础的学习路径",
+      "body": "有基础的人第 1 天快速过完基础内容，完成快速上手教程；第 1 周学习主流 AI 编程工具并尝试重构之前的项目；之后重点提升对话与上下文管理能力，进阶到更复杂的工程实践。这样的分流设计让两类读者都能找到自己的节奏。"
+    },
+    {
+      "title": "配套视频与更广的 AI 知识库",
+      "body": "除了文字教程，还有 B 站配套视频课《小白都能学的 AI 编程实战》，从零跑通完整项目流程。仓库同时包含 AI 指南、DeepSeek 专题、AI 应用场景、行业资讯等目录，是持续追踪 AI 动态的资源入口，适合长期订阅式使用。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "Structure: course / tools / practice / monetization in one track",
+      "body": "The course is organized into seven blocks: fundamentals (make your first work in 10 minutes), programming tools (model selection, no-code platforms, agent platforms, editors, CLI tools, IDE plugins), project practice (personal tools, AI apps, full-stack apps, mini-programs), experience & skills (mindset, conversation engineering, context management, hallucination handling), product monetization (requirements analysis, profit models, SEO, social media operations), programming learning (learning paths, encyclopedia, MCP development), and a resource library (tool collections, prompt templates, FAQs)."
+    },
+    {
+      "title": "A learning path for complete beginners",
+      "body": "The README lays out a clear rhythm: on day 1 finish the fundamentals and build your first work; during weeks 1-2 learn AI programming tools and make a few simple projects; afterwards learn experience tips and monetization as needed. It keeps insisting you can build a first work '10 minutes after opening the course', using quick wins to onboard people."
+    },
+    {
+      "title": "A learning path for those with a programming background",
+      "body": "If you already code, quickly go through the fundamentals on day 1 and finish the quick-start tutorial; in week 1 learn mainstream AI programming tools and try refactoring an old project; afterwards focus on improving conversation and context-management skills and move toward more complex engineering practices. This branching lets both kinds of readers find their own pace."
+    },
+    {
+      "title": "Companion video course and the wider AI knowledge base",
+      "body": "Besides the written course, there's a companion Bilibili video course 'AI Programming Practice for Absolute Beginners' that takes you through a complete project from zero. The repo also hosts directories on the AI guide, DeepSeek, AI use cases and industry news — a resource hub for keeping up with AI developments, ideal for long-term subscription-style use."
+    }
+  ],
+  "practiceZh": [
+    "按 README 的学习路径走：第 1 天只做一件事——读完基础必读，跟着做出第一个作品，先获得正反馈。",
+    "学工具阶段别贪多，选 1-2 个主流的 AI 编程工具（比如 Cursor / Claude Code）练熟，再带着旧项目去重构练手。",
+    "有想法就顺着「项目实战 → 产品变现」的章节把它做成能上线的小产品，重点练需求分析和盈利模式那一章。",
+    "把仓库当成持续更新的资源入口，常看资讯板块，遇到工具选型或 Prompt 需求时先来这里查现成的。"
+  ],
+  "practiceEn": [
+    "Follow the README path: on day 1 do just one thing — finish the fundamentals and build a first work for quick positive feedback.",
+    "Don't chase every tool at once — master one or two mainstream AI coding tools (e.g. Cursor / Claude Code), then practice by refactoring an old project.",
+    "If you have an idea, walk it through the 'project practice → monetization' chapters into a small shippable product, focusing on the requirements-analysis and business-model material.",
+    "Treat the repo as a living resource hub: check the news section regularly and search the existing collections whenever you face tool choices or need a prompt."
+  ]
+}

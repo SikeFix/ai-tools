@@ -1,0 +1,63 @@
+{
+  "slug": "codebase-to-course",
+  "introZh": "一个 Claude Code skill：把任意代码库变成一份精美的、可交互的单页 HTML 教学课程（5.3k+ star）。对着仓库运行一次，就能得到一份自包含的课程，用滚动导航、动画可视化、内嵌测验和「代码对照大白话」的方式，讲清楚这个代码是怎么工作的。它明确写给「vibe coder」——没有传统 CS 学历、靠自然语言指挥 AI 编程的人。",
+  "introEn": "A Claude Code skill that turns any codebase into a beautiful, interactive single-page HTML course (5.3k+ stars). Point it at a repo and get a self-contained course teaching how the code works — with scroll-based navigation, animated visualizations, embedded quizzes, and side-by-side 'code vs plain English' translations. It's written explicitly for 'vibe coders' — people building software through natural-language AI tools without a traditional CS education.",
+  "audienceZh": "已经用 AI 写出了能跑的东西、却不太懂它内部怎么工作的 vibe coder——想更好地指挥 AI、识别 AI 犯错、以及跟工程师顺畅对话的人。",
+  "audienceEn": "Vibe coders who have built something that works but don't fully understand how it works under the hood — and want to steer AI tools better, catch AI mistakes, and talk to engineers without feeling lost.",
+  "sectionsZh": [
+    {
+      "title": "它做什么：一份 HTML 就是一个完整课程",
+      "body": "输出是单个 HTML 文件，零依赖、零配置、离线可用。里面包含滚动式模块（带进度跟踪和键盘导航）、代码与大白话的逐行对照翻译、数据流动画与组件通信/架构图等动态可视化、以及测试「应用能力」而非死记硬背的交互测验（比如「你想加收藏功能，哪些文件会变？」）。术语悬浮即得定义，设计走温暖独特路线，不是常见的紫色渐变 AI 风。"
+    },
+    {
+      "title": "为什么对非技术 vibe coder 有价值",
+      "body": "作者的目标很务实而非学术：让你能更好地指挥 AI（做出更聪明的架构决策）、发现 AI 出错（识别幻觉、坏模式）、在 AI 卡住时跳出 bug 循环、以及不再茫然地跟工程师交流。你不需要成为软件工程师——你想让编程成为一项超能力。"
+    },
+    {
+      "title": "怎么安装和使用",
+      "body": "把 codebase-to-course 文件夹复制到 ~/.claude/skills/，在 Claude Code 里打开任意项目，然后说一句「Turn this codebase into an interactive course」即可。官方还给了触发短语清单：「Turn this into a course」「Explain this codebase interactively」「Teach me how this code works」等。"
+    },
+    {
+      "title": "设计哲学：先构建、后理解",
+      "body": "它刻意反转传统 CS 教育：不是先背多年概念再动手（大多数人在第三步前就放弃了），而是「先做出东西 → 体验它在运行 → 这才理解它是怎么工作的」。同时坚持 Show, don't tell——每个画面至少 50% 是视觉，一段文字最多两三句话；能画成图/动画/交互的就不写成段落。"
+    },
+    {
+      "title": "测验考「做」，不考「知」；代码只用原文",
+      "body": "测验不问「API 是什么缩写」，而问「用户切换页面后看到旧数据，你会先查哪里」。每个概念配一个贴合它的隐喻（数据库是有卡片目录的图书馆、鉴权是查 ID 的保安），绝不重复用同一个。代码片段必须是代码库里的真实原文，绝不改简，这样学习者打开真实文件能看到自己学过的同一段代码。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "What it does: one HTML file, one complete course",
+      "body": "The output is a single HTML file — no dependencies, no setup, works offline. It includes scroll-based modules with progress tracking and keyboard navigation, line-by-line 'code ↔ plain English' translations, animated visualizations (data-flow animations, component group chats, architecture diagrams), and interactive quizzes that test application rather than memorization (e.g. 'You want to add favorites — which files change?'). Glossary tooltips define any technical term on hover, and the design is warm and distinctive rather than the usual purple-gradient AI look."
+    },
+    {
+      "title": "Why it matters for non-technical vibe coders",
+      "body": "The author's goals are practical, not academic: steer AI coding tools better (make smarter architectural decisions), detect when AI is wrong (spot hallucinations, catch bad patterns), debug when AI gets stuck (break out of bug loops), and talk to engineers without feeling lost. You're not trying to become a software engineer — you want coding as a superpower."
+    },
+    {
+      "title": "How to install and use it",
+      "body": "Copy the codebase-to-course folder into ~/.claude/skills/, open any project in Claude Code, then say 'Turn this codebase into an interactive course'. The README also ships a list of trigger phrases: 'Turn this into a course', 'Explain this codebase interactively', 'Teach me how this code works', and more."
+    },
+    {
+      "title": "Design philosophy: build first, understand later",
+      "body": "It deliberately inverts traditional CS education: instead of memorizing concepts for years before building (most people quit before step 3), you build something → experience it working → now understand how it works. It also insists on show-don't-tell: every screen is at least 50% visual, text blocks stay at 2-3 sentences, and anything that can be a diagram, animation, or interactive element never becomes a paragraph."
+    },
+    {
+      "title": "Quizzes test doing, not knowing; code stays original",
+      "body": "No 'What does API stand for?' — instead: 'A user reports stale data after switching pages. Where would you look first?' Every concept gets a metaphor that fits that specific idea (a database is a library with a card catalog, auth is a bouncer checking IDs), never the same one twice. Code snippets are exact copies from the real codebase, never modified or simplified, so learners can open the actual file and see the same code they learned from."
+    }
+  ],
+  "practiceZh": [
+    "挑一个你自己用 AI 写的小项目，把 skill 复制进 ~/.claude/skills/，触发「Turn this codebase into an interactive course」，看看生成的课程里哪些模块帮你补上了盲区。",
+    "专门留意「你要加收藏功能，哪些文件会变」这类应用题：能答对，说明你真的理解了数据流，而不是记住了名词。",
+    "对照课程里的代码翻译块，找出 1-2 段你之前凭感觉写、现在才看懂细节的代码，回原文件里确认一遍。",
+    "把你最常被 AI 坑到的部分（比如鉴权、状态管理）单独生成一份课程，反复过知识点，直到能向别人讲清楚。"
+  ],
+  "practiceEn": [
+    "Pick a small project you built with AI, copy the skill into ~/.claude/skills/, trigger 'Turn this codebase into an interactive course', and see which modules fill your blind spots.",
+    "Focus on the application-style quizzes like 'You want to add favorites — which files change?': getting them right means you understand the data flow, not just the vocabulary.",
+    "Use the code-translation blocks to find 1-2 pieces of code you wrote by feel and only now understand in detail — then confirm them in the real source file.",
+    "Generate a dedicated course for the areas where AI most often trips you up (e.g. auth, state management) and review it until you can explain it to someone else."
+  ]
+}

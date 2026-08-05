@@ -1,0 +1,63 @@
+{
+  "slug": "awesome-context-engineering",
+  "introZh": "一个「上下文工程」的调研清单（3.3k+ star），不是手把手教程，而是把该领域的研究论文、博客、工具与最佳实践按主题整理成的知识地图。作者团队还配套发布了学术综述论文《A Survey of Context Engineering for Large Language Models》（arXiv 2507.13334，覆盖 1400+ 篇相关工作），README 就是这份综述的可浏览索引。想系统了解这个新兴领域、或给某个方向找切入点，它是很好的起点。",
+  "introEn": "A curated research survey of 'context engineering' (3.3k+ stars) — not a hands-on tutorial, but a knowledge map organizing the field's research papers, blogs, tools and practices by topic. The authors also published a companion survey, 'A Survey of Context Engineering for Large Language Models' (arXiv 2507.13334, covering 1400+ related works), and this README serves as the browsable index to it. A great starting point for systematically learning the field or finding an entry point in any direction.",
+  "audienceZh": "想系统了解 context engineering 研究全景的研究者与工程师；也包括想追踪 2026 年「从 context engineering 转向 agent engineering」趋势的人。",
+  "audienceEn": "Researchers and engineers who want a systematic view of the context engineering landscape, including those tracking the 2026 shift from context engineering toward agent engineering.",
+  "sectionsZh": [
+    {
+      "title": "定位：调研清单 + 综述论文，不是教程",
+      "body": "它遵循 Awesome 清单的惯例组织，但比一般清单更学术化：每个类别下列出的是论文、基准、工具与博客，并标注 arXiv 或会议来源。它与一篇已发表的综述论文配套（A Survey of Context Engineering for Large Language Models），论文系统性分析了 1400+ 篇相关工作，仓库结构即综述的章节结构——读 README 就是在读一篇可点击、可深挖的综述。"
+    },
+    {
+      "title": "收录了什么：按主题归档的资源",
+      "body": "内容按主题分类：context scaling（位置插值与超长上下文）、context management in production（压缩、缓存、作用域指令加载）、结构化数据集成与知识图谱、自生成上下文、RAG 检索增强、memory systems（神经记忆架构与生产记忆系统）、agent communication（MCP、A2A 等开放协议）、tool use、evaluation（LongBench、RULER、InfiniteBench 等长上下文基准）与 applications（科研自动化系统与企业生产系统）。"
+    },
+    {
+      "title": "2026 Agent Era 更新：从 Context Engineering 到 Agent Engineering",
+      "body": "2026 年 3 月起仓库大幅改版：重心从「怎么打包最好的 prompt」转向「Agent 系统如何管理运行时状态、记忆、工具、协议与长程执行」。它新增了 agent harness/runtime（规划、子代理、检查点、沙箱、人工审批）、open protocols、coding agents 与 project memory、observability 等板块，并明确说 context engineering 现在嵌在一个更大的技术栈里——在实践中正变成 agent engineering。"
+    },
+    {
+      "title": "形式化定义与「为什么需要它」",
+      "body": "仓库给出了严格定义：context 不是用户发的一条 prompt，而是推理时刻提供给 LLM 的完整信息载荷（指令、知识、工具、记忆、状态、查询）。它用数学公式把 context engineering 建模成「最优化上下文组装函数」的问题，并用对比表说明 prompt engineering 是静态字符串、context engineering 是动态多组件系统。章节还论证了动机：人类意图表达不清、知识会过时、幻觉与可溯源问题，都指向需要系统性管理上下文。"
+    },
+    {
+      "title": "怎么用它深挖 context engineering",
+      "body": "用法是「按图索骥」：想追 2026 年 Agent 转向，先读 agent harnesses 与 open protocols 板块；想打基础，从 definition 与 why context engineering 两节读起；想做长上下文评估，去 Evaluation 板块看 LongBench、RULER、InfiniteBench 与可观测性实践。每个条目都带外链，可顺着任一论文或工具深挖，配合综述论文一起读更成体系。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "What it is: a survey list + a survey paper, not a tutorial",
+      "body": "It follows the Awesome-list convention but is more academic than most: each category lists papers, benchmarks, tools and blogs with arXiv or venue sources. It pairs with a published survey, 'A Survey of Context Engineering for Large Language Models', which systematically analyzes 1400+ related works; the repo's structure mirrors the paper's sections — reading the README is reading a clickable, deep-diveable survey."
+    },
+    {
+      "title": "What it collects: resources organized by topic",
+      "body": "Content is filed by topic: context scaling (position interpolation and ultra-long context), context management in production (compaction, caching, scoped instruction loading), structured data integration and knowledge graphs, self-generated context, RAG, memory systems (neural memory architectures and production memory), agent communication (open protocols like MCP and A2A), tool use, evaluation (long-context benchmarks such as LongBench, RULER and InfiniteBench) and applications (automated scientific research systems and enterprise production systems)."
+    },
+    {
+      "title": "2026 Agent Era update: from Context Engineering to Agent Engineering",
+      "body": "Since March 2026 the repo has been reorganized around a shift in gravity: from 'how to pack the best prompt' to 'how agent systems manage runtime state, memory, tools, protocols and long-horizon execution'. It added sections on agent harnesses/runtimes (planning, subagents, checkpoints, sandboxes, human approvals), open protocols, coding agents and project memory, and observability — stating plainly that context engineering now sits inside a larger stack and, in practice, is becoming agent engineering."
+    },
+    {
+      "title": "The formal definition and 'why it matters'",
+      "body": "The repo gives a rigorous definition: context is not the single prompt a user sends, but the complete information payload provided to the LLM at inference time (instructions, knowledge, tools, memory, state, query). It models context engineering mathematically as an optimization problem over context-assembly functions, and a comparison table shows prompt engineering as a static string versus context engineering as a dynamic multi-component system. It also argues the motivation: ambiguous human intent, stale knowledge, hallucination and provenance problems all demand systematic context management."
+    },
+    {
+      "title": "How to use it to go deep on context engineering",
+      "body": "Use it as a map: to follow the 2026 agent shift, start with the agent harnesses and open protocols sections; to build foundations, read the definition and 'why context engineering' sections; to work on long-context evaluation, visit the Evaluation section for LongBench, RULER, InfiniteBench and observability practices. Every entry links out, so you can go deep on any paper or tool, and reading it alongside the companion survey gives the full picture."
+    }
+  ],
+  "practiceZh": [
+    "先读 README 的 2026 Agent Era Update，确认你关心的方向落在哪个板块，再决定从哪读起。",
+    "挑一个类别（如 Memory Systems），顺着列出的论文精读 2-3 篇，归纳它们解决同一个问题的共性。",
+    "把仓库的 prompt vs context engineering 对比表抄进你的学习笔记，作为后续判断的锚点。",
+    "结合配套综述论文读你选中的板块，用自己的话写一段该方向的现状总结。"
+  ],
+  "practiceEn": [
+    "Start with the 2026 Agent Era Update in the README to see which section your interest falls into, then decide where to begin.",
+    "Pick one category (e.g. Memory Systems) and read 2-3 of the listed papers closely, noting how they converge on the same problem.",
+    "Copy the prompt vs context engineering comparison table into your notes as an anchor for future judgment.",
+    "Read your chosen section alongside the companion survey paper and summarize the state of that direction in your own words."
+  ]
+}

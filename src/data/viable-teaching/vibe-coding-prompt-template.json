@@ -1,0 +1,63 @@
+{
+  "slug": "vibe-coding-prompt-template",
+  "introZh": "一套「把想法变成可交付 MVP」的实战 AI 工作流（2.8k+ star），由系列已上线项目（vibeworkflow.app、moneyvisualiser.com 等）沉淀而来。核心理念是「先把思考做完，再交给工具」：用分阶段的提示词模板先做市场调研、写 PRD、定技术设计，再生成 AGENTS.md 让编码 Agent 照着干，最后小步构建、每步验收。",
+  "introEn": "A practical AI workflow for shipping an MVP from an idea (2.8k+ stars), distilled from a handful of shipped projects like vibeworkflow.app and moneyvisualiser.com. The core idea: do the thinking upfront, hand clean context to your tools. Structured prompt templates take you through deep research, a PRD, and a tech design, then generate the AGENTS.md your coding agent works from, and finally build in small, reviewable chunks.",
+  "audienceZh": "想用 AI 把一个想法快速做成 MVP 的人——不需要是有经验的开发者，只需要会用浏览器、能复制粘贴文件、愿意投入几个小时。",
+  "audienceEn": "Anyone who wants to turn an idea into a shippable MVP with AI — no need to be an experienced developer, just comfortable with files and copy-paste and willing to spend a few hours.",
+  "sectionsZh": [
+    {
+      "title": "它提供什么：一份从 0 到上线的提示词模板集",
+      "body": "仓库把流程切成可复制的提示词文件：part1-deepresearch.md（20-30 分钟，判断需求、竞品和范围）、part2-prd-mvp.md（15-20 分钟，写清 MVP 到底要做什么）、part3-tech-design-mvp.md（15-20 分钟，定技术栈、预算、时间线）、part4-notes-for-agent.md（让 Agent 生成 AGENTS.md 等工作区文档）。前三个步骤在 ChatGPT/Claude/Gemini 等聊天工具里完成，不需要先建仓库。"
+    },
+    {
+      "title": "为什么「先想清楚再写」是 viable coding 的起点",
+      "body": "作者强调「做思考在前，把干净的上下文交给工具」。多数 vibe coding 翻车不是因为 AI 不够强，而是因为需求本身一团模糊。先跑深度调研确认「这值得做吗」，再写 PRD 把范围钉死，再定技术设计选一个你真能交付的栈——这几步把「凭感觉冲代码」变成「带着明确合同开工」。"
+    },
+    {
+      "title": "模板工作流怎么用：从聊天到 IDE 再到 MVP",
+      "body": "工作流分两阶段：阶段一在聊天工具里完成调研/PRD/技术设计并保存为 docs/ 下的文档；阶段二切到 Cursor、VS Code 或 Claude Code，用 part4 让 Agent 从模板生成 AGENTS.md、MEMORY.md、REVIEW-CHECKLIST.md（并为 Claude Code/Cursor/Antigravity/Codex 各配一层薄适配器），然后输入第一条命令：「Read AGENTS.md, propose a Phase 1 plan, wait for my approval, and then build it step by step.」按「计划→执行单个功能→验证测试」的小循环迭代，把 Agent 当初级开发者对待。"
+    },
+    {
+      "title": "进阶实践：产物优先记忆、多 Agent 编排与模型策略",
+      "body": "仓库补充了高级玩法：让 Agent 把发现写进真实文件而非堆在聊天历史里（避免上下文爆炸），用原生压缩/交接产物（如 001-spec.md）跨会话续接；用 agent teams 并行时先让主 Agent 出计划、批准后再执行，避免静默回归；还给了「速度优先 / 均衡 / 深度优先」三档模型组合矩阵，建议按模型家族而非固定版本号选型。"
+    },
+    {
+      "title": "避坑与上线检查",
+      "body": "常见坑都有对应解法：跳过调研就开写（先跑 Part 1）、让 Agent 独自交付代码（合入前审 diff、跑测试）、把自动生成的 UI 直接发布（上线前测可访问性与安全）、让一个工具包办一切（IDE + 终端 + 构建器混用通常更好）。上线前按 REVIEW-CHECKLIST 的安全清单过一遍密钥、鉴权与限流；Next.js/React 前端走 Vercel，静态站走 Cloudflare Pages。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "What it provides: prompt templates from zero to launch",
+      "body": "The repo slices the flow into copy-pasteable prompt files: part1-deepresearch.md (20-30 min, gauge demand, competitors and scope), part2-prd-mvp.md (15-20 min, pin down what the MVP must actually do), part3-tech-design-mvp.md (15-20 min, pick a stack, budget and timeline), and part4-notes-for-agent.md (get the agent to scaffold your AGENTS.md and workspace docs). The first three steps run in chat tools like ChatGPT, Claude or Gemini — you don't need a repo yet."
+    },
+    {
+      "title": "Why 'think it through first' is where viable coding starts",
+      "body": "The author's rule is to do the thinking upfront and hand clean context to your tools. Most vibe coding fails not because the AI isn't strong enough but because the requirements themselves are a blur. Deep research confirms 'is this worth building', the PRD locks the scope, and the tech design picks a stack you can actually ship — turning 'code by feel' into 'start with an explicit contract'."
+    },
+    {
+      "title": "How the template workflow runs: chat → IDE → MVP",
+      "body": "The workflow has two phases. Phase one: run research/PRD/tech design in a chat tool and save them into docs/. Phase two: move to Cursor, VS Code or Claude Code, use part4 to have the agent scaffold AGENTS.md, MEMORY.md and REVIEW-CHECKLIST.md (plus a thin tool adapter for Claude Code / Cursor / Antigravity / Codex), then give the first command: 'Read AGENTS.md, propose a Phase 1 plan, wait for my approval, and then build it step by step.' Iterate in a small loop of plan → execute one feature → verify/test, treating the agent like a junior developer."
+    },
+    {
+      "title": "Advanced practice: artifact-first memory, multi-agent orchestration, model strategy",
+      "body": "The repo layers on advanced tactics: let the agent write findings into real files instead of burying them in chat history (avoiding context overload), use native compaction and handoff artifacts like 001-spec.md to resume across sessions; when running agent teams, get an approved plan from the lead before the execute agent edits files to cut silent regressions; and a three-tier model matrix (speed-first / balanced / depth-first), recommending model families over pinned version names."
+    },
+    {
+      "title": "Pitfalls to avoid and the launch checklist",
+      "body": "Common pitfalls have matching fixes: skipping discovery (run Part 1 first), letting agents ship code alone (review the diff and run tests before merging), publishing auto-generated UIs (test accessibility and security before launch), and forcing one tool to do everything (mixing IDE + terminal + builder usually works better). Before deploying, run the security section of REVIEW-CHECKLIST.md over secrets, auth and rate limits; ship Next.js/React/frontend apps on Vercel and static sites on Cloudflare Pages."
+    }
+  ],
+  "practiceZh": [
+    "拿一个你早就想做的点子，从 part1-deepresearch 开始走完前三个提示词步骤，把输出存进 docs/，感受「想清楚」对后续构建的牵引力。",
+    "对照 examples/reddit-to-ai/ 的完整示例，看看同一套流程产出的调研、PRD、技术设计和最终代码长什么样。",
+    "在你的 AI IDE 里用 part4 生成 AGENTS.md 后，按「先计划、等批准、再执行」的首条命令跑一个功能，体会小步验收比一口气写完更可控。",
+    "上线的 MVP 对照 REVIEW-CHECKLIST 的安全清单自查一遍密钥、鉴权和限流，再决定部署到 Vercel 还是 Cloudflare Pages。"
+  ],
+  "practiceEn": [
+    "Take an idea you've wanted to build, run the first three prompt steps starting with part1-deepresearch, save the output into docs/, and feel how 'thinking it through' steers the build.",
+    "Compare against the worked example in examples/reddit-to-ai/ to see what research, PRD, tech design and final code look like end to end with this workflow.",
+    "After scaffolding AGENTS.md via part4 in your AI IDE, run one feature with the 'plan first, wait for approval, then execute' first command and feel how small reviewed steps beat one big write.",
+    "Before launch, run the security section of REVIEW-CHECKLIST.md over secrets, auth and rate limits, then decide between Vercel and Cloudflare Pages."
+  ]
+}

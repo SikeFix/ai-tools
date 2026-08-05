@@ -1,0 +1,63 @@
+{
+  "slug": "awesome-ai-coding-tools",
+  "introZh": "一份面向开发者与团队的 AI 编程工具全景清单（1.9k+ star），按用途把生态切成编辑器/助手、代码补全、编码 Agent、CLI、应用构建、UI 生成、代码审查、测试、代码模型、安全、MCP 等近二十个分区。它的核心价值是「按环节找工具」：从写代码到测试、审查、上线，每个环节都有对应的 AI 工具可查。",
+  "introEn": "A panorama of AI coding tools for developers and teams (1.9k+ stars), split into nearly twenty categories — editors and assistants, code completion, coding agents, CLI tools, app builders, UI generators, code review, testing, code models, security, MCP and more. Its core value is finding a tool for each stage: from writing code to testing, reviewing and shipping, every stage has a dedicated category to search.",
+  "audienceZh": "想按开发环节系统性选型 AI 工具的开发者和团队，尤其是从「编辑器补全」走向「Agent 全链路」的进阶者。",
+  "audienceEn": "Developers and teams who want to select AI tools systematically by development stage — especially those advancing from editor completion to end-to-end agentic workflows.",
+  "sectionsZh": [
+    {
+      "title": "按环节切分的分类法",
+      "body": "清单把「Code Editors and Assistants」与「Code Completion」分开：前者是 Cursor、Windsurf、GitHub Copilot 这类深度融入编辑器、能跨文件对话改代码的助手，后者聚焦 Tabnine、Supermaven、Codeium 等补全引擎。先分清你要的是「会理解上下文、改多文件的助手」还是「极速补全」，再去对应分区横向对比。"
+    },
+    {
+      "title": "从 Agent 到全链路构建",
+      "body": "「Coding Agents」与「CLI Tools」收录 Claude Code、Codex CLI、Gemini CLI、Devin、OpenHands、Aider 等能自主规划、写码、跑测试的 Agent；「App Builders」与「UI Generators」则覆盖 Bolt.new、Lovable、v0、screenshot-to-code 这类从提示或截图直接生成应用的入口，构成从「一句话需求」到「完整应用」的不同路径。"
+    },
+    {
+      "title": "质量防线：审查、测试与安全",
+      "body": "「Code Review and Refactoring」收 CodeRabbit、Sweep、What The Diff 等审查工具；「Testing and QA」收 Playwright、Qodo、Testim 等测试方案；「Security」收 Snyk、Semgrep、GitGuardian 等安全扫描。清单以「审查/测试/安全」三个分区提示读者：AI 生成代码的质量要靠这些环节来兜底，而不是信任模型本身。"
+    },
+    {
+      "title": "底座与配套：模型、MCP 与本地推理",
+      "body": "清单单列「Code Models」介绍 Claude、GPT、DeepSeek Coder、Qwen2.5-Coder 等模型；「MCP Servers and Directories」汇总 MCP 服务器目录；「Local LLM Tools」收录 Ollama、LM Studio 等本地推理工具；另有 DevOps、数据库与 API 工具等环节，帮助理解工具背后的模型、连接标准与部署链路。"
+    },
+    {
+      "title": "怎么按环节挑工具",
+      "body": "用法建议很直接：先明确当前最缺的是哪一环——写、测、审、部署还是安全，在该分区对比 2-3 个候选；再结合 Code Models 与 Related Lists 判断其底座模型与周边生态。它既是新手认知地图，也是老手的选型备查手册。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "A taxonomy cut by stage",
+      "body": "The list separates 'Code Editors and Assistants' from 'Code Completion': the former covers deep-in-editor assistants like Cursor, Windsurf and GitHub Copilot that understand context and edit across files; the latter focuses on completion engines like Tabnine, Supermaven and Codeium. Decide first whether you need a context-aware multi-file assistant or an ultra-fast completer, then compare within the matching category."
+    },
+    {
+      "title": "From agents to end-to-end builders",
+      "body": "'Coding Agents' and 'CLI Tools' cover agents that autonomously plan, write and test — Claude Code, Codex CLI, Gemini CLI, Devin, OpenHands, Aider and more. 'App Builders' and 'UI Generators' cover prompt- or screenshot-to-app entry points like Bolt.new, Lovable, v0 and screenshot-to-code, forming different routes from a one-line requirement to a complete application."
+    },
+    {
+      "title": "Quality guardrails: review, testing and security",
+      "body": "'Code Review and Refactoring' lists CodeRabbit, Sweep and What The Diff; 'Testing and QA' lists Playwright, Qodo and Testim; 'Security' lists Snyk, Semgrep and GitGuardian. With these three categories, the list signals that the quality of AI-generated code should be backstopped by review, testing and security tooling rather than by trusting the model itself."
+    },
+    {
+      "title": "Foundations: models, MCP and local inference",
+      "body": "The list dedicates 'Code Models' to Claude, GPT, DeepSeek Coder, Qwen2.5-Coder and others; 'MCP Servers and Directories' aggregates MCP server directories; 'Local LLM Tools' covers Ollama and LM Studio; plus DevOps, database and API tool sections — helping you understand the models, connection standards and deployment chains underneath the tools."
+    },
+    {
+      "title": "How to pick a tool by stage",
+      "body": "The usage guidance is direct: first identify which link is missing — writing, testing, review, deployment or security — then compare 2-3 candidates within that category; cross-check Code Models and Related Lists to judge the underlying model and ecosystem. It works both as a cognitive map for beginners and a reference manual for experienced selectors."
+    }
+  ],
+  "practiceZh": [
+    "从 Code Completion 与 Code Editors 各挑一个工具装进你的主力 IDE，跑一周真实任务，记下两者的体验差异。",
+    "用 Code Review 分区的一个工具（如 CodeRabbit）给你一个真实 PR 做审查，比较它与人工审查的发现。",
+    "用 Testing 分区的一个方案（如 Playwright 配合某个 AI 测试工具）为已有项目补一组端到端测试。",
+    "浏览 Related Lists，顺着链接跳到 AI For Developers 等更大目录，拓展你的选型视野。"
+  ],
+  "practiceEn": [
+    "Pick one tool each from Code Completion and Code Editors, install them in your main IDE, run a week of real tasks and note the difference.",
+    "Run a Code Review category tool (e.g. CodeRabbit) on one real PR and compare its findings with human review.",
+    "Use a Testing category solution (e.g. Playwright plus an AI test tool) to add end-to-end tests to an existing project.",
+    "Browse Related Lists and follow links to larger directories like AI For Developers to broaden your selection horizon."
+  ]
+}

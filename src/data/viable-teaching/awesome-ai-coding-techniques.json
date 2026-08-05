@@ -1,0 +1,63 @@
+{
+  "slug": "awesome-ai-coding-techniques",
+  "introZh": "一份社区维护、实践者验证的「AI 编码技巧」清单（348 star），按开发阶段（需求与规划→UI 原型→编码→调试→测试→审查与重构）组织实用技巧。每条技巧都注明来源（Simon Willison、Armin Ronacher、Indragie Karunaratne、Anthropic 团队等）与社区采用率，并给出 Claude Code、Cursor、Codex CLI 等工具的具体操作方式。",
+  "introEn": "A community-maintained, practitioner-tested list of AI coding techniques (348 stars), organized by development stage — from requirements and planning through UI prototyping, coding, debugging, testing, review and refactoring. Each technique cites its source (Simon Willison, Armin Ronacher, Indragie Karunaratne, the Anthropic team, etc.) and community adoption rate, with concrete instructions for tools like Claude Code, Cursor and Codex CLI.",
+  "audienceZh": "已在用 AI 编程助手、想把零散经验系统化成自己方法论的人；Claude Code、Cursor、Codex CLI 用户尤其适用。",
+  "audienceEn": "Anyone already using AI coding assistants who wants to turn scattered tips into a systematic methodology — especially Claude Code, Cursor and Codex CLI users.",
+  "sectionsZh": [
+    {
+      "title": "组织方式：按开发阶段编排",
+      "body": "清单按需求与规划、UI 与原型、编码、调试、测试与 QA、审查与重构、跨阶段技巧七个阶段编排。每个阶段下是一系列独立技巧，每条技巧都带社区采用率投票（例如「设置记忆文件」81% 认为必要、「选择成熟稳定库」64%），让新手一眼知道哪些做法被广泛验证过。"
+    },
+    {
+      "title": "需求与规划阶段：打好地基",
+      "body": "此阶段技巧包括「设置记忆文件」（用 CLAUDE.md / AGENTS.md 给 Agent 持续的项目上下文与约定）、「先要求计划再动手」（用 Plan Mode 保持只读、列步骤/风险/快速测试）、「用高能力模型做规划」以及 spec 驱动开发（把 Markdown 规格当源代码反复迭代）。清单引用 GitHub Engineering 的观点，强调规格是活的文档，要不断精化来引导生成。"
+    },
+    {
+      "title": "编码与调试的实战技巧",
+      "body": "编码阶段有「关键部分自己写、其余委托 AI」「把 AI 当数字实习生、给出精确函数签名」「用成熟稳定库」「先喂已有代码做上下文」；调试阶段有「AI 反复失败就换思路」「设计良好的日志让 Agent 自诊断」「让它自己改代码、跑测试、看失败再试」「用子代理交叉验证细节」。"
+    },
+    {
+      "title": "测试与审查：把好最后一道关",
+      "body": "清单反复强调「测试绝不能外包」，引用 Simon Willison 的话：你必须在亲眼看到它运行之后才承认它是可交付系统。审查方面有「把 AI 代码当同事的 PR 来审」「让 AI 自审自己的代码」「总是检查完整 diff（vibe coding 可能引入非预期的副作用）」「一个 Agent 写、另一个新会话审」。"
+    },
+    {
+      "title": "跨阶段技巧与配套教程",
+      "body": "横向技巧还包括「一个会话只有一个目标」「频繁 /clear 清空上下文」「按任务选模型与推理档位」「集中管理记忆文件（用 @ 引用或软链让 CLAUDE.md / AGENTS.md 指向同一份）」「并行跑多个 Agent」「简单任务可开全自动模式」。仓库配套在线站点 coding-with-ai.dev 可检索、投票并贡献新技巧。"
+    }
+  ],
+  "sectionsEn": [
+    {
+      "title": "Organization: arranged by development stage",
+      "body": "The list is organized into seven stages: Requirements & Planning, UI & Prototyping, Coding, Debugging, Testing & QA, Review & Refactoring, and Cross-Stage Techniques. Each stage holds independent techniques with community adoption votes (e.g. 'Set Up Memory Files' 81% essential, 'Choose Boring, Stable Libraries' 64%) so beginners can see at a glance which practices are widely validated."
+    },
+    {
+      "title": "Requirements and planning: build the foundation",
+      "body": "This stage covers setting up memory files (using CLAUDE.md / AGENTS.md to give agents persistent project context and conventions), asking to plan first (using Plan Mode to stay read-only and list steps, risks and quick tests), planning with a high-capacity model, and spec-driven development (iterating on Markdown specs as the source of truth). The list quotes GitHub Engineering on treating specs as living documents refined to guide generation with increasing precision."
+    },
+    {
+      "title": "Hands-on techniques for coding and debugging",
+      "body": "The coding stage covers writing critical parts yourself and delegating the rest, treating the assistant like a digital intern with exact function signatures, choosing boring stable libraries, and priming with existing code. The debugging stage covers pivoting when the assistant repeatedly fails, logging everything so agents can self-diagnose, letting the tool change code / run tests / see failures / retry, and spawning subagents to double-check details."
+    },
+    {
+      "title": "Testing and review: hold the last line",
+      "body": "The list stresses that you absolutely cannot outsource testing, quoting Simon Willison: you only have a working system once you've seen it run. For review it recommends treating AI code like a colleague's pull request, asking the agent to review its own work, always checking the full diff (vibe coding can introduce unintended side effects), and having one agent write while a fresh session reviews."
+    },
+    {
+      "title": "Cross-stage techniques and companion site",
+      "body": "Cross-stage tips include one goal per session, clearing the context window with /clear frequently, choosing the right model and reasoning level per task, centralising memory files (using @-references or symlinks so CLAUDE.md / AGENTS.md point to one canonical doc), running multiple agents in parallel, and enabling autonomous mode for low-risk tasks. The repo pairs with the live site coding-with-ai.dev for searching, voting and contributing new techniques."
+    }
+  ],
+  "practiceZh": [
+    "本周做一件事：在项目根目录写 CLAUDE.md（或 AGENTS.md），沉淀常用命令、技术栈与踩过的坑，跑一个会话对比差异。",
+    "试一次「先计划、通过后再实现」：用 Plan Mode 让工具先列步骤、风险与快速测试，你点头后再放行写代码。",
+    "把一个真实重构任务交给 AI，但保留自己审查完整 diff 的环节，实践「把 AI 代码当 PR 来审」。",
+    "在两个无关任务之间用 /clear 清空上下文，或开头声明「本会话只有一个目标」，比较输出质量的差异。"
+  ],
+  "practiceEn": [
+    "Do one thing this week: create a CLAUDE.md (or AGENTS.md) at your project root capturing common commands, tech stack and gotchas, then compare one session's difference.",
+    "Try plan-first: use Plan Mode so the tool lists steps, risks and quick tests, and only green-light implementation after you review.",
+    "Delegate one real refactor to the AI while keeping your own full-diff review step, practicing treating AI code as a pull request.",
+    "Clear context with /clear between unrelated tasks, or open a session declaring a single goal, and compare the quality of the output."
+  ]
+}

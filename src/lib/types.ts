@@ -131,3 +131,21 @@ export interface ViableResource {
   descZh: string;
   descEn: string;
 }
+
+export interface ViableTeachingSection {
+  title: string;
+  body: string;
+}
+
+/** 站内教学页内容（基于对应 GitHub 仓库原创整理，标注来源） */
+export interface ViableTeaching {
+  slug: string;
+  introZh: string;
+  introEn: string;
+  audienceZh: string;
+  audienceEn: string;
+  sectionsZh: ViableTeachingSection[];
+  sectionsEn: ViableTeachingSection[];
+  practiceZh: string[];
+  practiceEn: string[];
+}
