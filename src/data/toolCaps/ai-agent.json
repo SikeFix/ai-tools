@@ -76,5 +76,23 @@
     "caps": ["agent", "research", "workflow"],
     "useCasesZh": ["深度研究报告生成", "问题拆解并行检索", "Agent 编排示范", "调研自动化"],
     "useCasesEn": ["Deep research reports", "Decompose questions and search in parallel", "Agent orchestration examples", "Research automation"]
+  },
+  {
+    "slug": "agent-qa",
+    "caps": [
+      "agent",
+      "automation",
+      "memory"
+    ],
+    "useCasesZh": [
+      "发布前运行网页或移动端回归测试",
+      "通过 MCP 让编程智能体写测试、执行并检查证据",
+      "从确认的运行证据中积累可复用的事实、注意事项和操作流程"
+    ],
+    "useCasesEn": [
+      "Run web or mobile regression tests before a release",
+      "Let coding agents write tests, execute them and inspect evidence through MCP",
+      "Retain reusable facts, cautions and procedures from confirmed run evidence"
+    ]
   }
 ]

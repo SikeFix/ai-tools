@@ -1069,5 +1069,22 @@
     "tags": ["design", "figma", "agent"],
     "descZh": "开源 Claude Design/Figma 替代，自动检测机器上的编程 Agent 当设计引擎，现象级项目。",
     "descEn": "Open-source Claude Design/Figma alternative that auto-detects coding agents as design engines — a breakout project."
+  },
+  {
+    "slug": "agent-qa",
+    "name": "agent-qa",
+    "url": "https://vostride.com",
+    "category": "ai-agent",
+    "price": "Free",
+    "tags": [
+      "qa",
+      "web",
+      "android",
+      "ios",
+      "mcp",
+      "memidex"
+    ],
+    "descZh": "用自然语言测试 Web、Android 和 iOS 的 QA 智能体，结合 memidex 持久记忆、基于证据门控的自我改进与每步执行证据。CLI 免费；模型及可选服务费用另计，采用含商业限制的 FSL-1.1-ALv2 许可证。",
+    "descEn": "QA agent for plain-English web, Android and iOS tests, combining persistent memidex memory, evidence-gated self-improvement and per-step run evidence. Free CLI; model and optional service costs vary, with commercial restrictions under FSL-1.1-ALv2."
   }
 ]
